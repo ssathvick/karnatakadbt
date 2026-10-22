@@ -1,0 +1,74 @@
+{
+  "/partners/requests/onboarding": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:partner_manager"
+    ]
+  },
+  "/partners/requests/key-update": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:partner_manager"
+    ]
+  },
+  "/partners/requests": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:partner_manager"
+    ]
+  },
+  "/partners/requests/{request_id}": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:partner_manager"
+    ]
+  },
+  "/partners/requests/{request_id}/approve": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:partner_manager"
+    ]
+  },
+  "/partners/requests/{request_id}/reject": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:partner_manager"
+    ]
+  },
+  "/partners": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:partner_manager"
+    ]
+  },
+  "/partners/{partner_id}": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:partner_manager"
+    ]
+  },
+  "/partners/{partner_id}/keys": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:partner_manager"
+    ]
+  },
+  "/partners/{partner_id}/audit": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:partner_manager"
+    ]
+  },
+  "/partners/{partner_id}/disable": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:partner_manager"
+    ]
+  },
+  "/partners/{partner_id}/enable": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:partner_manager"
+    ]
+  }
+}

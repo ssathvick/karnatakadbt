@@ -1,0 +1,73 @@
+"""Assemble implemented operations on an explicitly isolated candidate database."""
+import json
+from pathlib import Path
+from registry_candidate_api import create_app
+from registry_console_auth import RegistryConsoleAuthorizer
+from registry_http_audit import RegistryHttpAudit
+from registry_score_config_store import RegistryScoreConfigStore,SUPPORTED_PATHS as score_paths
+from registry_ingestion_config_store import SUPPORTED_PATHS as ingestion_paths
+from registry_definition_store import SUPPORTED_PATHS as definition_paths
+from registry_intake_metadata_store import SUPPORTED_PATHS as intake_paths
+from registry_layout_store import SUPPORTED_PATHS as layout_paths
+from registry_configuration_store import SUPPORTED_PATHS as configuration_paths
+from registry_document_store import SUPPORTED_PATHS as document_paths
+from registry_message_template_store import SUPPORTED_PATHS as template_paths
+from registry_status_store import SUPPORTED_PATHS as status_paths
+from registry_verification_store import SUPPORTED_PATHS as verification_paths
+from registry_message_data_store import SUPPORTED_PATHS as message_data_paths
+from registry_subscription_store import SUPPORTED_PATHS as subscription_paths
+from registry_topic_store import SUPPORTED_PATHS as topic_paths
+from registry_record_store import RegistryRecordStore,SUPPORTED_PATHS as record_paths
+from registry_readable_store import RegistryReadableStore,SUPPORTED_PATHS as readable_paths
+from registry_change_query_store import SUPPORTED_PATHS as change_query_paths
+from registry_change_policy_store import SUPPORTED_PATHS as change_policy_paths
+from registry_dedup_result_store import RegistryDedupResultStore,SUPPORTED_PATHS as dedup_paths
+from registry_awe_store import RegistryAweStore,SUPPORTED_PATHS as awe_paths
+from registry_awe_client import ApprovalEngineClient
+from registry_hierarchy_store import SUPPORTED_PATHS as hierarchy_paths
+from registry_search_store import SUPPORTED_PATHS as search_paths
+from registry_registrant_view_store import RegistryRegistrantViewStore,SUPPORTED_PATHS as registrant_view_paths
+from registry_intake_view_store import RegistryIntakeViewStore,SUPPORTED_PATHS as intake_view_paths
+from registry_decision_store import RegistryDecisionStore,SUPPORTED_PATHS as decision_paths
+from registry_operation_store import SUPPORTED_PATHS as operation_paths
+from registry_change_detail_store import RegistryChangeDetailStore,SUPPORTED_PATHS as detail_paths
+from registry_admission_store import RegistryAdmissionStore,SUPPORTED_PATHS as admission_paths
+from registry_health import HEALTH_PATHS,install_health
+from registry_workflow_store import RegistryWorkflowStore,SUPPORTED_PATHS as workflow_paths
+from registry_change_creation_store import RegistryChangeCreationStore,SUPPORTED_PATHS as creation_paths
+from registry_master_codes import MasterCodeClient
+from registry_intake_write_store import RegistryIntakeWriteStore,SUPPORTED_PATHS as intake_write_paths
+from registry_ingest_store import RegistryIngestStore,SUPPORTED_PATHS as ingest_admission_paths
+from registry_partner_client import RegistryPartnerClient
+from registry_registrant_auth_store import RegistryRegistrantAuthStore,SUPPORTED_PATHS as registrant_auth_paths,CALLBACK_PATH
+from registry_registrant_callback import install_registrant_callback
+from registry_approval_webhook import RegistryApprovalWebhookStore,WEBHOOK_PATH
+from registry_approval_webhook_api import install_approval_webhook
+from registry_approval_store import SUPPORTED_PATHS as approval_paths
+
+metadata_paths=json.loads(Path(__file__).with_name('registry_metadata_contract.json').read_text())['paths']
+IMPLEMENTED_PATHS=frozenset(metadata_paths)|score_paths|ingestion_paths|definition_paths|intake_paths|layout_paths|configuration_paths|document_paths|template_paths|status_paths|verification_paths|message_data_paths|subscription_paths|topic_paths|record_paths|readable_paths|change_query_paths|change_policy_paths|dedup_paths|awe_paths|hierarchy_paths|search_paths|registrant_view_paths|intake_view_paths
+IMPLEMENTED_PATHS=IMPLEMENTED_PATHS|decision_paths
+IMPLEMENTED_PATHS=IMPLEMENTED_PATHS|operation_paths|detail_paths
+IMPLEMENTED_PATHS=IMPLEMENTED_PATHS|admission_paths|HEALTH_PATHS
+IMPLEMENTED_PATHS=IMPLEMENTED_PATHS|workflow_paths
+IMPLEMENTED_PATHS=IMPLEMENTED_PATHS|creation_paths
+IMPLEMENTED_PATHS=IMPLEMENTED_PATHS|intake_write_paths
+IMPLEMENTED_PATHS=IMPLEMENTED_PATHS|ingest_admission_paths
+IMPLEMENTED_PATHS=IMPLEMENTED_PATHS|registrant_auth_paths
+IMPLEMENTED_PATHS=IMPLEMENTED_PATHS|approval_paths|{WEBHOOK_PATH}
+
+def create_candidate(engine,iam_url,allowed_origins,storage,awe_url=None,workflow_settings=None,master_data_settings=None,geo_hierarchy=None,partner_settings=None,registrant_auth_settings=None,webhook_settings=None):
+    if not (engine.url.database or '').startswith('kdbt_registry_candidate_'):
+        raise ValueError('Candidate factory cannot target a production database')
+    if storage is None:raise ValueError('Isolated document storage is required')
+    if not awe_url:raise ValueError('Explicit approval engine URL is required for the assembled candidate')
+    store=RegistryApprovalWebhookStore(engine,storage,awe_client=ApprovalEngineClient(awe_url),workflow_settings=workflow_settings,master_codes=MasterCodeClient(master_data_settings) if master_data_settings else None,geo_hierarchy=geo_hierarchy,partner_client=RegistryPartnerClient(partner_settings) if partner_settings else None,registrant_auth_settings=registrant_auth_settings,webhook_settings=webhook_settings);store.initialize()
+    audit=RegistryHttpAudit(engine);audit.initialize()
+    authorizer=RegistryConsoleAuthorizer(iam_url,allowed_origins=allowed_origins)
+    app=create_app(store,IMPLEMENTED_PATHS-HEALTH_PATHS-{CALLBACK_PATH,WEBHOOK_PATH},authorizer,audit)
+    install_health(app)
+    install_registrant_callback(app,store,audit)
+    install_approval_webhook(app,store,audit)
+    app.state.registry_candidate=True
+    return app

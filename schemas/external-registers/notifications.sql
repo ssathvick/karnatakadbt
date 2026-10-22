@@ -1,0 +1,3 @@
+-- KarnatakaDBT simulation schema 1.0.0; not a government production DDL
+CREATE TABLE deliveries(message_id TEXT PRIMARY KEY, run_id TEXT NOT NULL, household_ref TEXT NOT NULL, template TEXT NOT NULL, status TEXT NOT NULL CHECK(status='simulated_delivered'), at TEXT NOT NULL);
+ CREATE TABLE grievances(case_id TEXT PRIMARY KEY, run_id TEXT UNIQUE NOT NULL, household_ref TEXT NOT NULL, reason TEXT NOT NULL, status TEXT NOT NULL CHECK(status IN ('open','resolved')), at TEXT NOT NULL);

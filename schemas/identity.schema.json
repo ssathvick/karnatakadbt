@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LOCAL SIMULATION identity",
+  "type": "object",
+  "properties": {
+    "verified": {
+      "type": "boolean"
+    },
+    "identity_reference": {
+      "type": "string"
+    },
+    "consent_reference": {
+      "type": "string"
+    },
+    "synthetic": {
+      "type": "boolean",
+      "enum": [
+        true
+      ]
+    }
+  },
+  "required": [
+    "verified",
+    "identity_reference",
+    "consent_reference",
+    "synthetic"
+  ]
+}

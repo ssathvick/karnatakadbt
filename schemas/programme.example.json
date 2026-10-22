@@ -1,0 +1,7 @@
+{
+  "programme_reference": "SIM-CASH-TRANSFER",
+  "amount_minor": 2500000,
+  "currency": "INR",
+  "eligible": true,
+  "synthetic": true
+}

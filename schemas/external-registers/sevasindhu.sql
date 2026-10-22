@@ -1,0 +1,2 @@
+-- KarnatakaDBT simulation schema 1.0.0; not a government production DDL
+CREATE TABLE service_applications(application_id TEXT PRIMARY KEY, household_ref TEXT UNIQUE NOT NULL, service_code TEXT NOT NULL, status TEXT NOT NULL CHECK(status IN ('submitted','approved','returned')), source_updated_at TEXT NOT NULL);

@@ -1,0 +1,15 @@
+fastapi==0.143.3
+uvicorn==0.54.0
+SQLAlchemy==2.0.54
+alembic==1.20.0
+a2wsgi==1.10.10
+httpx==0.28.1
+psycopg2-binary==2.9.13
+PyJWT[crypto]==2.15.1
+PyYAML==6.0.3
+pydantic==2.14.1
+Pillow==12.3.0
+filetype==1.2.0
+minio==7.2.20
+python-multipart==0.0.32
+redis==5.2.1

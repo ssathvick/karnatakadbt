@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:education:1.0.0",
+  "title": "Education and SSP register local database response",
+  "description": "Public service description; simulated tables and API. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "students": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "student_id": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "person_id": {
+            "type": "string"
+          },
+          "institution_id": {
+            "type": "string"
+          },
+          "academic_year": {
+            "type": "string"
+          },
+          "course": {
+            "type": "string"
+          },
+          "enrolment_status": {
+            "type": "string"
+          },
+          "scholarship_status": {
+            "type": "string"
+          },
+          "source_updated_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "student_id",
+          "household_ref",
+          "person_id",
+          "institution_id",
+          "academic_year",
+          "course",
+          "enrolment_status",
+          "scholarship_status",
+          "source_updated_at"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

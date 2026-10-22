@@ -1,0 +1,22 @@
+{
+  "farmers": [
+    {
+      "farmer_id": "SIM-FARMER-SIM-FAM-a41c89e27965",
+      "household_ref": "KA-DEMO-HH-001",
+      "person_id": "SIM-PER-b93ee8775afc2a",
+      "family_id": "SIM-FAM-a41c89e27965",
+      "registration_status": "active",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    }
+  ],
+  "crops": [
+    {
+      "crop_id": "SIM-CROP-SIM-FAM-a41c89e27965",
+      "farmer_id": "SIM-FARMER-SIM-FAM-a41c89e27965",
+      "parcel_id": "SIM-PARCEL-SIM-FAM-a41c89e27965",
+      "season": "Kharif 2026",
+      "crop_name": "Rice",
+      "area_hectares": 0.5
+    }
+  ]
+}

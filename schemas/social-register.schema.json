@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LOCAL SIMULATION social-register",
+  "type": "object",
+  "properties": {
+    "household_reference": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "members": {
+      "type": "integer"
+    },
+    "eligible": {
+      "type": "boolean"
+    },
+    "synthetic": {
+      "type": "boolean",
+      "enum": [
+        true
+      ]
+    }
+  },
+  "required": [
+    "household_reference",
+    "state",
+    "members",
+    "eligible",
+    "synthetic"
+  ]
+}

@@ -1,0 +1,4 @@
+# Extra dependency for the isolated registry candidate; no ERP framework.
+jsonpath-ng==1.8.0
+PyJWT[crypto]==2.15.1
+cryptography==50.0.2

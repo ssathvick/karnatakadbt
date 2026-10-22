@@ -1,0 +1,1776 @@
+{
+  "version": "1.0.0",
+  "synthetic": true,
+  "production_schema": false,
+  "public_standards": [
+    {
+      "name": "MDDS generic person and location domains",
+      "url": "https://docs.apisetu.gov.in/document-central/mdds/",
+      "use": "Conceptual guidance only; local column names and project codes are simulated"
+    },
+    {
+      "name": "DigiLocker generic certificate XML structure",
+      "url": "https://docs.apisetu.gov.in/document-central/dl-xml-format/XML%20Format.html",
+      "use": "Explicit field mappings in XML_MAPPINGS; no signature or production issuer API implemented"
+    }
+  ],
+  "document_xml_mappings": {
+    "document_id": "Certificate/@number",
+    "document_type": "Certificate/@type",
+    "issued_on": "Certificate/@issueDate (ISO date stored locally; DD-MM-YYYY on XML output)",
+    "expiry_date": "Certificate/@expiryDate",
+    "status": "Certificate/@status",
+    "issuer_name": "Certificate/IssuedBy/Organization/@name",
+    "holder_name": "Certificate/IssuedTo/Person/@name"
+  },
+  "sources": [
+    {
+      "id": "kutumba",
+      "name": "Kutumba family register",
+      "owner": "Centre for e Governance",
+      "url": "https://negd.gov.in/isl/Directory/statedata/403",
+      "classification": "Public domain description; simulated tables and API",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "families",
+          "sql": "CREATE TABLE families(family_id TEXT PRIMARY KEY, household_ref TEXT UNIQUE NOT NULL, household_name TEXT NOT NULL, district_id TEXT NOT NULL, address_line TEXT NOT NULL, monthly_income_inr INTEGER NOT NULL CHECK(monthly_income_inr>=0), status TEXT NOT NULL CHECK(status IN ('active','inactive')), source_updated_at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "family_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "household_name",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "district_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "address_line",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "monthly_income_inr",
+              "type": "INTEGER",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "source_updated_at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 1240
+        },
+        {
+          "name": "members",
+          "sql": "CREATE TABLE members(person_id TEXT PRIMARY KEY, family_id TEXT NOT NULL REFERENCES families(family_id), platform_member_ref TEXT UNIQUE NOT NULL, given_name TEXT NOT NULL, family_name TEXT NOT NULL, birth_date TEXT NOT NULL, gender TEXT NOT NULL, relationship TEXT NOT NULL, identity_token TEXT UNIQUE NOT NULL, source_updated_at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "person_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "family_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "platform_member_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "given_name",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "family_name",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "birth_date",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "gender",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "relationship",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "identity_token",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "source_updated_at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "families",
+              "from": "family_id",
+              "to": "family_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "count": 3720
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "ahara",
+      "name": "AHARA ration register",
+      "owner": "Food Civil Supplies and Consumer Affairs",
+      "url": "https://nfsa.gov.in/State/KA",
+      "classification": "Public service description; simulated tables and API",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "card_members",
+          "sql": "CREATE TABLE card_members(card_id TEXT NOT NULL REFERENCES ration_cards(card_id), person_id TEXT NOT NULL, PRIMARY KEY(card_id,person_id))",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "card_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "person_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 2
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "ration_cards",
+              "from": "card_id",
+              "to": "card_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "count": 3720
+        },
+        {
+          "name": "ration_cards",
+          "sql": "CREATE TABLE ration_cards(card_id TEXT PRIMARY KEY, household_ref TEXT UNIQUE NOT NULL, family_id TEXT NOT NULL, category TEXT NOT NULL CHECK(category IN ('PHH','AAY','NPHH')), status TEXT NOT NULL CHECK(status IN ('active','inactive')), district_id TEXT NOT NULL, source_updated_at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "card_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "family_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "category",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "district_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "source_updated_at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 1240
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "revenue",
+      "name": "Nadakacheri certificate register",
+      "owner": "Revenue Department",
+      "url": "https://bagalkot.nic.in/en/service/nadakacheri-ajsk/",
+      "classification": "Public service description; simulated tables and API",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "certificates",
+          "sql": "CREATE TABLE certificates(certificate_id TEXT PRIMARY KEY, household_ref TEXT NOT NULL, person_id TEXT NOT NULL, certificate_type TEXT NOT NULL CHECK(certificate_type IN ('income','residence')), annual_income_inr INTEGER CHECK(annual_income_inr>=0), issued_on TEXT NOT NULL, valid_until TEXT NOT NULL, status TEXT NOT NULL CHECK(status IN ('active','revoked','expired')), source_updated_at TEXT NOT NULL, UNIQUE(household_ref,certificate_type))",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "certificate_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "person_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "certificate_type",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "annual_income_inr",
+              "type": "INTEGER",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "issued_on",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "valid_until",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "source_updated_at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 2480
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "fruits",
+      "name": "FRUITS farmer register",
+      "owner": "Agriculture and allied departments",
+      "url": "https://amritmahotsav.negd.in/presentation/FRUITS-Rajeev%20Chawla,%20Additional%20Secretary,%20eGovernance,%20Karnataka.pdf",
+      "classification": "Published field domains; simulated tables and API",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "crops",
+          "sql": "CREATE TABLE crops(crop_id TEXT PRIMARY KEY, farmer_id TEXT NOT NULL REFERENCES farmers(farmer_id), parcel_id TEXT NOT NULL, season TEXT NOT NULL, crop_name TEXT NOT NULL, area_hectares REAL NOT NULL CHECK(area_hectares>0))",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "crop_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "farmer_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "parcel_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "season",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "crop_name",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "area_hectares",
+              "type": "REAL",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "farmers",
+              "from": "farmer_id",
+              "to": "farmer_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "count": 827
+        },
+        {
+          "name": "farmers",
+          "sql": "CREATE TABLE farmers(farmer_id TEXT PRIMARY KEY, household_ref TEXT UNIQUE NOT NULL, person_id TEXT NOT NULL, family_id TEXT NOT NULL, registration_status TEXT NOT NULL CHECK(registration_status IN ('active','inactive')), source_updated_at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "farmer_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "person_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "family_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "registration_status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "source_updated_at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 827
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "bhoomi",
+      "name": "Bhoomi land register",
+      "owner": "Revenue Department",
+      "url": "https://bengaluruurban.nic.in/en/bhoomi/",
+      "classification": "Public service description; simulated tables and API",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "parcels",
+          "sql": "CREATE TABLE parcels(parcel_id TEXT PRIMARY KEY, household_ref TEXT NOT NULL, district_id TEXT NOT NULL, village_code TEXT NOT NULL, survey_number TEXT NOT NULL, extent_hectares REAL NOT NULL CHECK(extent_hectares>0), owner_person_id TEXT NOT NULL, mutation_status TEXT NOT NULL CHECK(mutation_status IN ('clear','pending')), source_updated_at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "parcel_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "district_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "village_code",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "survey_number",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "extent_hectares",
+              "type": "REAL",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "owner_person_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "mutation_status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "source_updated_at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 827
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "ejanma",
+      "name": "eJanMa life events",
+      "owner": "Birth and death registration authorities",
+      "url": "https://informatics.nic.in/files/websites/january-2025/karnatakas-eJanma-revolutionizes-issuance-of-digitally-signed-birth-and-death-certificates.php",
+      "classification": "Public service description; simulated tables and API",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "life_events",
+          "sql": "CREATE TABLE life_events(event_id TEXT PRIMARY KEY, household_ref TEXT NOT NULL, person_id TEXT UNIQUE NOT NULL, birth_date TEXT NOT NULL, death_date TEXT, registration_status TEXT NOT NULL CHECK(registration_status IN ('registered','under_review')), source_updated_at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "event_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "person_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "birth_date",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "death_date",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "registration_status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "source_updated_at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 3720
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "education",
+      "name": "Education and SSP register",
+      "owner": "Education and scholarship departments",
+      "url": "https://www.nic.gov.in/state-content/karnataka/",
+      "classification": "Public service description; simulated tables and API",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "students",
+          "sql": "CREATE TABLE students(student_id TEXT PRIMARY KEY, household_ref TEXT NOT NULL, person_id TEXT UNIQUE NOT NULL, institution_id TEXT NOT NULL, academic_year TEXT NOT NULL, course TEXT NOT NULL, enrolment_status TEXT NOT NULL CHECK(enrolment_status IN ('active','inactive')), scholarship_status TEXT NOT NULL CHECK(scholarship_status IN ('none','sanctioned','paid')), source_updated_at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "student_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "person_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "institution_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "academic_year",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "course",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "enrolment_status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "scholarship_status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "source_updated_at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 2480
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "sevasindhu",
+      "name": "Seva Sindhu applications",
+      "owner": "Service owning departments and platform team",
+      "url": "https://www.nic.gov.in/state-content/karnataka/",
+      "classification": "Public service description; simulated tables and API",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "service_applications",
+          "sql": "CREATE TABLE service_applications(application_id TEXT PRIMARY KEY, household_ref TEXT UNIQUE NOT NULL, service_code TEXT NOT NULL, status TEXT NOT NULL CHECK(status IN ('submitted','approved','returned')), source_updated_at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "application_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "service_code",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "source_updated_at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 1240
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "geography",
+      "name": "Location master",
+      "owner": "LGD and state location custodians",
+      "url": "https://lgdirectory.gov.in/",
+      "classification": "Published code domains; project codes are synthetic, official LGD mappings unset",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "districts",
+          "sql": "CREATE TABLE districts(district_id TEXT PRIMARY KEY, name TEXT UNIQUE NOT NULL, division TEXT NOT NULL, official_lgd_code TEXT, code_status TEXT NOT NULL CHECK(code_status='synthetic_project_code'))",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "district_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "name",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "division",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "official_lgd_code",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "code_status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 31
+        },
+        {
+          "name": "locations",
+          "sql": "CREATE TABLE locations(location_id TEXT PRIMARY KEY, household_ref TEXT UNIQUE NOT NULL, district_id TEXT NOT NULL REFERENCES districts(district_id), village_code TEXT NOT NULL, latitude REAL CHECK(latitude BETWEEN -90 AND 90), longitude REAL CHECK(longitude BETWEEN -180 AND 180), coordinate_source TEXT NOT NULL, verified INTEGER NOT NULL CHECK(verified IN (0,1)), CHECK((latitude IS NULL)=(longitude IS NULL)))",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "location_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "district_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "village_code",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "latitude",
+              "type": "REAL",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "longitude",
+              "type": "REAL",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "coordinate_source",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "verified",
+              "type": "INTEGER",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "districts",
+              "from": "district_id",
+              "to": "district_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "count": 1240
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "identity",
+      "name": "Identity verification simulator",
+      "owner": "Authorised identity provider for future onboarding",
+      "url": "https://uidai.gov.in/en/ecosystem/authentication-devices-documents/requesting-agency.html",
+      "classification": "Local tokens only; no Aadhaar numbers, biometrics or authentication",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "verifications",
+          "sql": "CREATE TABLE verifications(identity_token TEXT PRIMARY KEY, household_ref TEXT NOT NULL, person_id TEXT UNIQUE NOT NULL, name TEXT NOT NULL, birth_date TEXT NOT NULL, status TEXT NOT NULL CHECK(status IN ('verified','mismatch','unavailable')), source_updated_at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "identity_token",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "person_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "name",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "birth_date",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "source_updated_at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 3720
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "documents",
+      "name": "Document verification simulator",
+      "owner": "Document issuers via approved DigiLocker route",
+      "url": "https://docs.apisetu.gov.in/document-central/dl-xml-format/XML%20Format.html",
+      "classification": "Published XML field mappings; local SQL and JSON API are simulated; no digital signatures",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "documents",
+          "sql": "CREATE TABLE documents(document_id TEXT PRIMARY KEY, household_ref TEXT NOT NULL, person_id TEXT NOT NULL, certificate_id TEXT NOT NULL, document_type TEXT NOT NULL, issuer_name TEXT NOT NULL, holder_name TEXT NOT NULL, issued_on TEXT NOT NULL, expiry_date TEXT NOT NULL, status TEXT NOT NULL CHECK(status IN ('A','E','R','S')), signature_status TEXT NOT NULL CHECK(signature_status='unsigned_simulation'), source_updated_at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "document_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "person_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "certificate_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "document_type",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "issuer_name",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "holder_name",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "issued_on",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "expiry_date",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "signature_status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 11,
+              "name": "source_updated_at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 2480
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "schemes",
+      "name": "Scheme and sanction register",
+      "owner": "Sponsoring scheme department",
+      "url": "https://negd.gov.in/isl/Directory/statedata/403",
+      "classification": "Demonstration rules and sanctions, not official scheme criteria",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "sanctions",
+          "sql": "CREATE TABLE sanctions(sanction_id TEXT PRIMARY KEY, run_id TEXT UNIQUE NOT NULL, household_ref TEXT NOT NULL, scheme_id TEXT NOT NULL REFERENCES schemes(scheme_id), cycle TEXT NOT NULL, amount_minor INTEGER NOT NULL CHECK(amount_minor>0), status TEXT NOT NULL CHECK(status='sanctioned'), UNIQUE(household_ref,scheme_id,cycle))",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "sanction_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "run_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "scheme_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "cycle",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "amount_minor",
+              "type": "INTEGER",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "schemes",
+              "from": "scheme_id",
+              "to": "scheme_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "count": 0
+        },
+        {
+          "name": "schemes",
+          "sql": "CREATE TABLE schemes(scheme_id TEXT PRIMARY KEY, name TEXT NOT NULL, rule_version TEXT NOT NULL, audience TEXT NOT NULL CHECK(audience IN ('household','farmer','student')), monthly_income_ceiling_inr INTEGER NOT NULL CHECK(monthly_income_ceiling_inr>=0), benefit_minor INTEGER NOT NULL CHECK(benefit_minor>0), currency TEXT NOT NULL CHECK(currency='INR'), required_sources TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "scheme_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "name",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "rule_version",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "audience",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "monthly_income_ceiling_inr",
+              "type": "INTEGER",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "benefit_minor",
+              "type": "INTEGER",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "currency",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "required_sources",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 3
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "treasury",
+      "name": "Treasury funding simulator",
+      "owner": "Finance and authorised treasury team",
+      "url": "https://www.nic.gov.in/state-content/karnataka/",
+      "classification": "Local funding model, not a treasury contract",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "budgets",
+          "sql": "CREATE TABLE budgets(scheme_id TEXT PRIMARY KEY, available_minor INTEGER NOT NULL CHECK(available_minor>=0), currency TEXT NOT NULL CHECK(currency='INR'))",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "scheme_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "available_minor",
+              "type": "INTEGER",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "currency",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 3
+        },
+        {
+          "name": "reservations",
+          "sql": "CREATE TABLE reservations(reservation_id TEXT PRIMARY KEY, run_id TEXT UNIQUE NOT NULL, scheme_id TEXT NOT NULL REFERENCES budgets(scheme_id), amount_minor INTEGER NOT NULL CHECK(amount_minor>0), status TEXT NOT NULL CHECK(status IN ('reserved','spent','released')))",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "reservation_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "run_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "scheme_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "amount_minor",
+              "type": "INTEGER",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "budgets",
+              "from": "scheme_id",
+              "to": "scheme_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "count": 0
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "bank",
+      "name": "State DBT and bank simulator",
+      "owner": "Authorised state DBT and bank route",
+      "url": "https://www.nic.gov.in/state-content/karnataka/",
+      "classification": "Local accounts, instructions and settlement model, not a financial API",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "accounts",
+          "sql": "CREATE TABLE accounts(account_token TEXT PRIMARY KEY, household_ref TEXT UNIQUE NOT NULL, holder_person_id TEXT NOT NULL, validation_status TEXT NOT NULL CHECK(validation_status IN ('valid','invalid')), routing_code TEXT NOT NULL CHECK(routing_code='SIMULATED'), source_updated_at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "account_token",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "holder_person_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "validation_status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "routing_code",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "source_updated_at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 1240
+        },
+        {
+          "name": "instructions",
+          "sql": "CREATE TABLE instructions(instruction_id TEXT PRIMARY KEY, run_id TEXT UNIQUE NOT NULL, account_token TEXT NOT NULL REFERENCES accounts(account_token), sanction_id TEXT UNIQUE NOT NULL, amount_minor INTEGER NOT NULL CHECK(amount_minor>0), status TEXT NOT NULL CHECK(status IN ('accepted','settled','failed','reversed')))",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "instruction_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "run_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "account_token",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "sanction_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "amount_minor",
+              "type": "INTEGER",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "accounts",
+              "from": "account_token",
+              "to": "account_token",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "count": 0
+        },
+        {
+          "name": "settlements",
+          "sql": "CREATE TABLE settlements(settlement_id TEXT PRIMARY KEY, instruction_id TEXT UNIQUE NOT NULL REFERENCES instructions(instruction_id), amount_minor INTEGER NOT NULL CHECK(amount_minor>=0), status TEXT NOT NULL CHECK(status IN ('settled','failed','reversed')), received_at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "settlement_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "instruction_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "amount_minor",
+              "type": "INTEGER",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "received_at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "instructions",
+              "from": "instruction_id",
+              "to": "instruction_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "count": 0
+        }
+      ],
+      "synthetic": true
+    },
+    {
+      "id": "notifications",
+      "name": "Notification and grievance simulator",
+      "owner": "Programme support team",
+      "url": "https://negd.gov.in/isl/Directory/statedata/403",
+      "classification": "Local delivery and case model; no external messages",
+      "version": "1.0.0",
+      "tables": [
+        {
+          "name": "deliveries",
+          "sql": "CREATE TABLE deliveries(message_id TEXT PRIMARY KEY, run_id TEXT NOT NULL, household_ref TEXT NOT NULL, template TEXT NOT NULL, status TEXT NOT NULL CHECK(status='simulated_delivered'), at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "message_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "run_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "template",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 0
+        },
+        {
+          "name": "grievances",
+          "sql": "CREATE TABLE grievances(case_id TEXT PRIMARY KEY, run_id TEXT UNIQUE NOT NULL, household_ref TEXT NOT NULL, reason TEXT NOT NULL, status TEXT NOT NULL CHECK(status IN ('open','resolved')), at TEXT NOT NULL)",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "case_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "dflt_value": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "run_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "household_ref",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "reason",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "status",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "at",
+              "type": "TEXT",
+              "notnull": 1,
+              "dflt_value": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "count": 0
+        }
+      ],
+      "synthetic": true
+    }
+  ],
+  "pending_department_confirmation": [
+    "Actual field names, types and permitted scope",
+    "Current production OpenAPI or XSD and version",
+    "Identifier matching and code lists",
+    "Authentication, network and refresh contract",
+    "Signed financial callback and reconciliation contract"
+  ]
+}

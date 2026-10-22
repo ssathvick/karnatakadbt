@@ -1,0 +1,31 @@
+{
+  "life_events": [
+    {
+      "event_id": "SIM-EVENT-SIM-PER-b93ee8775afc2a",
+      "household_ref": "KA-DEMO-HH-001",
+      "person_id": "SIM-PER-b93ee8775afc2a",
+      "birth_date": "1988-04-12",
+      "death_date": null,
+      "registration_status": "registered",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    },
+    {
+      "event_id": "SIM-EVENT-SIM-PER-5b6a6333f65b3e",
+      "household_ref": "KA-DEMO-HH-001",
+      "person_id": "SIM-PER-5b6a6333f65b3e",
+      "birth_date": "2012-08-05",
+      "death_date": null,
+      "registration_status": "registered",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    },
+    {
+      "event_id": "SIM-EVENT-SIM-PER-c7d531b54314e1",
+      "household_ref": "KA-DEMO-HH-001",
+      "person_id": "SIM-PER-c7d531b54314e1",
+      "birth_date": "2016-02-20",
+      "death_date": null,
+      "registration_status": "registered",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    }
+  ]
+}

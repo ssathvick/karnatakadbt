@@ -1,0 +1,23 @@
+{
+  "districts": [
+    {
+      "district_id": "KA-D01",
+      "name": "Bagalkote",
+      "division": "Belagavi",
+      "official_lgd_code": null,
+      "code_status": "synthetic_project_code"
+    }
+  ],
+  "locations": [
+    {
+      "location_id": "SIM-LOC-SIM-FAM-a41c89e27965",
+      "household_ref": "KA-DEMO-HH-001",
+      "district_id": "KA-D01",
+      "village_code": "SIM-VILLAGE-KA-D01-1",
+      "latitude": null,
+      "longitude": null,
+      "coordinate_source": "not_captured",
+      "verified": 0
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+engine,service,database,classification,tables,views,columns,foreign_keys,ddl_file
+PostgreSQL,commons-postgresql,audit_manager,application/support,4,0,60,0,ddl/postgresql/commons-postgresql/audit_manager.sql
+PostgreSQL,commons-postgresql,awe,application/support,12,0,123,11,ddl/postgresql/commons-postgresql/awe.sql
+PostgreSQL,commons-postgresql,bridge_db,application/support,14,0,223,0,ddl/postgresql/commons-postgresql/bridge_db.sql
+PostgreSQL,commons-postgresql,consent_manager,application/support,10,0,110,0,ddl/postgresql/commons-postgresql/consent_manager.sql
+PostgreSQL,commons-postgresql,dbt_analytics,application/support,3,0,19,0,ddl/postgresql/commons-postgresql/dbt_analytics.sql
+PostgreSQL,commons-postgresql,iam,application/support,6,0,67,0,ddl/postgresql/commons-postgresql/iam.sql
+PostgreSQL,commons-postgresql,inji_certify,application/support,12,0,141,1,ddl/postgresql/commons-postgresql/inji_certify.sql
+PostgreSQL,commons-postgresql,keycloak,application/support,92,0,515,74,ddl/postgresql/commons-postgresql/keycloak.sql
+PostgreSQL,commons-postgresql,master_data,application/support,6,0,55,0,ddl/postgresql/commons-postgresql/master_data.sql
+PostgreSQL,commons-postgresql,mosip_esignet,application/support,7,0,81,0,ddl/postgresql/commons-postgresql/mosip_esignet.sql
+PostgreSQL,commons-postgresql,mosip_keymgr,application/support,9,0,107,2,ddl/postgresql/commons-postgresql/mosip_keymgr.sql
+PostgreSQL,commons-postgresql,mosip_mockidentitysystem,application/support,5,0,44,0,ddl/postgresql/commons-postgresql/mosip_mockidentitysystem.sql
+PostgreSQL,commons-postgresql,odkdb,application/support,37,0,242,58,ddl/postgresql/commons-postgresql/odkdb.sql
+PostgreSQL,commons-postgresql,partner_management,application/support,4,0,49,0,ddl/postgresql/commons-postgresql/partner_management.sql
+PostgreSQL,commons-postgresql,postgres,maintenance,0,0,0,0,ddl/postgresql/commons-postgresql/postgres.sql
+PostgreSQL,commons-postgresql,register,application/support,96,2,1553,0,ddl/postgresql/commons-postgresql/register.sql
+PostgreSQL,commons-postgresql,register_idgenerator,application/support,3,0,12,0,ddl/postgresql/commons-postgresql/register_idgenerator.sql
+PostgreSQL,commons-postgresql,spar,application/support,5,0,40,0,ddl/postgresql/commons-postgresql/spar.sql
+PostgreSQL,commons-postgresql,superset,application/support,53,0,493,109,ddl/postgresql/commons-postgresql/superset.sql
+PostgreSQL,pbms-postgresql,bgtaskdb,application/support,6,0,127,0,ddl/postgresql/pbms-postgresql/bgtaskdb.sql
+PostgreSQL,pbms-postgresql,pbmsdb,application/support,282,0,3002,841,ddl/postgresql/pbms-postgresql/pbmsdb.sql
+PostgreSQL,pbms-postgresql,postgres,maintenance,0,0,0,0,ddl/postgresql/pbms-postgresql/postgres.sql
+PostgreSQL,registry-postgresql,odkdb,application/support,0,0,0,0,ddl/postgresql/registry-postgresql/odkdb.sql
+PostgreSQL,registry-postgresql,postgres,maintenance,0,0,0,0,ddl/postgresql/registry-postgresql/postgres.sql
+PostgreSQL,registry-postgresql,socialregistrydb,application/support,234,4,2302,702,ddl/postgresql/registry-postgresql/socialregistrydb.sql
+PostgreSQL,registry-postgresql,superset,application/support,0,0,0,0,ddl/postgresql/registry-postgresql/superset.sql
+PostgreSQL,example-bank-postgresql,example_bank_db,application/support,6,0,86,0,ddl/postgresql/example-bank-postgresql/example_bank_db.sql
+PostgreSQL,example-bank-postgresql,postgres,maintenance,0,0,0,0,ddl/postgresql/example-bank-postgresql/postgres.sql
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,application/support,488,2,5120,1683,ddl/postgresql/portal-backend-postgresql/portalpbmsdb.sql
+PostgreSQL,portal-backend-postgresql,postgres,maintenance,0,0,0,0,ddl/postgresql/portal-backend-postgresql/postgres.sql
+SQLite,registration,intake.sqlite,custom sandbox extension,13,0,91,0,ddl/sqlite/intake.sql
+SQLite,registration,partner-simulation.sqlite,custom sandbox extension,3,0,20,2,ddl/sqlite/partner-simulation.sql

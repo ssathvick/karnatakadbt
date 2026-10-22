@@ -1,0 +1,6 @@
+# Extra dependencies for the native candidate's shared Python/API runtime.
+# No former approval-engine packages.
+json-logic-qubit==0.9.1
+six==1.17.0
+PyJWT[crypto]==2.15.1
+cryptography==50.0.2

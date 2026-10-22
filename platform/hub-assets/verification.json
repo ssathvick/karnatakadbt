@@ -1,0 +1,114 @@
+[
+  {
+    "module": "intake",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "localhost:8443/registration/"
+  },
+  {
+    "module": "review",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "localhost:8443/registration/workspace"
+  },
+  {
+    "module": "register",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "localhost:8446/en"
+  },
+  {
+    "module": "registry",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "registry.localhost:8443/web/login"
+  },
+  {
+    "module": "beneficiary",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "beneficiary.localhost:8443/selfservice/en"
+  },
+  {
+    "module": "pbms",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "pbms.localhost:8443/web/login"
+  },
+  {
+    "module": "awe",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "localhost:8452/"
+  },
+  {
+    "module": "portal-admin",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "portal-admin.localhost:8443/web/login"
+  },
+  {
+    "module": "odk",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "odk.localhost:8443/"
+  },
+  {
+    "module": "geography",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "localhost:8444/realms/staff/protocol/openid-connect/auth"
+  },
+  {
+    "module": "superset",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "superset.localhost:8443/login/"
+  },
+  {
+    "module": "master-data-ui",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "localhost:8447/en"
+  },
+  {
+    "module": "partner-management",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "localhost:8448/"
+  },
+  {
+    "module": "consent-manager",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "localhost:8449/"
+  },
+  {
+    "module": "staff-portal",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "localhost:8451/en"
+  },
+  {
+    "module": "iam-staff-ui",
+    "status": 200,
+    "html": true,
+    "ux_assets": true,
+    "destination": "localhost:8445/en"
+  }
+]

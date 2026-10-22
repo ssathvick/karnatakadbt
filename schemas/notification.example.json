@@ -1,0 +1,5 @@
+{
+  "delivery_status": "simulated_delivered",
+  "channel": "simulated_sms",
+  "synthetic": true
+}

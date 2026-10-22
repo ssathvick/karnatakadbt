@@ -1,0 +1,1420 @@
+engine,service,database,schema,table_or_view,type,internal,comment
+PostgreSQL,commons-postgresql,audit_manager,public,audit_events,partitioned table,False,
+PostgreSQL,commons-postgresql,audit_manager,public,audit_events_2026_10,table,False,
+PostgreSQL,commons-postgresql,audit_manager,public,audit_events_2026_11,table,False,
+PostgreSQL,commons-postgresql,audit_manager,public,audit_events_2026_12,table,False,
+PostgreSQL,commons-postgresql,awe,public,approval_decision,table,False,
+PostgreSQL,commons-postgresql,awe,public,approval_event,table,False,
+PostgreSQL,commons-postgresql,awe,public,approval_policy,table,False,
+PostgreSQL,commons-postgresql,awe,public,approval_request,table,False,
+PostgreSQL,commons-postgresql,awe,public,approval_stage,table,False,
+PostgreSQL,commons-postgresql,awe,public,approval_task,table,False,
+PostgreSQL,commons-postgresql,awe,public,approver_rule,table,False,
+PostgreSQL,commons-postgresql,awe,public,audit_action,table,False,
+PostgreSQL,commons-postgresql,awe,public,callback_secret,table,False,
+PostgreSQL,commons-postgresql,awe,public,idempotency_key,table,False,
+PostgreSQL,commons-postgresql,awe,public,user_delegation,table,False,
+PostgreSQL,commons-postgresql,awe,public,webhook_delivery,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,account_statement_lobs,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,account_statements,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,disbursement_batch_control,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,disbursement_batch_control_geo,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,disbursement_batch_control_geo_attributes,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,disbursement_envelopes,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,disbursement_error_recons,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,disbursement_recons,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,disbursement_resolution_financial_address,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,disbursement_resolution_geo_address,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,disbursements,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,envelope_batch_status_for_cash,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,envelope_control,table,False,
+PostgreSQL,commons-postgresql,bridge_db,public,notification_logs,table,False,
+PostgreSQL,commons-postgresql,consent_manager,public,audit_logs,table,False,
+PostgreSQL,commons-postgresql,consent_manager,public,auth_contexts,table,False,
+PostgreSQL,commons-postgresql,consent_manager,public,cm_awe_processed_events,table,False,
+PostgreSQL,commons-postgresql,consent_manager,public,consent_artefacts,table,False,
+PostgreSQL,commons-postgresql,consent_manager,public,consent_receipts,table,False,
+PostgreSQL,commons-postgresql,consent_manager,public,consent_requests,table,False,
+PostgreSQL,commons-postgresql,consent_manager,public,decision_logs,table,False,
+PostgreSQL,commons-postgresql,consent_manager,public,partner_policies,table,False,
+PostgreSQL,commons-postgresql,consent_manager,public,partners,table,False,
+PostgreSQL,commons-postgresql,consent_manager,public,revocation_records,table,False,
+PostgreSQL,commons-postgresql,dbt_analytics,public,aggregate_metrics,table,False,
+PostgreSQL,commons-postgresql,dbt_analytics,public,knowledge_daily_usage,table,False,
+PostgreSQL,commons-postgresql,dbt_analytics,public,knowledge_governance,table,False,
+PostgreSQL,commons-postgresql,iam,public,data_policies,table,False,
+PostgreSQL,commons-postgresql,iam,public,login_providers,table,False,
+PostgreSQL,commons-postgresql,iam,public,staff_application_permissions,table,False,
+PostgreSQL,commons-postgresql,iam,public,staff_portal_applications,table,False,
+PostgreSQL,commons-postgresql,iam,public,staff_role_permissions,table,False,
+PostgreSQL,commons-postgresql,iam,public,staff_roles,table,False,
+PostgreSQL,commons-postgresql,inji_certify,certify,ca_cert_store,table,False,
+PostgreSQL,commons-postgresql,inji_certify,certify,credential_config,table,False,
+PostgreSQL,commons-postgresql,inji_certify,certify,credential_status_transaction,table,False,
+PostgreSQL,commons-postgresql,inji_certify,certify,iar_session,table,False,
+PostgreSQL,commons-postgresql,inji_certify,certify,key_alias,table,False,
+PostgreSQL,commons-postgresql,inji_certify,certify,key_policy_def,table,False,
+PostgreSQL,commons-postgresql,inji_certify,certify,key_store,table,False,
+PostgreSQL,commons-postgresql,inji_certify,certify,ledger,table,False,
+PostgreSQL,commons-postgresql,inji_certify,certify,rendering_template,table,False,
+PostgreSQL,commons-postgresql,inji_certify,certify,shedlock,table,False,
+PostgreSQL,commons-postgresql,inji_certify,certify,status_list_available_indices,table,False,
+PostgreSQL,commons-postgresql,inji_certify,certify,status_list_credential,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,admin_event_entity,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,associated_policy,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,authentication_execution,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,authentication_flow,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,authenticator_config,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,authenticator_config_entry,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,broker_link,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_attributes,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_auth_flow_bindings,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_initial_access,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_node_registrations,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_scope,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_scope_attributes,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_scope_client,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_scope_role_mapping,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_session,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_session_auth_status,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_session_note,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_session_prot_mapper,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_session_role,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,client_user_session_note,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,component,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,component_config,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,composite_role,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,credential,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,databasechangelog,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,databasechangeloglock,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,default_client_scope,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,event_entity,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,fed_user_attribute,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,fed_user_consent,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,fed_user_consent_cl_scope,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,fed_user_credential,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,fed_user_group_membership,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,fed_user_required_action,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,fed_user_role_mapping,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,federated_identity,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,federated_user,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,group_attribute,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,group_role_mapping,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,identity_provider,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,identity_provider_config,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,identity_provider_mapper,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,idp_mapper_config,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,keycloak_group,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,keycloak_role,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,migration_model,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,offline_client_session,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,offline_user_session,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,policy_config,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,protocol_mapper,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,protocol_mapper_config,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,realm,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,realm_attribute,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,realm_default_groups,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,realm_enabled_event_types,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,realm_events_listeners,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,realm_localizations,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,realm_required_credential,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,realm_smtp_config,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,realm_supported_locales,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,redirect_uris,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,required_action_config,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,required_action_provider,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,resource_attribute,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,resource_policy,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,resource_scope,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,resource_server,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,resource_server_perm_ticket,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,resource_server_policy,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,resource_server_resource,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,resource_server_scope,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,resource_uris,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,role_attribute,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,scope_mapping,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,scope_policy,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,user_attribute,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,user_consent,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,user_consent_client_scope,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,user_entity,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,user_federation_config,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,user_federation_mapper,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,user_federation_mapper_config,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,user_federation_provider,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,user_group_membership,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,user_required_action,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,user_role_mapping,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,user_session,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,user_session_note,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,username_login_failure,table,False,
+PostgreSQL,commons-postgresql,keycloak,public,web_origins,table,False,
+PostgreSQL,commons-postgresql,master_data,public,dbt_attribute_values,table,False,
+PostgreSQL,commons-postgresql,master_data,public,dbt_attributes,table,False,
+PostgreSQL,commons-postgresql,master_data,public,dbt_geo_level_values,table,False,
+PostgreSQL,commons-postgresql,master_data,public,dbt_geo_levels,table,False,
+PostgreSQL,commons-postgresql,master_data,public,dbt_sample_households,table,False,
+PostgreSQL,commons-postgresql,master_data,public,dbt_sample_individuals,table,False,
+PostgreSQL,commons-postgresql,mosip_esignet,esignet,client_detail,table,False,Contains key alias and  metadata of all the keys used in MOSIP system.
+PostgreSQL,commons-postgresql,mosip_esignet,esignet,consent_detail,table,False,Contains user consent details
+PostgreSQL,commons-postgresql,mosip_esignet,esignet,consent_history,table,False,Contains user consent details
+PostgreSQL,commons-postgresql,mosip_esignet,esignet,key_alias,table,False,Contains key alias and  metadata of all the keys used in MOSIP system.
+PostgreSQL,commons-postgresql,mosip_esignet,esignet,key_policy_def,table,False,Key Policy Defination: Policy related to encryption key management is defined here. For eg. Expiry duration of a key generated.
+PostgreSQL,commons-postgresql,mosip_esignet,esignet,key_store,table,False,Stores Encryption (Base) private keys along with certificates
+PostgreSQL,commons-postgresql,mosip_esignet,esignet,public_key_registry,table,False,"Contains id_hash and their respective PSU Tokens,public keys and wallet binding ids."
+PostgreSQL,commons-postgresql,mosip_keymgr,keymgr,ca_cert_store,table,False,Certificate Authority Certificate Store: Store details of all the certificate provided by certificate authority which will be used by MOSIP
+PostgreSQL,commons-postgresql,mosip_keymgr,keymgr,data_encrypt_keystore,table,False,Data Encrypt Keystore: Table is used to store the encryption key aliases which is used encrypt the data stored in identity cache table store.
+PostgreSQL,commons-postgresql,mosip_keymgr,keymgr,key_alias,table,False,Contains key alias and  metadata of all the keys used in MOSIP system.
+PostgreSQL,commons-postgresql,mosip_keymgr,keymgr,key_policy_def,table,False,Key Policy Defination: Policy related to encryption key management is defined here. For eg. Expiry duration of a key generated.
+PostgreSQL,commons-postgresql,mosip_keymgr,keymgr,key_store,table,False,Stores Encryption (Base) private keys along with certificates
+PostgreSQL,commons-postgresql,mosip_keymgr,keymgr,licensekey_list,table,False,License Key : Holds list of license keys which will be used by TSPs
+PostgreSQL,commons-postgresql,mosip_keymgr,keymgr,licensekey_permission,table,False,Permissions: List of permissions associated with license key
+PostgreSQL,commons-postgresql,mosip_keymgr,keymgr,partner_cert_store,table,False,Partner Certificate Store: Store details of all the certificate provided by partners which will be used by MOSIP
+PostgreSQL,commons-postgresql,mosip_keymgr,keymgr,tsp_licensekey_map,table,False,TSP License keys : TSP and License key mapping
+PostgreSQL,commons-postgresql,mosip_mockidentitysystem,mockidentitysystem,key_alias,table,False,Contains key alias and  metadata of all the keys used in MOSIP system.
+PostgreSQL,commons-postgresql,mosip_mockidentitysystem,mockidentitysystem,key_policy_def,table,False,Key Policy Defination: Policy related to encryption key management is defined here. For eg. Expiry duration of a key generated.
+PostgreSQL,commons-postgresql,mosip_mockidentitysystem,mockidentitysystem,key_store,table,False,Stores Encryption (Base) private keys along with certificates
+PostgreSQL,commons-postgresql,mosip_mockidentitysystem,mockidentitysystem,kyc_auth,table,False,
+PostgreSQL,commons-postgresql,mosip_mockidentitysystem,mockidentitysystem,mock_identity,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,actees,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,actors,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,assignments,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,audits,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,blobs,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,client_audits,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,comments,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,config,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,dataset_form_defs,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,datasets,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,ds_properties,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,ds_property_fields,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,entities,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,entity_def_sources,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,entity_defs,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,entity_submission_backlog,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,field_keys,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,form_attachments,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,form_defs,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,form_field_values,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,form_fields,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,form_schemas,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,forms,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,keys,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,knex_migrations,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,knex_migrations_lock,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,projects,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,public_links,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,purged_entities,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,roles,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,sessions,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,submission_attachments,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,submission_defs,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,submissions,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,user_project_preferences,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,user_site_preferences,table,False,
+PostgreSQL,commons-postgresql,odkdb,public,users,table,False,
+PostgreSQL,commons-postgresql,partner_management,public,pm_audit_events,table,False,
+PostgreSQL,commons-postgresql,partner_management,public,pm_partner_keys,table,False,
+PostgreSQL,commons-postgresql,partner_management,public,pm_partner_requests,table,False,
+PostgreSQL,commons-postgresql,partner_management,public,pm_partners,table,False,
+PostgreSQL,commons-postgresql,register,public,awe_req_events,table,False,
+PostgreSQL,commons-postgresql,register,public,data_models,table,False,
+PostgreSQL,commons-postgresql,register,public,dedup_results_intake_forms_vs_intake_forms,table,False,
+PostgreSQL,commons-postgresql,register,public,dedup_results_intake_forms_vs_register,table,False,
+PostgreSQL,commons-postgresql,register,public,deduplication_change_request_results,table,False,
+PostgreSQL,commons-postgresql,register,public,deduplication_register_results,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_change_request_documents,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_completion_score_computation_queue,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_functional_id_generation_queue,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_input_mechanisms,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_definitions,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_household_assets,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_household_housing_and_services,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_household_programs,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_households,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_individual_disabilities,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_individual_land,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_individual_livelihoods,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_individual_livestock,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_individual_programs,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_individual_shocks,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_individual_vulnerability,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_individuals,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_submissions,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_ui_tab_sections,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_form_ui_tabs,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_intake_section_documents,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_change_request_payloads,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_change_requests,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_definitions,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_document_history,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_export_data_queue,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_history_household_assets,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_history_household_housing_and_services,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_history_household_programs,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_history_households,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_history_individual_disabilities,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_history_individual_land,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_history_individual_livelihoods,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_history_individual_livestock,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_history_individual_programs,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_history_individual_shocks,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_history_individual_vulnerability,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_history_individuals,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_household_assets,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_household_housing_and_services,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_household_programs,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_households,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_individual_disabilities,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_individual_land,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_individual_livelihoods,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_individual_livestock,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_individual_programs,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_individual_shocks,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_individual_vulnerability,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_individuals,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_schemas,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_score_contributing_attributes,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_score_definitions,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_score_history,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_scores,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_section_completion_score,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_section_documents,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_sections,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_ui_tab_sections,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_ui_tabs,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_register_verifications,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_registrant_authentication_providers,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_registrant_authentications,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_registry_awe_policy_configurations,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_registry_configuration,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_registry_data_policies,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_registry_documents,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_registry_import_file_configurations,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_registry_vc_configurations,table,False,
+PostgreSQL,commons-postgresql,register,public,dbt_score_compute_queue,table,False,
+PostgreSQL,commons-postgresql,register,public,import_file_process_log,table,False,
+PostgreSQL,commons-postgresql,register,public,import_file_process_queue,table,False,
+PostgreSQL,commons-postgresql,register,public,incoming_classified_data,table,False,
+PostgreSQL,commons-postgresql,register,public,incoming_enriched_transformed_data,table,False,
+PostgreSQL,commons-postgresql,register,public,incoming_model_key_paths,table,False,
+PostgreSQL,commons-postgresql,register,public,incoming_model_register_semantic_patterns,table,False,
+PostgreSQL,commons-postgresql,register,public,incoming_model_semantic_patterns,table,False,
+PostgreSQL,commons-postgresql,register,public,incoming_raw_data,table,False,
+PostgreSQL,commons-postgresql,register,public,incoming_raw_data_payloads,table,False,
+PostgreSQL,commons-postgresql,register,public,incoming_templates,table,False,
+PostgreSQL,commons-postgresql,register,public,ndbt_geography_areas,table,False,
+PostgreSQL,commons-postgresql,register,public,ndbt_geography_record_counts,view,False,
+PostgreSQL,commons-postgresql,register,public,ndbt_record_geography,view,False,
+PostgreSQL,commons-postgresql,register,public,outgoing_raw_data,table,False,
+PostgreSQL,commons-postgresql,register,public,outgoing_raw_data_payloads,table,False,
+PostgreSQL,commons-postgresql,register,public,outgoing_templates,table,False,
+PostgreSQL,commons-postgresql,register,public,outgoing_topics,table,False,
+PostgreSQL,commons-postgresql,register,public,outgoing_transformed_data_payloads,table,False,
+PostgreSQL,commons-postgresql,register,public,registry_languages,table,False,
+PostgreSQL,commons-postgresql,register,public,registry_theme_values,table,False,
+PostgreSQL,commons-postgresql,register,public,registry_themes,table,False,
+PostgreSQL,commons-postgresql,register,public,subscription_activity_logs,table,False,
+PostgreSQL,commons-postgresql,register_idgenerator,public,id_pool_farmer,table,False,
+PostgreSQL,commons-postgresql,register_idgenerator,public,id_pool_household,table,False,
+PostgreSQL,commons-postgresql,register_idgenerator,public,id_pool_individual,table,False,
+PostgreSQL,commons-postgresql,spar,public,banks,table,False,
+PostgreSQL,commons-postgresql,spar,public,branches,table,False,
+PostgreSQL,commons-postgresql,spar,public,id_fa_mappings,table,False,
+PostgreSQL,commons-postgresql,spar,public,strategy,table,False,
+PostgreSQL,commons-postgresql,spar,public,wallet_service_providers,table,False,
+PostgreSQL,commons-postgresql,superset,public,ab_permission,table,False,
+PostgreSQL,commons-postgresql,superset,public,ab_permission_view,table,False,
+PostgreSQL,commons-postgresql,superset,public,ab_permission_view_role,table,False,
+PostgreSQL,commons-postgresql,superset,public,ab_register_user,table,False,
+PostgreSQL,commons-postgresql,superset,public,ab_role,table,False,
+PostgreSQL,commons-postgresql,superset,public,ab_user,table,False,
+PostgreSQL,commons-postgresql,superset,public,ab_user_role,table,False,
+PostgreSQL,commons-postgresql,superset,public,ab_view_menu,table,False,
+PostgreSQL,commons-postgresql,superset,public,alembic_version,table,False,
+PostgreSQL,commons-postgresql,superset,public,annotation,table,False,
+PostgreSQL,commons-postgresql,superset,public,annotation_layer,table,False,
+PostgreSQL,commons-postgresql,superset,public,cache_keys,table,False,
+PostgreSQL,commons-postgresql,superset,public,css_templates,table,False,
+PostgreSQL,commons-postgresql,superset,public,dashboard_roles,table,False,
+PostgreSQL,commons-postgresql,superset,public,dashboard_slices,table,False,
+PostgreSQL,commons-postgresql,superset,public,dashboard_user,table,False,
+PostgreSQL,commons-postgresql,superset,public,dashboards,table,False,
+PostgreSQL,commons-postgresql,superset,public,dbs,table,False,
+PostgreSQL,commons-postgresql,superset,public,dynamic_plugin,table,False,
+PostgreSQL,commons-postgresql,superset,public,embedded_dashboards,table,False,
+PostgreSQL,commons-postgresql,superset,public,favstar,table,False,
+PostgreSQL,commons-postgresql,superset,public,key_value,table,False,
+PostgreSQL,commons-postgresql,superset,public,keyvalue,table,False,
+PostgreSQL,commons-postgresql,superset,public,logs,table,False,
+PostgreSQL,commons-postgresql,superset,public,query,table,False,
+PostgreSQL,commons-postgresql,superset,public,report_execution_log,table,False,
+PostgreSQL,commons-postgresql,superset,public,report_recipient,table,False,
+PostgreSQL,commons-postgresql,superset,public,report_schedule,table,False,
+PostgreSQL,commons-postgresql,superset,public,report_schedule_user,table,False,
+PostgreSQL,commons-postgresql,superset,public,rls_filter_roles,table,False,
+PostgreSQL,commons-postgresql,superset,public,rls_filter_tables,table,False,
+PostgreSQL,commons-postgresql,superset,public,row_level_security_filters,table,False,
+PostgreSQL,commons-postgresql,superset,public,saved_query,table,False,
+PostgreSQL,commons-postgresql,superset,public,sl_columns,table,False,
+PostgreSQL,commons-postgresql,superset,public,sl_dataset_columns,table,False,
+PostgreSQL,commons-postgresql,superset,public,sl_dataset_tables,table,False,
+PostgreSQL,commons-postgresql,superset,public,sl_dataset_users,table,False,
+PostgreSQL,commons-postgresql,superset,public,sl_datasets,table,False,
+PostgreSQL,commons-postgresql,superset,public,sl_table_columns,table,False,
+PostgreSQL,commons-postgresql,superset,public,sl_tables,table,False,
+PostgreSQL,commons-postgresql,superset,public,slice_user,table,False,
+PostgreSQL,commons-postgresql,superset,public,slices,table,False,
+PostgreSQL,commons-postgresql,superset,public,sql_metrics,table,False,
+PostgreSQL,commons-postgresql,superset,public,sqlatable_user,table,False,
+PostgreSQL,commons-postgresql,superset,public,ssh_tunnels,table,False,
+PostgreSQL,commons-postgresql,superset,public,tab_state,table,False,
+PostgreSQL,commons-postgresql,superset,public,table_columns,table,False,
+PostgreSQL,commons-postgresql,superset,public,table_schema,table,False,
+PostgreSQL,commons-postgresql,superset,public,tables,table,False,
+PostgreSQL,commons-postgresql,superset,public,tag,table,False,
+PostgreSQL,commons-postgresql,superset,public,tagged_object,table,False,
+PostgreSQL,commons-postgresql,superset,public,user_attribute,table,False,
+PostgreSQL,commons-postgresql,superset,public,user_favorite_tag,table,False,
+PostgreSQL,pbms-postgresql,bgtaskdb,public,beneficiary_list_details,table,False,
+PostgreSQL,pbms-postgresql,bgtaskdb,public,beneficiary_list_summary_farmer,table,False,
+PostgreSQL,pbms-postgresql,bgtaskdb,public,beneficiary_list_summary_household,table,False,
+PostgreSQL,pbms-postgresql,bgtaskdb,public,beneficiary_list_summary_student,table,False,
+PostgreSQL,pbms-postgresql,bgtaskdb,public,disbursement_batch,table,False,
+PostgreSQL,pbms-postgresql,bgtaskdb,public,disbursement_envelope,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,activity_attachment_rel,table,False,RELATION BETWEEN mail_activity AND ir_attachment
+PostgreSQL,pbms-postgresql,pbmsdb,public,auth_oauth_provider,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,auth_totp_device,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,auth_totp_wizard,table,False,2-Factor Setup Wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_document_layout,table,False,Company Document Layout
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_enable_profiling_wizard,table,False,Enable profiling for some time
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_import_import,table,False,Base Import
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_import_mapping,table,False,Base Import Mapping
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_import_module,table,False,Import Module
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_language_export,table,False,Language Export
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_language_import,table,False,Language Import
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_language_install,table,False,Install Language
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_language_install_website_rel,table,False,RELATION BETWEEN base_language_install AND website
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_module_install_request,table,False,Module Activation Request
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_module_install_review,table,False,Module Activation Review
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_module_uninstall,table,False,Module Uninstall
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_module_update,table,False,Update Module
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_module_upgrade,table,False,Upgrade Module
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_partner_merge_automatic_wizard,table,False,Merge Partner Wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_partner_merge_automatic_wizard_res_partner_rel,table,False,RELATION BETWEEN base_partner_merge_automatic_wizard AND res_partner
+PostgreSQL,pbms-postgresql,pbmsdb,public,base_partner_merge_line,table,False,Merge Partner Line
+PostgreSQL,pbms-postgresql,pbmsdb,public,bus_bus,table,False,Communication Bus
+PostgreSQL,pbms-postgresql,pbmsdb,public,bus_presence,table,False,User Presence
+PostgreSQL,pbms-postgresql,pbmsdb,public,change_password_own,table,False,"User, change own password wizard"
+PostgreSQL,pbms-postgresql,pbmsdb,public,change_password_user,table,False,"User, Change Password Wizard"
+PostgreSQL,pbms-postgresql,pbmsdb,public,change_password_wizard,table,False,Change Password Wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,decimal_precision,table,False,Decimal Precision
+PostgreSQL,pbms-postgresql,pbmsdb,public,digest_digest,table,False,Digest
+PostgreSQL,pbms-postgresql,pbmsdb,public,digest_digest_res_users_rel,table,False,RELATION BETWEEN digest_digest AND res_users
+PostgreSQL,pbms-postgresql,pbmsdb,public,digest_tip,table,False,Digest Tips
+PostgreSQL,pbms-postgresql,pbmsdb,public,digest_tip_res_users_rel,table,False,RELATION BETWEEN digest_tip AND res_users
+PostgreSQL,pbms-postgresql,pbmsdb,public,discuss_channel,table,False,Discussion Channel
+PostgreSQL,pbms-postgresql,pbmsdb,public,discuss_channel_member,table,False,Channel Member
+PostgreSQL,pbms-postgresql,pbmsdb,public,discuss_channel_res_groups_rel,table,False,RELATION BETWEEN discuss_channel AND res_groups
+PostgreSQL,pbms-postgresql,pbmsdb,public,discuss_channel_rtc_session,table,False,Mail RTC session
+PostgreSQL,pbms-postgresql,pbmsdb,public,discuss_gif_favorite,table,False,Save favorite GIF from Tenor API
+PostgreSQL,pbms-postgresql,pbmsdb,public,discuss_voice_metadata,table,False,Metadata for voice attachments
+PostgreSQL,pbms-postgresql,pbmsdb,public,email_template_attachment_rel,table,False,RELATION BETWEEN mail_template AND ir_attachment
+PostgreSQL,pbms-postgresql,pbmsdb,public,fetchmail_server,table,False,Incoming Mail Server
+PostgreSQL,pbms-postgresql,pbmsdb,public,formio_builder,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_administrative_area_large,table,False,Administrative Area Large
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_administrative_area_large_dbt_warehouse_rel,table,False,RELATION BETWEEN dbt_warehouse AND dbt_administrative_area_large
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_administrative_area_small,table,False,Administrative Area Small
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_administrative_area_small_dbt_agency_rel,table,False,RELATION BETWEEN dbt_agency AND dbt_administrative_area_small
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_agency,table,False,Agency Model
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_agency_program_benefit_codes,table,False,Agency Program Benefit Codes
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_agency_program_benefit_codes_dbt_benefit_codes_rel,table,False,RELATION BETWEEN dbt_agency_program_benefit_codes AND dbt_benefit_codes
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_api_disbursement_batch_line,table,False,Disbursement Batch Line
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_api_disbursement_envelope_line,table,False,Disbursement Envelope Line
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_api_summary_line,table,False,Dynamic API Summary Line
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_beneficiary_list,table,False,DBT Beneficiary List
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_benefit_codes,table,False,Benefit Codes
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_benefit_codes_dbt_warehouse_program_benefit_codes_rel,table,False,RELATION BETWEEN dbt_warehouse_program_benefit_codes AND dbt_benefit_codes
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_bgtask_summary_wizard,table,False,Background Task Summary Wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_cycle,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_cycle_membership,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_disbursement_batch_summary_geo,table,False,Disbursement Batch Summary Geo
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_disbursement_batch_summary_wizard,table,False,Disbursement Batch Summary Wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_disbursement_cycle,table,False,DBT Disbursement Cycle
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_disbursement_envelope_summary_geo,table,False,Disbursement Envelope Summary Geo
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_disbursement_envelope_summary_wizard,table,False,Disbursement Envelope Summary Wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_document_tag,table,False,DBT Document Tag
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_document_tag_storage_file_rel,table,False,RELATION BETWEEN storage_file AND dbt_document_tag
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_eligibility_rule_definition,table,False,DBT Program Eligibility Rule Definition
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_enrollment_cycle,table,False,DBT Enrollment Cycle
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_entitlement,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_entitlement_rule_definition,table,False,DBT Program Entitlement Rule Definition
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_farmer_registry,table,False,Farmer Registry
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_household_registry,table,False,KDBT Household Registry
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_id_type,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_payment,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_phone_number,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_priority_rule_definition,table,False,DBT Priority Rule Definition
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_program,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_program_benefit_codes,table,False,Program Benefit Codes
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_program_definition,table,False,DBT Program Definition
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_program_membership,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_program_registrant_info,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_program_registrant_info_draft,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_reg_id,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_student_registry,table,False,Student Registry
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_warehouse,table,False,Warehouse Model
+PostgreSQL,pbms-postgresql,pbmsdb,public,dbt_warehouse_program_benefit_codes,table,False,Warehouse Program Benefit Codes
+PostgreSQL,pbms-postgresql,pbmsdb,public,iap_account,table,False,IAP Account
+PostgreSQL,pbms-postgresql,pbmsdb,public,iap_account_info,table,False,IAP Account Info
+PostgreSQL,pbms-postgresql,pbmsdb,public,iap_account_res_company_rel,table,False,RELATION BETWEEN iap_account AND res_company
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_act_client,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_act_report_xml,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_act_server,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_act_server_group_rel,table,False,RELATION BETWEEN ir_act_server AND res_groups
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_act_server_res_partner_rel,table,False,RELATION BETWEEN ir_act_server AND res_partner
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_act_server_webhook_field_rel,table,False,RELATION BETWEEN ir_act_server AND ir_model_fields
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_act_url,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_act_window,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_act_window_group_rel,table,False,RELATION BETWEEN ir_act_window AND res_groups
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_act_window_view,table,False,Action Window View
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_actions,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_actions_todo,table,False,Configuration Wizards
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_asset,table,False,Asset
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_attachment,table,False,Attachment
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_config_parameter,table,False,System Parameter
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_cron,table,False,Scheduled Actions
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_cron_trigger,table,False,Triggered actions
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_default,table,False,Default Values
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_demo,table,False,Demo
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_demo_failure,table,False,Demo failure
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_demo_failure_wizard,table,False,Demo Failure wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_exports,table,False,Exports
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_exports_line,table,False,Exports Line
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_filters,table,False,Filters
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_logging,table,False,Logging
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_mail_server,table,False,Mail Server
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_model,table,False,Models
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_model_access,table,False,Model Access
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_model_constraint,table,False,Model Constraint
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_model_data,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_model_fields,table,False,Fields
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_model_fields_group_rel,table,False,RELATION BETWEEN ir_model_fields AND res_groups
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_model_fields_selection,table,False,Fields Selection
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_model_inherit,table,False,Model Inheritance Tree
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_model_relation,table,False,Relation Model
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_module_category,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_module_module,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_module_module_dependency,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_module_module_exclusion,table,False,Module exclusion
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_profile,table,False,Profiling results
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_property,table,False,Company Property
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_rule,table,False,Record Rule
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_sequence,table,False,Sequence
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_sequence_date_range,table,False,Sequence Date Range
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_ui_menu,table,False,Menu
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_ui_menu_group_rel,table,False,RELATION BETWEEN ir_ui_menu AND res_groups
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_ui_view,table,False,View
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_ui_view_custom,table,False,Custom View
+PostgreSQL,pbms-postgresql,pbmsdb,public,ir_ui_view_group_rel,table,False,RELATION BETWEEN ir_ui_view AND res_groups
+PostgreSQL,pbms-postgresql,pbmsdb,public,login_providers,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_activity,table,False,Activity
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_activity_plan,table,False,Activity Plan
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_activity_plan_mail_activity_schedule_rel,table,False,RELATION BETWEEN mail_activity_schedule AND mail_activity_plan
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_activity_plan_template,table,False,Activity plan template
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_activity_rel,table,False,RELATION BETWEEN mail_activity_type AND mail_activity_type
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_activity_schedule,table,False,Activity schedule plan Wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_activity_type,table,False,Activity Type
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_activity_type_mail_template_rel,table,False,RELATION BETWEEN mail_activity_type AND mail_template
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_alias,table,False,Email Aliases
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_alias_domain,table,False,Email Domain
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_blacklist,table,False,Mail Blacklist
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_blacklist_remove,table,False,Remove email from blacklist wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_compose_message,table,False,Email composition wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_compose_message_ir_attachments_rel,table,False,RELATION BETWEEN mail_compose_message AND ir_attachment
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_compose_message_res_partner_rel,table,False,RELATION BETWEEN mail_compose_message AND res_partner
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_followers,table,False,Document Followers
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_followers_mail_message_subtype_rel,table,False,RELATION BETWEEN mail_followers AND mail_message_subtype
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_gateway_allowed,table,False,Mail Gateway Allowed
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_guest,table,False,Guest
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_ice_server,table,False,ICE server
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_link_preview,table,False,Store link preview data
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_mail,table,False,Outgoing Mails
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_mail_res_partner_rel,table,False,RELATION BETWEEN mail_mail AND res_partner
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_message,table,False,Message
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_message_reaction,table,False,Message Reaction
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_message_res_partner_rel,table,False,RELATION BETWEEN mail_message AND res_partner
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_message_res_partner_starred_rel,table,False,RELATION BETWEEN mail_message AND res_partner
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_message_schedule,table,False,Scheduled Messages
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_message_subtype,table,False,Message subtypes
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_message_translation,table,False,Message Translation
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_notification,table,False,Message Notifications
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_notification_mail_resend_message_rel,table,False,RELATION BETWEEN mail_resend_message AND mail_notification
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_notification_web_push,table,False,Cron data used for web push notification
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_partner_device,table,False,Partner Web Push Device
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_resend_message,table,False,Email resend wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_resend_partner,table,False,Partner with additional information for mail resend
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_shortcode,table,False,Canned Response / Shortcode
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_template,table,False,Email Templates
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_template_ir_actions_report_rel,table,False,RELATION BETWEEN mail_template AND ir_act_report_xml
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_template_mail_template_reset_rel,table,False,RELATION BETWEEN mail_template_reset AND mail_template
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_template_preview,table,False,Email Template Preview
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_template_reset,table,False,Mail Template Reset
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_tracking_value,table,False,Mail Tracking Value
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_wizard_invite,table,False,Invite wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,mail_wizard_invite_res_partner_rel,table,False,RELATION BETWEEN mail_wizard_invite AND res_partner
+PostgreSQL,pbms-postgresql,pbmsdb,public,message_attachment_rel,table,False,RELATION BETWEEN mail_message AND ir_attachment
+PostgreSQL,pbms-postgresql,pbmsdb,public,phone_blacklist,table,False,Phone Blacklist
+PostgreSQL,pbms-postgresql,pbmsdb,public,phone_blacklist_remove,table,False,Remove phone from blacklist
+PostgreSQL,pbms-postgresql,pbmsdb,public,portal_share,table,False,Portal Sharing
+PostgreSQL,pbms-postgresql,pbmsdb,public,portal_share_res_partner_rel,table,False,RELATION BETWEEN portal_share AND res_partner
+PostgreSQL,pbms-postgresql,pbmsdb,public,portal_wizard,table,False,Grant Portal Access
+PostgreSQL,pbms-postgresql,pbmsdb,public,portal_wizard_res_partner_rel,table,False,RELATION BETWEEN portal_wizard AND res_partner
+PostgreSQL,pbms-postgresql,pbmsdb,public,portal_wizard_user,table,False,Portal User Config
+PostgreSQL,pbms-postgresql,pbmsdb,public,privacy_log,table,False,Privacy Log
+PostgreSQL,pbms-postgresql,pbmsdb,public,privacy_lookup_wizard,table,False,Privacy Lookup Wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,privacy_lookup_wizard_line,table,False,Privacy Lookup Wizard Line
+PostgreSQL,pbms-postgresql,pbmsdb,public,rel_modules_langexport,table,False,RELATION BETWEEN base_language_export AND ir_module_module
+PostgreSQL,pbms-postgresql,pbmsdb,public,rel_server_actions,table,False,RELATION BETWEEN ir_act_server AND ir_act_server
+PostgreSQL,pbms-postgresql,pbmsdb,public,report_layout,table,False,Report Layout
+PostgreSQL,pbms-postgresql,pbmsdb,public,report_paperformat,table,False,Paper Format Config
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_bank,table,False,Bank
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_company,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_company_users_rel,table,False,RELATION BETWEEN res_company AND res_users
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_config,table,False,Config
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_config_installer,table,False,Config Installer
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_config_settings,table,False,Config Settings
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_country,table,False,Country
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_country_group,table,False,Country Group
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_country_res_country_group_rel,table,False,RELATION BETWEEN res_country AND res_country_group
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_country_state,table,False,Country state
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_currency,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_currency_rate,table,False,Currency Rate
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_groups,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_groups_implied_rel,table,False,RELATION BETWEEN res_groups AND res_groups
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_groups_report_rel,table,False,RELATION BETWEEN ir_act_report_xml AND res_groups
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_groups_users_rel,table,False,RELATION BETWEEN res_groups AND res_users
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_lang,table,False,Languages
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_lang_install_rel,table,False,RELATION BETWEEN base_language_install AND res_lang
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_partner,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_partner_autocomplete_sync,table,False,Partner Autocomplete Sync
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_partner_bank,table,False,Bank Accounts
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_partner_category,table,False,Partner Tags
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_partner_industry,table,False,Industry
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_partner_res_partner_category_rel,table,False,RELATION BETWEEN res_partner_category AND res_partner
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_partner_title,table,False,Partner Title
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_users,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_users_apikeys,table,False,
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_users_apikeys_description,table,False,API Key Description
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_users_deletion,table,False,Users Deletion Request
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_users_identitycheck,table,False,Password Check Wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_users_log,table,False,Users Log
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_users_settings,table,False,User Settings
+PostgreSQL,pbms-postgresql,pbmsdb,public,res_users_settings_volumes,table,False,User Settings Volumes
+PostgreSQL,pbms-postgresql,pbmsdb,public,reset_view_arch_wizard,table,False,Reset View Architecture Wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,resource_calendar,table,False,Resource Working Time
+PostgreSQL,pbms-postgresql,pbmsdb,public,resource_calendar_attendance,table,False,Work Detail
+PostgreSQL,pbms-postgresql,pbmsdb,public,resource_calendar_leaves,table,False,Resource Time Off Detail
+PostgreSQL,pbms-postgresql,pbmsdb,public,resource_resource,table,False,Resources
+PostgreSQL,pbms-postgresql,pbmsdb,public,rule_group_rel,table,False,RELATION BETWEEN ir_rule AND res_groups
+PostgreSQL,pbms-postgresql,pbmsdb,public,server_config,table,False,Display server configuration
+PostgreSQL,pbms-postgresql,pbmsdb,public,sms_composer,table,False,Send SMS Wizard
+PostgreSQL,pbms-postgresql,pbmsdb,public,sms_resend,table,False,SMS Resend
+PostgreSQL,pbms-postgresql,pbmsdb,public,sms_resend_recipient,table,False,Resend Notification
+PostgreSQL,pbms-postgresql,pbmsdb,public,sms_sms,table,False,Outgoing SMS
+PostgreSQL,pbms-postgresql,pbmsdb,public,sms_template,table,False,SMS Templates
+PostgreSQL,pbms-postgresql,pbmsdb,public,sms_template_preview,table,False,SMS Template Preview
+PostgreSQL,pbms-postgresql,pbmsdb,public,sms_template_reset,table,False,SMS Template Reset
+PostgreSQL,pbms-postgresql,pbmsdb,public,sms_template_sms_template_reset_rel,table,False,RELATION BETWEEN sms_template_reset AND sms_template
+PostgreSQL,pbms-postgresql,pbmsdb,public,sms_tracker,table,False,Link SMS to mailing/sms tracking models
+PostgreSQL,pbms-postgresql,pbmsdb,public,snailmail_letter,table,False,Snailmail Letter
+PostgreSQL,pbms-postgresql,pbmsdb,public,snailmail_letter_format_error,table,False,Format Error Sending a Snailmail Letter
+PostgreSQL,pbms-postgresql,pbmsdb,public,snailmail_letter_missing_required_fields,table,False,Update address of partner
+PostgreSQL,pbms-postgresql,pbmsdb,public,sparse_fields_test,table,False,Sparse fields Test
+PostgreSQL,pbms-postgresql,pbmsdb,public,spp_data_source,table,False,SPP Data Source
+PostgreSQL,pbms-postgresql,pbmsdb,public,spp_data_source_field_mapping,table,False,Data Source Field Mapping
+PostgreSQL,pbms-postgresql,pbmsdb,public,spp_data_source_parameter,table,False,Data Source Parameter
+PostgreSQL,pbms-postgresql,pbmsdb,public,spp_data_source_path,table,False,SPP Data Source Path
+PostgreSQL,pbms-postgresql,pbmsdb,public,storage_backend,table,False,Storage Backend
+PostgreSQL,pbms-postgresql,pbmsdb,public,storage_file,table,False,Storage File
+PostgreSQL,pbms-postgresql,pbmsdb,public,theme_ir_asset,table,False,Theme Asset
+PostgreSQL,pbms-postgresql,pbmsdb,public,theme_ir_attachment,table,False,Theme Attachments
+PostgreSQL,pbms-postgresql,pbmsdb,public,theme_ir_ui_view,table,False,Theme UI View
+PostgreSQL,pbms-postgresql,pbmsdb,public,theme_website_menu,table,False,Website Theme Menu
+PostgreSQL,pbms-postgresql,pbmsdb,public,theme_website_page,table,False,Website Theme Page
+PostgreSQL,pbms-postgresql,pbmsdb,public,utm_campaign,table,False,UTM Campaign
+PostgreSQL,pbms-postgresql,pbmsdb,public,utm_medium,table,False,UTM Medium
+PostgreSQL,pbms-postgresql,pbmsdb,public,utm_source,table,False,UTM Source
+PostgreSQL,pbms-postgresql,pbmsdb,public,utm_stage,table,False,Campaign Stage
+PostgreSQL,pbms-postgresql,pbmsdb,public,utm_tag,table,False,UTM Tag
+PostgreSQL,pbms-postgresql,pbmsdb,public,utm_tag_rel,table,False,RELATION BETWEEN utm_campaign AND utm_tag
+PostgreSQL,pbms-postgresql,pbmsdb,public,web_editor_converter_test,table,False,Web Editor Converter Test
+PostgreSQL,pbms-postgresql,pbmsdb,public,web_editor_converter_test_sub,table,False,Web Editor Converter Subtest
+PostgreSQL,pbms-postgresql,pbmsdb,public,web_tour_tour,table,False,Tours
+PostgreSQL,pbms-postgresql,pbmsdb,public,website,table,False,Website
+PostgreSQL,pbms-postgresql,pbmsdb,public,website_configurator_feature,table,False,Website Configurator Feature
+PostgreSQL,pbms-postgresql,pbmsdb,public,website_controller_page,table,False,Model Page
+PostgreSQL,pbms-postgresql,pbmsdb,public,website_lang_rel,table,False,RELATION BETWEEN website AND res_lang
+PostgreSQL,pbms-postgresql,pbmsdb,public,website_menu,table,False,Website Menu
+PostgreSQL,pbms-postgresql,pbmsdb,public,website_page,table,False,Page
+PostgreSQL,pbms-postgresql,pbmsdb,public,website_rewrite,table,False,Website rewrite
+PostgreSQL,pbms-postgresql,pbmsdb,public,website_robots,table,False,Robots.txt Editor
+PostgreSQL,pbms-postgresql,pbmsdb,public,website_route,table,False,All Website Route
+PostgreSQL,pbms-postgresql,pbmsdb,public,website_snippet_filter,table,False,Website Snippet Filter
+PostgreSQL,pbms-postgresql,pbmsdb,public,website_track,table,False,Visited Pages
+PostgreSQL,pbms-postgresql,pbmsdb,public,website_visitor,table,False,Website Visitor
+PostgreSQL,pbms-postgresql,pbmsdb,public,wizard_ir_model_menu_create,table,False,Create Menu Wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,activity_attachment_rel,table,False,RELATION BETWEEN mail_activity AND ir_attachment
+PostgreSQL,registry-postgresql,socialregistrydb,public,auth_totp_device,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,auth_totp_wizard,table,False,2-Factor Setup Wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_document_layout,table,False,Company Document Layout
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_enable_profiling_wizard,table,False,Enable profiling for some time
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_import_import,table,False,Base Import
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_import_mapping,table,False,Base Import Mapping
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_import_module,table,False,Import Module
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_language_export,table,False,Language Export
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_language_import,table,False,Language Import
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_language_install,table,False,Install Language
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_module_install_request,table,False,Module Activation Request
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_module_install_review,table,False,Module Activation Review
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_module_uninstall,table,False,Module Uninstall
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_module_update,table,False,Update Module
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_module_upgrade,table,False,Upgrade Module
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_partner_merge_automatic_wizard,table,False,Merge Partner Wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_partner_merge_automatic_wizard_res_partner_rel,table,False,RELATION BETWEEN base_partner_merge_automatic_wizard AND res_partner
+PostgreSQL,registry-postgresql,socialregistrydb,public,base_partner_merge_line,table,False,Merge Partner Line
+PostgreSQL,registry-postgresql,socialregistrydb,public,bus_bus,table,False,Communication Bus
+PostgreSQL,registry-postgresql,socialregistrydb,public,bus_presence,table,False,User Presence
+PostgreSQL,registry-postgresql,socialregistrydb,public,change_password_own,table,False,"User, change own password wizard"
+PostgreSQL,registry-postgresql,socialregistrydb,public,change_password_user,table,False,"User, Change Password Wizard"
+PostgreSQL,registry-postgresql,socialregistrydb,public,change_password_wizard,table,False,Change Password Wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,decimal_precision,table,False,Decimal Precision
+PostgreSQL,registry-postgresql,socialregistrydb,public,discuss_channel,table,False,Discussion Channel
+PostgreSQL,registry-postgresql,socialregistrydb,public,discuss_channel_member,table,False,Channel Member
+PostgreSQL,registry-postgresql,socialregistrydb,public,discuss_channel_res_groups_rel,table,False,RELATION BETWEEN discuss_channel AND res_groups
+PostgreSQL,registry-postgresql,socialregistrydb,public,discuss_channel_rtc_session,table,False,Mail RTC session
+PostgreSQL,registry-postgresql,socialregistrydb,public,discuss_gif_favorite,table,False,Save favorite GIF from Tenor API
+PostgreSQL,registry-postgresql,socialregistrydb,public,discuss_voice_metadata,table,False,Metadata for voice attachments
+PostgreSQL,registry-postgresql,socialregistrydb,public,email_template_attachment_rel,table,False,RELATION BETWEEN mail_template AND ir_attachment
+PostgreSQL,registry-postgresql,socialregistrydb,public,fetchmail_server,table,False,Incoming Mail Server
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_age_distribution_view,materialized view,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_disable_registrant_wizard,table,False,Disable Registrant Wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_district,table,False,DBT District
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_document_tag,table,False,DBT Document Tag
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_document_tag_storage_file_rel,table,False,RELATION BETWEEN storage_file AND dbt_document_tag
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_gender_count_view,materialized view,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_group_kind,table,False,Group Kind
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_group_kind_deduplication_config,table,False,Deduplication Mapping between Group Kind and ID Types
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_group_kind_deduplication_config_dbt_id_type_rel,table,False,RELATION BETWEEN dbt_group_kind_deduplication_config AND dbt_id_type
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_group_kind_deduplication_config_res_config_settings_rel,table,False,RELATION BETWEEN res_config_settings AND dbt_group_kind_deduplication_config
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_group_membership,table,False,Group Membership
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_group_membership_dbt_group_membership_kind_rel,table,False,RELATION BETWEEN dbt_group_membership AND dbt_group_membership_kind
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_group_membership_kind,table,False,Group Membership Kind
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_id_type,table,False,ID Type
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_phone_number,table,False,Phone Number
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_que_background_task,table,False,DBT Queue Background Task
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_reg_id,table,False,Registrant ID
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_reg_rel,table,False,Registrant Relationship
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_region,table,False,DBT Region
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_registrant_tags,table,False,Registrant Tags
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_registrant_tags_res_partner_rel,table,False,RELATION BETWEEN res_partner AND dbt_registrant_tags
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_registry_id_ind_deduplcation_rel,table,False,RELATION BETWEEN res_config_settings AND dbt_id_type
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_relationship,table,False,Relationship
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_sr_dashboard_data,materialized view,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,dbt_total_registrants_view,materialized view,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,gender_type,table,False,Gender Type
+PostgreSQL,registry-postgresql,socialregistrydb,public,iap_account,table,False,IAP Account
+PostgreSQL,registry-postgresql,socialregistrydb,public,iap_account_info,table,False,IAP Account Info
+PostgreSQL,registry-postgresql,socialregistrydb,public,iap_account_res_company_rel,table,False,RELATION BETWEEN iap_account AND res_company
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_act_client,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_act_report_xml,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_act_server,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_act_server_group_rel,table,False,RELATION BETWEEN ir_act_server AND res_groups
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_act_server_res_partner_rel,table,False,RELATION BETWEEN ir_act_server AND res_partner
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_act_server_webhook_field_rel,table,False,RELATION BETWEEN ir_act_server AND ir_model_fields
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_act_url,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_act_window,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_act_window_group_rel,table,False,RELATION BETWEEN ir_act_window AND res_groups
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_act_window_view,table,False,Action Window View
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_actions,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_actions_todo,table,False,Configuration Wizards
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_asset,table,False,Asset
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_attachment,table,False,Attachment
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_config_parameter,table,False,System Parameter
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_cron,table,False,Scheduled Actions
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_cron_trigger,table,False,Triggered actions
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_default,table,False,Default Values
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_demo,table,False,Demo
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_demo_failure,table,False,Demo failure
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_demo_failure_wizard,table,False,Demo Failure wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_exports,table,False,Exports
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_exports_line,table,False,Exports Line
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_filters,table,False,Filters
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_logging,table,False,Logging
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_mail_server,table,False,Mail Server
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_model,table,False,Models
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_model_access,table,False,Model Access
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_model_constraint,table,False,Model Constraint
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_model_data,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_model_fields,table,False,Fields
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_model_fields_group_rel,table,False,RELATION BETWEEN ir_model_fields AND res_groups
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_model_fields_selection,table,False,Fields Selection
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_model_inherit,table,False,Model Inheritance Tree
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_model_relation,table,False,Relation Model
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_module_category,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_module_module,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_module_module_dependency,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_module_module_exclusion,table,False,Module exclusion
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_profile,table,False,Profiling results
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_property,table,False,Company Property
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_rule,table,False,Record Rule
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_sequence,table,False,Sequence
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_sequence_date_range,table,False,Sequence Date Range
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_ui_menu,table,False,Menu
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_ui_menu_group_rel,table,False,RELATION BETWEEN ir_ui_menu AND res_groups
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_ui_view,table,False,View
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_ui_view_custom,table,False,Custom View
+PostgreSQL,registry-postgresql,socialregistrydb,public,ir_ui_view_group_rel,table,False,RELATION BETWEEN ir_ui_view AND res_groups
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_activity,table,False,Activity
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_activity_plan,table,False,Activity Plan
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_activity_plan_mail_activity_schedule_rel,table,False,RELATION BETWEEN mail_activity_schedule AND mail_activity_plan
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_activity_plan_template,table,False,Activity plan template
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_activity_rel,table,False,RELATION BETWEEN mail_activity_type AND mail_activity_type
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_activity_schedule,table,False,Activity schedule plan Wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_activity_type,table,False,Activity Type
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_activity_type_mail_template_rel,table,False,RELATION BETWEEN mail_activity_type AND mail_template
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_alias,table,False,Email Aliases
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_alias_domain,table,False,Email Domain
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_blacklist,table,False,Mail Blacklist
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_blacklist_remove,table,False,Remove email from blacklist wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_compose_message,table,False,Email composition wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_compose_message_ir_attachments_rel,table,False,RELATION BETWEEN mail_compose_message AND ir_attachment
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_compose_message_res_partner_rel,table,False,RELATION BETWEEN mail_compose_message AND res_partner
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_followers,table,False,Document Followers
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_followers_mail_message_subtype_rel,table,False,RELATION BETWEEN mail_followers AND mail_message_subtype
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_gateway_allowed,table,False,Mail Gateway Allowed
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_guest,table,False,Guest
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_ice_server,table,False,ICE server
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_link_preview,table,False,Store link preview data
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_mail,table,False,Outgoing Mails
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_mail_res_partner_rel,table,False,RELATION BETWEEN mail_mail AND res_partner
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_message,table,False,Message
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_message_reaction,table,False,Message Reaction
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_message_res_partner_rel,table,False,RELATION BETWEEN mail_message AND res_partner
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_message_res_partner_starred_rel,table,False,RELATION BETWEEN mail_message AND res_partner
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_message_schedule,table,False,Scheduled Messages
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_message_subtype,table,False,Message subtypes
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_message_translation,table,False,Message Translation
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_notification,table,False,Message Notifications
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_notification_mail_resend_message_rel,table,False,RELATION BETWEEN mail_resend_message AND mail_notification
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_notification_web_push,table,False,Cron data used for web push notification
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_partner_device,table,False,Partner Web Push Device
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_resend_message,table,False,Email resend wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_resend_partner,table,False,Partner with additional information for mail resend
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_shortcode,table,False,Canned Response / Shortcode
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_template,table,False,Email Templates
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_template_ir_actions_report_rel,table,False,RELATION BETWEEN mail_template AND ir_act_report_xml
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_template_mail_template_reset_rel,table,False,RELATION BETWEEN mail_template_reset AND mail_template
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_template_preview,table,False,Email Template Preview
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_template_reset,table,False,Mail Template Reset
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_tracking_value,table,False,Mail Tracking Value
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_wizard_invite,table,False,Invite wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,mail_wizard_invite_res_partner_rel,table,False,RELATION BETWEEN mail_wizard_invite AND res_partner
+PostgreSQL,registry-postgresql,socialregistrydb,public,message_attachment_rel,table,False,RELATION BETWEEN mail_message AND ir_attachment
+PostgreSQL,registry-postgresql,socialregistrydb,public,odk_config,table,False,ODK Configuration
+PostgreSQL,registry-postgresql,socialregistrydb,public,odk_import,table,False,ODK Import
+PostgreSQL,registry-postgresql,socialregistrydb,public,odk_instance_id,table,False,ODK Instance ID
+PostgreSQL,registry-postgresql,socialregistrydb,public,phone_blacklist,table,False,Phone Blacklist
+PostgreSQL,registry-postgresql,socialregistrydb,public,phone_blacklist_remove,table,False,Remove phone from blacklist
+PostgreSQL,registry-postgresql,socialregistrydb,public,portal_share,table,False,Portal Sharing
+PostgreSQL,registry-postgresql,socialregistrydb,public,portal_share_res_partner_rel,table,False,RELATION BETWEEN portal_share AND res_partner
+PostgreSQL,registry-postgresql,socialregistrydb,public,portal_wizard,table,False,Grant Portal Access
+PostgreSQL,registry-postgresql,socialregistrydb,public,portal_wizard_res_partner_rel,table,False,RELATION BETWEEN portal_wizard AND res_partner
+PostgreSQL,registry-postgresql,socialregistrydb,public,portal_wizard_user,table,False,Portal User Config
+PostgreSQL,registry-postgresql,socialregistrydb,public,privacy_log,table,False,Privacy Log
+PostgreSQL,registry-postgresql,socialregistrydb,public,privacy_lookup_wizard,table,False,Privacy Lookup Wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,privacy_lookup_wizard_line,table,False,Privacy Lookup Wizard Line
+PostgreSQL,registry-postgresql,socialregistrydb,public,queue_job,table,False,Queue Job
+PostgreSQL,registry-postgresql,socialregistrydb,public,queue_job_channel,table,False,Job Channels
+PostgreSQL,registry-postgresql,socialregistrydb,public,queue_job_function,table,False,Job Functions
+PostgreSQL,registry-postgresql,socialregistrydb,public,queue_job_queue_jobs_to_cancelled_rel,table,False,RELATION BETWEEN queue_jobs_to_cancelled AND queue_job
+PostgreSQL,registry-postgresql,socialregistrydb,public,queue_job_queue_jobs_to_done_rel,table,False,RELATION BETWEEN queue_jobs_to_done AND queue_job
+PostgreSQL,registry-postgresql,socialregistrydb,public,queue_job_queue_requeue_job_rel,table,False,RELATION BETWEEN queue_requeue_job AND queue_job
+PostgreSQL,registry-postgresql,socialregistrydb,public,queue_jobs_to_cancelled,table,False,Cancel all selected jobs
+PostgreSQL,registry-postgresql,socialregistrydb,public,queue_jobs_to_done,table,False,Set all selected jobs to done
+PostgreSQL,registry-postgresql,socialregistrydb,public,queue_requeue_job,table,False,Wizard to requeue a selection of jobs
+PostgreSQL,registry-postgresql,socialregistrydb,public,rel_modules_langexport,table,False,RELATION BETWEEN base_language_export AND ir_module_module
+PostgreSQL,registry-postgresql,socialregistrydb,public,rel_server_actions,table,False,RELATION BETWEEN ir_act_server AND ir_act_server
+PostgreSQL,registry-postgresql,socialregistrydb,public,report_layout,table,False,Report Layout
+PostgreSQL,registry-postgresql,socialregistrydb,public,report_paperformat,table,False,Paper Format Config
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_bank,table,False,Bank
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_company,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_company_users_rel,table,False,RELATION BETWEEN res_company AND res_users
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_config,table,False,Config
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_config_installer,table,False,Config Installer
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_config_settings,table,False,Config Settings
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_country,table,False,Country
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_country_group,table,False,Country Group
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_country_res_country_group_rel,table,False,RELATION BETWEEN res_country AND res_country_group
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_country_state,table,False,Country state
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_currency,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_currency_rate,table,False,Currency Rate
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_groups,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_groups_implied_rel,table,False,RELATION BETWEEN res_groups AND res_groups
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_groups_report_rel,table,False,RELATION BETWEEN ir_act_report_xml AND res_groups
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_groups_users_rel,table,False,RELATION BETWEEN res_groups AND res_users
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_lang,table,False,Languages
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_lang_install_rel,table,False,RELATION BETWEEN base_language_install AND res_lang
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_partner,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_partner_autocomplete_sync,table,False,Partner Autocomplete Sync
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_partner_bank,table,False,Bank Accounts
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_partner_category,table,False,Partner Tags
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_partner_industry,table,False,Industry
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_partner_res_partner_category_rel,table,False,RELATION BETWEEN res_partner_category AND res_partner
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_partner_title,table,False,Partner Title
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_users,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_users_apikeys,table,False,
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_users_apikeys_description,table,False,API Key Description
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_users_deletion,table,False,Users Deletion Request
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_users_identitycheck,table,False,Password Check Wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_users_log,table,False,Users Log
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_users_settings,table,False,User Settings
+PostgreSQL,registry-postgresql,socialregistrydb,public,res_users_settings_volumes,table,False,User Settings Volumes
+PostgreSQL,registry-postgresql,socialregistrydb,public,reset_view_arch_wizard,table,False,Reset View Architecture Wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,rule_group_rel,table,False,RELATION BETWEEN ir_rule AND res_groups
+PostgreSQL,registry-postgresql,socialregistrydb,public,server_config,table,False,Display server configuration
+PostgreSQL,registry-postgresql,socialregistrydb,public,sms_composer,table,False,Send SMS Wizard
+PostgreSQL,registry-postgresql,socialregistrydb,public,sms_resend,table,False,SMS Resend
+PostgreSQL,registry-postgresql,socialregistrydb,public,sms_resend_recipient,table,False,Resend Notification
+PostgreSQL,registry-postgresql,socialregistrydb,public,sms_sms,table,False,Outgoing SMS
+PostgreSQL,registry-postgresql,socialregistrydb,public,sms_template,table,False,SMS Templates
+PostgreSQL,registry-postgresql,socialregistrydb,public,sms_template_preview,table,False,SMS Template Preview
+PostgreSQL,registry-postgresql,socialregistrydb,public,sms_template_reset,table,False,SMS Template Reset
+PostgreSQL,registry-postgresql,socialregistrydb,public,sms_template_sms_template_reset_rel,table,False,RELATION BETWEEN sms_template_reset AND sms_template
+PostgreSQL,registry-postgresql,socialregistrydb,public,sms_tracker,table,False,Link SMS to mailing/sms tracking models
+PostgreSQL,registry-postgresql,socialregistrydb,public,snailmail_letter,table,False,Snailmail Letter
+PostgreSQL,registry-postgresql,socialregistrydb,public,snailmail_letter_format_error,table,False,Format Error Sending a Snailmail Letter
+PostgreSQL,registry-postgresql,socialregistrydb,public,snailmail_letter_missing_required_fields,table,False,Update address of partner
+PostgreSQL,registry-postgresql,socialregistrydb,public,sparse_fields_test,table,False,Sparse fields Test
+PostgreSQL,registry-postgresql,socialregistrydb,public,storage_backend,table,False,Storage Backend
+PostgreSQL,registry-postgresql,socialregistrydb,public,storage_file,table,False,Storage File
+PostgreSQL,registry-postgresql,socialregistrydb,public,web_editor_converter_test,table,False,Web Editor Converter Test
+PostgreSQL,registry-postgresql,socialregistrydb,public,web_editor_converter_test_sub,table,False,Web Editor Converter Subtest
+PostgreSQL,registry-postgresql,socialregistrydb,public,web_tour_tour,table,False,Tours
+PostgreSQL,registry-postgresql,socialregistrydb,public,wizard_ir_model_menu_create,table,False,Create Menu Wizard
+PostgreSQL,example-bank-postgresql,example_bank_db,public,account_statements,table,False,
+PostgreSQL,example-bank-postgresql,example_bank_db,public,accounting_logs,table,False,
+PostgreSQL,example-bank-postgresql,example_bank_db,public,accounts,table,False,
+PostgreSQL,example-bank-postgresql,example_bank_db,public,fund_blocks,table,False,
+PostgreSQL,example-bank-postgresql,example_bank_db,public,initiate_payment_batch_requests,table,False,
+PostgreSQL,example-bank-postgresql,example_bank_db,public,initiate_payment_requests,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_account,table,False,Account
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_account_account_journal_rel,table,False,RELATION BETWEEN account_account AND account_journal
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_account_account_tag,table,False,RELATION BETWEEN account_account AND account_account_tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_account_tag,table,False,Account Tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_account_tag_account_move_line_rel,table,False,RELATION BETWEEN account_move_line AND account_account_tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_account_tag_account_tax_repartition_line_rel,table,False,RELATION BETWEEN account_tax_repartition_line AND account_account_tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_account_tag_product_template_rel,table,False,RELATION BETWEEN product_template AND account_account_tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_account_tax_default_rel,table,False,RELATION BETWEEN account_account AND account_tax
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_accrued_orders_wizard,table,False,Accrued Orders Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_analytic_account,table,False,Analytic Account
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_analytic_applicability,table,False,Analytic Plan's Applicabilities
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_analytic_distribution_model,table,False,Analytic Distribution Model
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_analytic_line,table,False,Analytic Line
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_analytic_plan,table,False,Analytic Plans
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_automatic_entry_wizard,table,False,Create Automatic Entries
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_automatic_entry_wizard_account_move_line_rel,table,False,RELATION BETWEEN account_automatic_entry_wizard AND account_move_line
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_bank_statement,table,False,Bank Statement
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_bank_statement_ir_attachment_rel,table,False,RELATION BETWEEN account_bank_statement AND ir_attachment
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_bank_statement_line,table,False,Bank Statement Line
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_cash_rounding,table,False,Account Cash Rounding
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_financial_year_op,table,False,Opening Balance of Financial Year
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_fiscal_position,table,False,Fiscal Position
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_fiscal_position_account,table,False,Accounts Mapping of Fiscal Position
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_fiscal_position_res_country_state_rel,table,False,RELATION BETWEEN account_fiscal_position AND res_country_state
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_fiscal_position_tax,table,False,Tax Mapping of Fiscal Position
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_full_reconcile,table,False,Full Reconcile
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_group,table,False,Account Group
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_incoterms,table,False,Incoterms
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_invoice_transaction_rel,table,False,RELATION BETWEEN account_move AND payment_transaction
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_journal,table,False,Journal
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_journal_account_journal_group_rel,table,False,RELATION BETWEEN account_journal_group AND account_journal
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_journal_account_reconcile_model_rel,table,False,RELATION BETWEEN account_reconcile_model AND account_journal
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_journal_group,table,False,Account Journal Group
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_move,table,False,Journal Entry
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_move_account_move_send_rel,table,False,RELATION BETWEEN account_move_send AND account_move
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_move_account_resequence_wizard_rel,table,False,RELATION BETWEEN account_resequence_wizard AND account_move
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_move_line,table,False,Journal Item
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_move_line_account_tax_rel,table,False,RELATION BETWEEN account_move_line AND account_tax
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_move_reversal,table,False,Account Move Reversal
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_move_reversal_move,table,False,RELATION BETWEEN account_move_reversal AND account_move
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_move_reversal_new_move,table,False,RELATION BETWEEN account_move_reversal AND account_move
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_move_send,table,False,Account Move Send
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_move_send_res_partner_rel,table,False,RELATION BETWEEN account_move_send AND res_partner
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_partial_reconcile,table,False,Partial Reconcile
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_payment,table,False,Payments
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_payment_account_bank_statement_line_rel,table,False,RELATION BETWEEN account_bank_statement_line AND account_payment
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_payment_method,table,False,Payment Methods
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_payment_method_line,table,False,Payment Methods
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_payment_register,table,False,Register Payment
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_payment_register_move_line_rel,table,False,RELATION BETWEEN account_payment_register AND account_move_line
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_payment_term,table,False,Payment Terms
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_payment_term_line,table,False,Payment Terms Line
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_reconcile_model,table,False,Preset to create journal entries during a invoices and payments matching
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_reconcile_model_line,table,False,Rules for the reconciliation model
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_reconcile_model_line_account_tax_rel,table,False,RELATION BETWEEN account_reconcile_model_line AND account_tax
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_reconcile_model_partner_mapping,table,False,Partner mapping for reconciliation models
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_reconcile_model_res_partner_category_rel,table,False,RELATION BETWEEN account_reconcile_model AND res_partner_category
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_reconcile_model_res_partner_rel,table,False,RELATION BETWEEN account_reconcile_model AND res_partner
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_report,table,False,Accounting Report
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_report_column,table,False,Accounting Report Column
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_report_expression,table,False,Accounting Report Expression
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_report_external_value,table,False,Accounting Report External Value
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_report_line,table,False,Accounting Report Line
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_report_section_rel,table,False,RELATION BETWEEN account_report AND account_report
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_resequence_wizard,table,False,Remake the sequence of Journal Entries.
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_root,view,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_setup_bank_manual_config,table,False,Bank setup manual config
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_tax,table,False,Tax
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_tax_filiation_rel,table,False,RELATION BETWEEN account_tax AND account_tax
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_tax_group,table,False,Tax Group
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_tax_repartition_line,table,False,Tax Repartition Line
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_tour_upload_bill,table,False,Account tour upload bill
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_tour_upload_bill_email_confirm,table,False,Account tour upload bill email confirm
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_tour_upload_bill_ir_attachments_rel,table,False,RELATION BETWEEN account_tour_upload_bill AND ir_attachment
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,account_unreconcile,table,False,Account Unreconcile
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,activity_attachment_rel,table,False,RELATION BETWEEN mail_activity AND ir_attachment
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,auth_oauth_provider,table,False,OAuth2 provider
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,auth_oauth_provider_res_groups_rel,table,False,RELATION BETWEEN auth_oauth_provider AND res_groups
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,auth_totp_device,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,auth_totp_wizard,table,False,2-Factor Setup Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,barcode_nomenclature,table,False,Barcode Nomenclature
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,barcode_rule,table,False,Barcode Rule
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_document_layout,table,False,Company Document Layout
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_enable_profiling_wizard,table,False,Enable profiling for some time
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_import_import,table,False,Base Import
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_import_mapping,table,False,Base Import Mapping
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_import_module,table,False,Import Module
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_language_export,table,False,Language Export
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_language_import,table,False,Language Import
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_language_install,table,False,Install Language
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_language_install_website_rel,table,False,RELATION BETWEEN base_language_install AND website
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_module_install_request,table,False,Module Activation Request
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_module_install_review,table,False,Module Activation Review
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_module_uninstall,table,False,Module Uninstall
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_module_update,table,False,Update Module
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_module_upgrade,table,False,Upgrade Module
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_partner_merge_automatic_wizard,table,False,Merge Partner Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_partner_merge_automatic_wizard_res_partner_rel,table,False,RELATION BETWEEN base_partner_merge_automatic_wizard AND res_partner
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,base_partner_merge_line,table,False,Merge Partner Line
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,bus_bus,table,False,Communication Bus
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,bus_presence,table,False,User Presence
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,calendar_alarm,table,False,Event Alarm
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,calendar_alarm_calendar_event_rel,table,False,RELATION BETWEEN calendar_event AND calendar_alarm
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,calendar_attendee,table,False,Calendar Attendee Information
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,calendar_event,table,False,Calendar Event
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,calendar_event_res_partner_rel,table,False,RELATION BETWEEN res_partner AND calendar_event
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,calendar_event_type,table,False,Event Meeting Type
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,calendar_filters,table,False,Calendar Filters
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,calendar_popover_delete_wizard,table,False,Calendar Popover Delete Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,calendar_provider_config,table,False,Calendar Provider Configuration Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,calendar_recurrence,table,False,Event Recurrence Rule
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,change_password_own,table,False,"User, change own password wizard"
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,change_password_user,table,False,"User, Change Password Wizard"
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,change_password_wizard,table,False,Change Password Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,decimal_precision,table,False,Decimal Precision
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,digest_digest,table,False,Digest
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,digest_digest_res_users_rel,table,False,RELATION BETWEEN digest_digest AND res_users
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,digest_tip,table,False,Digest Tips
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,digest_tip_res_users_rel,table,False,RELATION BETWEEN digest_tip AND res_users
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,discuss_channel,table,False,Discussion Channel
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,discuss_channel_member,table,False,Channel Member
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,discuss_channel_res_groups_rel,table,False,RELATION BETWEEN discuss_channel AND res_groups
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,discuss_channel_rtc_session,table,False,Mail RTC session
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,discuss_gif_favorite,table,False,Save favorite GIF from Tenor API
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,discuss_voice_metadata,table,False,Metadata for voice attachments
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,email_template_attachment_rel,table,False,RELATION BETWEEN mail_template AND ir_attachment
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,event_event,table,False,Event
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,event_event_event_tag_rel,table,False,RELATION BETWEEN event_event AND event_tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,event_event_ticket,table,False,Event Ticket
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,event_mail,table,False,Event Automated Mailing
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,event_mail_registration,table,False,Registration Mail Scheduler
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,event_registration,table,False,Event Registration
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,event_stage,table,False,Event Stage
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,event_tag,table,False,Event Tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,event_tag_category,table,False,Event Tag Category
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,event_tag_event_type_rel,table,False,RELATION BETWEEN event_type AND event_tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,event_type,table,False,Event Template
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,event_type_mail,table,False,Mail Scheduling on Event Category
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,event_type_ticket,table,False,Event Template Ticket
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,fetchmail_server,table,False,Incoming Mail Server
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_builder,table,False,Form Builder
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_builder_ir_act_server_rel,table,False,RELATION BETWEEN formio_builder AND ir_act_server
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_builder_js_options,table,False,formio.builder JavaScript Options
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_builder_js_options_merge,table,False,Form Builder JS Options Merge
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_builder_res_groups_rel,table,False,RELATION BETWEEN formio_builder AND res_groups
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_builder_translation,table,False,formio.builder Translation
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_default_asset_css,table,False,formio.js Default Asset CSS
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_default_asset_css_res_config_settings_rel,table,False,RELATION BETWEEN res_config_settings AND formio_default_asset_css
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_form,table,False,Form
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_license,table,False,Forms License
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_license_res_users_rel,table,False,RELATION BETWEEN formio_license AND res_users
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_res_model,table,False,Form Resource Model
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_translation,table,False,formio.js Base Translation
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_translation_source,table,False,formio.js Version Translation Source
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_version,table,False,formio.js Version
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_version_asset,table,False,formio.js Version Asset
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_version_github_checker_wizard,table,False,formio.js Version GitHub Checker Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_version_github_tag,table,False,formio.js Version GitHub Tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_version_github_tag_available,table,False,formio.js Version GitHub Tag Available
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,formio_version_translation,table,False,formio.js Version Translation
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_assign_payments_batch_wizard,table,False,Add Payments to Batch Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_assign_program_registrants,table,False,Registrant Assign to Program
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_assign_program_wizard,table,False,Add Registrants to Program Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_cycle,table,False,Cycle
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_cycle_manager,table,False,Cycle Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_cycle_manager_default,table,False,Default Cycle Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_cycle_manager_dbt_program_rel,table,False,RELATION BETWEEN dbt_program AND dbt_cycle_manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_cycle_membership,table,False,Cycle Membership
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_cycle_recurrence_mixin,table,False,Cycle Recurrence Mixin
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_deduplication_manager,table,False,Deduplication Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_deduplication_manager_default,table,False,Default Deduplication Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_deduplication_manager_dbt_program_rel,table,False,RELATION BETWEEN dbt_program AND dbt_deduplication_manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_deduplication_manager_id_dedup,table,False,ID Deduplication Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_deduplication_manager_id_dedup_dbt_id_type_rel,table,False,RELATION BETWEEN dbt_deduplication_manager_id_dedup AND dbt_id_type
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_deduplication_manager_phone_number,table,False,Phone Number Deduplication Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_disable_registrant_wizard,table,False,Disable Registrant Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_district,table,False,DBT District
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_document_tag,table,False,DBT Document Tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_document_tag_storage_file_rel,table,False,RELATION BETWEEN storage_file AND dbt_document_tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_eligibility_manager,table,False,Eligibility Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_eligibility_manager_dbt_program_rel,table,False,RELATION BETWEEN dbt_program AND dbt_eligibility_manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_entitlement,table,False,Entitlement
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_entitlement_create_wizard,table,False,DBT Entitlement Create Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_group_kind,table,False,Group Kind
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_group_membership,table,False,Group Membership
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_group_membership_dbt_group_membership_kind_rel,table,False,RELATION BETWEEN dbt_group_membership AND dbt_group_membership_kind
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_group_membership_kind,table,False,Group Membership Kind
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_id_type,table,False,ID Type
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_multi_entitlement_approval,table,False,Multi Entitlement Approval
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_multi_entitlement_approval_wizard,table,False,Multi Entitlement Approval Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_pay_batch_tag_pay_manager_def,table,False,RELATION BETWEEN dbt_program_payment_manager_default AND dbt_payment_batch_tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_payment,table,False,Payment
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_payment_batch,table,False,Payment Batch
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_payment_batch_tag,table,False,Payment Batch Tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_payment_dbt_payment_batch_rel,table,False,RELATION BETWEEN dbt_payment_batch AND dbt_payment
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_phone_number,table,False,Phone Number
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program,table,False,Program
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_assessment,table,False,DBT Assessment
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_create_wizard,table,False,Create a New Program Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_entitlement_manager,table,False,Entitlement Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_entitlement_manager_default,table,False,Default Entitlement Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_fund,table,False,Program Fund Entries
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_fund_report_view,view,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_dbt_program_entitlement_manager_rel,table,False,RELATION BETWEEN dbt_program AND dbt_program_entitlement_manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_dbt_program_manager_rel,table,False,RELATION BETWEEN dbt_program AND dbt_program_manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_dbt_program_notification_manager_rel,table,False,RELATION BETWEEN dbt_program AND dbt_program_notification_manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_dbt_program_payment_manager_rel,table,False,RELATION BETWEEN dbt_program AND dbt_program_payment_manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_manager,table,False,Program Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_manager_default,table,False,Default Program Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_membership,table,False,Program Membership
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_membership_assessment_wizard,table,False,DBT Program Membership Assessment Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_membership_duplicate,table,False,Program Membership duplicate
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_membership_dbt_program_membership_duplicate_rel,table,False,RELATION BETWEEN dbt_program_membership_duplicate AND dbt_program_membership
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_membership_manager_default,table,False,Simple Eligibility
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_membership_manager_id_dedup,table,False,ID Document Deduplication Eligibility
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_membership_manager_phone_number,table,False,Phone Number Deduplication Eligibility
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_notification_manager,table,False,Program Notification Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_notification_manager_sms,table,False,SMS Program Notification Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_payment_manager,table,False,Payment Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_payment_manager_default,table,False,Default Payment Manager
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_registrant_info,table,False,Program Registrant Info
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_registrant_info_draft,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_program_registrantinfo_wizard,table,False,DBT Program Registrant Info Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_que_background_task,table,False,DBT Queue Background Task
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_reg_id,table,False,Registrant ID
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_reg_rel,table,False,Registrant Relationship
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_registrant_tags,table,False,Registrant Tags
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_registrant_tags_res_partner_rel,table,False,RELATION BETWEEN res_partner AND dbt_registrant_tags
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,dbt_relationship,table,False,Relationship
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,gender_type,table,False,Gender Type
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,iap_account,table,False,IAP Account
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,iap_account_info,table,False,IAP Account Info
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,iap_account_res_company_rel,table,False,RELATION BETWEEN iap_account AND res_company
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_act_client,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_act_report_xml,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_act_server,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_act_server_group_rel,table,False,RELATION BETWEEN ir_act_server AND res_groups
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_act_server_res_partner_rel,table,False,RELATION BETWEEN ir_act_server AND res_partner
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_act_server_webhook_field_rel,table,False,RELATION BETWEEN ir_act_server AND ir_model_fields
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_act_url,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_act_window,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_act_window_group_rel,table,False,RELATION BETWEEN ir_act_window AND res_groups
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_act_window_view,table,False,Action Window View
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_actions,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_actions_todo,table,False,Configuration Wizards
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_asset,table,False,Asset
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_attachment,table,False,Attachment
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_config_parameter,table,False,System Parameter
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_cron,table,False,Scheduled Actions
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_cron_trigger,table,False,Triggered actions
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_default,table,False,Default Values
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_demo,table,False,Demo
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_demo_failure,table,False,Demo failure
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_demo_failure_wizard,table,False,Demo Failure wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_exports,table,False,Exports
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_exports_line,table,False,Exports Line
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_filters,table,False,Filters
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_logging,table,False,Logging
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_mail_server,table,False,Mail Server
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_model,table,False,Models
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_model_access,table,False,Model Access
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_model_constraint,table,False,Model Constraint
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_model_data,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_model_fields,table,False,Fields
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_model_fields_group_rel,table,False,RELATION BETWEEN ir_model_fields AND res_groups
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_model_fields_selection,table,False,Fields Selection
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_model_inherit,table,False,Model Inheritance Tree
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_model_relation,table,False,Relation Model
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_module_category,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_module_module,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_module_module_dependency,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_module_module_exclusion,table,False,Module exclusion
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_profile,table,False,Profiling results
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_property,table,False,Company Property
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_rule,table,False,Record Rule
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_sequence,table,False,Sequence
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_sequence_date_range,table,False,Sequence Date Range
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_ui_menu,table,False,Menu
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_ui_menu_group_rel,table,False,RELATION BETWEEN ir_ui_menu AND res_groups
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_ui_view,table,False,View
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_ui_view_custom,table,False,Custom View
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,ir_ui_view_group_rel,table,False,RELATION BETWEEN ir_ui_view AND res_groups
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,journal_account_control_rel,table,False,RELATION BETWEEN account_journal AND account_account
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,login_providers,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_activity,table,False,Activity
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_activity_plan,table,False,Activity Plan
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_activity_plan_mail_activity_schedule_rel,table,False,RELATION BETWEEN mail_activity_schedule AND mail_activity_plan
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_activity_plan_template,table,False,Activity plan template
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_activity_rel,table,False,RELATION BETWEEN mail_activity_type AND mail_activity_type
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_activity_schedule,table,False,Activity schedule plan Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_activity_type,table,False,Activity Type
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_activity_type_mail_template_rel,table,False,RELATION BETWEEN mail_activity_type AND mail_template
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_alias,table,False,Email Aliases
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_alias_domain,table,False,Email Domain
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_blacklist,table,False,Mail Blacklist
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_blacklist_remove,table,False,Remove email from blacklist wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_compose_message,table,False,Email composition wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_compose_message_ir_attachments_rel,table,False,RELATION BETWEEN mail_compose_message AND ir_attachment
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_compose_message_res_partner_rel,table,False,RELATION BETWEEN mail_compose_message AND res_partner
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_followers,table,False,Document Followers
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_followers_mail_message_subtype_rel,table,False,RELATION BETWEEN mail_followers AND mail_message_subtype
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_gateway_allowed,table,False,Mail Gateway Allowed
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_guest,table,False,Guest
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_ice_server,table,False,ICE server
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_link_preview,table,False,Store link preview data
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_mail,table,False,Outgoing Mails
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_mail_res_partner_rel,table,False,RELATION BETWEEN mail_mail AND res_partner
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_message,table,False,Message
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_message_reaction,table,False,Message Reaction
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_message_res_partner_rel,table,False,RELATION BETWEEN mail_message AND res_partner
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_message_res_partner_starred_rel,table,False,RELATION BETWEEN mail_message AND res_partner
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_message_schedule,table,False,Scheduled Messages
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_message_subtype,table,False,Message subtypes
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_message_translation,table,False,Message Translation
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_notification,table,False,Message Notifications
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_notification_mail_resend_message_rel,table,False,RELATION BETWEEN mail_resend_message AND mail_notification
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_notification_web_push,table,False,Cron data used for web push notification
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_partner_device,table,False,Partner Web Push Device
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_resend_message,table,False,Email resend wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_resend_partner,table,False,Partner with additional information for mail resend
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_shortcode,table,False,Canned Response / Shortcode
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_template,table,False,Email Templates
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_template_ir_actions_report_rel,table,False,RELATION BETWEEN mail_template AND ir_act_report_xml
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_template_mail_template_reset_rel,table,False,RELATION BETWEEN mail_template_reset AND mail_template
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_template_preview,table,False,Email Template Preview
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_template_reset,table,False,Mail Template Reset
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_tracking_value,table,False,Mail Tracking Value
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_wizard_invite,table,False,Invite wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,mail_wizard_invite_res_partner_rel,table,False,RELATION BETWEEN mail_wizard_invite AND res_partner
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,meeting_category_rel,table,False,RELATION BETWEEN calendar_event AND calendar_event_type
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,message_attachment_rel,table,False,RELATION BETWEEN mail_message AND ir_attachment
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,onboarding_onboarding,table,False,Onboarding
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,onboarding_onboarding_onboarding_onboarding_step_rel,table,False,RELATION BETWEEN onboarding_onboarding AND onboarding_onboarding_step
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,onboarding_onboarding_step,table,False,Onboarding Step
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,onboarding_progress,table,False,Onboarding Progress Tracker
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,onboarding_progress_onboarding_progress_step_rel,table,False,RELATION BETWEEN onboarding_progress AND onboarding_progress_step
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,onboarding_progress_step,table,False,Onboarding Progress Step Tracker
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_capture_wizard,table,False,Payment Capture Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_capture_wizard_payment_transaction_rel,table,False,RELATION BETWEEN payment_capture_wizard AND payment_transaction
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_country_rel,table,False,RELATION BETWEEN payment_provider AND res_country
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_currency_rel,table,False,RELATION BETWEEN payment_provider AND res_currency
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_link_wizard,table,False,Generate Payment Link
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_method,table,False,Payment Method
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_method_payment_provider_rel,table,False,RELATION BETWEEN payment_method AND payment_provider
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_method_res_country_rel,table,False,RELATION BETWEEN payment_method AND res_country
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_method_res_currency_rel,table,False,RELATION BETWEEN payment_method AND res_currency
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_provider,table,False,Payment Provider
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_provider_onboarding_wizard,table,False,Payment provider onboarding wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_refund_wizard,table,False,Payment Refund Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_token,table,False,Payment Token
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,payment_transaction,table,False,Payment Transaction
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,phone_blacklist,table,False,Phone Blacklist
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,phone_blacklist_remove,table,False,Remove phone from blacklist
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,portal_share,table,False,Portal Sharing
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,portal_share_res_partner_rel,table,False,RELATION BETWEEN portal_share AND res_partner
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,portal_wizard,table,False,Grant Portal Access
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,portal_wizard_res_partner_rel,table,False,RELATION BETWEEN portal_wizard AND res_partner
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,portal_wizard_user,table,False,Portal User Config
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,privacy_log,table,False,Privacy Log
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,privacy_lookup_wizard,table,False,Privacy Lookup Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,privacy_lookup_wizard_line,table,False,Privacy Lookup Wizard Line
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_attr_exclusion_value_ids_rel,table,False,RELATION BETWEEN product_template_attribute_exclusion AND product_template_attribute_value
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_attribute,table,False,Product Attribute
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_attribute_custom_value,table,False,Product Attribute Custom Value
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_attribute_product_template_rel,table,False,RELATION BETWEEN product_attribute AND product_template
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_attribute_value,table,False,Attribute Value
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_attribute_value_product_template_attribute_line_rel,table,False,RELATION BETWEEN product_attribute_value AND product_template_attribute_line
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_category,table,False,Product Category
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_document,table,False,Product Document
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_label_layout,table,False,Choose the sheet layout to print the labels
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_label_layout_product_product_rel,table,False,RELATION BETWEEN product_label_layout AND product_product
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_label_layout_product_template_rel,table,False,RELATION BETWEEN product_label_layout AND product_template
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_packaging,table,False,Product Packaging
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_pricelist,table,False,Pricelist
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_pricelist_item,table,False,Pricelist Rule
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_product,table,False,Product Variant
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_supplier_taxes_rel,table,False,RELATION BETWEEN product_template AND account_tax
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_supplierinfo,table,False,Supplier Pricelist
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_tag,table,False,Product Tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_tag_product_product_rel,table,False,RELATION BETWEEN product_product AND product_tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_tag_product_template_rel,table,False,RELATION BETWEEN product_template AND product_tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_taxes_rel,table,False,RELATION BETWEEN product_template AND account_tax
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_template,table,False,Product
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_template_attribute_exclusion,table,False,Product Template Attribute Exclusion
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_template_attribute_line,table,False,Product Template Attribute Line
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_template_attribute_value,table,False,Product Template Attribute Value
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,product_variant_combination,table,False,RELATION BETWEEN product_product AND product_template_attribute_value
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,queue_job,table,False,Queue Job
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,queue_job_channel,table,False,Job Channels
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,queue_job_function,table,False,Job Functions
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,queue_job_queue_jobs_to_cancelled_rel,table,False,RELATION BETWEEN queue_jobs_to_cancelled AND queue_job
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,queue_job_queue_jobs_to_done_rel,table,False,RELATION BETWEEN queue_jobs_to_done AND queue_job
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,queue_job_queue_requeue_job_rel,table,False,RELATION BETWEEN queue_requeue_job AND queue_job
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,queue_jobs_to_cancelled,table,False,Cancel all selected jobs
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,queue_jobs_to_done,table,False,Set all selected jobs to done
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,queue_requeue_job,table,False,Wizard to requeue a selection of jobs
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,rel_modules_langexport,table,False,RELATION BETWEEN base_language_export AND ir_module_module
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,rel_server_actions,table,False,RELATION BETWEEN ir_act_server AND ir_act_server
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,report_layout,table,False,Report Layout
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,report_paperformat,table,False,Paper Format Config
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_bank,table,False,Bank
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_company,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_company_users_rel,table,False,RELATION BETWEEN res_company AND res_users
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_config,table,False,Config
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_config_installer,table,False,Config Installer
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_config_settings,table,False,Config Settings
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_country,table,False,Country
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_country_group,table,False,Country Group
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_country_group_pricelist_rel,table,False,RELATION BETWEEN product_pricelist AND res_country_group
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_country_res_country_group_rel,table,False,RELATION BETWEEN res_country AND res_country_group
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_country_state,table,False,Country state
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_currency,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_currency_rate,table,False,Currency Rate
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_groups,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_groups_implied_rel,table,False,RELATION BETWEEN res_groups AND res_groups
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_groups_report_rel,table,False,RELATION BETWEEN ir_act_report_xml AND res_groups
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_groups_spreadsheet_dashboard_rel,table,False,RELATION BETWEEN spreadsheet_dashboard AND res_groups
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_groups_users_rel,table,False,RELATION BETWEEN res_groups AND res_users
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_lang,table,False,Languages
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_lang_install_rel,table,False,RELATION BETWEEN base_language_install AND res_lang
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_partner,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_partner_autocomplete_sync,table,False,Partner Autocomplete Sync
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_partner_bank,table,False,Bank Accounts
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_partner_category,table,False,Partner Tags
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_partner_industry,table,False,Industry
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_partner_res_partner_category_rel,table,False,RELATION BETWEEN res_partner_category AND res_partner
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_partner_title,table,False,Partner Title
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_users,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_users_apikeys,table,False,
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_users_apikeys_description,table,False,API Key Description
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_users_deletion,table,False,Users Deletion Request
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_users_identitycheck,table,False,Password Check Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_users_log,table,False,Users Log
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_users_settings,table,False,User Settings
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,res_users_settings_volumes,table,False,User Settings Volumes
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,reset_view_arch_wizard,table,False,Reset View Architecture Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,resource_calendar,table,False,Resource Working Time
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,resource_calendar_attendance,table,False,Work Detail
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,resource_calendar_leaves,table,False,Resource Time Off Detail
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,resource_resource,table,False,Resources
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,rule_group_rel,table,False,RELATION BETWEEN ir_rule AND res_groups
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,server_config,table,False,Display server configuration
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,sms_composer,table,False,Send SMS Wizard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,sms_resend,table,False,SMS Resend
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,sms_resend_recipient,table,False,Resend Notification
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,sms_sms,table,False,Outgoing SMS
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,sms_template,table,False,SMS Templates
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,sms_template_preview,table,False,SMS Template Preview
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,sms_template_reset,table,False,SMS Template Reset
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,sms_template_sms_template_reset_rel,table,False,RELATION BETWEEN sms_template_reset AND sms_template
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,sms_tracker,table,False,Link SMS to mailing/sms tracking models
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,snailmail_letter,table,False,Snailmail Letter
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,snailmail_letter_format_error,table,False,Format Error Sending a Snailmail Letter
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,snailmail_letter_missing_required_fields,table,False,Update address of partner
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,sparse_fields_test,table,False,Sparse fields Test
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,spreadsheet_dashboard,table,False,Spreadsheet Dashboard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,spreadsheet_dashboard_group,table,False,Group of dashboards
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,spreadsheet_dashboard_share,table,False,Copy of a shared dashboard
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,storage_backend,table,False,Storage Backend
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,storage_file,table,False,Storage File
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,theme_ir_asset,table,False,Theme Asset
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,theme_ir_attachment,table,False,Theme Attachments
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,theme_ir_ui_view,table,False,Theme UI View
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,theme_website_menu,table,False,Website Theme Menu
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,theme_website_page,table,False,Website Theme Page
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,uom_category,table,False,Product UoM Categories
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,uom_uom,table,False,Product Unit of Measure
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,utm_campaign,table,False,UTM Campaign
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,utm_medium,table,False,UTM Medium
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,utm_source,table,False,UTM Source
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,utm_stage,table,False,Campaign Stage
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,utm_tag,table,False,UTM Tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,utm_tag_rel,table,False,RELATION BETWEEN utm_campaign AND utm_tag
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,validate_account_move,table,False,Validate Account Move
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,web_editor_converter_test,table,False,Web Editor Converter Test
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,web_editor_converter_test_sub,table,False,Web Editor Converter Subtest
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,web_tour_tour,table,False,Tours
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,website,table,False,Website
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,website_configurator_feature,table,False,Website Configurator Feature
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,website_controller_page,table,False,Model Page
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,website_lang_rel,table,False,RELATION BETWEEN website AND res_lang
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,website_menu,table,False,Website Menu
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,website_page,table,False,Page
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,website_rewrite,table,False,Website rewrite
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,website_robots,table,False,Robots.txt Editor
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,website_route,table,False,All Website Route
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,website_snippet_filter,table,False,Website Snippet Filter
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,website_track,table,False,Visited Pages
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,website_visitor,table,False,Website Visitor
+PostgreSQL,portal-backend-postgresql,portalpbmsdb,public,wizard_ir_model_menu_create,table,False,Create Menu Wizard
+SQLite,registration,intake.sqlite,main,ai_usage,table,False,
+SQLite,registration,intake.sqlite,main,analytics_daily_usage,table,False,
+SQLite,registration,intake.sqlite,main,analytics_events,table,False,
+SQLite,registration,intake.sqlite,main,analytics_metadata,table,False,
+SQLite,registration,intake.sqlite,main,analytics_snapshots,table,False,
+SQLite,registration,intake.sqlite,main,analytics_source_cache,table,False,
+SQLite,registration,intake.sqlite,main,applications,table,False,
+SQLite,registration,intake.sqlite,main,audit,table,False,
+SQLite,registration,intake.sqlite,main,km_articles,table,False,
+SQLite,registration,intake.sqlite,main,km_history,table,False,
+SQLite,registration,intake.sqlite,main,profiles,table,False,
+SQLite,registration,intake.sqlite,main,programs,table,False,
+SQLite,registration,intake.sqlite,main,sessions,table,False,
+SQLite,registration,intake.sqlite,main,sqlite_sequence,table,True,
+SQLite,registration,partner-simulation.sqlite,main,callbacks,table,False,
+SQLite,registration,partner-simulation.sqlite,main,events,table,False,
+SQLite,registration,partner-simulation.sqlite,main,runs,table,False,

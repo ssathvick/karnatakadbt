@@ -1,0 +1,23 @@
+name: Validate source
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile Python sources and validate JSON
+        run: |
+          python -m compileall -q platform deployment manage.py tests
+          python - <<'PY'
+          import json,pathlib,hashlib
+          for folder in ['deployment','schemas']:
+              for file in pathlib.Path(folder).rglob('*.json'):
+                  json.loads(file.read_text(encoding='utf-8'))
+          manifest=json.loads(pathlib.Path('vendor/java/manifest.json').read_text())
+          print('Python and JSON validation passed')
+          PY

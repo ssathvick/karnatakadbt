@@ -1,0 +1,2 @@
+-- KarnatakaDBT simulation schema 1.0.0; not a government production DDL
+CREATE TABLE certificates(certificate_id TEXT PRIMARY KEY, household_ref TEXT NOT NULL, person_id TEXT NOT NULL, certificate_type TEXT NOT NULL CHECK(certificate_type IN ('income','residence')), annual_income_inr INTEGER CHECK(annual_income_inr>=0), issued_on TEXT NOT NULL, valid_until TEXT NOT NULL, status TEXT NOT NULL CHECK(status IN ('active','revoked','expired')), source_updated_at TEXT NOT NULL, UNIQUE(household_ref,certificate_type));

@@ -1,0 +1,26 @@
+{
+  "students": [
+    {
+      "student_id": "SIM-STUDENT-SIM-PER-5b6a6333f65b3e",
+      "household_ref": "KA-DEMO-HH-001",
+      "person_id": "SIM-PER-5b6a6333f65b3e",
+      "institution_id": "SIM-SCHOOL-KA-D01",
+      "academic_year": "2026-27",
+      "course": "School education",
+      "enrolment_status": "active",
+      "scholarship_status": "none",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    },
+    {
+      "student_id": "SIM-STUDENT-SIM-PER-c7d531b54314e1",
+      "household_ref": "KA-DEMO-HH-001",
+      "person_id": "SIM-PER-c7d531b54314e1",
+      "institution_id": "SIM-SCHOOL-KA-D01",
+      "academic_year": "2026-27",
+      "course": "School education",
+      "enrolment_status": "active",
+      "scholarship_status": "none",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    }
+  ]
+}

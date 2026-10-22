@@ -1,0 +1,31 @@
+{
+  "url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_registry_candidate_local",
+  "candidate_settings_directory": "/runtime/config/registry",
+  "handoff_scope": "registry",
+  "health_file": "/runtime/status/health.json",
+  "stop_file": "/runtime/status/stopped",
+  "sync_health_file": "/runtime/status/health.json",
+  "approval_url": "http://10.43.172.195:80",
+  "identifier_url": "http://10.43.191.34:80",
+  "scheduling": {
+    "no_of_tasks_to_process": 4,
+    "export_no_of_tasks_to_process": 5,
+    "default_beat_producer_frequency": 20,
+    "data_transformation_beat_producer_frequency": 20,
+    "ingest_data_beat_producer_frequency": 20,
+    "ingest_data_classification_beat_producer_frequency": 20,
+    "outgest_data_publish_beat_producer_frequency": 20,
+    "outgest_topic_register_beat_producer_frequency": 20,
+    "deduplication_beat_producer_frequency": 30,
+    "intake_form_register_ingest_beat_producer_frequency": null,
+    "functional_id_allocation_beat_producer_frequency": null,
+    "functional_id_updation_beat_producer_frequency": null,
+    "score_compute_beat_producer_frequency": null,
+    "completion_score_beat_producer_frequency": null,
+    "import_file_process_beat_producer_frequency": null,
+    "register_export_beat_producer_frequency": 20,
+    "default_batch_size": 4,
+    "export_batch_size": 5
+  },
+  "native_capture_key_path": "/runtime/config/references/f013-raw-capture.key"
+}

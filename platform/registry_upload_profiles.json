@@ -1,0 +1,96 @@
+{
+  "default": {
+    "allowed_mime_types": [
+      "application/pdf",
+      "image/jpeg",
+      "image/png",
+      "image/webp"
+    ],
+    "allowed_extensions": [
+      "jpeg",
+      "jpg",
+      "pdf",
+      "png",
+      "webp"
+    ],
+    "max_bytes": 10485760,
+    "max_width": null,
+    "max_height": null,
+    "require_filename": true,
+    "max_bytes_by_mime": {
+      "image/png": 5242880,
+      "image/jpeg": 5242880,
+      "image/webp": 5242880,
+      "application/pdf": 10485760
+    },
+    "content_mode": "binary"
+  },
+  "templates": {
+    "allowed_mime_types": [
+      "application/json",
+      "text/plain"
+    ],
+    "allowed_extensions": [
+      "json.j2"
+    ],
+    "max_bytes": 1048576,
+    "max_width": null,
+    "max_height": null,
+    "require_filename": true,
+    "max_bytes_by_mime": {},
+    "content_mode": "text"
+  },
+  "documents": {
+    "allowed_mime_types": [
+      "application/pdf",
+      "image/jpeg",
+      "image/png",
+      "image/webp"
+    ],
+    "allowed_extensions": [
+      "jpeg",
+      "jpg",
+      "pdf",
+      "png",
+      "webp"
+    ],
+    "max_bytes": 10485760,
+    "max_width": null,
+    "max_height": null,
+    "require_filename": true,
+    "max_bytes_by_mime": {
+      "image/png": 5242880,
+      "image/jpeg": 5242880,
+      "image/webp": 5242880,
+      "application/pdf": 10485760
+    },
+    "content_mode": "binary"
+  },
+  "data_import_files": null,
+  "export-files": {
+    "allowed_mime_types": [
+      "application/pdf",
+      "image/jpeg",
+      "image/png",
+      "image/webp"
+    ],
+    "allowed_extensions": [
+      "jpeg",
+      "jpg",
+      "pdf",
+      "png",
+      "webp"
+    ],
+    "max_bytes": 10485760,
+    "max_width": null,
+    "max_height": null,
+    "require_filename": true,
+    "max_bytes_by_mime": {
+      "image/png": 5242880,
+      "image/jpeg": 5242880,
+      "image/webp": 5242880,
+      "application/pdf": 10485760
+    },
+    "content_mode": "binary"
+  }
+}

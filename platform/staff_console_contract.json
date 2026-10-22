@@ -1,0 +1,1 @@
+{"openapi":"3.1.0","info":{"title":"KarnatakaDBT staff application catalogue","version":"0.1.0"},"paths":{"/user-access/get_staff_portal_applications":{"get":{"summary":"Get Staff Portal Applications"}},"/user-access/get_application_permissions_for_user":{"get":{"summary":"Get Application Permissions For User"}}}}

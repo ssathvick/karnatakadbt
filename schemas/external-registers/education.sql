@@ -1,0 +1,2 @@
+-- KarnatakaDBT simulation schema 1.0.0; not a government production DDL
+CREATE TABLE students(student_id TEXT PRIMARY KEY, household_ref TEXT NOT NULL, person_id TEXT UNIQUE NOT NULL, institution_id TEXT NOT NULL, academic_year TEXT NOT NULL, course TEXT NOT NULL, enrolment_status TEXT NOT NULL CHECK(enrolment_status IN ('active','inactive')), scholarship_status TEXT NOT NULL CHECK(scholarship_status IN ('none','sanctioned','paid')), source_updated_at TEXT NOT NULL);

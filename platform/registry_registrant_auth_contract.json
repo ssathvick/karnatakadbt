@@ -1,0 +1,185 @@
+{
+  "provider": {
+    "source_table": "g2p_registrant_authentication_providers",
+    "selected_fields": [
+      "provider_id",
+      "register_id",
+      "provider_name",
+      "provider_description",
+      "adapter_name",
+      "display_order",
+      "is_active"
+    ],
+    "columns": {
+      "provider_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "register_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "provider_name": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "provider_description": {
+        "type": "character varying",
+        "nullable": true
+      },
+      "adapter_name": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "server_metadata_url": {
+        "type": "character varying",
+        "nullable": true
+      },
+      "authorization_endpoint": {
+        "type": "character varying",
+        "nullable": true
+      },
+      "token_endpoint": {
+        "type": "character varying",
+        "nullable": true
+      },
+      "userinfo_endpoint": {
+        "type": "character varying",
+        "nullable": true
+      },
+      "jwks_endpoint": {
+        "type": "character varying",
+        "nullable": true
+      },
+      "introspection_endpoint": {
+        "type": "character varying",
+        "nullable": true
+      },
+      "client_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "client_secret": {
+        "type": "character varying",
+        "nullable": true
+      },
+      "client_private_key": {
+        "type": "bytea",
+        "nullable": true
+      },
+      "token_endpoint_auth_method": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "oauth_callback_url": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "keymanager_sign_app_id": {
+        "type": "character varying",
+        "nullable": true
+      },
+      "provider_config": {
+        "type": "jsonb",
+        "nullable": true
+      },
+      "display_order": {
+        "type": "integer",
+        "nullable": false
+      },
+      "is_active": {
+        "type": "boolean",
+        "nullable": false
+      },
+      "created_at": {
+        "type": "timestamp without time zone",
+        "nullable": false
+      },
+      "updated_at": {
+        "type": "timestamp without time zone",
+        "nullable": false
+      }
+    }
+  },
+  "history": {
+    "source_table": "g2p_registrant_authentications",
+    "selected_fields": [
+      "authentication_id",
+      "register_id",
+      "internal_record_id",
+      "initiated_at",
+      "status",
+      "authentication_method",
+      "initiated_by_staff_id",
+      "claim_verifications",
+      "expiry_at",
+      "failure_reason"
+    ],
+    "columns": {
+      "authentication_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "register_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "internal_record_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "provider_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "initiated_by_staff_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "initiated_at": {
+        "type": "timestamp without time zone",
+        "nullable": false
+      },
+      "status": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "user_claims": {
+        "type": "character varying",
+        "nullable": true
+      },
+      "authentication_method": {
+        "type": "character varying",
+        "nullable": true
+      },
+      "claim_verifications": {
+        "type": "jsonb",
+        "nullable": true
+      },
+      "token_hash": {
+        "type": "character varying",
+        "nullable": true
+      },
+      "token_expires_at": {
+        "type": "timestamp without time zone",
+        "nullable": true
+      },
+      "expiry_at": {
+        "type": "timestamp without time zone",
+        "nullable": true
+      },
+      "failure_reason": {
+        "type": "character varying",
+        "nullable": true
+      },
+      "completed_at": {
+        "type": "timestamp without time zone",
+        "nullable": true
+      },
+      "created_at": {
+        "type": "timestamp without time zone",
+        "nullable": false
+      }
+    }
+  }
+}

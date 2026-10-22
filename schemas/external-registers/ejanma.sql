@@ -1,0 +1,2 @@
+-- KarnatakaDBT simulation schema 1.0.0; not a government production DDL
+CREATE TABLE life_events(event_id TEXT PRIMARY KEY, household_ref TEXT NOT NULL, person_id TEXT UNIQUE NOT NULL, birth_date TEXT NOT NULL, death_date TEXT, registration_status TEXT NOT NULL CHECK(registration_status IN ('registered','under_review')), source_updated_at TEXT NOT NULL);

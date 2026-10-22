@@ -1,0 +1,1996 @@
+{
+  "/registry-config/create_registry_configuration": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registryConfiguration:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registry_configuration_controller.py",
+    "operation": "create_registry_configuration"
+  },
+  "/registry-config/get_registry_configuration": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_registry_configuration_controller.py",
+    "operation": "get_registry_configuration"
+  },
+  "/registry-config/update_registry_configuration": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registryConfiguration:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registry_configuration_controller.py",
+    "operation": "update_registry_configuration"
+  },
+  "/registry-config/get_number_of_requests_pending": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:view",
+      "registryConfiguration:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registry_configuration_controller.py",
+    "operation": "get_number_of_requests_pending"
+  },
+  "/registry-config/get_earliest_pending_change_request": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:view",
+      "registryConfiguration:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registry_configuration_controller.py",
+    "operation": "get_earliest_pending_change_request"
+  },
+  "/registry-theme/get_all_themes": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_registry_theme_controller.py",
+    "operation": "get_all_themes"
+  },
+  "/registry-theme/create_theme": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registryConfiguration:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registry_theme_controller.py",
+    "operation": "create_theme"
+  },
+  "/registry-theme/remove_theme": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registryConfiguration:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registry_theme_controller.py",
+    "operation": "remove_theme"
+  },
+  "/registry-theme/update_theme_values": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registryConfiguration:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registry_theme_controller.py",
+    "operation": "update_theme_values"
+  },
+  "/registry-theme/get_theme_values": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_registry_theme_controller.py",
+    "operation": "get_theme_values"
+  },
+  "/registry-language/get_all_languages": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_registry_language_controller.py",
+    "operation": "get_all_languages"
+  },
+  "/registry-language/get_language": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_registry_language_controller.py",
+    "operation": "get_language"
+  },
+  "/registry-language/create_language": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registryConfiguration:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registry_language_controller.py",
+    "operation": "create_language"
+  },
+  "/registry-language/update_language": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registryConfiguration:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registry_language_controller.py",
+    "operation": "update_language"
+  },
+  "/registry-language/remove_language": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registryConfiguration:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registry_language_controller.py",
+    "operation": "remove_language"
+  },
+  "/register-metadata/create_register": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "create_register"
+  },
+  "/register-metadata/edit_register": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "edit_register"
+  },
+  "/register-metadata/delete_register": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:delete"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "delete_register"
+  },
+  "/register-metadata/get_all_registers": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "get_all_registers"
+  },
+  "/register-metadata/get_dashboard_registers": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "get_dashboard_registers"
+  },
+  "/register-metadata/get_child_registers": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "get_child_registers"
+  },
+  "/register-metadata/get_master_register": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "get_master_register"
+  },
+  "/register-metadata/get_register_fields": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "get_register_fields"
+  },
+  "/register-metadata/get_register_schema": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "get_register_schema"
+  },
+  "/register-metadata/update_register_schema": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "update_register_schema"
+  },
+  "/register-metadata/update_dedup_is_enabled": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "update_dedup_is_enabled"
+  },
+  "/register-metadata/update_dedup_threshold_score": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "update_dedup_threshold_score"
+  },
+  "/register-metadata/update_deduplication_schema": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "update_deduplication_schema"
+  },
+  "/register-metadata/update_search_result_schema": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_metadata_controller.py",
+    "operation": "update_search_result_schema"
+  },
+  "/register-tab-metadata/create_tab": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerTab:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_tab_metadata_controller.py",
+    "operation": "create_tab"
+  },
+  "/register-tab-metadata/delete_tab": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerTab:delete"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_tab_metadata_controller.py",
+    "operation": "delete_tab"
+  },
+  "/register-tab-metadata/get_all_tabs": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerTab:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_tab_metadata_controller.py",
+    "operation": "get_all_tabs"
+  },
+  "/register-tab-metadata/get_tab": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerTab:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_tab_metadata_controller.py",
+    "operation": "get_tab"
+  },
+  "/register-tab-metadata/update_tab": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerTab:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_tab_metadata_controller.py",
+    "operation": "update_tab"
+  },
+  "/register-tab-metadata/add_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerTab:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_tab_metadata_controller.py",
+    "operation": "add_section"
+  },
+  "/register-tab-metadata/get_sections": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerTab:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_tab_metadata_controller.py",
+    "operation": "get_sections"
+  },
+  "/register-tab-metadata/update_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerTab:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_tab_metadata_controller.py",
+    "operation": "update_section"
+  },
+  "/register-tab-metadata/remove_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerTab:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_tab_metadata_controller.py",
+    "operation": "remove_section"
+  },
+  "/register-section-metadata/create_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerSection:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_section_metadata_controller.py",
+    "operation": "create_section"
+  },
+  "/register-section-metadata/delete_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerSection:delete"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_section_metadata_controller.py",
+    "operation": "delete_section"
+  },
+  "/register-section-metadata/get_all_sections_brief": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerSection:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_section_metadata_controller.py",
+    "operation": "get_all_sections_brief"
+  },
+  "/register-section-metadata/get_all_sections": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerSection:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_section_metadata_controller.py",
+    "operation": "get_all_sections"
+  },
+  "/register-section-metadata/get_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerSection:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_section_metadata_controller.py",
+    "operation": "get_section"
+  },
+  "/register-section-metadata/update_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerSection:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_section_metadata_controller.py",
+    "operation": "update_section"
+  },
+  "/register-section-metadata/update_section_ui_schema": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerSection:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_section_metadata_controller.py",
+    "operation": "update_section_ui_schema"
+  },
+  "/register-section-metadata/get_section_ui_schema": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerSection:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_section_metadata_controller.py",
+    "operation": "get_section_ui_schema"
+  },
+  "/register-data/get_number_of_versions": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerHistory:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "get_number_of_versions"
+  },
+  "/register-data/get_record_history": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerHistory:view"
+    ],
+    "data_policy": true,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "get_record_history"
+  },
+  "/register-data/get_version_dates": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerHistory:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "get_version_dates"
+  },
+  "/register-data/get_versions_for_a_date": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerHistory:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "get_versions_for_a_date"
+  },
+  "/register-data/get_subject_record": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": true,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "get_subject_record"
+  },
+  "/register-data/get_deduplication_register_results": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "get_deduplication_register_results"
+  },
+  "/register-data/get_deduplication_change_request_results": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "get_deduplication_change_request_results"
+  },
+  "/register-data/get_schema_definition_for_register_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerSection:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "get_schema_definition_for_register_section"
+  },
+  "/register-data/get_section_records": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "get_section_records"
+  },
+  "/register-data/get_tab_records": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": true,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "get_tab_records"
+  },
+  "/register-data/get_register_summary_data": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": true,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "get_register_summary_data"
+  },
+  "/register-data/search_in_a_register": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": true,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "search_in_a_register"
+  },
+  "/register-data/get_allowed_parents_for_a_child_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "get_allowed_parents_for_a_child_section"
+  },
+  "/register-data/export_register_records": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:export"
+    ],
+    "data_policy": true,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "export_register_records"
+  },
+  "/register-data/get_export_queue_records": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:export"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_data_controller.py",
+    "operation": "get_export_queue_records"
+  },
+  "/change-requests/create_change_request": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_change_request_controller.py",
+    "operation": "create_change_request"
+  },
+  "/change-requests/approve_change_request": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:approve"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_change_request_controller.py",
+    "operation": "approve_change_request"
+  },
+  "/change-requests/reject_change_request": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:approve"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_change_request_controller.py",
+    "operation": "reject_change_request"
+  },
+  "/change-requests/get_number_of_pending_change_requests": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_change_request_controller.py",
+    "operation": "get_number_of_pending_change_requests"
+  },
+  "/change-requests/get_number_of_cross_register_changes": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_change_request_controller.py",
+    "operation": "get_number_of_cross_register_changes"
+  },
+  "/change-requests/get_cross_register_changes": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_change_request_controller.py",
+    "operation": "get_cross_register_changes"
+  },
+  "/change-requests/get_change_requests": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:view"
+    ],
+    "data_policy": true,
+    "controller": "g2p_register_change_request_controller.py",
+    "operation": "get_change_requests"
+  },
+  "/change-requests/get_change_request": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:view"
+    ],
+    "data_policy": true,
+    "controller": "g2p_register_change_request_controller.py",
+    "operation": "get_change_request"
+  },
+  "/change-requests/check_change_request_sequence": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_change_request_controller.py",
+    "operation": "check_change_request_sequence"
+  },
+  "/change-requests/get_verifications_for_change_request": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "verificationChangeRequest:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_change_request_controller.py",
+    "operation": "get_verifications_for_change_request"
+  },
+  "/change-requests/add_verification_for_change_request": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "verificationChangeRequest:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_register_change_request_controller.py",
+    "operation": "add_verification_for_change_request"
+  },
+  "/change-requests/get_register_change_request_summary_data": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": true,
+    "controller": "g2p_register_change_request_controller.py",
+    "operation": "get_register_change_request_summary_data"
+  },
+  "/change-requests/search_in_change_request": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:view"
+    ],
+    "data_policy": true,
+    "controller": "g2p_register_change_request_controller.py",
+    "operation": "search_in_change_request"
+  },
+  "/ingestion-config/create_incoming_key_path": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestKeyPath:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "create_incoming_key_path"
+  },
+  "/ingestion-config/get_incoming_key_path": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestKeyPath:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "get_incoming_key_path"
+  },
+  "/ingestion-config/get_all_incoming_key_paths": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestKeyPath:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "get_all_incoming_key_paths"
+  },
+  "/ingestion-config/update_incoming_key_path": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestKeyPath:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "update_incoming_key_path"
+  },
+  "/ingestion-config/delete_incoming_key_path": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestKeyPath:delete"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "delete_incoming_key_path"
+  },
+  "/ingestion-config/create_semantic_pattern": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestExpression:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "create_semantic_pattern"
+  },
+  "/ingestion-config/get_semantic_pattern": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestExpression:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "get_semantic_pattern"
+  },
+  "/ingestion-config/update_semantic_pattern": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestExpression:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "update_semantic_pattern"
+  },
+  "/ingestion-config/get_all_semantic_patterns": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestExpression:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "get_all_semantic_patterns"
+  },
+  "/ingestion-config/delete_semantic_pattern": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestExpression:delete"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "delete_semantic_pattern"
+  },
+  "/ingestion-config/create_register_semantic_pattern": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestExpression:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "create_register_semantic_pattern"
+  },
+  "/ingestion-config/get_register_semantic_pattern": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestExpression:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "get_register_semantic_pattern"
+  },
+  "/ingestion-config/update_register_semantic_pattern": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestExpression:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "update_register_semantic_pattern"
+  },
+  "/ingestion-config/get_all_register_semantic_patterns": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestExpression:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "get_all_register_semantic_patterns"
+  },
+  "/ingestion-config/delete_register_semantic_pattern": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestExpression:delete"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "delete_register_semantic_pattern"
+  },
+  "/ingestion-config/create_template": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestTemplate:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "create_template"
+  },
+  "/ingestion-config/get_template": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestTemplate:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "get_template"
+  },
+  "/ingestion-config/get_all_templates": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestTemplate:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "get_all_templates"
+  },
+  "/ingestion-config/update_template": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestTemplate:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "update_template"
+  },
+  "/ingestion-config/delete_template": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestTemplate:delete"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "delete_template"
+  },
+  "/ingestion-config/create_subscription_activity_log": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestSubscription:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "create_subscription_activity_log"
+  },
+  "/ingestion-config/get_subscription_activity_logs_by_partner": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestSubscription:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "get_subscription_activity_logs_by_partner"
+  },
+  "/ingestion-config/get_all_subscription_activity_logs": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "ingestSubscription:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_configuration_controller.py",
+    "operation": "get_all_subscription_activity_logs"
+  },
+  "/data-model/create_data_model": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "dataModel:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_data_model_controller.py",
+    "operation": "create_data_model"
+  },
+  "/data-model/get_data_model": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "dataModel:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_data_model_controller.py",
+    "operation": "get_data_model"
+  },
+  "/data-model/get_all_data_models": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "dataModel:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_data_model_controller.py",
+    "operation": "get_all_data_models"
+  },
+  "/data-model/update_data_model": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "dataModel:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_data_model_controller.py",
+    "operation": "update_data_model"
+  },
+  "/data-model/delete_data_model": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "dataModel:delete"
+    ],
+    "data_policy": false,
+    "controller": "g2p_data_model_controller.py",
+    "operation": "delete_data_model"
+  },
+  "/ingestion-data/get_ingestion_summary_data": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_ingestion_data_controller.py",
+    "operation": "get_ingestion_summary_data"
+  },
+  "/ingestion-data/search_in_ingestion_data": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "incomingMessage:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_data_controller.py",
+    "operation": "search_in_ingestion_data"
+  },
+  "/ingestion-data/get_raw_payload": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "incomingMessage:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_data_controller.py",
+    "operation": "get_raw_payload"
+  },
+  "/ingestion-data/get_enriched_and_transformed_payload": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "incomingMessage:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_ingestion_data_controller.py",
+    "operation": "get_enriched_and_transformed_payload"
+  },
+  "/outgestion-data/get_outgestion_summary_data": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_outgestion_data_controller.py",
+    "operation": "get_outgestion_summary_data"
+  },
+  "/outgestion-data/search_in_outgestion_data": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "outgoingMessage:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_outgestion_data_controller.py",
+    "operation": "search_in_outgestion_data"
+  },
+  "/outgestion-config/create_topic": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "outgestTopic:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_outgestion_configuration_controller.py",
+    "operation": "create_outgoing_topic"
+  },
+  "/outgestion-config/get_all_topics": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "outgestTopic:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_outgestion_configuration_controller.py",
+    "operation": "get_all_outgoing_topics"
+  },
+  "/outgestion-config/get_topic": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "outgestTopic:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_outgestion_configuration_controller.py",
+    "operation": "get_outgoing_topic"
+  },
+  "/outgestion-config/update_topic": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "outgestTopic:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_outgestion_configuration_controller.py",
+    "operation": "update_outgoing_topic"
+  },
+  "/outgestion-config/toggle_topicstatus": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "outgestTopic:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_outgestion_configuration_controller.py",
+    "operation": "toggle_outgoing_topic_status"
+  },
+  "/outgestion-config/re_register_topic": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "outgestTopic:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_outgestion_configuration_controller.py",
+    "operation": "re_register_outgoing_topic"
+  },
+  "/outgestion-config/delete_topic": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "outgestTopic:delete"
+    ],
+    "data_policy": false,
+    "controller": "g2p_outgestion_configuration_controller.py",
+    "operation": "delete_outgoing_topic"
+  },
+  "/outgestion-config/create_template": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "outgestTemplate:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_outgestion_configuration_controller.py",
+    "operation": "create_template"
+  },
+  "/outgestion-config/get_template": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "outgestTemplate:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_outgestion_configuration_controller.py",
+    "operation": "get_template"
+  },
+  "/outgestion-config/get_all_templates": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "outgestTemplate:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_outgestion_configuration_controller.py",
+    "operation": "get_all_templates"
+  },
+  "/outgestion-config/update_template": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "outgestTemplate:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_outgestion_configuration_controller.py",
+    "operation": "update_template"
+  },
+  "/outgestion-config/delete_template": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "outgestTemplate:delete"
+    ],
+    "data_policy": false,
+    "controller": "g2p_outgestion_configuration_controller.py",
+    "operation": "delete_template"
+  },
+  "/documents/upload_documents": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_document_controller.py",
+    "operation": "upload_documents"
+  },
+  "/documents/delete_documents": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_document_controller.py",
+    "operation": "delete_documents"
+  },
+  "/documents/get_documents": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_document_controller.py",
+    "operation": "get_documents"
+  },
+  "/documents/get_change_request_documents": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_document_controller.py",
+    "operation": "get_change_request_documents"
+  },
+  "/documents/get_intake_form_documents": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_document_controller.py",
+    "operation": "get_intake_form_documents"
+  },
+  "/documents/get_section_documents": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_document_controller.py",
+    "operation": "get_section_documents"
+  },
+  "/input-mechanism-metadata/get_all_input_mechanisms": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "input_mechanism_metadata_controller.py",
+    "operation": "get_all_input_mechanisms"
+  },
+  "/input-mechanism-metadata/get_all_vc_configurations": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "input_mechanism_metadata_controller.py",
+    "operation": "get_all_vc_configurations"
+  },
+  "/input-mechanism-metadata/get_vc_configuration_for_register": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "input_mechanism_metadata_controller.py",
+    "operation": "get_vc_configuration_for_register"
+  },
+  "/input-mechanism-metadata/create_vc_configuration": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "input_mechanism_metadata_controller.py",
+    "operation": "create_vc_configuration"
+  },
+  "/input-mechanism-metadata/update_vc_configuration": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "input_mechanism_metadata_controller.py",
+    "operation": "update_vc_configuration"
+  },
+  "/input-mechanism-metadata/delete_vc_configuration": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "input_mechanism_metadata_controller.py",
+    "operation": "delete_vc_configuration"
+  },
+  "/input-mechanism-metadata/get_all_import_file_configurations": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "input_mechanism_metadata_controller.py",
+    "operation": "get_all_import_file_configurations"
+  },
+  "/input-mechanism-metadata/get_import_file_configuration_for_register": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "input_mechanism_metadata_controller.py",
+    "operation": "get_import_file_configuration_for_register"
+  },
+  "/input-mechanism-metadata/create_import_file_configuration": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "input_mechanism_metadata_controller.py",
+    "operation": "create_import_file_configuration"
+  },
+  "/input-mechanism-metadata/update_import_file_configuration": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "input_mechanism_metadata_controller.py",
+    "operation": "update_import_file_configuration"
+  },
+  "/input-mechanism-metadata/delete_import_file_configuration": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "input_mechanism_metadata_controller.py",
+    "operation": "delete_import_file_configuration"
+  },
+  "/input-mechanism-data/enqueue_import_file": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "input_mechanism_data_controller.py",
+    "operation": "enqueue_import_file"
+  },
+  "/input-mechanism-data/ingest-data": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "input_mechanism_data_controller.py",
+    "operation": "ingest_data"
+  },
+  "/verifications/get_verifications": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "verificationIntakeForm:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_verification_controller.py",
+    "operation": "get_verifications"
+  },
+  "/verifications/add_verification": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "verificationIntakeForm:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_verification_controller.py",
+    "operation": "add_verification"
+  },
+  "/intake-form-data/save_intake_form_submission": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_data_controller.py",
+    "operation": "save_intake_form_submission"
+  },
+  "/intake-form-data/finalize_intake_form_submission": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_data_controller.py",
+    "operation": "finalize_intake_form_submission"
+  },
+  "/intake-form-data/delete_intake_form_submission": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_data_controller.py",
+    "operation": "delete_intake_form_submission"
+  },
+  "/intake-form-data/approve_intake_form_submission": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:approve"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_data_controller.py",
+    "operation": "approve_intake_form_submission"
+  },
+  "/intake-form-data/reject_intake_form_submission": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:approve"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_data_controller.py",
+    "operation": "reject_intake_form_submission"
+  },
+  "/intake-form-data/get_intake_form_submission": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:view"
+    ],
+    "data_policy": true,
+    "controller": "g2p_intake_form_data_controller.py",
+    "operation": "get_intake_form_submission"
+  },
+  "/intake-form-data/search_in_intake_form_submissions": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:view"
+    ],
+    "data_policy": true,
+    "controller": "g2p_intake_form_data_controller.py",
+    "operation": "search_in_intake_form_submissions"
+  },
+  "/intake-form-data/get_tab_records": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:view"
+    ],
+    "data_policy": true,
+    "controller": "g2p_intake_form_data_controller.py",
+    "operation": "get_tab_records"
+  },
+  "/intake-form-data/get_deduplication_intake_form_register_results": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_data_controller.py",
+    "operation": "get_deduplication_intake_form_register_results"
+  },
+  "/intake-form-data/get_deduplication_intake_form_intake_form_results": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_data_controller.py",
+    "operation": "get_deduplication_intake_form_intake_form_results"
+  },
+  "/intake-form-data/get_intake_form_submissions_summary": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": true,
+    "controller": "g2p_intake_form_data_controller.py",
+    "operation": "get_intake_form_submissions_summary"
+  },
+  "/intake-form-data/get_intake_allowed_parents": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeSubmission:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_data_controller.py",
+    "operation": "get_intake_allowed_parents"
+  },
+  "/intake-form-metadata/create_intake_form": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "create_intake_form"
+  },
+  "/intake-form-metadata/get_intake_form": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "get_intake_form"
+  },
+  "/intake-form-metadata/render_intake_form": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "render_intake_form"
+  },
+  "/intake-form-metadata/get_all_intake_forms": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "get_all_intake_forms"
+  },
+  "/intake-form-metadata/update_intake_form": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "update_intake_form"
+  },
+  "/intake-form-metadata/delete_intake_form": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "delete_intake_form"
+  },
+  "/intake-form-metadata/create_tab": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "create_tab"
+  },
+  "/intake-form-metadata/get_tab": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "get_tab"
+  },
+  "/intake-form-metadata/get_all_tabs": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "get_all_tabs"
+  },
+  "/intake-form-metadata/update_tab": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "update_tab"
+  },
+  "/intake-form-metadata/delete_tab": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "delete_tab"
+  },
+  "/intake-form-metadata/add_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "add_section"
+  },
+  "/intake-form-metadata/get_all_sections": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "get_all_sections"
+  },
+  "/intake-form-metadata/update_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "update_section"
+  },
+  "/intake-form-metadata/remove_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "intakeFormDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_intake_form_metadata_controller.py",
+    "operation": "remove_section"
+  },
+  "/change-requests-core-data/create_change_request_for_core_data": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_change_request_core_controller.py",
+    "operation": "create_change_request_for_core_data"
+  },
+  "/change-requests-core-data/approve_change_request_for_core_data": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:approve"
+    ],
+    "data_policy": false,
+    "controller": "g2p_change_request_core_controller.py",
+    "operation": "approve_change_request_for_core_data"
+  },
+  "/change-requests-core-data/reject_change_request_for_core_data": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "changeRequest:approve"
+    ],
+    "data_policy": false,
+    "controller": "g2p_change_request_core_controller.py",
+    "operation": "reject_change_request_for_core_data"
+  },
+  "/register-data/get_scores": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_score_controller.py",
+    "operation": "get_scores"
+  },
+  "/register-data/get_score_history": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerHistory:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_score_controller.py",
+    "operation": "get_score_history"
+  },
+  "/computation-score/get_score_definitions": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerScore:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_score_definition_controller.py",
+    "operation": "get_score_definitions"
+  },
+  "/computation-score/create_score_definition": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerScore:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_score_definition_controller.py",
+    "operation": "create_score_definition"
+  },
+  "/computation-score/update_score_definition": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerScore:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_score_definition_controller.py",
+    "operation": "update_score_definition"
+  },
+  "/computation-score/delete_score_definition": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerScore:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_score_definition_controller.py",
+    "operation": "delete_score_definition"
+  },
+  "/computation-score/get_score_contributing_attributes": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerScore:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_score_contributing_attribute_controller.py",
+    "operation": "get_score_contributing_attributes"
+  },
+  "/computation-score/create_score_contributing_attribute": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerScore:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_score_contributing_attribute_controller.py",
+    "operation": "create_score_contributing_attribute"
+  },
+  "/computation-score/update_score_contributing_attribute": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerScore:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_score_contributing_attribute_controller.py",
+    "operation": "update_score_contributing_attribute"
+  },
+  "/computation-score/delete_score_contributing_attribute": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerScore:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_score_contributing_attribute_controller.py",
+    "operation": "delete_score_contributing_attribute"
+  },
+  "/completion-score/get_ideal_completion_score_for_register": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_completion_score_controller.py",
+    "operation": "get_ideal_completion_score_for_register"
+  },
+  "/completion-score/get_ideal_completion_score_for_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_completion_score_controller.py",
+    "operation": "get_ideal_completion_score_for_section"
+  },
+  "/completion-score/get_computed_completion_score_for_section": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_completion_score_controller.py",
+    "operation": "get_computed_completion_score_for_section"
+  },
+  "/completion-score/get_computed_completion_score_for_record": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_completion_score_controller.py",
+    "operation": "get_computed_completion_score_for_record"
+  },
+  "/register-data/get_available_authentication_providers": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:authenticate"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registrant_authentication_controller.py",
+    "operation": "get_available_providers"
+  },
+  "/register-data/authenticate_registrant": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:authenticate"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registrant_authentication_controller.py",
+    "operation": "initiate_authentication"
+  },
+  "/registrant-auth/callback": {
+    "method": "GET",
+    "scheme": "oidc-single-use-state",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_registrant_authentication_controller.py",
+    "operation": "callback"
+  },
+  "/register-data/get_registrant_authentication_status": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:authenticate"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registrant_authentication_controller.py",
+    "operation": "get_status"
+  },
+  "/register-data/get_registrant_authentication_history": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "register:authenticate"
+    ],
+    "data_policy": false,
+    "controller": "g2p_registrant_authentication_controller.py",
+    "operation": "get_history"
+  },
+  "/awe-policy-config/get_all_awe_policy_configurations": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_awe_policy_configuration_controller.py",
+    "operation": "get_all_awe_policy_configurations"
+  },
+  "/awe-policy-config/get_awe_policy_configuration": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:view"
+    ],
+    "data_policy": false,
+    "controller": "g2p_awe_policy_configuration_controller.py",
+    "operation": "get_awe_policy_configuration"
+  },
+  "/awe-policy-config/create_awe_policy_configuration": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:create"
+    ],
+    "data_policy": false,
+    "controller": "g2p_awe_policy_configuration_controller.py",
+    "operation": "create_awe_policy_configuration"
+  },
+  "/awe-policy-config/update_awe_policy_configuration": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_awe_policy_configuration_controller.py",
+    "operation": "update_awe_policy_configuration"
+  },
+  "/awe-policy-config/delete_awe_policy_configuration": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [
+      "registerDefinition:edit"
+    ],
+    "data_policy": false,
+    "controller": "g2p_awe_policy_configuration_controller.py",
+    "operation": "delete_awe_policy_configuration"
+  },
+  "/awe/webhooks/decision": {
+    "method": "POST",
+    "scheme": "hmac-sha256",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_awe_webhook_controller.py",
+    "operation": "receive_decision"
+  },
+  "/awe/list_my_tasks": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_awe_proxy_controller.py",
+    "operation": "list_my_tasks"
+  },
+  "/awe/list_tasks_for_request": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_awe_proxy_controller.py",
+    "operation": "list_tasks_for_request"
+  },
+  "/awe/my_task_stats": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_awe_proxy_controller.py",
+    "operation": "my_task_stats"
+  },
+  "/awe/submit_task_decision": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_awe_proxy_controller.py",
+    "operation": "submit_task_decision"
+  },
+  "/awe/claim_task": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_awe_proxy_controller.py",
+    "operation": "claim_task"
+  },
+  "/awe/get_request": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_awe_proxy_controller.py",
+    "operation": "get_request"
+  },
+  "/awe/get_request_events": {
+    "method": "POST",
+    "scheme": "console",
+    "required_permissions": [],
+    "data_policy": false,
+    "controller": "g2p_awe_proxy_controller.py",
+    "operation": "get_request_events"
+  },
+  "/ping": {
+    "method": "GET",
+    "scheme": "public-health",
+    "required_permissions": [],
+    "data_policy": false
+  }
+}

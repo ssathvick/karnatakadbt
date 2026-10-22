@@ -1,0 +1,52 @@
+{
+  "families": [
+    {
+      "family_id": "SIM-FAM-a41c89e27965",
+      "household_ref": "KA-DEMO-HH-001",
+      "household_name": "Lakshmi Gowda household",
+      "district_id": "KA-D01",
+      "address_line": "Synthetic address in Bagalkote",
+      "monthly_income_inr": 8500,
+      "status": "active",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    }
+  ],
+  "members": [
+    {
+      "person_id": "SIM-PER-b93ee8775afc2a",
+      "family_id": "SIM-FAM-a41c89e27965",
+      "platform_member_ref": "KA-I-0001-01",
+      "given_name": "Lakshmi",
+      "family_name": "Gowda",
+      "birth_date": "1988-04-12",
+      "gender": "Female",
+      "relationship": "self",
+      "identity_token": "synthetic-example-1",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    },
+    {
+      "person_id": "SIM-PER-5b6a6333f65b3e",
+      "family_id": "SIM-FAM-a41c89e27965",
+      "platform_member_ref": "KA-I-0001-02",
+      "given_name": "Kiran",
+      "family_name": "Gowda",
+      "birth_date": "2012-08-05",
+      "gender": "Male",
+      "relationship": "child",
+      "identity_token": "synthetic-example-2",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    },
+    {
+      "person_id": "SIM-PER-c7d531b54314e1",
+      "family_id": "SIM-FAM-a41c89e27965",
+      "platform_member_ref": "KA-I-0001-03",
+      "given_name": "Sahana",
+      "family_name": "Gowda",
+      "birth_date": "2016-02-20",
+      "gender": "Female",
+      "relationship": "child",
+      "identity_token": "synthetic-example-3",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    }
+  ]
+}

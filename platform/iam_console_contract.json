@@ -1,0 +1,6937 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OpenG2P IAM Service",
+    "description": "\n    This is common library for FastAPI service. Override Settings properties to change this.\n\n    ***********************************\n    Further details goes here\n    ***********************************\n    ",
+    "contact": {
+      "url": "https://www.openg2p.org/",
+      "email": "info@openg2p.org"
+    },
+    "license": {
+      "name": "Mozilla Public License 2.0",
+      "url": "https://www.mozilla.org/en-US/MPL/2.0/"
+    },
+    "version": "1.4.0"
+  },
+  "paths": {
+    "/auth/get_user_profile": {
+      "get": {
+        "tags": [
+          "/auth"
+        ],
+        "summary": "Get User Profile",
+        "operationId": "get_user_profile_auth_get_user_profile_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/get_logged_in_user": {
+      "get": {
+        "tags": [
+          "/auth"
+        ],
+        "summary": "Get Logged In User",
+        "operationId": "get_logged_in_user_auth_get_logged_in_user_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoggedInUserResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/logout": {
+      "get": {
+        "tags": [
+          "/auth"
+        ],
+        "summary": "Logout",
+        "operationId": "logout_auth_logout_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/backchannel-logout": {
+      "post": {
+        "tags": [
+          "/auth"
+        ],
+        "summary": "Backchannel Logout",
+        "operationId": "backchannel_logout_auth_backchannel_logout_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/get_login_providers": {
+      "get": {
+        "tags": [
+          "/auth"
+        ],
+        "summary": "Get Login Providers",
+        "operationId": "get_login_providers_auth_get_login_providers_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginProviderHttpResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/start_authentication_transaction": {
+      "post": {
+        "tags": [
+          "/auth"
+        ],
+        "summary": "Start Authentication Transaction",
+        "operationId": "start_authentication_transaction_auth_start_authentication_transaction_post",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Id"
+            }
+          },
+          {
+            "name": "redirect_uri",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "/",
+              "title": "Redirect Uri"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StartAuthTransactionResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/callback": {
+      "get": {
+        "tags": [
+          "/auth"
+        ],
+        "summary": "Oauth Callback",
+        "operationId": "oauth_callback_auth_callback_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user-access/get_staff_portal_applications": {
+      "get": {
+        "tags": [
+          "/user-access"
+        ],
+        "summary": "Get Staff Portal Applications",
+        "operationId": "get_staff_portal_applications_user_access_get_staff_portal_applications_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/StaffPortalApplicationResponse"
+                  },
+                  "type": "array",
+                  "title": "Response Get Staff Portal Applications User Access Get Staff Portal Applications Get"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user-access/get_application_permissions_for_user": {
+      "get": {
+        "tags": [
+          "/user-access"
+        ],
+        "summary": "Get Application Permissions For User",
+        "operationId": "get_application_permissions_for_user_user_access_get_application_permissions_for_user_get",
+        "parameters": [
+          {
+            "name": "application_mnemonic",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Application Mnemonic"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ApplicationPermissionResponse"
+                  },
+                  "title": "Response Get Application Permissions For User User Access Get Application Permissions For User Get"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user-access/get_permissions_for_roles": {
+      "post": {
+        "tags": [
+          "/user-access"
+        ],
+        "summary": "Get Permissions For Roles",
+        "operationId": "get_permissions_for_roles_user_access_get_permissions_for_roles_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPermissionsForRolesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermissionsForRolesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user-access/staff_portal_applications": {
+      "post": {
+        "tags": [
+          "/user-access"
+        ],
+        "summary": "Register Staff Portal Application",
+        "description": "Register or update a staff portal application and its access catalog.\n\nIntended for applications such as registries to self-register at install\ntime \u2014 their tile (URL, icon, ordering) plus their roles and permissions \u2014\ninstead of any of it being hardcoded into IAM ahead of time. Everything is\nupserted by mnemonic and scoped to this application's id, so it is\nidempotent across re-installs/upgrades.\n\n``application_mnemonic`` must equal the application's Keycloak client_id so\nrole-gating in ``get_staff_portal_applications`` /\n``get_application_permissions_for_user`` resolves correctly. Multiple\ninstances of the same product coexist by each using a distinct\nmnemonic/client_id and pushing their own (identical) catalog under it.",
+        "operationId": "register_staff_portal_application_user_access_staff_portal_applications_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterStaffPortalApplicationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisterStaffPortalApplicationResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/identity-providers/get_provider_by_issuer": {
+      "get": {
+        "tags": [
+          "/identity-providers"
+        ],
+        "summary": "Get Provider By Issuer",
+        "operationId": "get_provider_by_issuer_identity_providers_get_provider_by_issuer_get",
+        "parameters": [
+          {
+            "name": "issuer",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Issuer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/get_applications": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Get Applications",
+        "operationId": "get_applications_applications_get_applications_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetApplicationsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/get_application": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Get Application",
+        "operationId": "get_application_applications_get_application_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetApplicationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/create_application": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Create Application",
+        "operationId": "create_application_applications_create_application_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateApplicationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/update_application": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Update Application",
+        "operationId": "update_application_applications_update_application_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateApplicationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/delete_application": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Delete Application",
+        "operationId": "delete_application_applications_delete_application_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteApplicationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/get_roles": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Get Roles",
+        "operationId": "get_roles_applications_get_roles_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetRolesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RolesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/create_role": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Create Role",
+        "operationId": "create_role_applications_create_role_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRoleRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/delete_role": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Delete Role",
+        "operationId": "delete_role_applications_delete_role_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteRoleRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/get_permissions": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Get Permissions",
+        "operationId": "get_permissions_applications_get_permissions_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPermissionsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermissionsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/create_permission": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Create Permission",
+        "operationId": "create_permission_applications_create_permission_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePermissionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermissionResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/delete_permission": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Delete Permission",
+        "operationId": "delete_permission_applications_delete_permission_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeletePermissionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermissionResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/get_role_permissions": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Get Role Permissions",
+        "operationId": "get_role_permissions_applications_get_role_permissions_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetRolePermissionsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RolePermissionsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/create_role_permission": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Create Role Permission",
+        "operationId": "create_role_permission_applications_create_role_permission_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRolePermissionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RolePermissionResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/applications/delete_role_permission": {
+      "post": {
+        "tags": [
+          "/applications"
+        ],
+        "summary": "Delete Role Permission",
+        "operationId": "delete_role_permission_applications_delete_role_permission_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteRolePermissionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RolePermissionResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/login-providers/get_login_providers": {
+      "post": {
+        "tags": [
+          "/login-providers"
+        ],
+        "summary": "Get Login Providers",
+        "operationId": "get_login_providers_login_providers_get_login_providers_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetLoginProvidersRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginProvidersResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/login-providers/get_login_provider": {
+      "post": {
+        "tags": [
+          "/login-providers"
+        ],
+        "summary": "Get Login Provider",
+        "operationId": "get_login_provider_login_providers_get_login_provider_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetLoginProviderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/iam_staff_portal_api__schemas__LoginProviderResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/login-providers/create_login_provider": {
+      "post": {
+        "tags": [
+          "/login-providers"
+        ],
+        "summary": "Create Login Provider",
+        "operationId": "create_login_provider_login_providers_create_login_provider_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateLoginProviderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/iam_staff_portal_api__schemas__LoginProviderResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/login-providers/update_login_provider": {
+      "post": {
+        "tags": [
+          "/login-providers"
+        ],
+        "summary": "Update Login Provider",
+        "operationId": "update_login_provider_login_providers_update_login_provider_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateLoginProviderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/iam_staff_portal_api__schemas__LoginProviderResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/login-providers/delete_login_provider": {
+      "post": {
+        "tags": [
+          "/login-providers"
+        ],
+        "summary": "Delete Login Provider",
+        "operationId": "delete_login_provider_login_providers_delete_login_provider_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteLoginProviderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/iam_staff_portal_api__schemas__LoginProviderResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data-policies/get_policy": {
+      "post": {
+        "tags": [
+          "/data-policies"
+        ],
+        "summary": "Get Policy",
+        "operationId": "get_policy_data_policies_get_policy_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPolicyRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetPolicyResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data-policies/get_all_policies": {
+      "post": {
+        "tags": [
+          "/data-policies"
+        ],
+        "summary": "Get All Policies",
+        "operationId": "get_all_policies_data_policies_get_all_policies_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllPoliciesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllPoliciesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data-policies/add_policy": {
+      "post": {
+        "tags": [
+          "/data-policies"
+        ],
+        "summary": "Add Policy",
+        "operationId": "add_policy_data_policies_add_policy_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPolicyRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddPolicyResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data-policies/remove_policy": {
+      "post": {
+        "tags": [
+          "/data-policies"
+        ],
+        "summary": "Remove Policy",
+        "operationId": "remove_policy_data_policies_remove_policy_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemovePolicyRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemovePolicyResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/data-policies/evaluate_expression": {
+      "post": {
+        "tags": [
+          "/data-policies"
+        ],
+        "summary": "Evaluate Expression",
+        "description": "Evaluate data policy expression for given policy mnemonics.\nThis endpoint is called by registry middleware to get all policies matching mnemonics.\nReturns complete policy data; registry will handle filtering and expression merging.\nResults are cached based on policy mnemonics.\nNo permission decorator - accessible by registry service-to-service.",
+        "operationId": "evaluate_expression_data_policies_evaluate_expression_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EvaluateExpressionRequestPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvaluateExpressionResponsePayload"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ping": {
+      "get": {
+        "tags": [
+          "ping"
+        ],
+        "summary": "Get Ping",
+        "description": "Returns \"pong\" always, if the service is healthy.\nThis can also used for service health checks.",
+        "operationId": "get_ping_ping_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AddPolicyRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/AddPolicyRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "AddPolicyRequest"
+      },
+      "AddPolicyRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/AddPolicyRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "AddPolicyRequestBody"
+      },
+      "AddPolicyRequestPayload": {
+        "properties": {
+          "policy_mnemonic": {
+            "type": "string",
+            "title": "Policy Mnemonic",
+            "description": "Mnemonic within the register (shared across targets)"
+          },
+          "policy_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Policy Description",
+            "description": "Human-readable description"
+          },
+          "register_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Register Id",
+            "description": "Register definition ID; required for REGISTER_RECORD, null for GEO/ATTRIBUTE"
+          },
+          "policy_target": {
+            "$ref": "#/components/schemas/PolicyTarget",
+            "description": "Governed resource: REGISTER_RECORD, GEO, or ATTRIBUTE",
+            "default": "REGISTER_RECORD"
+          },
+          "policy_type": {
+            "$ref": "#/components/schemas/DataPolicyType",
+            "description": "ALLOW or DISALLOW"
+          },
+          "policy_filter_expression": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Policy Filter Expression",
+            "description": "Nested GROUP/CONDITION policy filter tree"
+          },
+          "application_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Application Id",
+            "description": "Application ID from IAM; links policy to specific application"
+          }
+        },
+        "type": "object",
+        "required": [
+          "policy_mnemonic",
+          "policy_type",
+          "policy_filter_expression"
+        ],
+        "title": "AddPolicyRequestPayload"
+      },
+      "AddPolicyResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AddPolicyResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "AddPolicyResponse"
+      },
+      "AddPolicyResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AddPolicyResponsePayload"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "AddPolicyResponseBody"
+      },
+      "AddPolicyResponsePayload": {
+        "properties": {
+          "policy": {
+            "$ref": "#/components/schemas/DataPolicyData",
+            "description": "Created policy"
+          }
+        },
+        "type": "object",
+        "required": [
+          "policy"
+        ],
+        "title": "AddPolicyResponsePayload"
+      },
+      "ApplicationCreatePayload": {
+        "properties": {
+          "application_mnemonic": {
+            "type": "string",
+            "title": "Application Mnemonic"
+          },
+          "application_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Application Description"
+          },
+          "application_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Application Url"
+          },
+          "api_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Api Url"
+          },
+          "icon_base64": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Icon Base64"
+          },
+          "order": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Order"
+          },
+          "width": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Width"
+          }
+        },
+        "type": "object",
+        "required": [
+          "application_mnemonic"
+        ],
+        "title": "ApplicationCreatePayload"
+      },
+      "ApplicationData": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "application_mnemonic": {
+            "type": "string",
+            "title": "Application Mnemonic"
+          },
+          "application_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Application Description"
+          },
+          "application_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Application Url"
+          },
+          "api_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Api Url"
+          },
+          "icon_base64": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Icon Base64"
+          },
+          "width": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Width"
+          },
+          "order": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Order"
+          },
+          "is_self_registered": {
+            "type": "boolean",
+            "title": "Is Self Registered",
+            "default": false
+          },
+          "active": {
+            "type": "boolean",
+            "title": "Active",
+            "default": true
+          },
+          "created_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Created At"
+          },
+          "updated_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "application_mnemonic"
+        ],
+        "title": "ApplicationData"
+      },
+      "ApplicationDeletePayload": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "title": "ApplicationDeletePayload"
+      },
+      "ApplicationIdPayload": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "title": "ApplicationIdPayload"
+      },
+      "ApplicationPermissionResponse": {
+        "properties": {
+          "application_id": {
+            "type": "integer",
+            "title": "Application Id"
+          },
+          "application_mnemonic": {
+            "type": "string",
+            "title": "Application Mnemonic"
+          },
+          "permissions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Permissions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "application_id",
+          "application_mnemonic",
+          "permissions"
+        ],
+        "title": "ApplicationPermissionResponse"
+      },
+      "ApplicationResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ApplicationResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "ApplicationResponse"
+      },
+      "ApplicationResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ApplicationData"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "ApplicationResponseBody"
+      },
+      "ApplicationScopedPayload": {
+        "properties": {
+          "application_id": {
+            "type": "integer",
+            "title": "Application Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "application_id"
+        ],
+        "title": "ApplicationScopedPayload"
+      },
+      "ApplicationUpdatePayload": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "application_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Application Description"
+          },
+          "application_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Application Url"
+          },
+          "api_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Api Url"
+          },
+          "icon_base64": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Icon Base64"
+          },
+          "order": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Order"
+          },
+          "width": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Width"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "title": "ApplicationUpdatePayload"
+      },
+      "ApplicationsResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ApplicationsResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "ApplicationsResponse"
+      },
+      "ApplicationsResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/ApplicationData"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Payload"
+          }
+        },
+        "type": "object",
+        "title": "ApplicationsResponseBody"
+      },
+      "CreateApplicationRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/CreateApplicationRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "CreateApplicationRequest"
+      },
+      "CreateApplicationRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/ApplicationCreatePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "CreateApplicationRequestBody"
+      },
+      "CreateLoginProviderRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/CreateLoginProviderRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "CreateLoginProviderRequest"
+      },
+      "CreateLoginProviderRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/LoginProviderCreatePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "CreateLoginProviderRequestBody"
+      },
+      "CreatePermissionRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/CreatePermissionRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "CreatePermissionRequest"
+      },
+      "CreatePermissionRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/PermissionCreatePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "CreatePermissionRequestBody"
+      },
+      "CreateRolePermissionRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/CreateRolePermissionRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "CreateRolePermissionRequest"
+      },
+      "CreateRolePermissionRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/RolePermissionCreatePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "CreateRolePermissionRequestBody"
+      },
+      "CreateRoleRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/CreateRoleRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "CreateRoleRequest"
+      },
+      "CreateRoleRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/RoleCreatePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "CreateRoleRequestBody"
+      },
+      "DataPolicyData": {
+        "properties": {
+          "policy_id": {
+            "type": "string",
+            "title": "Policy Id",
+            "description": "Policy ID"
+          },
+          "policy_mnemonic": {
+            "type": "string",
+            "title": "Policy Mnemonic",
+            "description": "Unique mnemonic; referenced from Keycloak roles"
+          },
+          "policy_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Policy Description",
+            "description": "Human-readable description"
+          },
+          "register_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Register Id",
+            "description": "Register definition ID; required for REGISTER_RECORD, null for GEO/ATTRIBUTE"
+          },
+          "policy_target": {
+            "$ref": "#/components/schemas/PolicyTarget",
+            "description": "Governed resource: REGISTER_RECORD, GEO, or ATTRIBUTE"
+          },
+          "policy_type": {
+            "$ref": "#/components/schemas/DataPolicyType",
+            "description": "ALLOW or DISALLOW"
+          },
+          "policy_filter_expression": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Policy Filter Expression",
+            "description": "Nested GROUP/CONDITION policy filter tree"
+          },
+          "application_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Application Id",
+            "description": "Application ID from IAM; links policy to specific application"
+          }
+        },
+        "type": "object",
+        "required": [
+          "policy_id",
+          "policy_mnemonic",
+          "policy_target",
+          "policy_type",
+          "policy_filter_expression"
+        ],
+        "title": "DataPolicyData"
+      },
+      "DataPolicyType": {
+        "type": "string",
+        "enum": [
+          "ALLOW",
+          "DISALLOW"
+        ],
+        "title": "DataPolicyType"
+      },
+      "DeleteApplicationRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/DeleteApplicationRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "DeleteApplicationRequest"
+      },
+      "DeleteApplicationRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/ApplicationDeletePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "DeleteApplicationRequestBody"
+      },
+      "DeleteLoginProviderRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/DeleteLoginProviderRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "DeleteLoginProviderRequest"
+      },
+      "DeleteLoginProviderRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/LoginProviderDeletePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "DeleteLoginProviderRequestBody"
+      },
+      "DeletePermissionRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/DeletePermissionRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "DeletePermissionRequest"
+      },
+      "DeletePermissionRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/PermissionDeletePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "DeletePermissionRequestBody"
+      },
+      "DeleteRolePermissionRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/DeleteRolePermissionRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "DeleteRolePermissionRequest"
+      },
+      "DeleteRolePermissionRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/RolePermissionDeletePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "DeleteRolePermissionRequestBody"
+      },
+      "DeleteRoleRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/DeleteRoleRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "DeleteRoleRequest"
+      },
+      "DeleteRoleRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/RoleDeletePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "DeleteRoleRequestBody"
+      },
+      "EmptyRequestPayload": {
+        "properties": {},
+        "type": "object",
+        "title": "EmptyRequestPayload"
+      },
+      "ErrorListResponse": {
+        "properties": {
+          "errors": {
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "type": "array",
+            "title": "Errors"
+          }
+        },
+        "type": "object",
+        "required": [
+          "errors"
+        ],
+        "title": "ErrorListResponse"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code",
+            "default": ""
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "title": "ErrorResponse"
+      },
+      "EvaluateExpressionRequestPayload": {
+        "properties": {
+          "policy_mnemonics": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Policy Mnemonics",
+            "description": "List of policy mnemonics to evaluate"
+          }
+        },
+        "type": "object",
+        "required": [
+          "policy_mnemonics"
+        ],
+        "title": "EvaluateExpressionRequestPayload"
+      },
+      "EvaluateExpressionResponsePayload": {
+        "properties": {
+          "policies": {
+            "items": {
+              "$ref": "#/components/schemas/DataPolicyData"
+            },
+            "type": "array",
+            "title": "Policies",
+            "description": "All policies matching the given mnemonics"
+          }
+        },
+        "type": "object",
+        "title": "EvaluateExpressionResponsePayload"
+      },
+      "G2PPaginationRequest": {
+        "properties": {
+          "current_page": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Current Page"
+          },
+          "page_size": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Page Size"
+          },
+          "sort_by": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort By"
+          },
+          "filter_by": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Filter By"
+          },
+          "search_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Search Text"
+          }
+        },
+        "type": "object",
+        "required": [
+          "current_page",
+          "page_size"
+        ],
+        "title": "G2PPaginationRequest"
+      },
+      "G2PPaginationResponse": {
+        "properties": {
+          "number_of_items": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Number Of Items"
+          },
+          "number_of_pages": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Number Of Pages"
+          }
+        },
+        "type": "object",
+        "required": [
+          "number_of_items",
+          "number_of_pages"
+        ],
+        "title": "G2PPaginationResponse"
+      },
+      "G2PRequestHeader": {
+        "properties": {
+          "sender_app_mnemonic": {
+            "type": "string",
+            "title": "Sender App Mnemonic"
+          },
+          "sender_app_url": {
+            "type": "string",
+            "title": "Sender App Url"
+          },
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "request_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Request Timestamp"
+          },
+          "instance_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Instance Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "sender_app_mnemonic",
+          "sender_app_url",
+          "request_id",
+          "request_timestamp"
+        ],
+        "title": "G2PRequestHeader"
+      },
+      "G2PResponseHeader": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "response_status": {
+            "$ref": "#/components/schemas/G2PResponseStatus"
+          },
+          "response_error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Error Code"
+          },
+          "response_error_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Error Message"
+          },
+          "response_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Response Timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_id",
+          "response_status",
+          "response_timestamp"
+        ],
+        "title": "G2PResponseHeader"
+      },
+      "G2PResponseStatus": {
+        "type": "string",
+        "enum": [
+          "ERROR",
+          "SUCCESS"
+        ],
+        "title": "G2PResponseStatus"
+      },
+      "GetAllPoliciesRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetAllPoliciesRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetAllPoliciesRequest"
+      },
+      "GetAllPoliciesRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/GetAllPoliciesRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "GetAllPoliciesRequestBody"
+      },
+      "GetAllPoliciesRequestPayload": {
+        "properties": {
+          "application_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Application Id",
+            "description": "Filter by application ID"
+          },
+          "policy_target": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PolicyTarget"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Filter by policy target (REGISTER_RECORD, GEO, ATTRIBUTE)"
+          },
+          "register_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Register Id",
+            "description": "Filter by register ID (only for REGISTER_RECORD target)"
+          }
+        },
+        "type": "object",
+        "title": "GetAllPoliciesRequestPayload",
+        "description": "Optional filters for data policies."
+      },
+      "GetAllPoliciesResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GetAllPoliciesResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "GetAllPoliciesResponse"
+      },
+      "GetAllPoliciesResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GetAllPoliciesResponsePayload"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "GetAllPoliciesResponseBody"
+      },
+      "GetAllPoliciesResponsePayload": {
+        "properties": {
+          "policies": {
+            "items": {
+              "$ref": "#/components/schemas/DataPolicyData"
+            },
+            "type": "array",
+            "title": "Policies"
+          }
+        },
+        "type": "object",
+        "title": "GetAllPoliciesResponsePayload"
+      },
+      "GetApplicationRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetApplicationRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetApplicationRequest"
+      },
+      "GetApplicationRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/ApplicationIdPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "GetApplicationRequestBody"
+      },
+      "GetApplicationsRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetApplicationsRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetApplicationsRequest"
+      },
+      "GetApplicationsRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EmptyRequestPayload"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "GetApplicationsRequestBody"
+      },
+      "GetLoginProviderRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetLoginProviderRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetLoginProviderRequest"
+      },
+      "GetLoginProviderRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/LoginProviderIdPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "GetLoginProviderRequestBody"
+      },
+      "GetLoginProvidersRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetLoginProvidersRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetLoginProvidersRequest"
+      },
+      "GetLoginProvidersRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EmptyRequestPayload"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "GetLoginProvidersRequestBody"
+      },
+      "GetPermissionsForRolesRequest": {
+        "properties": {
+          "role_mnemonics": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Role Mnemonics"
+          }
+        },
+        "type": "object",
+        "required": [
+          "role_mnemonics"
+        ],
+        "title": "GetPermissionsForRolesRequest"
+      },
+      "GetPermissionsRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetPermissionsRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetPermissionsRequest"
+      },
+      "GetPermissionsRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/ApplicationScopedPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "GetPermissionsRequestBody"
+      },
+      "GetPolicyRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetPolicyRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetPolicyRequest"
+      },
+      "GetPolicyRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/GetPolicyRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "GetPolicyRequestBody"
+      },
+      "GetPolicyRequestPayload": {
+        "properties": {
+          "policy_id": {
+            "type": "string",
+            "title": "Policy Id",
+            "description": "Policy ID to retrieve"
+          }
+        },
+        "type": "object",
+        "required": [
+          "policy_id"
+        ],
+        "title": "GetPolicyRequestPayload"
+      },
+      "GetPolicyResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GetPolicyResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "GetPolicyResponse"
+      },
+      "GetPolicyResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GetPolicyResponsePayload"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "GetPolicyResponseBody"
+      },
+      "GetPolicyResponsePayload": {
+        "properties": {
+          "policy": {
+            "$ref": "#/components/schemas/DataPolicyData",
+            "description": "Requested policy"
+          }
+        },
+        "type": "object",
+        "required": [
+          "policy"
+        ],
+        "title": "GetPolicyResponsePayload"
+      },
+      "GetRolePermissionsRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetRolePermissionsRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetRolePermissionsRequest"
+      },
+      "GetRolePermissionsRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/RolePermissionListPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "GetRolePermissionsRequestBody"
+      },
+      "GetRolesRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetRolesRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetRolesRequest"
+      },
+      "GetRolesRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/ApplicationScopedPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "GetRolesRequestBody"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "LoggedInUserResponse": {
+        "properties": {
+          "sub": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sub"
+          },
+          "email_verified": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Email Verified"
+          },
+          "address": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Address"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "preferred_username": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Preferred Username"
+          },
+          "given_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Given Name"
+          },
+          "family_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Family Name"
+          },
+          "email": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Email"
+          }
+        },
+        "type": "object",
+        "title": "LoggedInUserResponse"
+      },
+      "LoginProviderCreatePayload": {
+        "properties": {
+          "provider_name": {
+            "type": "string",
+            "title": "Provider Name"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "icon_base64": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Icon Base64"
+          },
+          "client_id": {
+            "type": "string",
+            "title": "Client Id"
+          },
+          "client_secret": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Client Secret"
+          },
+          "client_private_key": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Client Private Key"
+          },
+          "token_endpoint_auth_method": {
+            "$ref": "#/components/schemas/TokenEndpointAuthMethod"
+          },
+          "issuer": {
+            "type": "string",
+            "title": "Issuer"
+          },
+          "authorization_endpoint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Authorization Endpoint"
+          },
+          "token_endpoint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Token Endpoint"
+          },
+          "userinfo_endpoint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Userinfo Endpoint"
+          },
+          "server_metadata_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Server Metadata Url"
+          },
+          "jwks_uri": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Jwks Uri"
+          },
+          "adapter_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Adapter Name"
+          },
+          "scope": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scope"
+          },
+          "enable_pkce": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Enable Pkce"
+          },
+          "extra_authorize_params": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Extra Authorize Params"
+          },
+          "jwt_assertion_aud": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Jwt Assertion Aud"
+          },
+          "audiences": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Audiences"
+          },
+          "oauth_callback_url": {
+            "type": "string",
+            "title": "Oauth Callback Url"
+          },
+          "default_redirect_uri": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Default Redirect Uri"
+          }
+        },
+        "type": "object",
+        "required": [
+          "provider_name",
+          "client_id",
+          "token_endpoint_auth_method",
+          "issuer",
+          "oauth_callback_url"
+        ],
+        "title": "LoginProviderCreatePayload"
+      },
+      "LoginProviderData": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "provider_name": {
+            "type": "string",
+            "title": "Provider Name"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "icon_base64": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Icon Base64"
+          },
+          "client_id": {
+            "type": "string",
+            "title": "Client Id"
+          },
+          "has_client_secret": {
+            "type": "boolean",
+            "title": "Has Client Secret",
+            "default": false
+          },
+          "has_client_private_key": {
+            "type": "boolean",
+            "title": "Has Client Private Key",
+            "default": false
+          },
+          "token_endpoint_auth_method": {
+            "$ref": "#/components/schemas/TokenEndpointAuthMethod"
+          },
+          "issuer": {
+            "type": "string",
+            "title": "Issuer"
+          },
+          "authorization_endpoint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Authorization Endpoint"
+          },
+          "token_endpoint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Token Endpoint"
+          },
+          "userinfo_endpoint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Userinfo Endpoint"
+          },
+          "server_metadata_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Server Metadata Url"
+          },
+          "jwks_uri": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Jwks Uri"
+          },
+          "adapter_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Adapter Name"
+          },
+          "scope": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scope"
+          },
+          "enable_pkce": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Enable Pkce"
+          },
+          "extra_authorize_params": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Extra Authorize Params"
+          },
+          "jwt_assertion_aud": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Jwt Assertion Aud"
+          },
+          "audiences": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Audiences"
+          },
+          "oauth_callback_url": {
+            "type": "string",
+            "title": "Oauth Callback Url"
+          },
+          "default_redirect_uri": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Default Redirect Uri"
+          },
+          "keymanager_app_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Keymanager App Id"
+          },
+          "keymanager_ref_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Keymanager Ref Id"
+          },
+          "active": {
+            "type": "boolean",
+            "title": "Active",
+            "default": true
+          },
+          "created_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Created At"
+          },
+          "updated_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "provider_name",
+          "client_id",
+          "token_endpoint_auth_method",
+          "issuer",
+          "oauth_callback_url"
+        ],
+        "title": "LoginProviderData"
+      },
+      "LoginProviderDeletePayload": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "title": "LoginProviderDeletePayload"
+      },
+      "LoginProviderHttpResponse": {
+        "properties": {
+          "loginProviders": {
+            "items": {
+              "$ref": "#/components/schemas/iam_core__schemas__login_provider__LoginProviderResponse"
+            },
+            "type": "array",
+            "title": "Loginproviders"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loginProviders"
+        ],
+        "title": "LoginProviderHttpResponse"
+      },
+      "LoginProviderIdPayload": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "title": "LoginProviderIdPayload"
+      },
+      "LoginProviderResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LoginProviderData"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "LoginProviderResponseBody"
+      },
+      "LoginProviderUpdatePayload": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "provider_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Provider Name"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "icon_base64": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Icon Base64"
+          },
+          "client_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Client Id"
+          },
+          "client_secret": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Client Secret"
+          },
+          "client_private_key": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Client Private Key"
+          },
+          "token_endpoint_auth_method": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TokenEndpointAuthMethod"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "issuer": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Issuer"
+          },
+          "authorization_endpoint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Authorization Endpoint"
+          },
+          "token_endpoint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Token Endpoint"
+          },
+          "userinfo_endpoint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Userinfo Endpoint"
+          },
+          "server_metadata_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Server Metadata Url"
+          },
+          "jwks_uri": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Jwks Uri"
+          },
+          "adapter_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Adapter Name"
+          },
+          "scope": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scope"
+          },
+          "enable_pkce": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Enable Pkce"
+          },
+          "extra_authorize_params": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Extra Authorize Params"
+          },
+          "jwt_assertion_aud": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Jwt Assertion Aud"
+          },
+          "audiences": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Audiences"
+          },
+          "oauth_callback_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Oauth Callback Url"
+          },
+          "default_redirect_uri": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Default Redirect Uri"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "title": "LoginProviderUpdatePayload"
+      },
+      "LoginProvidersResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LoginProvidersResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "LoginProvidersResponse"
+      },
+      "LoginProvidersResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/LoginProviderData"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Payload"
+          }
+        },
+        "type": "object",
+        "title": "LoginProvidersResponseBody"
+      },
+      "PermissionCreatePayload": {
+        "properties": {
+          "application_id": {
+            "type": "integer",
+            "title": "Application Id"
+          },
+          "permission_mnemonic": {
+            "type": "string",
+            "title": "Permission Mnemonic"
+          },
+          "permission_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Permission Description"
+          }
+        },
+        "type": "object",
+        "required": [
+          "application_id",
+          "permission_mnemonic"
+        ],
+        "title": "PermissionCreatePayload"
+      },
+      "PermissionData": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "permission_mnemonic": {
+            "type": "string",
+            "title": "Permission Mnemonic"
+          },
+          "permission_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Permission Description"
+          },
+          "application_id": {
+            "type": "integer",
+            "title": "Application Id"
+          },
+          "active": {
+            "type": "boolean",
+            "title": "Active",
+            "default": true
+          },
+          "created_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Created At"
+          },
+          "updated_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "permission_mnemonic",
+          "application_id"
+        ],
+        "title": "PermissionData"
+      },
+      "PermissionDeletePayload": {
+        "properties": {
+          "application_id": {
+            "type": "integer",
+            "title": "Application Id"
+          },
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "application_id",
+          "id"
+        ],
+        "title": "PermissionDeletePayload"
+      },
+      "PermissionResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PermissionResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "PermissionResponse"
+      },
+      "PermissionResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PermissionData"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "PermissionResponseBody"
+      },
+      "PermissionsForRolesResponse": {
+        "properties": {
+          "permissions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Permissions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "permissions"
+        ],
+        "title": "PermissionsForRolesResponse",
+        "description": "Plain JSON for ResolvePermissionMiddleware (not G2P envelope)."
+      },
+      "PermissionsResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PermissionsResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "PermissionsResponse"
+      },
+      "PermissionsResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/PermissionData"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Payload"
+          }
+        },
+        "type": "object",
+        "title": "PermissionsResponseBody"
+      },
+      "PolicyTarget": {
+        "type": "string",
+        "enum": [
+          "REGISTER_RECORD",
+          "GEO",
+          "ATTRIBUTE"
+        ],
+        "title": "PolicyTarget",
+        "description": "Resource type governed by the policy filter expression."
+      },
+      "RegisterApplicationPermission": {
+        "properties": {
+          "permission_mnemonic": {
+            "type": "string",
+            "title": "Permission Mnemonic"
+          },
+          "permission_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Permission Description"
+          },
+          "active": {
+            "type": "boolean",
+            "title": "Active",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "permission_mnemonic"
+        ],
+        "title": "RegisterApplicationPermission"
+      },
+      "RegisterApplicationRole": {
+        "properties": {
+          "role_mnemonic": {
+            "type": "string",
+            "title": "Role Mnemonic"
+          },
+          "role_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Role Description"
+          },
+          "active": {
+            "type": "boolean",
+            "title": "Active",
+            "default": true
+          },
+          "permissions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Permissions",
+            "default": []
+          }
+        },
+        "type": "object",
+        "required": [
+          "role_mnemonic"
+        ],
+        "title": "RegisterApplicationRole"
+      },
+      "RegisterStaffPortalApplicationRequest": {
+        "properties": {
+          "application_mnemonic": {
+            "type": "string",
+            "title": "Application Mnemonic"
+          },
+          "application_url": {
+            "type": "string",
+            "title": "Application Url"
+          },
+          "api_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Api Url"
+          },
+          "application_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Application Description"
+          },
+          "icon_base64": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Icon Base64"
+          },
+          "width": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Width"
+          },
+          "order": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Order"
+          },
+          "active": {
+            "type": "boolean",
+            "title": "Active",
+            "default": true
+          },
+          "permissions": {
+            "items": {
+              "$ref": "#/components/schemas/RegisterApplicationPermission"
+            },
+            "type": "array",
+            "title": "Permissions",
+            "default": []
+          },
+          "roles": {
+            "items": {
+              "$ref": "#/components/schemas/RegisterApplicationRole"
+            },
+            "type": "array",
+            "title": "Roles",
+            "default": []
+          }
+        },
+        "type": "object",
+        "required": [
+          "application_mnemonic",
+          "application_url"
+        ],
+        "title": "RegisterStaffPortalApplicationRequest",
+        "description": "Payload an application (e.g. a registry) sends to register/update itself\nin the staff portal. Upserted by ``application_mnemonic``, which must equal\nthe application's Keycloak client_id so role-gating resolves correctly.\n\nThe optional ``permissions`` and ``roles`` carry the application's full\naccess catalog; they are upserted under this application's id and the\nrole->permission mappings are rebuilt to match the payload. Multiple\ninstances of the same product each push their own (identical) catalog under\ntheir own mnemonic/client_id."
+      },
+      "RegisterStaffPortalApplicationResponse": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "application_mnemonic": {
+            "type": "string",
+            "title": "Application Mnemonic"
+          },
+          "created": {
+            "type": "boolean",
+            "title": "Created"
+          },
+          "permissions_count": {
+            "type": "integer",
+            "title": "Permissions Count",
+            "default": 0
+          },
+          "roles_count": {
+            "type": "integer",
+            "title": "Roles Count",
+            "default": 0
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "application_mnemonic",
+          "created"
+        ],
+        "title": "RegisterStaffPortalApplicationResponse"
+      },
+      "RemovePolicyRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/RemovePolicyRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "RemovePolicyRequest"
+      },
+      "RemovePolicyRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/RemovePolicyRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "RemovePolicyRequestBody"
+      },
+      "RemovePolicyRequestPayload": {
+        "properties": {
+          "policy_id": {
+            "type": "string",
+            "title": "Policy Id",
+            "description": "Policy ID to remove"
+          }
+        },
+        "type": "object",
+        "required": [
+          "policy_id"
+        ],
+        "title": "RemovePolicyRequestPayload"
+      },
+      "RemovePolicyResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RemovePolicyResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "RemovePolicyResponse"
+      },
+      "RemovePolicyResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RemovePolicyResponsePayload"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "RemovePolicyResponseBody"
+      },
+      "RemovePolicyResponsePayload": {
+        "properties": {
+          "policy_id": {
+            "type": "string",
+            "title": "Policy Id",
+            "description": "Removed policy ID"
+          }
+        },
+        "type": "object",
+        "required": [
+          "policy_id"
+        ],
+        "title": "RemovePolicyResponsePayload"
+      },
+      "RoleCreatePayload": {
+        "properties": {
+          "application_id": {
+            "type": "integer",
+            "title": "Application Id"
+          },
+          "role_mnemonic": {
+            "type": "string",
+            "title": "Role Mnemonic"
+          },
+          "role_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Role Description"
+          }
+        },
+        "type": "object",
+        "required": [
+          "application_id",
+          "role_mnemonic"
+        ],
+        "title": "RoleCreatePayload"
+      },
+      "RoleData": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "role_mnemonic": {
+            "type": "string",
+            "title": "Role Mnemonic"
+          },
+          "role_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Role Description"
+          },
+          "application_id": {
+            "type": "integer",
+            "title": "Application Id"
+          },
+          "active": {
+            "type": "boolean",
+            "title": "Active",
+            "default": true
+          },
+          "created_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Created At"
+          },
+          "updated_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "role_mnemonic",
+          "application_id"
+        ],
+        "title": "RoleData"
+      },
+      "RoleDeletePayload": {
+        "properties": {
+          "application_id": {
+            "type": "integer",
+            "title": "Application Id"
+          },
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "application_id",
+          "id"
+        ],
+        "title": "RoleDeletePayload"
+      },
+      "RolePermissionCreatePayload": {
+        "properties": {
+          "application_id": {
+            "type": "integer",
+            "title": "Application Id"
+          },
+          "role_id": {
+            "type": "integer",
+            "title": "Role Id"
+          },
+          "permission_id": {
+            "type": "integer",
+            "title": "Permission Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "application_id",
+          "role_id",
+          "permission_id"
+        ],
+        "title": "RolePermissionCreatePayload"
+      },
+      "RolePermissionData": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "role_id": {
+            "type": "integer",
+            "title": "Role Id"
+          },
+          "permission_id": {
+            "type": "integer",
+            "title": "Permission Id"
+          },
+          "role_mnemonic": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Role Mnemonic"
+          },
+          "permission_mnemonic": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Permission Mnemonic"
+          },
+          "active": {
+            "type": "boolean",
+            "title": "Active",
+            "default": true
+          },
+          "created_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Created At"
+          },
+          "updated_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "role_id",
+          "permission_id"
+        ],
+        "title": "RolePermissionData"
+      },
+      "RolePermissionDeletePayload": {
+        "properties": {
+          "application_id": {
+            "type": "integer",
+            "title": "Application Id"
+          },
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "application_id",
+          "id"
+        ],
+        "title": "RolePermissionDeletePayload"
+      },
+      "RolePermissionListPayload": {
+        "properties": {
+          "application_id": {
+            "type": "integer",
+            "title": "Application Id"
+          },
+          "role_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Role Id"
+          },
+          "permission_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Permission Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "application_id"
+        ],
+        "title": "RolePermissionListPayload"
+      },
+      "RolePermissionResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RolePermissionResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "RolePermissionResponse"
+      },
+      "RolePermissionResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RolePermissionData"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "RolePermissionResponseBody"
+      },
+      "RolePermissionsResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RolePermissionsResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "RolePermissionsResponse"
+      },
+      "RolePermissionsResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/RolePermissionData"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Payload"
+          }
+        },
+        "type": "object",
+        "title": "RolePermissionsResponseBody"
+      },
+      "RoleResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RoleResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "RoleResponse"
+      },
+      "RoleResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RoleData"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "RoleResponseBody"
+      },
+      "RolesResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RolesResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "RolesResponse"
+      },
+      "RolesResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/RoleData"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Payload"
+          }
+        },
+        "type": "object",
+        "title": "RolesResponseBody"
+      },
+      "StaffPortalApplicationResponse": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "application_mnemonic": {
+            "type": "string",
+            "title": "Application Mnemonic"
+          },
+          "application_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Application Description"
+          },
+          "application_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Application Url"
+          },
+          "api_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Api Url"
+          },
+          "icon_base64": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Icon Base64"
+          },
+          "width": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Width"
+          },
+          "order": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Order"
+          },
+          "disabled": {
+            "type": "boolean",
+            "title": "Disabled"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "application_mnemonic",
+          "disabled"
+        ],
+        "title": "StaffPortalApplicationResponse"
+      },
+      "StartAuthTransactionResponse": {
+        "properties": {
+          "redirectUrl": {
+            "type": "string",
+            "title": "Redirecturl"
+          },
+          "state": {
+            "type": "string",
+            "title": "State"
+          }
+        },
+        "type": "object",
+        "required": [
+          "redirectUrl",
+          "state"
+        ],
+        "title": "StartAuthTransactionResponse"
+      },
+      "TokenEndpointAuthMethod": {
+        "type": "string",
+        "enum": [
+          "private_key_jwt",
+          "private_key_jwt_keymanager",
+          "client_secret_basic",
+          "client_secret_post"
+        ],
+        "title": "TokenEndpointAuthMethod"
+      },
+      "UpdateApplicationRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/UpdateApplicationRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "UpdateApplicationRequest"
+      },
+      "UpdateApplicationRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/ApplicationUpdatePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "UpdateApplicationRequestBody"
+      },
+      "UpdateLoginProviderRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/UpdateLoginProviderRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "UpdateLoginProviderRequest"
+      },
+      "UpdateLoginProviderRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/LoginProviderUpdatePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "UpdateLoginProviderRequestBody"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "iam_core__schemas__login_provider__LoginProviderResponse": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "protocol": {
+            "type": "string",
+            "title": "Protocol",
+            "default": "oidc"
+          },
+          "displayName": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "additionalProperties": true,
+                "type": "object"
+              }
+            ],
+            "title": "Displayname"
+          },
+          "displayIconUrl": {
+            "type": "string",
+            "title": "Displayiconurl"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "displayName",
+          "displayIconUrl"
+        ],
+        "title": "LoginProviderResponse"
+      },
+      "iam_staff_portal_api__schemas__LoginProviderResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LoginProviderResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "LoginProviderResponse"
+      }
+    }
+  }
+}

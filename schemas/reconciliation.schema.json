@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LOCAL SIMULATION reconciliation",
+  "type": "object",
+  "properties": {
+    "settled_amount_minor": {
+      "type": "integer"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "reversed": {
+      "type": "boolean"
+    },
+    "synthetic": {
+      "type": "boolean",
+      "enum": [
+        true
+      ]
+    }
+  },
+  "required": [
+    "settled_amount_minor",
+    "currency",
+    "reversed",
+    "synthetic"
+  ]
+}

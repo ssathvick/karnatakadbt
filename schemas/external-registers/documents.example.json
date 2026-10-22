@@ -1,0 +1,32 @@
+{
+  "documents": [
+    {
+      "document_id": "SIM-DOC-SIM-CERT-income-SIM-FAM-a41c89e27965",
+      "household_ref": "KA-DEMO-HH-001",
+      "person_id": "SIM-PER-b93ee8775afc2a",
+      "certificate_id": "SIM-CERT-income-SIM-FAM-a41c89e27965",
+      "document_type": "income",
+      "issuer_name": "Simulated Karnataka Revenue issuer",
+      "holder_name": "Lakshmi Gowda",
+      "issued_on": "2026-09-16",
+      "expiry_date": "2027-10-16",
+      "status": "A",
+      "signature_status": "unsigned_simulation",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    },
+    {
+      "document_id": "SIM-DOC-SIM-CERT-residence-SIM-FAM-a41c89e27965",
+      "household_ref": "KA-DEMO-HH-001",
+      "person_id": "SIM-PER-b93ee8775afc2a",
+      "certificate_id": "SIM-CERT-residence-SIM-FAM-a41c89e27965",
+      "document_type": "residence",
+      "issuer_name": "Simulated Karnataka Revenue issuer",
+      "holder_name": "Lakshmi Gowda",
+      "issued_on": "2026-09-16",
+      "expiry_date": "2027-10-16",
+      "status": "A",
+      "signature_status": "unsigned_simulation",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    }
+  ]
+}

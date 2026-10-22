@@ -1,0 +1,14 @@
+{
+  "accounts": [
+    {
+      "account_token": "SIM-ACCOUNT-SIM-FAM-a41c89e27965",
+      "household_ref": "KA-DEMO-HH-001",
+      "holder_person_id": "SIM-PER-b93ee8775afc2a",
+      "validation_status": "valid",
+      "routing_code": "SIMULATED",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    }
+  ],
+  "instructions": [],
+  "settlements": []
+}

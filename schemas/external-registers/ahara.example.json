@@ -1,0 +1,27 @@
+{
+  "ration_cards": [
+    {
+      "card_id": "SIM-CARD-SIM-FAM-a41c89e27965",
+      "household_ref": "KA-DEMO-HH-001",
+      "family_id": "SIM-FAM-a41c89e27965",
+      "category": "PHH",
+      "status": "active",
+      "district_id": "KA-D01",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    }
+  ],
+  "card_members": [
+    {
+      "card_id": "SIM-CARD-SIM-FAM-a41c89e27965",
+      "person_id": "SIM-PER-5b6a6333f65b3e"
+    },
+    {
+      "card_id": "SIM-CARD-SIM-FAM-a41c89e27965",
+      "person_id": "SIM-PER-b93ee8775afc2a"
+    },
+    {
+      "card_id": "SIM-CARD-SIM-FAM-a41c89e27965",
+      "person_id": "SIM-PER-c7d531b54314e1"
+    }
+  ]
+}

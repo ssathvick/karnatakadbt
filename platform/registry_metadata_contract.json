@@ -1,0 +1,2687 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Registry metadata compatibility interface",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/registry-config/create_registry_configuration": {
+      "post": {
+        "tags": [
+          "/registry-config"
+        ],
+        "summary": "Create Registry Configuration",
+        "operationId": "create_registry_configuration_registry_config_create_registry_configuration_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRegistryConfigurationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistryConfigurationDataResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/registry-config/get_registry_configuration": {
+      "post": {
+        "tags": [
+          "/registry-config"
+        ],
+        "summary": "Get Registry Configuration",
+        "operationId": "get_registry_configuration_registry_config_get_registry_configuration_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetRegistryConfigurationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistryConfigurationDataResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/registry-config/update_registry_configuration": {
+      "post": {
+        "tags": [
+          "/registry-config"
+        ],
+        "summary": "Update Registry Configuration",
+        "operationId": "update_registry_configuration_registry_config_update_registry_configuration_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRegistryConfigurationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistryConfigurationDataResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/registry-theme/get_all_themes": {
+      "post": {
+        "tags": [
+          "/registry-theme"
+        ],
+        "summary": "Get All Themes",
+        "operationId": "get_all_themes_registry_theme_get_all_themes_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllThemesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistryThemesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/registry-theme/create_theme": {
+      "post": {
+        "tags": [
+          "/registry-theme"
+        ],
+        "summary": "Create Theme",
+        "operationId": "create_theme_registry_theme_create_theme_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateThemeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThemeOperationResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/registry-theme/remove_theme": {
+      "post": {
+        "tags": [
+          "/registry-theme"
+        ],
+        "summary": "Remove Theme",
+        "operationId": "remove_theme_registry_theme_remove_theme_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoveThemeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThemeOperationResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/registry-theme/update_theme_values": {
+      "post": {
+        "tags": [
+          "/registry-theme"
+        ],
+        "summary": "Update Theme Values",
+        "operationId": "update_theme_values_registry_theme_update_theme_values_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateThemeValuesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThemeOperationResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/registry-theme/get_theme_values": {
+      "post": {
+        "tags": [
+          "/registry-theme"
+        ],
+        "summary": "Get Theme Values",
+        "operationId": "get_theme_values_registry_theme_get_theme_values_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetThemeValuesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistryThemeValuesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/registry-language/get_all_languages": {
+      "post": {
+        "tags": [
+          "/registry-language"
+        ],
+        "summary": "Get All Languages",
+        "operationId": "get_all_languages_registry_language_get_all_languages_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllLanguagesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistryLanguagesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/registry-language/get_language": {
+      "post": {
+        "tags": [
+          "/registry-language"
+        ],
+        "summary": "Get Language",
+        "operationId": "get_language_registry_language_get_language_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetLanguageRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistryLanguageResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/registry-language/create_language": {
+      "post": {
+        "tags": [
+          "/registry-language"
+        ],
+        "summary": "Create Language",
+        "operationId": "create_language_registry_language_create_language_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateLanguageRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistryLanguageResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/registry-language/update_language": {
+      "post": {
+        "tags": [
+          "/registry-language"
+        ],
+        "summary": "Update Language",
+        "operationId": "update_language_registry_language_update_language_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateLanguageRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistryLanguageResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/registry-language/remove_language": {
+      "post": {
+        "tags": [
+          "/registry-language"
+        ],
+        "summary": "Remove Language",
+        "operationId": "remove_language_registry_language_remove_language_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoveLanguageRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistryLanguageResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreateLanguageRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/CreateLanguageRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "CreateLanguageRequest"
+      },
+      "CreateLanguageRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/CreateLanguageRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "CreateLanguageRequestBody"
+      },
+      "CreateLanguageRequestPayload": {
+        "properties": {
+          "language_code": {
+            "type": "string",
+            "title": "Language Code"
+          },
+          "language_label": {
+            "type": "string",
+            "title": "Language Label"
+          },
+          "language_flag_base64": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Language Flag Base64"
+          },
+          "is_default": {
+            "type": "boolean",
+            "title": "Is Default",
+            "default": false
+          },
+          "core_translation": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Core Translation"
+          },
+          "domain_translation": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Domain Translation"
+          }
+        },
+        "type": "object",
+        "required": [
+          "language_code",
+          "language_label"
+        ],
+        "title": "CreateLanguageRequestPayload"
+      },
+      "CreateRegistryConfigurationRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/CreateRegistryConfigurationRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "CreateRegistryConfigurationRequest"
+      },
+      "CreateRegistryConfigurationRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/CreateRegistryConfigurationRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "CreateRegistryConfigurationRequestBody"
+      },
+      "CreateRegistryConfigurationRequestPayload": {
+        "properties": {
+          "registry_name": {
+            "type": "string",
+            "title": "Registry Name"
+          },
+          "registry_logo": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Logo"
+          },
+          "registry_favicon": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Favicon"
+          },
+          "registry_theme_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Theme Id"
+          },
+          "registry_language_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Language Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "registry_name"
+        ],
+        "title": "CreateRegistryConfigurationRequestPayload"
+      },
+      "CreateThemeRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/CreateThemeRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "CreateThemeRequest"
+      },
+      "CreateThemeRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/CreateThemeRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "CreateThemeRequestBody"
+      },
+      "CreateThemeRequestPayload": {
+        "properties": {
+          "theme_mnemonic": {
+            "type": "string",
+            "title": "Theme Mnemonic"
+          },
+          "theme_values": {
+            "items": {
+              "$ref": "#/components/schemas/ThemeAttributeValueInput"
+            },
+            "type": "array",
+            "title": "Theme Values"
+          }
+        },
+        "type": "object",
+        "required": [
+          "theme_mnemonic",
+          "theme_values"
+        ],
+        "title": "CreateThemeRequestPayload"
+      },
+      "EmptyRequestPayload": {
+        "properties": {},
+        "type": "object",
+        "title": "EmptyRequestPayload",
+        "description": "Empty payload for requests that don't require any parameters"
+      },
+      "ErrorListResponse": {
+        "properties": {
+          "errors": {
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "type": "array",
+            "title": "Errors"
+          }
+        },
+        "type": "object",
+        "required": [
+          "errors"
+        ],
+        "title": "ErrorListResponse"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code",
+            "default": ""
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "title": "ErrorResponse"
+      },
+      "G2PPaginationRequest": {
+        "properties": {
+          "current_page": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Current Page"
+          },
+          "page_size": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Page Size"
+          },
+          "sort_by": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort By"
+          },
+          "filter_by": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Filter By"
+          },
+          "search_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Search Text"
+          }
+        },
+        "type": "object",
+        "required": [
+          "current_page",
+          "page_size"
+        ],
+        "title": "G2PPaginationRequest"
+      },
+      "G2PPaginationResponse": {
+        "properties": {
+          "number_of_items": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Number Of Items"
+          },
+          "number_of_pages": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Number Of Pages"
+          }
+        },
+        "type": "object",
+        "required": [
+          "number_of_items",
+          "number_of_pages"
+        ],
+        "title": "G2PPaginationResponse"
+      },
+      "G2PRequestHeader": {
+        "properties": {
+          "sender_app_mnemonic": {
+            "type": "string",
+            "title": "Sender App Mnemonic"
+          },
+          "sender_app_url": {
+            "type": "string",
+            "title": "Sender App Url"
+          },
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "request_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Request Timestamp"
+          },
+          "instance_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Instance Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "sender_app_mnemonic",
+          "sender_app_url",
+          "request_id",
+          "request_timestamp"
+        ],
+        "title": "G2PRequestHeader"
+      },
+      "G2PResponseHeader": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "response_status": {
+            "$ref": "#/components/schemas/G2PResponseStatus"
+          },
+          "response_error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Error Code"
+          },
+          "response_error_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Error Message"
+          },
+          "response_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Response Timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_id",
+          "response_status",
+          "response_timestamp"
+        ],
+        "title": "G2PResponseHeader"
+      },
+      "G2PResponseStatus": {
+        "type": "string",
+        "enum": [
+          "ERROR",
+          "SUCCESS"
+        ],
+        "title": "G2PResponseStatus"
+      },
+      "GetAllLanguagesRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetAllLanguagesRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetAllLanguagesRequest"
+      },
+      "GetAllLanguagesRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/EmptyRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "GetAllLanguagesRequestBody"
+      },
+      "GetAllThemesRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetAllThemesRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetAllThemesRequest"
+      },
+      "GetAllThemesRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/EmptyRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "GetAllThemesRequestBody"
+      },
+      "GetLanguageRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetLanguageRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetLanguageRequest"
+      },
+      "GetLanguageRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/GetLanguageRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "GetLanguageRequestBody"
+      },
+      "GetLanguageRequestPayload": {
+        "properties": {
+          "language_id": {
+            "type": "string",
+            "title": "Language Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "language_id"
+        ],
+        "title": "GetLanguageRequestPayload"
+      },
+      "GetRegistryConfigurationRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetRegistryConfigurationRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetRegistryConfigurationRequest"
+      },
+      "GetRegistryConfigurationRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/EmptyRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "GetRegistryConfigurationRequestBody"
+      },
+      "GetThemeValuesRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/GetThemeValuesRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "GetThemeValuesRequest"
+      },
+      "GetThemeValuesRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/GetThemeValuesRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "GetThemeValuesRequestBody"
+      },
+      "GetThemeValuesRequestPayload": {
+        "properties": {
+          "theme_id": {
+            "type": "string",
+            "title": "Theme Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "theme_id"
+        ],
+        "title": "GetThemeValuesRequestPayload"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "RegistryConfigurationData": {
+        "properties": {
+          "configuration_id": {
+            "type": "string",
+            "title": "Configuration Id"
+          },
+          "registry_name": {
+            "type": "string",
+            "title": "Registry Name"
+          },
+          "registry_logo": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Logo"
+          },
+          "registry_favicon": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Favicon"
+          },
+          "registry_theme_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Theme Id"
+          },
+          "registry_language_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Language Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "configuration_id",
+          "registry_name"
+        ],
+        "title": "RegistryConfigurationData",
+        "description": "Data for registry configuration"
+      },
+      "RegistryConfigurationDataResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RegistryConfigurationDataResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "RegistryConfigurationDataResponse"
+      },
+      "RegistryConfigurationDataResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RegistryConfigurationData"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "RegistryConfigurationDataResponseBody"
+      },
+      "RegistryLanguageData": {
+        "properties": {
+          "language_id": {
+            "type": "string",
+            "title": "Language Id"
+          },
+          "language_code": {
+            "type": "string",
+            "title": "Language Code"
+          },
+          "language_label": {
+            "type": "string",
+            "title": "Language Label"
+          },
+          "language_flag_base64": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Language Flag Base64"
+          },
+          "is_default": {
+            "type": "boolean",
+            "title": "Is Default",
+            "default": false
+          },
+          "core_translation": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Core Translation"
+          },
+          "domain_translation": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Domain Translation"
+          }
+        },
+        "type": "object",
+        "required": [
+          "language_id",
+          "language_code",
+          "language_label"
+        ],
+        "title": "RegistryLanguageData"
+      },
+      "RegistryLanguageResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RegistryLanguageResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "RegistryLanguageResponse"
+      },
+      "RegistryLanguageResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RegistryLanguageData"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "RegistryLanguageResponseBody"
+      },
+      "RegistryLanguagesResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RegistryLanguagesResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "RegistryLanguagesResponse"
+      },
+      "RegistryLanguagesResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/RegistryLanguageData"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Payload"
+          }
+        },
+        "type": "object",
+        "title": "RegistryLanguagesResponseBody"
+      },
+      "RegistryThemeData": {
+        "properties": {
+          "theme_id": {
+            "type": "string",
+            "title": "Theme Id"
+          },
+          "theme_mnemonic": {
+            "type": "string",
+            "title": "Theme Mnemonic"
+          },
+          "is_factory_shipped": {
+            "type": "boolean",
+            "title": "Is Factory Shipped"
+          }
+        },
+        "type": "object",
+        "required": [
+          "theme_id",
+          "theme_mnemonic",
+          "is_factory_shipped"
+        ],
+        "title": "RegistryThemeData"
+      },
+      "RegistryThemeValueData": {
+        "properties": {
+          "theme_value_id": {
+            "type": "string",
+            "title": "Theme Value Id"
+          },
+          "theme_id": {
+            "type": "string",
+            "title": "Theme Id"
+          },
+          "attribute_name": {
+            "type": "string",
+            "title": "Attribute Name"
+          },
+          "attribute_value": {
+            "type": "string",
+            "title": "Attribute Value"
+          }
+        },
+        "type": "object",
+        "required": [
+          "theme_value_id",
+          "theme_id",
+          "attribute_name",
+          "attribute_value"
+        ],
+        "title": "RegistryThemeValueData"
+      },
+      "RegistryThemeValuesResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RegistryThemeValuesResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "RegistryThemeValuesResponse"
+      },
+      "RegistryThemeValuesResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/RegistryThemeValueData"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Payload"
+          }
+        },
+        "type": "object",
+        "title": "RegistryThemeValuesResponseBody"
+      },
+      "RegistryThemesResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RegistryThemesResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "RegistryThemesResponse"
+      },
+      "RegistryThemesResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/RegistryThemeData"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Payload"
+          }
+        },
+        "type": "object",
+        "title": "RegistryThemesResponseBody"
+      },
+      "RemoveLanguageRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/RemoveLanguageRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "RemoveLanguageRequest"
+      },
+      "RemoveLanguageRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/RemoveLanguageRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "RemoveLanguageRequestBody"
+      },
+      "RemoveLanguageRequestPayload": {
+        "properties": {
+          "language_id": {
+            "type": "string",
+            "title": "Language Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "language_id"
+        ],
+        "title": "RemoveLanguageRequestPayload"
+      },
+      "RemoveThemeRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/RemoveThemeRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "RemoveThemeRequest"
+      },
+      "RemoveThemeRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/RemoveThemeRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "RemoveThemeRequestBody"
+      },
+      "RemoveThemeRequestPayload": {
+        "properties": {
+          "theme_id": {
+            "type": "string",
+            "title": "Theme Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "theme_id"
+        ],
+        "title": "RemoveThemeRequestPayload"
+      },
+      "ThemeAttributeValueInput": {
+        "properties": {
+          "attribute_name": {
+            "type": "string",
+            "title": "Attribute Name"
+          },
+          "attribute_value": {
+            "type": "string",
+            "title": "Attribute Value"
+          }
+        },
+        "type": "object",
+        "required": [
+          "attribute_name",
+          "attribute_value"
+        ],
+        "title": "ThemeAttributeValueInput"
+      },
+      "ThemeOperationData": {
+        "properties": {
+          "theme_id": {
+            "type": "string",
+            "title": "Theme Id"
+          },
+          "success": {
+            "type": "boolean",
+            "title": "Success",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "theme_id"
+        ],
+        "title": "ThemeOperationData"
+      },
+      "ThemeOperationResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ThemeOperationResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "ThemeOperationResponse"
+      },
+      "ThemeOperationResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ThemeOperationData"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "ThemeOperationResponseBody"
+      },
+      "UpdateLanguageRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/UpdateLanguageRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "UpdateLanguageRequest"
+      },
+      "UpdateLanguageRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/UpdateLanguageRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "UpdateLanguageRequestBody"
+      },
+      "UpdateLanguageRequestPayload": {
+        "properties": {
+          "language_id": {
+            "type": "string",
+            "title": "Language Id"
+          },
+          "language_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Language Code"
+          },
+          "language_label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Language Label"
+          },
+          "language_flag_base64": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Language Flag Base64"
+          },
+          "is_default": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Is Default"
+          },
+          "core_translation": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Core Translation"
+          },
+          "domain_translation": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Domain Translation"
+          }
+        },
+        "type": "object",
+        "required": [
+          "language_id"
+        ],
+        "title": "UpdateLanguageRequestPayload"
+      },
+      "UpdateRegistryConfigurationRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/UpdateRegistryConfigurationRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "UpdateRegistryConfigurationRequest"
+      },
+      "UpdateRegistryConfigurationRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/UpdateRegistryConfigurationRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "UpdateRegistryConfigurationRequestBody"
+      },
+      "UpdateRegistryConfigurationRequestPayload": {
+        "properties": {
+          "configuration_id": {
+            "type": "string",
+            "title": "Configuration Id"
+          },
+          "registry_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Name"
+          },
+          "registry_logo": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Logo"
+          },
+          "registry_favicon": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Favicon"
+          },
+          "registry_theme_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Theme Id"
+          },
+          "registry_language_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registry Language Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "configuration_id"
+        ],
+        "title": "UpdateRegistryConfigurationRequestPayload"
+      },
+      "UpdateThemeValuesRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/UpdateThemeValuesRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "UpdateThemeValuesRequest"
+      },
+      "UpdateThemeValuesRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/UpdateThemeValuesRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "UpdateThemeValuesRequestBody"
+      },
+      "UpdateThemeValuesRequestPayload": {
+        "properties": {
+          "theme_id": {
+            "type": "string",
+            "title": "Theme Id"
+          },
+          "theme_attribute_values": {
+            "items": {
+              "$ref": "#/components/schemas/ThemeAttributeValueInput"
+            },
+            "type": "array",
+            "title": "Theme Attribute Values"
+          }
+        },
+        "type": "object",
+        "required": [
+          "theme_id",
+          "theme_attribute_values"
+        ],
+        "title": "UpdateThemeValuesRequestPayload"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  },
+  "x-provenance": "Interface-only compatibility snapshot of the running registry API; no application implementation code included."
+}

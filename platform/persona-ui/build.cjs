@@ -1,0 +1,1 @@
+const esbuild=require('esbuild');const options={bundle:true,minify:true,define:{'process.env.NODE_ENV':'"production"'},target:['es2020']};for(const [entry,out] of [['src/main.jsx','workspace'],['src/site.jsx','site'],['src/shell.js','site-shell']])esbuild.buildSync({...options,entryPoints:[entry],outfile:'dist/'+out+'.js'});

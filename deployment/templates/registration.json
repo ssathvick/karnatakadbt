@@ -1,0 +1,14 @@
+{
+  "base_url": "https://localhost:8443",
+  "keycloak": "https://localhost:8444",
+  "clients": {
+    "beneficiary": {
+      "id": "iqs-registration-beneficiary",
+      "secret": "${secret:s020}"
+    },
+    "staff": {
+      "id": "iqs-registration-staff",
+      "secret": "${secret:s021}"
+    }
+  }
+}

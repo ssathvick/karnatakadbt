@@ -1,0 +1,1349 @@
+{
+  "schema_version": 1,
+  "articles": [
+    {
+      "slug": "docs-register-unified-registry-model",
+      "module": "register",
+      "stage": "Registry and register concepts",
+      "audience": "all",
+      "title": "Understand registries and registers",
+      "purpose": "A registry is the application for a domain; a register is a structured dataset inside it.",
+      "steps": "Identify the correct registry service.\nChoose the register that stores the required entity.\nCheck related records and linked identifiers before entering data.",
+      "requirements": "Existing registry access.",
+      "next_step": "Open the relevant intake or record screen.",
+      "issues": "Different registers have different fields; do not treat a household and a person as the same record.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: unified registry model",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/unified-registry-model.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-register-change-management-and-approval-workflow",
+      "module": "register",
+      "stage": "Proposed and approved changes",
+      "audience": "all",
+      "title": "Understand proposed and approved record changes",
+      "purpose": "A proposed change is separate from the approved record until its workflow completes.",
+      "steps": "Open the record and identify the section to change.\nDescribe the proposed correction and attach required evidence.\nSubmit through the configured review process.\nCheck the request status before assuming the live record changed.",
+      "requirements": "Record editing permission and evidence.",
+      "next_step": "Track verification and approval.",
+      "issues": "A saved proposal does not by itself prove that the approved record has changed.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: change management and approval workflow",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/change-management-and-approval-workflow.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-register-audit-ability-and-trace-ability",
+      "module": "register",
+      "stage": "Workflow audit",
+      "audience": "all",
+      "title": "Read the record workflow audit",
+      "purpose": "Workflow evidence and actor timestamps explain who initiated, checked and approved a change.",
+      "steps": "Locate the change request for the record.\nReview the submitted evidence and recorded actors.\nCompare the decision and time with the reported issue.",
+      "requirements": "Permission to view the request and audit information.",
+      "next_step": "Escalate discrepancies with the request reference.",
+      "issues": "A workflow trail differs from a snapshot of the record at a particular time.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: audit ability and trace ability",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/audit-ability-and-trace-ability.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-register-documents",
+      "module": "register",
+      "stage": "Record documents",
+      "audience": "all",
+      "title": "Attach and review record documents",
+      "purpose": "Record file fields and evidence attached to a change request serve different purposes.",
+      "steps": "Check the file field label, allowed type and maximum size.\nUpload the required file into its intended slot.\nConfirm it appears before saving or submitting.\nUse the view control to inspect the file when reviewing evidence.",
+      "requirements": "Document access and the required file.",
+      "next_step": "Submit the proposed record or change for review.",
+      "issues": "Supporting evidence on a change request may not become a permanent record file after approval.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: documents",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/documents.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-register-ingestion-pipeline",
+      "module": "register",
+      "stage": "Ingestion monitoring",
+      "audience": "all",
+      "title": "Monitor imported registry submissions",
+      "purpose": "Partner and staff ingestion can create intake submissions or proposed updates.",
+      "steps": "Identify the source, target register and intake form.\nRetain the returned correlation reference.\nCheck classification, transformation and processing status where available.\nInvestigate failed items before resubmitting.",
+      "requirements": "An authorised integration and supported ingestion configuration.",
+      "next_step": "Verify the resulting submission or change request.",
+      "issues": "Acceptance by an API is not proof of successful registry processing; do not repeatedly send the same payload.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: ingestion pipeline",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/ingestion-pipeline.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-register-version-history",
+      "module": "register",
+      "stage": "Committed record history",
+      "audience": "all",
+      "title": "Inspect committed record history",
+      "purpose": "Record history shows approved snapshots and associated changes.",
+      "steps": "Open Version History if it is available on the record.\nChoose the relevant date.\nCompare the changed sections and linked request.",
+      "requirements": "History viewing permission.",
+      "next_step": "Use the evidence for an authorised correction or investigation.",
+      "issues": "History, workflow audit and computed-score history are different views; availability depends on the installed release.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: version history",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/version-history.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-register-registry-intake",
+      "module": "register",
+      "stage": "Registry intake lifecycle",
+      "audience": "all",
+      "title": "Follow the registry intake lifecycle",
+      "purpose": "Intake progresses from a saved form through submission, review and backend processing.",
+      "steps": "Choose the target register and intake form.\nComplete required fields and save a draft.\nSubmit and retain the application reference.\nTrack review and processing separately.",
+      "requirements": "Configured intake form and intake access.",
+      "next_step": "Verify that processing completed and the record exists.",
+      "issues": "Submitted forms may be locked. Approval and successful backend processing are separate milestones.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: registry intake",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/registry-intake.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-consent-manager-consent-aware-data-sharing",
+      "module": "consent-manager",
+      "stage": "Consent-aware sharing",
+      "audience": "all",
+      "title": "Understand consent-aware registry sharing",
+      "purpose": "Documented sharing separates the consent decision from enforcement by the registry.",
+      "steps": "Identify the recipient, purpose and requested data.\nCheck the applicable consent and partner policy.\nUse the authorised integration to request only the effective permitted fields.",
+      "requirements": "Configured consent enforcement and an authorised recipient.",
+      "next_step": "Record the decision reference or resolve a denial.",
+      "issues": "Documentation does not prove that every connector in this sandbox enforces the same consent flow.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: consent aware data sharing",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/consent-aware-data-sharing.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-register-deduplication",
+      "module": "register",
+      "stage": "Duplicate candidate review",
+      "audience": "all",
+      "title": "Review potential duplicate registry records",
+      "purpose": "Deduplication produces candidates according to configured fields and matching rules.",
+      "steps": "Check whether deduplication is enabled for the register.\nReview the flagged candidates and supporting identity data.\nEscalate uncertain matches through the authorised workflow.",
+      "requirements": "Duplicate-review access and configured matching rules.",
+      "next_step": "Record the reviewed outcome through available controls.",
+      "issues": "A similarity score is a review signal, not proof that two people are the same. Administrators control thresholds.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: deduplication",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/deduplication.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-iam-staff-ui-rbac-roles-and-permissions",
+      "module": "iam-staff-ui",
+      "stage": "Operations and configuration roles",
+      "audience": "all",
+      "title": "Understand role-based access",
+      "purpose": "Operational and configuration permissions are assigned through the identity system.",
+      "steps": "Identify the task and its required permission.\nCheck the assigned application and account role.\nAsk the access administrator to resolve a missing permission.",
+      "requirements": "Existing identity and access administration process.",
+      "next_step": "Sign in again after an approved role change.",
+      "issues": "Default upstream role names may differ from KarnatakaDBT roles. Choosing a persona does not grant access.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: rbac roles and permissions",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/rbac-roles-and-permissions.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-register-export-register-data",
+      "module": "register",
+      "stage": "Registry export jobs",
+      "audience": "all",
+      "title": "Understand registry export jobs",
+      "purpose": "Documented export jobs can include a chosen register and related records.",
+      "steps": "Confirm the filtered or selected scope.\nChoose an available export format.\nMonitor the job in export history.\nCheck the downloaded file and related-record coverage.",
+      "requirements": "Export permission; the export feature must exist in the installed release.",
+      "next_step": "Handle the output using the approved reporting process.",
+      "issues": "A retry may use current filters rather than the previous row selection. Check scope before retrying.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: export register data",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/export-register-data.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-pbms-rule-driven-processing",
+      "module": "pbms",
+      "stage": "Eligibility and entitlement rules",
+      "audience": "all",
+      "title": "Distinguish programme processing rules",
+      "purpose": "Eligibility, disbursement selection and entitlement are separate rule decisions.",
+      "steps": "Identify which decision is being configured.\nUse the programme-approved criteria for that decision.\nTest with fictional examples and inspect the resulting status.",
+      "requirements": "Programme management permission and approved rule definitions.",
+      "next_step": "Send the result through configured verification.",
+      "issues": "Do not infer benefit amounts from eligibility alone; missing or stale registry data can affect results.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: rule driven processing",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/pbms/features/rule-driven-processing.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-pbms-dual-cycle-management",
+      "module": "pbms",
+      "stage": "Enrolment and disbursement cycles",
+      "audience": "all",
+      "title": "Distinguish enrolment and disbursement cycles",
+      "purpose": "Enrolment cycles select beneficiaries; disbursement cycles organise delivery of benefits.",
+      "steps": "Select the programme and identify the cycle type.\nCheck its dates and source beneficiary list.\nApply the configured rules and review the resulting list.",
+      "requirements": "Programme access and configured cycles.",
+      "next_step": "Follow the relevant list verification process.",
+      "issues": "Newer PBMS documentation describes dual cycles; verify the controls present in this installation.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: dual cycle management",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/pbms/features/dual-cycle-management.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-pbms-verification-workflows",
+      "module": "pbms",
+      "stage": "List verification",
+      "audience": "all",
+      "title": "Review programme lists before finalisation",
+      "purpose": "Configured verifications provide evidence and accountability before a list is finalised.",
+      "steps": "Open the relevant enrolment or disbursement list.\nCheck the required verification stage.\nReview the supporting information and record your authorised assessment.",
+      "requirements": "Assigned verification permission.",
+      "next_step": "Send the list to the next configured reviewer.",
+      "issues": "Do not claim a list is verified simply because it has been generated.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: verification workflows",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/pbms/features/verification-workflows.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-pbms-controlled-list-management",
+      "module": "pbms",
+      "stage": "Registry-based list corrections",
+      "audience": "all",
+      "title": "Correct the source of beneficiary lists",
+      "purpose": "Documented PBMS list generation uses registry data as its source.",
+      "steps": "Identify the incorrect source record.\nCorrect it through the registry workflow.\nConfirm the approved change before generating a replacement list where permitted.",
+      "requirements": "Registry correction and programme permissions.",
+      "next_step": "Review the regenerated list and its cycle state.",
+      "issues": "Approved cycles may prevent new lists. Do not edit exported lists to simulate a registry correction.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: controlled list management",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/pbms/features/controlled-list-management.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-pbms-reconciliation-with-sponsor-bank",
+      "module": "pbms",
+      "stage": "Bank reconciliation concepts",
+      "audience": "all",
+      "title": "Understand bank reconciliation",
+      "purpose": "Reconciliation compares disbursement references with bank transaction evidence.",
+      "steps": "Check the programme, cycle and disbursement reference.\nReview the returned transaction or statement evidence in the configured reconciliation service.\nEscalate unmatched or inconsistent items.",
+      "requirements": "A configured reconciliation integration and assigned staff permission.",
+      "next_step": "Record the resolved reconciliation result.",
+      "issues": "The upstream guide describes sponsor-bank statements and Bridge processing. This sandbox does not issue real payments.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: reconciliation with sponsor bank",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/pbms/features/reconciliation-with-sponsor-bank.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-superset-reporting-and-dashboards",
+      "module": "superset",
+      "stage": "Programme reporting",
+      "audience": "all",
+      "title": "Use programme reports and dashboards",
+      "purpose": "Programme reporting can cover beneficiary statistics, transactions and reconciliation.",
+      "steps": "Open the relevant dashboard.\nConfirm its dataset, period and programme filters.\nCheck whether its numbers represent people, households, applications or transactions.",
+      "requirements": "Dashboard viewing permission and a configured dataset.",
+      "next_step": "Use the filtered results in authorised reporting.",
+      "issues": "A dashboard may not refresh immediately when source records change; check its update time.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: reporting and dashboards",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/pbms/features/reporting-and-dashboards.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-pbms-create-program-fund",
+      "module": "pbms",
+      "stage": "Programme fund records",
+      "audience": "all",
+      "title": "Understand programme fund records",
+      "purpose": "A programme fund records an allocation against the chosen programme and company.",
+      "steps": "Open programme accounting if available.\nCheck the programme, company, date and amount on the fund record.\nFollow the finance team’s authorised process for any proposed allocation.",
+      "requirements": "Finance authority and the relevant accounting feature.",
+      "next_step": "Review the allocation using the programme finance workflow.",
+      "issues": "Examples in upstream documentation do not define KarnatakaDBT budgets or authorise a transfer. Use fictional amounts in the sandbox.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: create program fund",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/program-disbursement-cycles/user-guides/create-program-fund.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-pbms-create-cycle-manager-for-a-program",
+      "module": "pbms",
+      "stage": "Cycle manager configuration",
+      "audience": "all",
+      "title": "Review cycle manager settings",
+      "purpose": "A cycle manager defines the configured behaviour of programme benefit cycles.",
+      "steps": "Open the programme configuration.\nInspect its cycle manager and available settings.\nConfirm the intended cycle behaviour with the programme owner before changing it.",
+      "requirements": "Programme configuration authority.",
+      "next_step": "Test the configuration using a demonstration cycle.",
+      "issues": "Older cycle-manager screens differ from newer PBMS. Do not enable automatic approval without an approved policy.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: create cycle manager for a program",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/program-disbursement-cycles/user-guides/create-cycle-manager-for-a-program.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-registry-create-an-individual-registrant",
+      "module": "registry",
+      "stage": "Individual registrant entry",
+      "audience": "all",
+      "title": "Create an individual registrant in the legacy registry",
+      "purpose": "Legacy registry screens collect a person’s identifying and personal details.",
+      "steps": "Open Registry and choose Individual.\nUse Create if your account has the required permission.\nEnter the mandatory names and the configured personal details.\nReview and save the record.",
+      "requirements": "Registrar access and the information required by the form.",
+      "next_step": "Link the person to the correct household or programme as required.",
+      "issues": "This guide applies to the legacy registry; modern intake uses a different review workflow. Use fictional identities here.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: create an individual registrant",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/beneficiary-management/beneficiary-registry/user-guides/create-an-individual-registrant.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-registry-create-a-group-and-add-individual-registrants-to-the-group",
+      "module": "registry",
+      "stage": "Household membership entry",
+      "audience": "all",
+      "title": "Link members to a household or group",
+      "purpose": "Legacy groups can link existing individual registrants as members.",
+      "steps": "Open the group or household.\nUse the Members section to select existing individuals.\nCheck each person and membership relationship.\nReview and save the proposed membership.",
+      "requirements": "Group-editing permission and the member records.",
+      "next_step": "Check the saved membership and any applicable review status.",
+      "issues": "A person’s name alone is insufficient to identify the correct record; compare the authorised identifiers.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: create a group and add individual registrants to the group",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/beneficiary-management/beneficiary-registry/user-guides/create-a-group-and-add-individual-registrants-to-the-group.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-registry-configure-id-types",
+      "module": "registry",
+      "stage": "Identifier type configuration",
+      "audience": "all",
+      "title": "Maintain configured identifier types",
+      "purpose": "Identifier types define the options used when storing registrant IDs.",
+      "steps": "Open registry configuration if authorised.\nInspect existing ID Types before proposing a new one.\nUse the approved identifier name and save through the available process.",
+      "requirements": "Registry configuration authority.",
+      "next_step": "Use the configured type when entering an identifier.",
+      "issues": "An identifier type is a label and does not by itself verify a Synthetic identity ID or other identity.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: configure id types",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/beneficiary-management/beneficiary-registry-configurations/user-guides/configure-id-types.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-registry-configure-relationships",
+      "module": "registry",
+      "stage": "Relationship type configuration",
+      "audience": "all",
+      "title": "Maintain relationship definitions",
+      "purpose": "Relationships can define source and destination entity types and an inverse label.",
+      "steps": "Review existing relationship definitions.\nConfirm the intended direction and entity types.\nEnter the approved name and inverse name where the form requires them.",
+      "requirements": "Registry configuration authority.",
+      "next_step": "Test the relationship on fictional records.",
+      "issues": "Membership and relationship definitions must match the intended household model; do not create duplicate labels.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: configure relationships",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/beneficiary-management/beneficiary-registry-configurations/user-guides/configure-relationships.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-registry-import-csv-file-to-registry-module",
+      "module": "registry",
+      "stage": "CSV import validation",
+      "audience": "all",
+      "title": "Validate a CSV import before loading",
+      "purpose": "Legacy import maps spreadsheet columns to registry fields.",
+      "steps": "Choose the correct register and Import records if available.\nUpload a fictional test file.\nMap each column to its intended field.\nRun Test and resolve errors before Import.",
+      "requirements": "Import permission and a correctly formatted file.",
+      "next_step": "Check imported records, IDs and relationships.",
+      "issues": "A successful file upload does not validate mappings. Retain identifiers to avoid accidental duplicate imports.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: import csv file to registry module",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/beneficiary-management/registration/user-guides/import-csv-file-to-registry-module.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-pbms-configure-proxy-means-test",
+      "module": "pbms",
+      "stage": "Proxy means test configuration",
+      "audience": "all",
+      "title": "Understand proxy means test configuration",
+      "purpose": "A PMT combines configured household indicators and weights for programme assessment.",
+      "steps": "Open the programme’s PMT configuration where available.\nCompare fields and weights with the approved scoring specification.\nTest expected outcomes with fictional household examples.",
+      "requirements": "Programme configuration authority and approved scoring rules.",
+      "next_step": "Review the results before applying the programme process.",
+      "issues": "The library supplies no Karnatakan eligibility threshold. AI must not invent weights, cutoffs or policy rules.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: configure proxy means test",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/eligibility/user-guides/configure-proxy-means-test.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-pbms-verify-eligibility-of-enrolled-registrants",
+      "module": "pbms",
+      "stage": "Eligibility reassessment",
+      "audience": "all",
+      "title": "Understand eligibility reassessment",
+      "purpose": "Older PBMS supports reassessing enrolled registrants against updated configured criteria.",
+      "steps": "Confirm the programme and reason for reassessment.\nReview the approved criteria and current enrolled list.\nUse Verify eligibility only through the authorised programme process.\nCheck resulting beneficiary statuses.",
+      "requirements": "Programme management authority and existing enrolled records.",
+      "next_step": "Review any changed status and communicate through the approved process.",
+      "issues": "Reassessment can affect beneficiary status; do not run it casually or treat a draft registrant as enrolled.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: verify eligibility of enrolled registrants",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/eligibility/user-guides/verify-eligibility-of-enrolled-registrants.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-pbms-deduplicate-registrants",
+      "module": "pbms",
+      "stage": "Programme duplicate checks",
+      "audience": "all",
+      "title": "Check programme duplicate status",
+      "purpose": "Programme deduplication uses the programme’s configured deduplication manager.",
+      "steps": "Open the programme and inspect its beneficiaries.\nReview the configured duplicate-check rules.\nRun the available check only when authorised and inspect flagged statuses.",
+      "requirements": "Programme administration permission.",
+      "next_step": "Investigate candidate duplicates before the next programme step.",
+      "issues": "A Duplicated status requires review; do not delete or merge records solely on a matching name.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: deduplicate registrants",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/deduplication/user-guides/deduplicate-registrants.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-pbms-enrol-registrants-into-program",
+      "module": "pbms",
+      "stage": "Enrolment outcomes",
+      "audience": "all",
+      "title": "Interpret programme enrolment results",
+      "purpose": "Configured programme criteria determine which draft candidates become enrolled.",
+      "steps": "Open the programme and inspect candidate statuses.\nConfirm the applicable eligibility configuration.\nUse the authorised enrolment workflow.\nReview Enrolled and Not Eligible results.",
+      "requirements": "Programme management permission and candidate records.",
+      "next_step": "Continue to the configured verification or benefit cycle.",
+      "issues": "Registration, eligibility and enrolment are distinct states; an application is not a payment confirmation.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: enrol registrants into program",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/enrolment/user-guides/enrol-registrants-into-program.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-pbms-multi-stage-approval",
+      "module": "pbms",
+      "stage": "Entitlement assessment stages",
+      "audience": "all",
+      "title": "Understand staged entitlement assessment",
+      "purpose": "Older PBMS can assign entitlement assessment to multiple managers in sequence.",
+      "steps": "Check the programme’s assessment stage and your assignment.\nReview evidence and record the assessment required at your stage.\nSubmit through the configured entitlement workflow.",
+      "requirements": "Configured staged assessment and the appropriate manager role.",
+      "next_step": "Allow the next authorised stage to review the assessment.",
+      "issues": "Only assigned stages can carry out their actions. An assessment recommendation is not an approved payment.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: multi stage approval",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/entitlement/user-guides/multi-stage-approval.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-portal-admin-configure-notification-manager",
+      "module": "portal-admin",
+      "stage": "Programme notifications",
+      "audience": "all",
+      "title": "Review programme notification configuration",
+      "purpose": "A notification manager connects programme events to configured notification behaviour.",
+      "steps": "Open the programme configuration.\nInspect the assigned notification manager and provider type.\nConfirm permitted templates and recipient behaviour using fictional test data.",
+      "requirements": "Programme configuration permission and an enabled provider.",
+      "next_step": "Check the test notification outcome.",
+      "issues": "A configured manager does not prove delivery. Avoid sending live messages during a client demonstration.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: configure notification manager",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/notifications/user-guides/configure-notification-manager.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-odk-customize-the-odk-importer-configuration-based-on-the-odk-form-fields",
+      "module": "odk",
+      "stage": "ODK import field mapping",
+      "audience": "all",
+      "title": "Map field collection data into the registry",
+      "purpose": "An ODK importer transforms selected submission fields into individual or group records.",
+      "steps": "Identify the ODK form and target registry.\nCheck that the form has its intended importer and field mapping.\nTest a fictional submission and inspect the transformed values.",
+      "requirements": "ODK/import administration access and a supported mapping configuration.",
+      "next_step": "Validate the imported record and its processing status.",
+      "issues": "Mappings are form-specific. An ODK submission is not automatically a verified beneficiary.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: customize the odk importer configuration based on the odk form fields",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/odk-importer/user-guides/customize-the-odk-importer-configuration-based-on-the-odk-form-fields.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-portal-admin-import-social-registry-data-into-pbms",
+      "module": "portal-admin",
+      "stage": "Social registry data source",
+      "audience": "all",
+      "title": "Understand importing a registry data source into PBMS",
+      "purpose": "Legacy PBMS can use configured data sources to retrieve social registry records.",
+      "steps": "Check the source service and the target individual or group register.\nHave the authorised administrator confirm endpoint and authentication configuration.\nTest a small fictional dataset and check field mapping.",
+      "requirements": "Approved integration access and a configured data source.",
+      "next_step": "Verify imported records before programme processing.",
+      "issues": "Do not place passwords or tokens in knowledge content. Source and target identifiers must remain consistent.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: import social registry data into pbms",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/odk-importer/user-guides/import-social-registry-data-into-pbms.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-iam-staff-ui-requirements",
+      "module": "iam-staff-ui",
+      "stage": "Application and login provider configuration",
+      "audience": "all",
+      "title": "Understand application and login-provider administration",
+      "purpose": "The IAM admin console describes registered applications and their login providers.",
+      "steps": "Open Applications to inspect the service’s registered URL and identifier.\nReview the associated Login Providers.\nEscalate an incorrect mapping to the authorised access administrator.",
+      "requirements": "IAM administration access.",
+      "next_step": "Test the existing sign-in route after an approved correction.",
+      "issues": "Application registration and persona selection are separate from operational permission assignment.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: requirements",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/identity-and-access-management/staff-ui/requirements.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-master-data-ui-concepts",
+      "module": "master-data-ui",
+      "stage": "Reference code lists",
+      "audience": "all",
+      "title": "Understand shared reference code lists",
+      "purpose": "Code lists provide stable codes and labels for values used across services.",
+      "steps": "Choose the relevant reference dataset.\nCheck the code, label and parent value where applicable.\nConfirm the version or effective date if the installed service provides them.",
+      "requirements": "Master-data viewing access.",
+      "next_step": "Use the approved code rather than inventing a free-text value.",
+      "issues": "Newer catalogue versioning is documented upstream; this installation may expose the earlier attribute/value interface.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: concepts",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/master-data-service/catalogue/concepts.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-master-data-ui-geography",
+      "module": "master-data-ui",
+      "stage": "Geography changes",
+      "audience": "all",
+      "title": "Plan administrative geography changes",
+      "purpose": "Upstream catalogue guidance treats hierarchy and boundaries as a consistent geography version.",
+      "steps": "Identify the official change and its effective date.\nCheck affected parent and child units.\nPrepare an old-to-new code mapping for reports and consumers.\nUse the authorised reference-data change process.",
+      "requirements": "Approved geographic reference information and administration authority.",
+      "next_step": "Validate consuming forms and maps after the change.",
+      "issues": "Do not overwrite a household’s recorded Taluk merely because its state or a boundary label changes.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: geography",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/master-data-service/catalogue/geography.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-master-data-ui-change-control",
+      "module": "master-data-ui",
+      "stage": "Reference data change review",
+      "audience": "all",
+      "title": "Review changes to shared reference data",
+      "purpose": "Newer catalogue guidance uses drafts and approvals before publishing versioned changes.",
+      "steps": "Identify the proposed change and its owner.\nReview the affected values and consumers.\nSubmit through the change controls available in the installed release.",
+      "requirements": "Reference-data change authority.",
+      "next_step": "Confirm the published values and their effective date.",
+      "issues": "Do not assume draft/publish controls exist in older interfaces; ask the administrator to confirm the supported process.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: change control",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/master-data-service/catalogue/change-control.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-master-data-ui-ui",
+      "module": "master-data-ui",
+      "stage": "Reference data navigation",
+      "audience": "all",
+      "title": "Navigate the reference-data administration interface",
+      "purpose": "The current upstream catalogue UI groups datasets, geography, releases and activity.",
+      "steps": "Identify the installed interface and its menu labels.\nLocate the dataset or geography entry you need.\nInspect codes, labels and available history before proposing changes.",
+      "requirements": "Master-data access.",
+      "next_step": "Use the authorised edit or review process for the selected item.",
+      "issues": "The local version may use Attributes and Values rather than the newer catalogue pages.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: ui",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/master-data-service/catalogue/ui.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-awe-scenarios",
+      "module": "awe",
+      "stage": "Approval patterns",
+      "audience": "all",
+      "title": "Understand approval stages and quorum",
+      "purpose": "Approval policies can combine sequential stages, parallel groups and required approval counts.",
+      "steps": "Identify the request’s active policy.\nCheck the current stage and assigned approvers.\nDetermine whether all, a configured count or a percentage must approve.",
+      "requirements": "Request-view permission and a configured policy.",
+      "next_step": "Complete your assigned task and monitor the next stage.",
+      "issues": "Your individual approval may not complete the stage; newer policy options may not exist in this release.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: scenarios",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/approval-workflow-engine/scenarios.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-awe-functional-specifications",
+      "module": "awe",
+      "stage": "Policy versions",
+      "audience": "all",
+      "title": "Understand approval policy versions",
+      "purpose": "A policy defines stages and rules; requests can remain tied to the version they started with.",
+      "steps": "Inspect the policy version attached to the request.\nCompare its stage rules with the active configuration.\nPrepare changes in a new draft where that versioning interface is available.",
+      "requirements": "Approval administration authority for configuration changes.",
+      "next_step": "Test the revised policy before activation.",
+      "issues": "Changing a policy does not necessarily change requests already in progress.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: functional specifications",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/approval-workflow-engine/functional-specifications.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-awe-sla-escalation",
+      "module": "awe",
+      "stage": "Overdue approval tasks",
+      "audience": "all",
+      "title": "Understand overdue task escalation",
+      "purpose": "An SLA policy determines what happens when an assigned task passes its due time.",
+      "steps": "Check the due time and current stage.\nInspect the configured breach action.\nContact the responsible supervisor through the approved escalation process.",
+      "requirements": "Task-view access; administrative authority to change policies.",
+      "next_step": "Track the actual escalation result in request history.",
+      "issues": "An overdue task is not automatically approved. Upstream permits several actions; confirm this deployment’s configured behaviour.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: sla escalation",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/approval-workflow-engine/how-to/sla-escalation.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-awe-segregation-of-duties",
+      "module": "awe",
+      "stage": "Independent approvers",
+      "audience": "all",
+      "title": "Understand separation of approval duties",
+      "purpose": "Policy settings can prevent requesters or earlier-stage approvers from approving later work.",
+      "steps": "Check your relationship to the request.\nReview the available assigned task.\nUse the independent reviewer route required by the policy.",
+      "requirements": "Assigned approver permission.",
+      "next_step": "Escalate a stage with no eligible approver.",
+      "issues": "A role alone may not make you eligible for every task; do not bypass separation rules by changing accounts.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: segregation of duties",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/approval-workflow-engine/how-to/segregation-of-duties.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-awe-reassign-task",
+      "module": "awe",
+      "stage": "Task reassignment",
+      "audience": "all",
+      "title": "Understand reassignment of a blocked approval task",
+      "purpose": "The documented admin workflow closes the old task and creates one for a new assignee.",
+      "steps": "Open the request and locate the unresolved task.\nConfirm why reassignment is needed and who is authorised to receive it.\nHave an authorised administrator use Reassign if available.\nCheck the resulting task and audit entry.",
+      "requirements": "Approval administrator permission.",
+      "next_step": "The new assignee reviews the task.",
+      "issues": "Reassignment is not approval. The original due time may remain in effect.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: reassign task",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/approval-workflow-engine/how-to/reassign-task.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-partner-management-functional-specifications",
+      "module": "partner-management",
+      "stage": "Partner lifecycle and keys",
+      "audience": "all",
+      "title": "Understand partner onboarding and public keys",
+      "purpose": "Partner management stores partner identity, lifecycle and signing public keys.",
+      "steps": "Check the stable partner identifier and organisation.\nInspect the onboarding request and proposed public keys.\nUse the authorised review process to activate or reject the request.",
+      "requirements": "Partner administration and review permission.",
+      "next_step": "Verify the partner and key status for the intended integration.",
+      "issues": "A created partner or pending key is not automatically active. Never put private keys in guidance or uploaded public-key fields.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: functional specifications",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/partner-management/functional-specifications.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-partner-management-integration",
+      "module": "partner-management",
+      "stage": "Partner key integration",
+      "audience": "all",
+      "title": "Understand partner signature verification",
+      "purpose": "Integrations can retrieve active partner public keys from partner management.",
+      "steps": "Confirm that the caller’s partner identifier matches the onboarded identifier.\nCheck partner activation and key validity.\nAsk the integration administrator to inspect key retrieval and signature failures.",
+      "requirements": "An approved integration and its responsible administrator.",
+      "next_step": "Retest an authorised fictional request.",
+      "issues": "Disabled or unknown partners must not be treated as trusted merely because a prior key is cached.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: integration",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/partner-management/integration.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-consent-manager-verification-and-enforcement",
+      "module": "consent-manager",
+      "stage": "Consent decision enforcement",
+      "audience": "all",
+      "title": "Understand effective consent scope",
+      "purpose": "Documented consent decisions restrict sharing to the intersection of requested, granted and policy-permitted data.",
+      "steps": "Check the subject, recipient, purpose and requested fields.\nReview the validation result and effective scopes.\nRelease data only through a configured enforcement integration.",
+      "requirements": "Consent-policy access and a supported integration.",
+      "next_step": "Retain the decision reference or resolve the denial.",
+      "issues": "A broad request does not authorise broad sharing; upstream design details may differ from the installed implementation.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: verification and enforcement",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/consent-management/design/verification-and-enforcement.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-consent-manager-partner-onboarding-and-policy",
+      "module": "consent-manager",
+      "stage": "Partner policy scope",
+      "audience": "all",
+      "title": "Understand consent policies for partners",
+      "purpose": "A consent policy limits what a partner can receive from a specified data controller.",
+      "steps": "Identify the partner and controller.\nReview the permitted purpose, scopes and validity constraints.\nSend policy changes through the authorised approval process.",
+      "requirements": "Consent administration authority.",
+      "next_step": "Test the resulting decision using fictional subjects.",
+      "issues": "Newer documentation separates partner identity from consent bindings. Confirm this deployment’s version before applying those screens.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: partner onboarding and policy",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/consent-management/design/partner-onboarding-and-policy.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-consent-manager-consent-lifecycle",
+      "module": "consent-manager",
+      "stage": "Consent withdrawal and expiry",
+      "audience": "all",
+      "title": "Understand consent lifecycle and withdrawal",
+      "purpose": "Consent can progress through request, authentication, grant, expiry or revocation.",
+      "steps": "Review who is requesting data and why.\nUse the configured subject consent flow to grant or decline.\nCheck active status and expiry before use.\nUse the authorised revocation route when withdrawing a grant.",
+      "requirements": "A configured consent flow and the appropriate subject or administrative authority.",
+      "next_step": "Check the receipt and updated status where supported.",
+      "issues": "A pending request is not an active grant. Consent collection and registry enforcement may use different integration paths.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: consent lifecycle",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/consent-management/design/consent-lifecycle.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "docs-superset-importing-dashboards-on-the-superset-ui-for-opeka2p-applications",
+      "module": "superset",
+      "stage": "Dashboard import preparation",
+      "audience": "all",
+      "title": "Prepare a dashboard import",
+      "purpose": "Superset can import packaged dashboard definitions linked to configured datasets.",
+      "steps": "Have an authorised analytics administrator confirm the target data connection.\nChoose a compatible dashboard ZIP package.\nImport through the available dashboard controls.\nOpen the result and check every chart and filter.",
+      "requirements": "Dashboard import permission and an approved data connection.",
+      "next_step": "Validate counts against the source dataset.",
+      "issues": "Never paste database credentials into help text; imported charts may require connection or schema corrections.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT documentation: importing dashboards on the superset ui for opeka2p applications",
+          "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/deployment/deployment-guide/importing-dashboards-on-the-superset-ui-for-opeka2p-applications.md"
+        }
+      ],
+      "scope": "upstream_reference",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-platform-1",
+      "module": "platform",
+      "stage": "End-to-end service journey",
+      "audience": "all",
+      "title": "Follow the KarnatakaDBT service journey",
+      "purpose": "Know which application handles each part of the demonstration.",
+      "steps": "Start with the persona workspace or All services.\nRegister the household and submit it for independent review.\nAfter approval, track the programme application, eligibility and enrolment through the relevant service.\nUse reporting to inspect recorded outcomes.",
+      "requirements": "An existing account with the required task permissions.",
+      "next_step": "Open help at the stage you are working on.",
+      "issues": "Household approval does not itself grant a benefit or prove a payment. Demonstration records are fictional.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/workspace"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-platform-2",
+      "module": "platform",
+      "stage": "Persona and permission",
+      "audience": "all",
+      "title": "Understand personas and account permissions",
+      "purpose": "Personas organise the experience around citizen, registration, verification and supervision tasks.",
+      "steps": "Choose the persona relevant to the client walkthrough.\nRead the task list and current status.\nSign in with an authorised account to perform available actions.",
+      "requirements": "Existing account permission for any operational action.",
+      "next_step": "Use the linked service for your assigned task.",
+      "issues": "The persona selector and demo walkthrough cannot grant new permissions.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/?persona=all"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-intake-3",
+      "module": "intake",
+      "stage": "Registration readiness",
+      "audience": "all",
+      "title": "Prepare a household registration",
+      "purpose": "Collect the information required by the household form before submission.",
+      "steps": "Check required household details and location fields.\nCheck member details and relationships.\nSave and review the draft.\nResolve form errors, then submit once for review.",
+      "requirements": "Fictional household information for this sandbox.",
+      "next_step": "Retain the reference and track the submitted status.",
+      "issues": "Submission is different from approval. Avoid creating another household merely because review is pending.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-intake-4",
+      "module": "intake",
+      "stage": "Returned registration corrections",
+      "audience": "all",
+      "title": "Respond to a returned registration",
+      "purpose": "Use reviewer feedback to correct the original household submission.",
+      "steps": "Open the returned record.\nRead the reason for correction.\nUpdate the relevant fields and check the household members and location.\nResubmit through the form when the application allows it.",
+      "requirements": "Access to the returned household and its feedback.",
+      "next_step": "Track the new review status.",
+      "issues": "Correct the original record instead of making a duplicate application.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/workspace"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-review-5",
+      "module": "review",
+      "stage": "Verification readiness",
+      "audience": "all",
+      "title": "Prepare an independent registration review",
+      "purpose": "A verifier checks the submitted information and recorded evidence before deciding.",
+      "steps": "Open a pending record assigned or available to your account.\nCompare household details, members and geographic information.\nRead recorded evidence and provenance.\nUse the available decision controls with a useful reason for any return.",
+      "requirements": "Verification permission and access to the submitted record.",
+      "next_step": "Check the resulting status and activity record.",
+      "issues": "A map dot or AI answer is not identity or residence verification.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/staff"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-review-6",
+      "module": "review",
+      "stage": "Registration audit reference",
+      "audience": "all",
+      "title": "Investigate a registration status question",
+      "purpose": "Use the record reference and activity rather than relying on recollection.",
+      "steps": "Find the household or submission reference.\nInspect the current review status and recorded activity.\nCompare feedback and the relevant timestamp.\nEscalate discrepancies to the responsible staff member.",
+      "requirements": "Permission to inspect the record.",
+      "next_step": "Follow the appropriate correction or review process.",
+      "issues": "Screens may show different stages of processing. Do not approve a case just to resolve a display inconsistency.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/workspace"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-beneficiary-7",
+      "module": "beneficiary",
+      "stage": "Application preparation",
+      "audience": "all",
+      "title": "Prepare a programme application",
+      "purpose": "A programme application is a separate step after the required registration process.",
+      "steps": "Check that the household registration has the required status.\nOpen the programme application route available to your account.\nReview the programme and required form information.\nSubmit and retain the application reference.",
+      "requirements": "An eligible application route and the information required by the programme.",
+      "next_step": "Track the application and its eligibility/enrolment status.",
+      "issues": "The library does not define government eligibility rules. Use only the programme criteria configured and approved by its owner.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/workspace"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-beneficiary-8",
+      "module": "beneficiary",
+      "stage": "Status meaning",
+      "audience": "all",
+      "title": "Interpret household and programme statuses",
+      "purpose": "Understand what the application has actually recorded at each stage.",
+      "steps": "Read the household review status first.\nCheck the programme application separately.\nDistinguish pending review, returned details, approved registration, eligibility and enrolment.\nUse the current screen’s next-step guidance.",
+      "requirements": "Access to your household or assigned record.",
+      "next_step": "Ask the responsible officer about a blocked stage.",
+      "issues": "Approved registration and enrolled status are not confirmation of a real payment in this sandbox.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/workspace"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-geography-9",
+      "module": "geography",
+      "stage": "Map intensity and counting",
+      "audience": "all",
+      "title": "Interpret state colours on the Karnataka map",
+      "purpose": "State shading summarises the records included by the current map filters.",
+      "steps": "Check the selected filters and counting unit.\nRead the colour legend before comparing states.\nInspect the displayed state count.\nUse household points to examine coordinate coverage rather than infer approval or need.",
+      "requirements": "Geography page access.",
+      "next_step": "Compare the map with the filtered record list and coverage summary.",
+      "issues": "A darker state indicates more included records, not a higher poverty rate or a verified population estimate.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/geography"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-geography-10",
+      "module": "geography",
+      "stage": "Coordinate quality",
+      "audience": "all",
+      "title": "Check household coordinate quality",
+      "purpose": "Coordinate provenance determines whether a household point is useful beyond a demonstration.",
+      "steps": "Check latitude, longitude and coordinate source.\nDistinguish synthetic demo points from captured or verified residence points.\nKeep the recorded state and Taluk structure intact.\nFlag missing or inconsistent locations for authorised correction.",
+      "requirements": "Permission to view geographic records.",
+      "next_step": "Review the coverage and coordinate provenance summary.",
+      "issues": "Demo points are not verified households or Taluk positions. Do not infer a new Taluk from a synthetic coordinate.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/geography"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-staff-portal-11",
+      "module": "staff-portal",
+      "stage": "Staff service navigation",
+      "audience": "all",
+      "title": "Choose the correct staff service",
+      "purpose": "Use the staff portal and shared navigation to reach the task-specific application.",
+      "steps": "Sign in through the existing staff route.\nChoose the service for your task.\nConfirm the application and record context before acting.\nOpen stage help when the next step is unclear.",
+      "requirements": "An existing staff account and assigned permissions.",
+      "next_step": "Continue the task in the target service.",
+      "issues": "Access to one service does not imply permission for every other service.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-staff-portal-12",
+      "module": "staff-portal",
+      "stage": "Access troubleshooting",
+      "audience": "all",
+      "title": "Resolve a staff access problem",
+      "purpose": "Separate an expired session from a missing task permission.",
+      "steps": "Confirm the correct service and staff sign-in route.\nSign in again if the session has expired.\nCheck whether the task is assigned and the required role is present.\nReport the service, screen and error to the access administrator without sharing credentials.",
+      "requirements": "Your existing account and a non-sensitive problem description.",
+      "next_step": "Retry after the authorised correction.",
+      "issues": "Never put passwords, session cookies or tokens into knowledge articles or AI questions.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/workspace"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-knowledge-13",
+      "module": "knowledge",
+      "stage": "Source-aware guidance",
+      "audience": "all",
+      "title": "Use source-linked task guidance",
+      "purpose": "Library articles explain local tasks or summarise official upstream reference material.",
+      "steps": "Check the article’s service and workflow stage.\nRead its local-workflow or upstream-reference label.\nUse the source link for further detail.\nConfirm release-dependent features with the application administrator.",
+      "requirements": "Published library access.",
+      "next_step": "Follow the actual controls available to your account.",
+      "issues": "An upstream feature description is not proof that the feature is enabled in KarnatakaDBT.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/knowledge"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-knowledge-14",
+      "module": "knowledge",
+      "stage": "Knowledge content maintenance",
+      "audience": "all",
+      "title": "Maintain a guidance article",
+      "purpose": "Staff can update guidance through the existing versioned review process.",
+      "steps": "Open Manage guidance with an authorised account.\nCreate or edit the service, stage, audience and six guidance fields.\nSave the draft and submit for independent review.\nAn authorised reviewer checks it before supervisor publication.",
+      "requirements": "Existing knowledge editing/review/publication permissions.",
+      "next_step": "Verify the published version in the library and screen help.",
+      "issues": "Drafts remain separate from published content. Authors cannot review their own drafts.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/knowledge/admin"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-knowledge-15",
+      "module": "knowledge",
+      "stage": "AI source verification",
+      "audience": "all",
+      "title": "Check a local AI answer",
+      "purpose": "The local assistant retrieves published guidance and presents relevant source links.",
+      "steps": "Select the service, role and workflow stage.\nAsk a task question without personal information.\nRead the linked source articles and any version caveats.\nUse the application’s authorised controls for the actual task.",
+      "requirements": "An existing account and an available local model.",
+      "next_step": "Consult an authorised staff member if guidance is insufficient.",
+      "issues": "AI may be wrong and cannot verify identities, approve cases, set policy or initiate payments.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/ai"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    },
+    {
+      "slug": "karnataka-guide-knowledge-16",
+      "module": "knowledge",
+      "stage": "AI drafting review",
+      "audience": "all",
+      "title": "Review AI-suggested guidance before saving",
+      "purpose": "A generated suggestion is editable form text, not a published rule.",
+      "steps": "Choose the service, audience and stage.\nGenerate and read the suggestion preview.\nApply it only after checking the contents.\nConfirm missing facts, then save and follow independent review.",
+      "requirements": "Existing knowledge editing permission.",
+      "next_step": "Submit the corrected draft for review.",
+      "issues": "Applying replaces the six guidance fields but does not save or publish; never invent eligibility thresholds.",
+      "sources": [
+        {
+          "title": "KarnatakaDBT local application workflow",
+          "url": "/registration/knowledge/admin/new"
+        }
+      ],
+      "scope": "local_workflow",
+      "sources_checked_on": "2026-10-05",
+      "origin": "system:documentation-import"
+    }
+  ]
+}

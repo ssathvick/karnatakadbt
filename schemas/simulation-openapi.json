@@ -1,0 +1,1356 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "KarnatakaDBT Local Partner Simulation",
+    "version": "1.0.0",
+    "description": "Simulation contracts only. NOT official NIMC, NASSCO, NIBSS, bank or treasury schemas. Fixed synthetic fixtures. Uses platform staff sessions and form CSRF. Amounts are integer kobo; settlement and payment acceptance are separate."
+  },
+  "servers": [
+    {
+      "url": "/registration"
+    }
+  ],
+  "paths": {
+    "/api/simulation/partners/identity": {
+      "post": {
+        "security": [
+          {
+            "staffSession": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "csrf": {
+                    "type": "string"
+                  },
+                  "scenario": {
+                    "type": "string",
+                    "enum": [
+                      "success",
+                      "identity_mismatch",
+                      "ineligible",
+                      "invalid_account",
+                      "insufficient_funds",
+                      "payment_failed",
+                      "delayed_settlement",
+                      "reconciliation_mismatch",
+                      "reversal"
+                    ]
+                  }
+                },
+                "required": [
+                  "csrf",
+                  "scenario"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Synthetic result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "verified": {
+                      "type": "boolean"
+                    },
+                    "identity_reference": {
+                      "type": "string"
+                    },
+                    "consent_reference": {
+                      "type": "string"
+                    },
+                    "synthetic": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    }
+                  },
+                  "required": [
+                    "verified",
+                    "identity_reference",
+                    "consent_reference",
+                    "synthetic"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Staff login required"
+          },
+          "403": {
+            "description": "Role or CSRF rejected"
+          },
+          "409": {
+            "description": "State or idempotency conflict"
+          }
+        }
+      }
+    },
+    "/api/simulation/partners/social-register": {
+      "post": {
+        "security": [
+          {
+            "staffSession": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "csrf": {
+                    "type": "string"
+                  },
+                  "scenario": {
+                    "type": "string",
+                    "enum": [
+                      "success",
+                      "identity_mismatch",
+                      "ineligible",
+                      "invalid_account",
+                      "insufficient_funds",
+                      "payment_failed",
+                      "delayed_settlement",
+                      "reconciliation_mismatch",
+                      "reversal"
+                    ]
+                  }
+                },
+                "required": [
+                  "csrf",
+                  "scenario"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Synthetic result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "household_reference": {
+                      "type": "string"
+                    },
+                    "state": {
+                      "type": "string"
+                    },
+                    "members": {
+                      "type": "integer"
+                    },
+                    "eligible": {
+                      "type": "boolean"
+                    },
+                    "synthetic": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    }
+                  },
+                  "required": [
+                    "household_reference",
+                    "state",
+                    "members",
+                    "eligible",
+                    "synthetic"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Staff login required"
+          },
+          "403": {
+            "description": "Role or CSRF rejected"
+          },
+          "409": {
+            "description": "State or idempotency conflict"
+          }
+        }
+      }
+    },
+    "/api/simulation/partners/programme": {
+      "post": {
+        "security": [
+          {
+            "staffSession": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "csrf": {
+                    "type": "string"
+                  },
+                  "scenario": {
+                    "type": "string",
+                    "enum": [
+                      "success",
+                      "identity_mismatch",
+                      "ineligible",
+                      "invalid_account",
+                      "insufficient_funds",
+                      "payment_failed",
+                      "delayed_settlement",
+                      "reconciliation_mismatch",
+                      "reversal"
+                    ]
+                  }
+                },
+                "required": [
+                  "csrf",
+                  "scenario"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Synthetic result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "programme_reference": {
+                      "type": "string"
+                    },
+                    "amount_minor": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string",
+                      "enum": [
+                        "INR"
+                      ]
+                    },
+                    "eligible": {
+                      "type": "boolean"
+                    },
+                    "synthetic": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    }
+                  },
+                  "required": [
+                    "programme_reference",
+                    "amount_minor",
+                    "currency",
+                    "eligible",
+                    "synthetic"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Staff login required"
+          },
+          "403": {
+            "description": "Role or CSRF rejected"
+          },
+          "409": {
+            "description": "State or idempotency conflict"
+          }
+        }
+      }
+    },
+    "/api/simulation/partners/treasury": {
+      "post": {
+        "security": [
+          {
+            "staffSession": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "csrf": {
+                    "type": "string"
+                  },
+                  "scenario": {
+                    "type": "string",
+                    "enum": [
+                      "success",
+                      "identity_mismatch",
+                      "ineligible",
+                      "invalid_account",
+                      "insufficient_funds",
+                      "payment_failed",
+                      "delayed_settlement",
+                      "reconciliation_mismatch",
+                      "reversal"
+                    ]
+                  }
+                },
+                "required": [
+                  "csrf",
+                  "scenario"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Synthetic result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "funding_reference": {
+                      "type": "string"
+                    },
+                    "approved": {
+                      "type": "boolean"
+                    },
+                    "amount_minor": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string"
+                    },
+                    "synthetic": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    }
+                  },
+                  "required": [
+                    "funding_reference",
+                    "approved",
+                    "amount_minor",
+                    "currency",
+                    "synthetic"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Staff login required"
+          },
+          "403": {
+            "description": "Role or CSRF rejected"
+          },
+          "409": {
+            "description": "State or idempotency conflict"
+          }
+        }
+      }
+    },
+    "/api/simulation/partners/account": {
+      "post": {
+        "security": [
+          {
+            "staffSession": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "csrf": {
+                    "type": "string"
+                  },
+                  "scenario": {
+                    "type": "string",
+                    "enum": [
+                      "success",
+                      "identity_mismatch",
+                      "ineligible",
+                      "invalid_account",
+                      "insufficient_funds",
+                      "payment_failed",
+                      "delayed_settlement",
+                      "reconciliation_mismatch",
+                      "reversal"
+                    ]
+                  }
+                },
+                "required": [
+                  "csrf",
+                  "scenario"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Synthetic result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "account_reference": {
+                      "type": "string"
+                    },
+                    "valid": {
+                      "type": "boolean"
+                    },
+                    "account_name": {
+                      "type": "string"
+                    },
+                    "synthetic": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    }
+                  },
+                  "required": [
+                    "account_reference",
+                    "valid",
+                    "account_name",
+                    "synthetic"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Staff login required"
+          },
+          "403": {
+            "description": "Role or CSRF rejected"
+          },
+          "409": {
+            "description": "State or idempotency conflict"
+          }
+        }
+      }
+    },
+    "/api/simulation/partners/payment": {
+      "post": {
+        "security": [
+          {
+            "staffSession": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "csrf": {
+                    "type": "string"
+                  },
+                  "scenario": {
+                    "type": "string",
+                    "enum": [
+                      "success",
+                      "identity_mismatch",
+                      "ineligible",
+                      "invalid_account",
+                      "insufficient_funds",
+                      "payment_failed",
+                      "delayed_settlement",
+                      "reconciliation_mismatch",
+                      "reversal"
+                    ]
+                  }
+                },
+                "required": [
+                  "csrf",
+                  "scenario"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Synthetic result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "accepted",
+                        "failed"
+                      ]
+                    },
+                    "reason_code": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "synthetic": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "reason_code",
+                    "synthetic"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Staff login required"
+          },
+          "403": {
+            "description": "Role or CSRF rejected"
+          },
+          "409": {
+            "description": "State or idempotency conflict"
+          }
+        }
+      }
+    },
+    "/api/simulation/partners/notification": {
+      "post": {
+        "security": [
+          {
+            "staffSession": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "csrf": {
+                    "type": "string"
+                  },
+                  "scenario": {
+                    "type": "string",
+                    "enum": [
+                      "success",
+                      "identity_mismatch",
+                      "ineligible",
+                      "invalid_account",
+                      "insufficient_funds",
+                      "payment_failed",
+                      "delayed_settlement",
+                      "reconciliation_mismatch",
+                      "reversal"
+                    ]
+                  }
+                },
+                "required": [
+                  "csrf",
+                  "scenario"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Synthetic result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "delivery_status": {
+                      "type": "string"
+                    },
+                    "channel": {
+                      "type": "string"
+                    },
+                    "synthetic": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    }
+                  },
+                  "required": [
+                    "delivery_status",
+                    "channel",
+                    "synthetic"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Staff login required"
+          },
+          "403": {
+            "description": "Role or CSRF rejected"
+          },
+          "409": {
+            "description": "State or idempotency conflict"
+          }
+        }
+      }
+    },
+    "/api/simulation/partners/grievance": {
+      "post": {
+        "security": [
+          {
+            "staffSession": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "csrf": {
+                    "type": "string"
+                  },
+                  "scenario": {
+                    "type": "string",
+                    "enum": [
+                      "success",
+                      "identity_mismatch",
+                      "ineligible",
+                      "invalid_account",
+                      "insufficient_funds",
+                      "payment_failed",
+                      "delayed_settlement",
+                      "reconciliation_mismatch",
+                      "reversal"
+                    ]
+                  }
+                },
+                "required": [
+                  "csrf",
+                  "scenario"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Synthetic result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "case_reference": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "synthetic": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    }
+                  },
+                  "required": [
+                    "case_reference",
+                    "status",
+                    "synthetic"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Staff login required"
+          },
+          "403": {
+            "description": "Role or CSRF rejected"
+          },
+          "409": {
+            "description": "State or idempotency conflict"
+          }
+        }
+      }
+    },
+    "/api/simulation/partners/reconciliation": {
+      "post": {
+        "security": [
+          {
+            "staffSession": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "csrf": {
+                    "type": "string"
+                  },
+                  "scenario": {
+                    "type": "string",
+                    "enum": [
+                      "success",
+                      "identity_mismatch",
+                      "ineligible",
+                      "invalid_account",
+                      "insufficient_funds",
+                      "payment_failed",
+                      "delayed_settlement",
+                      "reconciliation_mismatch",
+                      "reversal"
+                    ]
+                  }
+                },
+                "required": [
+                  "csrf",
+                  "scenario"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Synthetic result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "settled_amount_minor": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string"
+                    },
+                    "reversed": {
+                      "type": "boolean"
+                    },
+                    "synthetic": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    }
+                  },
+                  "required": [
+                    "settled_amount_minor",
+                    "currency",
+                    "reversed",
+                    "synthetic"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Staff login required"
+          },
+          "403": {
+            "description": "Role or CSRF rejected"
+          },
+          "409": {
+            "description": "State or idempotency conflict"
+          }
+        }
+      }
+    },
+    "/api/simulation/runs": {
+      "post": {
+        "security": [
+          {
+            "staffSession": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "csrf": {
+                    "type": "string"
+                  },
+                  "scenario": {
+                    "type": "string",
+                    "enum": [
+                      "success",
+                      "identity_mismatch",
+                      "ineligible",
+                      "invalid_account",
+                      "insufficient_funds",
+                      "payment_failed",
+                      "delayed_settlement",
+                      "reconciliation_mismatch",
+                      "reversal"
+                    ]
+                  },
+                  "request_key": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                },
+                "required": [
+                  "csrf",
+                  "scenario",
+                  "request_key"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Synthetic result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "run_id": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "synthetic": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    }
+                  },
+                  "required": [
+                    "run_id",
+                    "synthetic"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Staff login required"
+          },
+          "403": {
+            "description": "Role or CSRF rejected"
+          },
+          "409": {
+            "description": "State or idempotency conflict"
+          }
+        }
+      }
+    },
+    "/api/simulation/callback": {
+      "post": {
+        "security": [
+          {
+            "staffSession": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "csrf": {
+                    "type": "string"
+                  },
+                  "run_id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "event_id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "status": {
+                    "type": "string",
+                    "enum": [
+                      "successful",
+                      "reversed"
+                    ]
+                  }
+                },
+                "required": [
+                  "csrf",
+                  "run_id",
+                  "event_id",
+                  "status"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Synthetic result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "accepted": {
+                      "type": "boolean"
+                    },
+                    "synthetic": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    }
+                  },
+                  "required": [
+                    "accepted",
+                    "synthetic"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Staff login required"
+          },
+          "403": {
+            "description": "Role or CSRF rejected"
+          },
+          "409": {
+            "description": "State or idempotency conflict"
+          }
+        }
+      }
+    },
+    "/api/simulation/report": {
+      "get": {
+        "security": [
+          {
+            "staffSession": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Current isolated simulation counts, runs and settled total",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "synthetic": {
+                      "type": "boolean",
+                      "enum": [
+                        true
+                      ]
+                    },
+                    "scope": {
+                      "type": "string"
+                    },
+                    "counts": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "integer"
+                      }
+                    },
+                    "settled_amount_minor": {
+                      "type": "integer"
+                    },
+                    "currency": {
+                      "type": "string"
+                    },
+                    "runs": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    }
+                  },
+                  "required": [
+                    "synthetic",
+                    "scope",
+                    "counts",
+                    "settled_amount_minor",
+                    "currency",
+                    "runs"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/simulation/reset": {
+      "post": {
+        "security": [
+          {
+            "staffSession": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "csrf": {
+                    "type": "string"
+                  },
+                  "confirmation": {
+                    "type": "string",
+                    "enum": [
+                      "RESET SYNTHETIC RUNS"
+                    ]
+                  }
+                },
+                "required": [
+                  "csrf",
+                  "confirmation"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "302": {
+            "description": "Simulation cleared; redirect to console"
+          },
+          "400": {
+            "description": "Confirmation missing"
+          },
+          "403": {
+            "description": "CSRF or role rejected"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "staffSession": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "KDBT-INTAKE",
+        "description": "Existing staff login; supervisor or intake reviewer role. CSRF token required on every POST."
+      }
+    },
+    "schemas": {
+      "identity": {
+        "type": "object",
+        "properties": {
+          "verified": {
+            "type": "boolean"
+          },
+          "identity_reference": {
+            "type": "string"
+          },
+          "consent_reference": {
+            "type": "string"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          }
+        },
+        "required": [
+          "verified",
+          "identity_reference",
+          "consent_reference",
+          "synthetic"
+        ]
+      },
+      "social-register": {
+        "type": "object",
+        "properties": {
+          "household_reference": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "members": {
+            "type": "integer"
+          },
+          "eligible": {
+            "type": "boolean"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          }
+        },
+        "required": [
+          "household_reference",
+          "state",
+          "members",
+          "eligible",
+          "synthetic"
+        ]
+      },
+      "programme": {
+        "type": "object",
+        "properties": {
+          "programme_reference": {
+            "type": "string"
+          },
+          "amount_minor": {
+            "type": "integer"
+          },
+          "currency": {
+            "type": "string",
+            "enum": [
+              "INR"
+            ]
+          },
+          "eligible": {
+            "type": "boolean"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          }
+        },
+        "required": [
+          "programme_reference",
+          "amount_minor",
+          "currency",
+          "eligible",
+          "synthetic"
+        ]
+      },
+      "treasury": {
+        "type": "object",
+        "properties": {
+          "funding_reference": {
+            "type": "string"
+          },
+          "approved": {
+            "type": "boolean"
+          },
+          "amount_minor": {
+            "type": "integer"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          }
+        },
+        "required": [
+          "funding_reference",
+          "approved",
+          "amount_minor",
+          "currency",
+          "synthetic"
+        ]
+      },
+      "account": {
+        "type": "object",
+        "properties": {
+          "account_reference": {
+            "type": "string"
+          },
+          "valid": {
+            "type": "boolean"
+          },
+          "account_name": {
+            "type": "string"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          }
+        },
+        "required": [
+          "account_reference",
+          "valid",
+          "account_name",
+          "synthetic"
+        ]
+      },
+      "payment": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "accepted",
+              "failed"
+            ]
+          },
+          "reason_code": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "synthetic": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          }
+        },
+        "required": [
+          "status",
+          "reason_code",
+          "synthetic"
+        ]
+      },
+      "notification": {
+        "type": "object",
+        "properties": {
+          "delivery_status": {
+            "type": "string"
+          },
+          "channel": {
+            "type": "string"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          }
+        },
+        "required": [
+          "delivery_status",
+          "channel",
+          "synthetic"
+        ]
+      },
+      "grievance": {
+        "type": "object",
+        "properties": {
+          "case_reference": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          }
+        },
+        "required": [
+          "case_reference",
+          "status",
+          "synthetic"
+        ]
+      },
+      "reconciliation": {
+        "type": "object",
+        "properties": {
+          "settled_amount_minor": {
+            "type": "integer"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "reversed": {
+            "type": "boolean"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "enum": [
+              true
+            ]
+          }
+        },
+        "required": [
+          "settled_amount_minor",
+          "currency",
+          "reversed",
+          "synthetic"
+        ]
+      }
+    }
+  }
+}

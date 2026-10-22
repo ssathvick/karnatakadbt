@@ -1,0 +1,3 @@
+-- KarnatakaDBT simulation schema 1.0.0; not a government production DDL
+CREATE TABLE families(family_id TEXT PRIMARY KEY, household_ref TEXT UNIQUE NOT NULL, household_name TEXT NOT NULL, district_id TEXT NOT NULL, address_line TEXT NOT NULL, monthly_income_inr INTEGER NOT NULL CHECK(monthly_income_inr>=0), status TEXT NOT NULL CHECK(status IN ('active','inactive')), source_updated_at TEXT NOT NULL);
+ CREATE TABLE members(person_id TEXT PRIMARY KEY, family_id TEXT NOT NULL REFERENCES families(family_id), platform_member_ref TEXT UNIQUE NOT NULL, given_name TEXT NOT NULL, family_name TEXT NOT NULL, birth_date TEXT NOT NULL, gender TEXT NOT NULL, relationship TEXT NOT NULL, identity_token TEXT UNIQUE NOT NULL, source_updated_at TEXT NOT NULL);

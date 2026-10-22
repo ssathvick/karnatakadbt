@@ -1,0 +1,3 @@
+-- KarnatakaDBT simulation schema 1.0.0; not a government production DDL
+CREATE TABLE budgets(scheme_id TEXT PRIMARY KEY, available_minor INTEGER NOT NULL CHECK(available_minor>=0), currency TEXT NOT NULL CHECK(currency='INR'));
+ CREATE TABLE reservations(reservation_id TEXT PRIMARY KEY, run_id TEXT UNIQUE NOT NULL, scheme_id TEXT NOT NULL REFERENCES budgets(scheme_id), amount_minor INTEGER NOT NULL CHECK(amount_minor>0), status TEXT NOT NULL CHECK(status IN ('reserved','spent','released')));

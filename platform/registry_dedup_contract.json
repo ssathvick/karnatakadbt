@@ -1,0 +1,126 @@
+{
+  "change-register": {
+    "source_table": "deduplication_register_results",
+    "columns": {
+      "dedup_result_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "change_request_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "internal_record_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "match_score": {
+        "type": "double precision",
+        "nullable": false
+      },
+      "field_matches": {
+        "type": "json",
+        "nullable": false
+      },
+      "created_at": {
+        "type": "timestamp without time zone",
+        "nullable": false
+      }
+    }
+  },
+  "change-change": {
+    "source_table": "deduplication_change_request_results",
+    "columns": {
+      "dedup_result_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "change_request_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "candidate_change_request_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "match_score": {
+        "type": "double precision",
+        "nullable": false
+      },
+      "field_matches": {
+        "type": "json",
+        "nullable": false
+      },
+      "created_at": {
+        "type": "timestamp without time zone",
+        "nullable": false
+      }
+    }
+  },
+  "intake-register": {
+    "source_table": "dedup_results_intake_forms_vs_register",
+    "columns": {
+      "dedup_result_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "submission_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "section_register_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "internal_record_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "match_score": {
+        "type": "double precision",
+        "nullable": false
+      },
+      "field_matches": {
+        "type": "json",
+        "nullable": false
+      },
+      "created_at": {
+        "type": "timestamp without time zone",
+        "nullable": false
+      }
+    }
+  },
+  "intake-intake": {
+    "source_table": "dedup_results_intake_forms_vs_intake_forms",
+    "columns": {
+      "dedup_result_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "submission_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "section_register_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "candidate_submission_id": {
+        "type": "character varying",
+        "nullable": false
+      },
+      "match_score": {
+        "type": "double precision",
+        "nullable": false
+      },
+      "field_matches": {
+        "type": "json",
+        "nullable": false
+      },
+      "created_at": {
+        "type": "timestamp without time zone",
+        "nullable": false
+      }
+    }
+  }
+}

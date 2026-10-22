@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LOCAL SIMULATION account",
+  "type": "object",
+  "properties": {
+    "account_reference": {
+      "type": "string"
+    },
+    "valid": {
+      "type": "boolean"
+    },
+    "account_name": {
+      "type": "string"
+    },
+    "synthetic": {
+      "type": "boolean",
+      "enum": [
+        true
+      ]
+    }
+  },
+  "required": [
+    "account_reference",
+    "valid",
+    "account_name",
+    "synthetic"
+  ]
+}

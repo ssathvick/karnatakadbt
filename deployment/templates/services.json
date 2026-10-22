@@ -1,0 +1,2659 @@
+{
+  "approval": {
+    "url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_approval",
+    "schema": "native_approval_live_20261018034134",
+    "archive_key_path": "/runtime/config/references/f001-archive.key",
+    "ca_file": "/runtime/caddy/pki/authorities/local/root.crt",
+    "issuer": "https://localhost:8444/realms/staff",
+    "accepted_issuers": [
+      "https://localhost:8444/realms/staff"
+    ],
+    "audience": "account",
+    "jwks_url": "https://localhost:8444/realms/staff/protocol/openid-connect/certs",
+    "directory": {
+      "base_url": "https://localhost:8444",
+      "realm": "staff",
+      "client_id": "awe-admin-resolver",
+      "client_secret": "${secret:s001}"
+    },
+    "public_config": {
+      "service_id": "openg2p.awe",
+      "api_version": "1.0",
+      "module": "default",
+      "webhook": {
+        "timeout_seconds": 10,
+        "max_attempts": 6,
+        "backoff_seconds": [
+          60,
+          300,
+          900,
+          3600,
+          21600
+        ],
+        "poll_interval_seconds": 2,
+        "batch_size": 20
+      },
+      "sla": {
+        "check_interval_seconds": 300
+      }
+    },
+    "callback_origins": [
+      "http://register-staff-portal-api",
+      "https://localhost:8449",
+      "https://localhost:8446"
+    ],
+    "resolver_origins": [],
+    "cluster_hosts": {
+      "bridge-api": "10.43.115.211",
+      "bridge-bene-portal-api": "10.43.39.65",
+      "bridge-redis-master": "10.43.244.28",
+      "commons-kafka": "10.43.79.40",
+      "commons-kafka-ui": "10.43.193.50",
+      "commons-keycloak": "10.43.203.135",
+      "commons-minio": "10.43.161.203",
+      "commons-postgresql": "10.43.202.92",
+      "commons-redis-auth-master": "10.43.73.236",
+      "commons-redis-master": "10.43.205.181",
+      "commons-services-artifactory": "10.43.246.215",
+      "commons-services-auditmanager": "10.43.184.56",
+      "commons-services-awe": "10.43.172.195",
+      "commons-services-awe-ui": "10.43.59.191",
+      "commons-services-cm-api": "10.43.207.0",
+      "commons-services-cm-partner-api": "10.43.20.167",
+      "commons-services-cm-ui": "10.43.248.37",
+      "commons-services-esignet": "10.43.21.212",
+      "commons-services-esignet-oidc-ui": "10.43.152.184",
+      "commons-services-iam-agent-portal-api": "10.43.43.185",
+      "commons-services-iam-staff-portal-api": "10.43.73.106",
+      "commons-services-iam-staff-ui": "10.43.208.33",
+      "commons-services-inji-certify": "10.43.3.195",
+      "commons-services-keymanager": "10.43.214.169",
+      "commons-services-master-data-api": "10.43.220.243",
+      "commons-services-master-data-ui": "10.43.185.242",
+      "commons-services-mock-identity-system": "10.43.50.225",
+      "commons-services-odk-central-backend": "10.43.62.94",
+      "commons-services-odk-central-enketo": "10.43.164.201",
+      "commons-services-odk-central-frontend": "10.43.84.222",
+      "commons-services-odk-central-pyxform": "10.43.71.170",
+      "commons-services-pm-partner-api": "10.43.82.203",
+      "commons-services-pm-staff-portal-api": "10.43.25.187",
+      "commons-services-pm-staff-portal-ui": "10.43.176.239",
+      "commons-services-staff-portal-ui": "10.43.225.240",
+      "commons-services-superset": "10.43.26.189",
+      "commons-softhsm": "10.43.254.189",
+      "example-bank-postgresql": "10.43.90.123",
+      "example-bank-redis-master": "10.43.32.237",
+      "karnatakadbt-core-postgresql": "10.43.163.34",
+      "openg2p-g2p-bridge-example-bank-api": "10.43.95.57",
+      "pbms-api": "10.43.207.94",
+      "pbms-beneficiary-portal": "10.43.164.84",
+      "pbms-beneficiary-portal-ui": "10.43.16.20",
+      "pbms-odoo": "10.43.13.171",
+      "pbms-postgresql": "10.43.217.208",
+      "pbms-redis-master": "10.43.223.247",
+      "portal-backend-odoo": "10.43.82.188",
+      "portal-backend-postgresql": "10.43.219.19",
+      "register-bene-portal-api": "10.43.142.247",
+      "register-id-generator": "10.43.191.34",
+      "register-partner-api": "10.43.116.111",
+      "register-redis-master": "10.43.221.230",
+      "register-staff-portal-api": "10.43.146.231",
+      "register-staff-portal-ui": "10.43.215.68",
+      "registry-bg-tasks-redis-master": "10.43.132.87",
+      "registry-odoo": "10.43.101.207",
+      "registry-postgresql": "10.43.175.237",
+      "spar-openg2p-spar-bene-portal-api": "10.43.55.126",
+      "spar-openg2p-spar-mapper-api": "10.43.250.54"
+    },
+    "workers_enabled": true,
+    "native_callback_secrets_path": "/runtime/config/references/f002-approval-callback-secrets.fernet",
+    "production_acceptance_verified": false
+  },
+  "native-agent-oauth": {
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_iam",
+    "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+    "auth": {
+      "auth_enabled": true,
+      "auth_verify_ssl": false,
+      "auth_cookie_max_age": 2100,
+      "auth_cookie_set_expires": true,
+      "auth_cookie_domain": "localhost",
+      "auth_cookie_prefix": "agent-",
+      "auth_cookie_path": "/",
+      "auth_cookie_httponly": true,
+      "auth_cookie_secure": true,
+      "auth_transaction_store_backend": "redis",
+      "auth_redis_url": "redis://:${redis_password}@redis:6379/0",
+      "auth_refresh_token_ttl_seconds": 2100,
+      "auth_default_id_token_verify_at_hash": true,
+      "auth_provider_api_url": "http://commons-services-iam-agent-portal-api"
+    },
+    "production_acceptance_verified": false
+  },
+  "native-audit": {
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_audit",
+    "audit_manager": {
+      "service_id": "openg2p.auditmanager",
+      "api_version": "1.0",
+      "ingest": {
+        "queue_max_size": 10000,
+        "max_batch_size": 500
+      },
+      "kafka": {
+        "topic": "openg2p.audit.events",
+        "dlq_topic": "openg2p.audit.dlq",
+        "consumer_group": "karnatakadbt-native-audit-20261018175321",
+        "bootstrap_servers": "10.43.79.40:9092",
+        "client_id": "karnatakadbt-native-audit",
+        "consumer": {
+          "auto_offset_reset": "earliest",
+          "batch_max_records": 500
+        }
+      },
+      "database": {
+        "partition_pre_create_months": 3,
+        "partition_retention_months": 84,
+        "partition_check_interval_seconds": 3600
+      }
+    },
+    "ingest_enabled": true,
+    "historical_copy_complete": true,
+    "source_baseline_snapshot": "88777:88777:",
+    "historical_rows": 3326,
+    "historical_sha256": "fresh-local-install",
+    "source_digest": "fresh-local-install",
+    "build_time": "2026-10-18T18:06:47.409002+00:00",
+    "production_acceptance_verified": false
+  },
+  "native-auth-candidate": {
+    "environment": "CANDIDATE",
+    "connection": {
+      "host": "postgres",
+      "port": 5432,
+      "dbname": "kdbt_authorization",
+      "user": "kdbt",
+      "password": "${postgres_password}"
+    },
+    "redis": {
+      "db": 15,
+      "socket_timeout": 5,
+      "host": "redis",
+      "port": 6379,
+      "password": "${redis_password}"
+    },
+    "redis_owner": "idmpZM8rRzJeb65RvKKtvbea9NpDXgeTM0BKM7v5sTQ",
+    "control_database": "/runtime/databases/control.sqlite",
+    "session_templates": "/runtime/config/session-templates.json",
+    "contract": "/runtime/config/references/f003-contract.json",
+    "cache_ttls": {
+      "clientdetails": 86400,
+      "preauth": 300,
+      "authenticated": 120,
+      "authcodegenerated": 60,
+      "userinfo": 3600,
+      "linkcodegenerated": 60,
+      "linked": 120,
+      "linkedcode": 60,
+      "linkedauth": 120,
+      "consented": 600,
+      "authtokens": 18000,
+      "bindingtransaction": 600,
+      "vcissuance": 3600,
+      "apiRateLimit": 300,
+      "blocked": 300
+    },
+    "cache_key": "${secret:s002}",
+    "signing": {
+      "directory": "/runtime/signing",
+      "scope": "esignet",
+      "connection": {
+        "host": "postgres",
+        "port": 5432,
+        "dbname": "kdbt_authorization",
+        "user": "kdbt",
+        "password": "${postgres_password}"
+      },
+      "applications": [
+        "BINDING_SERVICE",
+        "MOCK_BINDING_SERVICE",
+        "OIDC_PARTNER",
+        "OIDC_SERVICE",
+        "ROOT"
+      ],
+      "jose_ids": {
+        "2564b99c-abe7-4a81-a0d5-781e186f2b3e": "FMNeCddruv_bTTwV4HUkoc8o62Dbx9Ig_hjyNEDfOYI",
+        "38d7be32-9594-4ae2-a0f4-b933ce615e5c": "EeDmXNY6Eb_xLIlsY3-4DuGAaQvUkp-UGV1AA0LAbVk"
+      }
+    },
+    "identity_origin": "http://127.0.0.1:18141",
+    "identity_service_token": "${secret:s003}",
+    "identity_verification_keys": [
+      "${fresh_public_key}"
+    ],
+    "administration": {
+      "issuer": "https://localhost:8444/realms/master",
+      "jwks_uri": "http://keycloak:8080/realms/master/protocol/openid-connect/certs",
+      "required_scope": "esignet_admin_access"
+    },
+    "discovery": {
+      "issuer": "https://localhost:8454",
+      "authorization_endpoint": "https://localhost:8454/authorize",
+      "token_endpoint": "https://localhost:8454/v1/esignet/oauth/v2/token",
+      "userinfo_endpoint": "https://localhost:8454/v1/esignet/oidc/userinfo",
+      "jwks_uri": "https://localhost:8454/.well-known/jwks.json",
+      "scopes_supported": [
+        "profile",
+        "email",
+        "phone"
+      ],
+      "response_types_supported": [
+        "code"
+      ],
+      "response_modes_supported": [
+        "query"
+      ],
+      "token_endpoint_auth_methods_supported": [
+        "private_key_jwt"
+      ],
+      "token_endpoint_auth_signing_alg_values_supported": [
+        "RS256"
+      ],
+      "userinfo_signing_alg_values_supported": [
+        "RS256"
+      ],
+      "userinfo_encryption_alg_values_supported": [
+        "RSAXXXXX"
+      ],
+      "userinfo_encryption_enc_values_supported": [
+        "A128GCM"
+      ],
+      "id_token_signing_alg_values_supported": [
+        "RS256"
+      ],
+      "claim_types_supported": [
+        "normal"
+      ],
+      "claims_parameter_supported": true,
+      "display_values_supported": [
+        "page",
+        "popup",
+        "touch",
+        "wap"
+      ],
+      "subject_types_supported": [
+        "pairwise"
+      ],
+      "claims_supported": [
+        "name",
+        "address",
+        "gender",
+        "birthdate",
+        "picture",
+        "email",
+        "phone_number",
+        "individual_id"
+      ],
+      "acr_values_supported": [
+        "mosip:idp:acr:static-code",
+        "mosip:idp:acr:generated-code",
+        "mosip:idp:acr:linked-wallet",
+        "mosip:idp:acr:biometrics",
+        "mosip:idp:acr:knowledge"
+      ],
+      "request_parameter_supported": false,
+      "claims_locales_supported": [
+        "en"
+      ],
+      "ui_locales_supported": [
+        "en"
+      ]
+    },
+    "oauth_discovery": {
+      "issuer": "https://localhost:8454",
+      "authorization_endpoint": "https://localhost:8454/authorize",
+      "token_endpoint": "https://localhost:8454/v1/esignet/oauth/v2/token",
+      "jwks_uri": "https://localhost:8454/.well-known/jwks.json",
+      "token_endpoint_auth_methods_supported": [
+        "private_key_jwt"
+      ],
+      "token_endpoint_auth_signing_alg_values_supported": [
+        "RS256"
+      ],
+      "scopes_supported": [
+        "profile",
+        "email",
+        "phone"
+      ],
+      "response_modes_supported": [
+        "query"
+      ],
+      "grant_types_supported": [
+        "authorization_code"
+      ],
+      "response_types_supported": [
+        "code"
+      ]
+    },
+    "issuer": "https://localhost:8454",
+    "token_audiences": [
+      "https://localhost:8454/v1/esignet/oauth/v2/token",
+      "https://localhost:8454/v1/esignet/oauth/token"
+    ],
+    "token_ttl": 3600,
+    "openid_scopes": [
+      "profile",
+      "email",
+      "phone"
+    ],
+    "claims_supported": [
+      "name",
+      "address",
+      "gender",
+      "birthdate",
+      "picture",
+      "email",
+      "phone_number",
+      "individual_id"
+    ],
+    "authorize_scopes": [
+      "Manage-Authentication",
+      "Manage-Credentials",
+      "Manage-Identity-Data",
+      "Manage-Service-Requests",
+      "Manage-VID"
+    ],
+    "credential_scopes": [
+      "mock_identity_vc_ldp",
+      "mosip_identity_vc_ldp",
+      "openg2p_beneficiary_1_vc_ldp",
+      "openg2p_beneficiary_2_vc_ldp",
+      "openg2p_registry_group_vc_ldp",
+      "openg2p_registry_vc_ldp",
+      "sunbird_rc_insurance_vc_ldp"
+    ],
+    "scope_claims": {
+      "profile": [
+        "name",
+        "birthdate",
+        "gender",
+        "picture"
+      ],
+      "email": [
+        "email"
+      ],
+      "phone": [
+        "phone_number"
+      ]
+    },
+    "acr_factors": {
+      "mosip:idp:acr:password": [
+        {
+          "type": "PWD",
+          "count": 0,
+          "subTypes": null
+        }
+      ],
+      "mosip:idp:acr:static-code": [
+        {
+          "type": "PIN",
+          "count": 0,
+          "subTypes": null
+        }
+      ],
+      "mosip:idp:acr:generated-code": [
+        {
+          "type": "OTP",
+          "count": 0,
+          "subTypes": null
+        }
+      ],
+      "mosip:idp:acr:linked-wallet": [
+        {
+          "type": "WLA",
+          "count": 0,
+          "subTypes": null
+        }
+      ],
+      "mosip:idp:acr:biometrics": [
+        {
+          "type": "BIO",
+          "count": 1,
+          "subTypes": null
+        }
+      ]
+    },
+    "ui_configs": {
+      "sbi.env": "Developer",
+      "sbi.timeout.DISC": 30,
+      "sbi.timeout.DINFO": 30,
+      "sbi.timeout.CAPTURE": 30,
+      "sbi.capture.count.face": 1,
+      "sbi.capture.count.finger": 1,
+      "sbi.capture.count.iris": 1,
+      "sbi.capture.score.face": 70,
+      "sbi.capture.score.finger": 70,
+      "sbi.capture.score.iris": 70,
+      "resend.otp.delay.secs": 180,
+      "send.otp.channels": "email,phone",
+      "captcha.sitekey": "",
+      "captcha.enable": "",
+      "auth.txnid.length": "10",
+      "consent.screen.timeout-in-secs": 120,
+      "consent.screen.timeout-buffer-in-secs": 5,
+      "linked-transaction-expire-in-secs": 240,
+      "sbi.port.range": "4501-4600",
+      "sbi.bio.subtypes.iris": "UNKNOWN",
+      "sbi.bio.subtypes.finger": "UNKNOWN",
+      "wallet.qr-code-buffer-in-secs": 10,
+      "otp.length": 6,
+      "password.regex": "^.{8,20}$",
+      "password.max-length": 30,
+      "username.regex": "^[0-9]{10,30}$",
+      "username.prefix": "",
+      "username.postfix": "",
+      "username.max-length": 16,
+      "username.input-type": "number",
+      "wallet.config": [
+        {
+          "wallet.name": "walletName",
+          "wallet.logo-url": "/images/qr_code.png",
+          "wallet.download-uri": "#",
+          "wallet.deep-link-uri": "inji://landing-page-name?linkCode=LINK_CODE&linkExpireDateTime=LINK_EXPIRE_DT"
+        }
+      ],
+      "signup.config": {
+        "signup.banner": true,
+        "signup.url": "https://localhost:8454/signup"
+      },
+      "forgot-password.config": {
+        "forgot-password": true,
+        "forgot-password.url": "https://localhost:8454/reset-password"
+      },
+      "error.banner.close-timer": 10,
+      "auth.factor.kba.individual-id-field": "",
+      "auth.factor.kba.field-details": []
+    },
+    "link_code_limit": 5,
+    "link_code_queue_size": 3,
+    "rate_limit": 10,
+    "rate_window": 60,
+    "poll_timeout": 25,
+    "candidate_identity_settings": "/runtime/config/references/f004-settings.json",
+    "binding": {
+      "relying_party": "MockRelyingPartyId",
+      "client": "MockClientId",
+      "audience": "esignet-binding",
+      "validity_days": 10,
+      "encrypt_binding_id": false
+    },
+    "credentials": {
+      "metadata": {
+        "credential_issuer": "https://localhost:8454",
+        "credential_endpoint": "https://localhost:8454/v1/esignet/vci/credential",
+        "display": [
+          {
+            "name": "National ID",
+            "locale": "en"
+          }
+        ],
+        "credentials_supported": {
+          "MOSIPVerifiableCredential": {
+            "format": "ldp_vc",
+            "scope": "mock_identity_vc_ldp",
+            "cryptographic_binding_methods_supported": [
+              "did:jwk"
+            ],
+            "cryptographic_suites_supported": [
+              "RsaSignature2018"
+            ],
+            "proof_types_supported": [
+              "jwt"
+            ],
+            "credential_definition": {
+              "type": [
+                "VerifiableCredential",
+                "MOSIPVerifiableCredential"
+              ],
+              "credentialSubject": {
+                "UIN": {
+                  "display": [
+                    {
+                      "name": "UIN",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "name": {
+                  "display": [
+                    {
+                      "name": "Name",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "fullName": {
+                  "display": [
+                    {
+                      "name": "Full Name",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "dateOfBirth": {
+                  "display": [
+                    {
+                      "name": "Date of Birth",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "age": {
+                  "display": [
+                    {
+                      "name": "Age",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "gender": {
+                  "display": [
+                    {
+                      "name": "Gender",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "email": {
+                  "display": [
+                    {
+                      "name": "Email",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "phone": {
+                  "display": [
+                    {
+                      "name": "Phone Number",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "addressLine1": {
+                  "display": [
+                    {
+                      "name": "Address Line 1",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "city": {
+                  "display": [
+                    {
+                      "name": "City",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "province": {
+                  "display": [
+                    {
+                      "name": "Province",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "region": {
+                  "display": [
+                    {
+                      "name": "Region",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "postalCode": {
+                  "display": [
+                    {
+                      "name": "Postal Code",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "residenceStatus": {
+                  "display": [
+                    {
+                      "name": "Residence Status",
+                      "locale": "en"
+                    }
+                  ]
+                },
+                "face": {
+                  "display": [
+                    {
+                      "name": "Profile Photo",
+                      "locale": "en"
+                    }
+                  ]
+                }
+              }
+            },
+            "display": [
+              {
+                "name": "National ID Verifiable Credential",
+                "locale": "en",
+                "logo": {
+                  "url": "https://localhost:8454/logo.png",
+                  "alt_text": "eignet-logo"
+                },
+                "background_color": "#12107c",
+                "text_color": "#FFFFFF"
+              }
+            ],
+            "order": [
+              "fullName",
+              "UIN",
+              "gender",
+              "dateOfBirth",
+              "phone"
+            ]
+          }
+        }
+      },
+      "contexts": "/runtime/config/references/f005-contexts.json",
+      "contexts_for_credentials": [
+        "https://www.w3.org/2018/credentials/v1",
+        {
+          "@vocab": "https://localhost:8443/credentials#",
+          "sec": "https://w3id.org/security#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#"
+        }
+      ]
+    },
+    "production_acceptance_verified": false
+  },
+  "native-bank-api": {
+    "profile": "api",
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_registry_candidate_bank_local",
+    "processing_enabled": false,
+    "payment_attempts": 3,
+    "simulated_external_failure_percent": 30,
+    "statement_callback_url": "http://127.0.0.1:18127/upload_mt940",
+    "capture_key": "${secret:s004}",
+    "statement_callback_keys": {
+      "native-bank-v1": "${secret:s005}"
+    },
+    "statement_callback_key_id": "native-bank-v1",
+    "production_acceptance_verified": false
+  },
+  "native-bank-worker": {
+    "profile": "worker",
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_registry_candidate_bank_local",
+    "processing_enabled": true,
+    "payment_attempts": 3,
+    "simulated_external_failure_percent": 30,
+    "statement_callback_url": "http://127.0.0.1:18127/upload_mt940",
+    "capture_key": "${secret:s004}",
+    "statement_callback_keys": {
+      "native-bank-v1": "${secret:s005}"
+    },
+    "statement_callback_key_id": "native-bank-v1",
+    "production_acceptance_verified": false
+  },
+  "native-bridge-beneficiary": {
+    "profile": "beneficiary",
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_registry_candidate_bridge_local",
+    "native_partner_key_origin": "http://127.0.0.1:18113",
+    "max_upload_file_size": 10485760,
+    "supported_file_types": [
+      "application/x-iso8583",
+      "application/x-iso20022",
+      "application/vnd.swift.mt940",
+      "text/plain"
+    ],
+    "native_identity_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_iam",
+    "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+    "issuer_policy": {
+      "https://localhost:8444/realms/staff": {
+        "audiences": [
+          "account"
+        ],
+        "user_types": [
+          "staff"
+        ],
+        "allow_staff_mapping_resolution": true
+      },
+      "https://localhost:8444/realms/beneficiary": {
+        "audiences": [
+          "account"
+        ],
+        "user_types": [
+          "beneficiary"
+        ],
+        "allow_staff_mapping_resolution": false
+      }
+    },
+    "allowed_origins": [
+      "https://localhost:8443",
+      "https://localhost:8443",
+      "https://localhost:8451"
+    ],
+    "capture_key": "${secret:s006}",
+    "production_acceptance_verified": false
+  },
+  "native-bridge-partner": {
+    "profile": "partner",
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_registry_candidate_bridge_local",
+    "native_partner_key_origin": "http://127.0.0.1:18113",
+    "max_upload_file_size": 10485760,
+    "supported_file_types": [
+      "application/x-iso8583",
+      "application/x-iso20022",
+      "application/vnd.swift.mt940",
+      "text/plain"
+    ],
+    "statement_callback_keys": {
+      "native-bank-v1": "${secret:s005}"
+    },
+    "capture_key": "${secret:s006}",
+    "production_acceptance_verified": false
+  },
+  "native-bridge-worker": {
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_registry_candidate_bridge_local",
+    "mapping_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_registry_candidate_mapping_local",
+    "registry_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_registry_candidate_local",
+    "bank_origin": "http://127.0.0.1:18125",
+    "registry_targets": {
+      "Household": {
+        "register_id": "a0000000-0000-4000-8000-000000000002",
+        "fields": {
+          "administrative_zone_id_large": [
+            "geo_code_hierarchy_json",
+            "karnatakadbt",
+            "zone_id"
+          ],
+          "administrative_zone_mnemonic_large": [
+            "geo_code_hierarchy_json",
+            "karnatakadbt",
+            "zone_name"
+          ],
+          "administrative_zone_id_small": [
+            "geo_code_hierarchy_json",
+            "karnatakadbt",
+            "district_id"
+          ],
+          "administrative_zone_mnemonic_small": [
+            "geo_code_hierarchy_json",
+            "karnatakadbt",
+            "district_name"
+          ]
+        }
+      },
+      "Individual": {
+        "register_id": "a0000000-0000-4000-8000-000000000001",
+        "fields": {
+          "administrative_zone_id_large": [
+            "geo_code_hierarchy_json",
+            "karnatakadbt",
+            "zone_id"
+          ],
+          "administrative_zone_mnemonic_large": [
+            "geo_code_hierarchy_json",
+            "karnatakadbt",
+            "zone_name"
+          ],
+          "administrative_zone_id_small": [
+            "geo_code_hierarchy_json",
+            "karnatakadbt",
+            "district_id"
+          ],
+          "administrative_zone_mnemonic_small": [
+            "geo_code_hierarchy_json",
+            "karnatakadbt",
+            "district_name"
+          ]
+        }
+      },
+      "FARMER": {
+        "driver": "native_farmer_registry"
+      }
+    },
+    "processing_enabled": true,
+    "max_attempts": 3,
+    "batch_size": 2,
+    "suppress_notifications": true,
+    "process_future_disbursement_schedules": true,
+    "capture_key": "${secret:s006}",
+    "production_acceptance_verified": false
+  },
+  "native-certify-candidate": {
+    "environment": "CANDIDATE",
+    "crypto": {
+      "owner": "CANDIDATE",
+      "database": "/runtime/databases/authority.sqlite",
+      "master_key": "${secret:s007}",
+      "policies": {
+        "ROOT": {
+          "active": true,
+          "validity_days": 2920,
+          "key_size": 2048
+        },
+        "CERTIFY_SERVICE": {
+          "active": true,
+          "validity_days": 1095,
+          "key_size": 2048,
+          "issuer_application": "ROOT"
+        },
+        "CERTIFY_PARTNER": {
+          "active": true,
+          "validity_days": 1095,
+          "key_size": 2048,
+          "issuer_application": "ROOT"
+        },
+        "CERTIFY_VC_SIGN_RSA": {
+          "active": true,
+          "validity_days": 1095,
+          "key_size": 2048,
+          "issuer_application": "ROOT"
+        },
+        "CERTIFY_VC_SIGN_ED25519": {
+          "active": true,
+          "validity_days": 1095,
+          "key_size": 2048,
+          "issuer_application": "ROOT"
+        },
+        "BASE": {
+          "active": true,
+          "validity_days": 1095,
+          "key_size": 2048,
+          "issuer_application": "ROOT"
+        },
+        "CERTIFY_VC_SIGN_EC_K1": {
+          "active": true,
+          "validity_days": 1095,
+          "key_size": 2048,
+          "issuer_application": "ROOT",
+          "reference_issuer_application": "ROOT",
+          "allow_reference_ca": true
+        },
+        "CERTIFY_VC_SIGN_EC_R1": {
+          "active": true,
+          "validity_days": 1095,
+          "key_size": 2048,
+          "issuer_application": "ROOT",
+          "reference_issuer_application": "ROOT",
+          "allow_reference_ca": true
+        }
+      },
+      "default_application": "CERTIFY_SERVICE",
+      "default_reference": "",
+      "data_key_splitter": "#KEY_SPLITTER#",
+      "pin_iterations": 100000,
+      "argon2": {
+        "iterations": 10,
+        "memory": 65536,
+        "parallelism": 2
+      },
+      "principals": [],
+      "source_snapshot_sha256": "fresh-local-install"
+    },
+    "inprocess_crypto_token": "${secret:s008}",
+    "candidate_token": "${secret:s009}",
+    "trust_domains": [
+      "CERTIFY",
+      "AUTH"
+    ],
+    "contract": "/runtime/config/references/f006-contract.json",
+    "business": {
+      "connection": {
+        "host": "postgres",
+        "port": 5432,
+        "dbname": "kdbt_credentials",
+        "user": "kdbt",
+        "password": "${postgres_password}"
+      },
+      "issuer": "https://localhost:8456",
+      "did": "did:web:certify.aidrivendbt.com",
+      "display": [
+        {
+          "name": "KarnatakaDBT",
+          "locale": "en"
+        },
+        {
+          "name": "\u0c95\u0cb0\u0ccd\u0ca8\u0cbe\u0c9f\u0c95 DBT",
+          "locale": "kn"
+        }
+      ]
+    },
+    "authorization": {
+      "state_key": "${secret:s010}"
+    },
+    "issuance": {
+      "contexts": "/runtime/config/references/f005-contexts.json",
+      "templates": {
+        "runtime": "/app/template-runtime"
+      },
+      "proof_runtime": "/app/template-runtime"
+    },
+    "staff_administrator": {
+      "issuer": "https://localhost:8444/realms/staff",
+      "audiences": [
+        "account"
+      ],
+      "jwks_url": "https://localhost:8444/realms/staff/protocol/openid-connect/certs",
+      "ca_file": "/runtime/caddy/pki/authorities/local/root.crt"
+    },
+    "console": {
+      "public_url": "https://localhost:8443/registration/credential-admin/",
+      "iam_url": "http://127.0.0.1:18110"
+    },
+    "production_acceptance_verified": false
+  },
+  "native-consent-public": {
+    "profile": "consent-public",
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_consent",
+    "business_writes_enabled": true,
+    "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+    "native_iam_url": "http://127.0.0.1:18110",
+    "keycloak_admin_origin": "http://keycloak:8080",
+    "approval_url": "http://10.43.172.195:80",
+    "auth": {
+      "app_host": "0.0.0.0",
+      "app_port": 8000,
+      "no_of_workers": 1,
+      "worker_id": -1,
+      "worker_pid": -1,
+      "worker_type": "local",
+      "docker_pod_id": "",
+      "docker_pod_name": "",
+      "logging_default_logger_name": "app",
+      "logging_level": "INFO",
+      "logging_file_name": null,
+      "openapi_title": "OpenG2P IAM Service",
+      "openapi_description": "\n    This is common library for FastAPI service. Override Settings properties to change this.\n\n    ***********************************\n    Further details goes here\n    ***********************************\n    ",
+      "openapi_version": "1.4.0",
+      "openapi_contact_url": "https://www.openg2p.org/",
+      "openapi_contact_email": "info@openg2p.org",
+      "openapi_license_name": "Mozilla Public License 2.0",
+      "openapi_license_url": "https://www.mozilla.org/en-US/MPL/2.0/",
+      "openapi_root_path": "/",
+      "openapi_common_api_prefix": "",
+      "db_datasource": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_agent",
+      "db_driver": "postgresql+asyncpg",
+      "db_username": "kdbt",
+      "db_password": "${secret:s011}",
+      "db_hostname": "postgres",
+      "db_port": 5432,
+      "db_dbname": "kdbt_agent",
+      "db_logging": false,
+      "db_pool_pre_ping": true,
+      "db_pool_recycle": 1800,
+      "error_response_debug": false,
+      "keymanager_api_base_url": "",
+      "keymanager_api_timeout": 10,
+      "keymanager_api_domain": "AUTH",
+      "keymanager_ssl_verify": false,
+      "keymanager_auth_enabled": true,
+      "keymanager_auth_url": "",
+      "keymanager_auth_client_id": "openg2p",
+      "keymanager_auth_client_secret": "",
+      "keymanager_sign_app_id": "OPENG2P",
+      "keymanager_sign_ref_id": "",
+      "crypto_backend": "pyjwt",
+      "crypto_signing_key_path": "",
+      "crypto_signing_key_password": "",
+      "crypto_signing_key_kid": "",
+      "crypto_signing_algorithm": "RS256",
+      "crypto_allowed_algorithms": "RS256",
+      "crypto_partner_certs": [],
+      "partner_mgmt_api_url": "",
+      "partner_key_cache_ttl_seconds": 300,
+      "partner_key_hard_ttl_seconds": 21600,
+      "partner_key_negative_ttl_seconds": 30,
+      "partner_key_refresh_cooldown_seconds": 10,
+      "partner_key_fetch_timeout_seconds": 3.0,
+      "notification_impl": "openg2p_fastapi_common.notification.implementations.NovuNotifier",
+      "novu_url": "https://api.novu.co",
+      "novu_api_key": "",
+      "cors_allow_origins": [
+        "https://localhost:8443",
+        "https://localhost:8451",
+        "https://localhost:8445"
+      ],
+      "cors_allow_credentials": true,
+      "security_headers_enabled": true,
+      "auth_enabled": true,
+      "csrf_enabled": true,
+      "auth_verify_ssl": true,
+      "auth_cookie_max_age": 2100,
+      "auth_cookie_set_expires": true,
+      "auth_cookie_domain": "localhost",
+      "auth_cookie_prefix": "",
+      "auth_cookie_path": "/",
+      "auth_cookie_httponly": true,
+      "auth_cookie_secure": true,
+      "auth_transaction_store_backend": "redis",
+      "auth_redis_url": "redis://:${redis_password}@redis:6379/0",
+      "auth_refresh_token_ttl_seconds": 2100,
+      "auth_default_id_token_verify_at_hash": true,
+      "auth_provider_api_url": "http://commons-services-iam-staff-portal-api",
+      "keycloak_client_id": "iam-staff-ui",
+      "auth_api_get_staff_portal_applications": {
+        "enabled": true,
+        "claim_name": null,
+        "claim_values": null,
+        "id_token_verify_at_hash": null,
+        "validation_mode": "jwt",
+        "introspection_endpoint": null
+      },
+      "auth_api_register_staff_portal_application": {
+        "enabled": true,
+        "claim_name": null,
+        "claim_values": null,
+        "id_token_verify_at_hash": null,
+        "validation_mode": "jwt",
+        "introspection_endpoint": null
+      },
+      "data_application_urls": {
+        "awe_application_url": "https://localhost:8452",
+        "master_data_application_url": "https://localhost:8447",
+        "keycloak_application_url": "https://localhost:8444",
+        "registry_application_url": "https://localhost:8446",
+        "iam_staff_ui_application_url": "https://localhost:8445",
+        "superset_application_url": "https://localhost:8443",
+        "minio_application_url": "https://localhost:8443"
+      },
+      "data_client_secrets": {
+        "staff_portal_secret": "${secret:s012}"
+      },
+      "cache_expire_seconds": 1800,
+      "data_dir": "/runtime/config/references/f008-iam-staff-portal-data",
+      "keycloak_admin_url": "http://keycloak:8080",
+      "keycloak_realm": "staff",
+      "default_page_size": 20
+    },
+    "redirect_origins": [
+      "https://localhost:8445",
+      "https://localhost:8451",
+      "https://localhost:8443",
+      "https://localhost:8443"
+    ],
+    "registration_client_ids": [],
+    "consent_public": {
+      "signing_key_path": "/runtime/keys/consent.pem",
+      "signing_kid": "karnatakadbt-consent-480bb20d61777cbc1629",
+      "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+      "subject_providers": {
+        "https://localhost:8444/realms/staff": {
+          "jwks_uri": "https://localhost:8444/realms/staff/protocol/openid-connect/certs",
+          "audiences": [
+            "staff-portal"
+          ]
+        },
+        "https://localhost:8444/realms/agent": {
+          "jwks_uri": "https://localhost:8444/realms/agent/protocol/openid-connect/certs",
+          "audiences": [
+            "agent-portal"
+          ]
+        }
+      },
+      "subject_default_id_type": "national_id",
+      "caller_identity": {
+        "issuer": "https://localhost:8444/realms/staff",
+        "audience": "account",
+        "jwks_uri": "https://localhost:8444/realms/staff/protocol/openid-connect/certs"
+      },
+      "consent_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_consent",
+      "partner_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_partner",
+      "freshness_seconds": 300,
+      "writer_handoff_required": true,
+      "bind_service": false
+    },
+    "writer_ownership_scope": "consent",
+    "native_recovery_settings_path": "/runtime/config/references/f009-consent-settings.json",
+    "production_acceptance_verified": false
+  },
+  "native-consent-staff": {
+    "profile": "consent-staff",
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_consent",
+    "business_writes_enabled": true,
+    "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+    "native_iam_url": "http://127.0.0.1:18110",
+    "keycloak_admin_origin": "http://keycloak:8080",
+    "approval_url": "http://10.43.172.195:80",
+    "auth": {
+      "app_host": "0.0.0.0",
+      "app_port": 8000,
+      "no_of_workers": 1,
+      "worker_id": -1,
+      "worker_pid": -1,
+      "worker_type": "local",
+      "docker_pod_id": "",
+      "docker_pod_name": "",
+      "logging_default_logger_name": "app",
+      "logging_level": "INFO",
+      "logging_file_name": null,
+      "openapi_title": "OpenG2P IAM Service",
+      "openapi_description": "\n    This is common library for FastAPI service. Override Settings properties to change this.\n\n    ***********************************\n    Further details goes here\n    ***********************************\n    ",
+      "openapi_version": "1.4.0",
+      "openapi_contact_url": "https://www.openg2p.org/",
+      "openapi_contact_email": "info@openg2p.org",
+      "openapi_license_name": "Mozilla Public License 2.0",
+      "openapi_license_url": "https://www.mozilla.org/en-US/MPL/2.0/",
+      "openapi_root_path": "/",
+      "openapi_common_api_prefix": "",
+      "db_datasource": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_agent",
+      "db_driver": "postgresql+asyncpg",
+      "db_username": "kdbt",
+      "db_password": "${secret:s011}",
+      "db_hostname": "postgres",
+      "db_port": 5432,
+      "db_dbname": "kdbt_agent",
+      "db_logging": false,
+      "db_pool_pre_ping": true,
+      "db_pool_recycle": 1800,
+      "error_response_debug": false,
+      "keymanager_api_base_url": "",
+      "keymanager_api_timeout": 10,
+      "keymanager_api_domain": "AUTH",
+      "keymanager_ssl_verify": false,
+      "keymanager_auth_enabled": true,
+      "keymanager_auth_url": "",
+      "keymanager_auth_client_id": "openg2p",
+      "keymanager_auth_client_secret": "",
+      "keymanager_sign_app_id": "OPENG2P",
+      "keymanager_sign_ref_id": "",
+      "crypto_backend": "pyjwt",
+      "crypto_signing_key_path": "",
+      "crypto_signing_key_password": "",
+      "crypto_signing_key_kid": "",
+      "crypto_signing_algorithm": "RS256",
+      "crypto_allowed_algorithms": "RS256",
+      "crypto_partner_certs": [],
+      "partner_mgmt_api_url": "",
+      "partner_key_cache_ttl_seconds": 300,
+      "partner_key_hard_ttl_seconds": 21600,
+      "partner_key_negative_ttl_seconds": 30,
+      "partner_key_refresh_cooldown_seconds": 10,
+      "partner_key_fetch_timeout_seconds": 3.0,
+      "notification_impl": "openg2p_fastapi_common.notification.implementations.NovuNotifier",
+      "novu_url": "https://api.novu.co",
+      "novu_api_key": "",
+      "cors_allow_origins": [
+        "https://localhost:8443",
+        "https://localhost:8451",
+        "https://localhost:8445"
+      ],
+      "cors_allow_credentials": true,
+      "security_headers_enabled": true,
+      "auth_enabled": true,
+      "csrf_enabled": true,
+      "auth_verify_ssl": true,
+      "auth_cookie_max_age": 2100,
+      "auth_cookie_set_expires": true,
+      "auth_cookie_domain": "localhost",
+      "auth_cookie_prefix": "",
+      "auth_cookie_path": "/",
+      "auth_cookie_httponly": true,
+      "auth_cookie_secure": true,
+      "auth_transaction_store_backend": "redis",
+      "auth_redis_url": "redis://:${redis_password}@redis:6379/0",
+      "auth_refresh_token_ttl_seconds": 2100,
+      "auth_default_id_token_verify_at_hash": true,
+      "auth_provider_api_url": "http://commons-services-iam-staff-portal-api",
+      "keycloak_client_id": "iam-staff-ui",
+      "auth_api_get_staff_portal_applications": {
+        "enabled": true,
+        "claim_name": null,
+        "claim_values": null,
+        "id_token_verify_at_hash": null,
+        "validation_mode": "jwt",
+        "introspection_endpoint": null
+      },
+      "auth_api_register_staff_portal_application": {
+        "enabled": true,
+        "claim_name": null,
+        "claim_values": null,
+        "id_token_verify_at_hash": null,
+        "validation_mode": "jwt",
+        "introspection_endpoint": null
+      },
+      "data_application_urls": {
+        "awe_application_url": "https://localhost:8452",
+        "master_data_application_url": "https://localhost:8447",
+        "keycloak_application_url": "https://localhost:8444",
+        "registry_application_url": "https://localhost:8446",
+        "iam_staff_ui_application_url": "https://localhost:8445",
+        "superset_application_url": "https://localhost:8443",
+        "minio_application_url": "https://localhost:8443"
+      },
+      "data_client_secrets": {
+        "staff_portal_secret": "${secret:s012}"
+      },
+      "cache_expire_seconds": 1800,
+      "data_dir": "/runtime/config/references/f008-iam-staff-portal-data",
+      "keycloak_admin_url": "http://keycloak:8080",
+      "keycloak_realm": "staff",
+      "default_page_size": 20
+    },
+    "redirect_origins": [
+      "https://localhost:8445",
+      "https://localhost:8451",
+      "https://localhost:8443",
+      "https://localhost:8443"
+    ],
+    "registration_client_ids": [],
+    "consent_public": {
+      "signing_key_path": "/runtime/keys/consent.pem",
+      "signing_kid": "karnatakadbt-consent-480bb20d61777cbc1629",
+      "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+      "subject_providers": {
+        "https://localhost:8444/realms/staff": {
+          "jwks_uri": "https://localhost:8444/realms/staff/protocol/openid-connect/certs",
+          "audiences": [
+            "staff-portal"
+          ]
+        },
+        "https://localhost:8444/realms/agent": {
+          "jwks_uri": "https://localhost:8444/realms/agent/protocol/openid-connect/certs",
+          "audiences": [
+            "agent-portal"
+          ]
+        }
+      },
+      "subject_default_id_type": "national_id",
+      "caller_identity": {
+        "issuer": "https://localhost:8444/realms/staff",
+        "audience": "account",
+        "jwks_uri": "https://localhost:8444/realms/staff/protocol/openid-connect/certs"
+      },
+      "consent_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_consent",
+      "partner_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_partner",
+      "freshness_seconds": 300,
+      "writer_handoff_required": true,
+      "bind_service": false
+    },
+    "callback_settings_path": "/runtime/config/references/f010-settings.json",
+    "writer_ownership_scope": "consent",
+    "native_recovery_settings_path": "/runtime/config/references/f009-consent-settings.json",
+    "production_acceptance_verified": false
+  },
+  "native-farmer": {
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_registry_candidate_local",
+    "native_iam_url": "http://127.0.0.1:18110",
+    "allowed_origins": [
+      "https://localhost:8446",
+      "https://localhost:8443"
+    ],
+    "production_acceptance_verified": false
+  },
+  "native-iam": {
+    "profile": "iam",
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_iam",
+    "business_writes_enabled": true,
+    "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+    "native_iam_url": "http://127.0.0.1:18110",
+    "keycloak_admin_origin": "http://keycloak:8080",
+    "approval_url": "http://10.43.172.195:80",
+    "auth": {
+      "app_host": "0.0.0.0",
+      "app_port": 8000,
+      "no_of_workers": 1,
+      "worker_id": -1,
+      "worker_pid": -1,
+      "worker_type": "local",
+      "docker_pod_id": "",
+      "docker_pod_name": "",
+      "logging_default_logger_name": "app",
+      "logging_level": "INFO",
+      "logging_file_name": null,
+      "openapi_title": "OpenG2P IAM Service",
+      "openapi_description": "\n    This is common library for FastAPI service. Override Settings properties to change this.\n\n    ***********************************\n    Further details goes here\n    ***********************************\n    ",
+      "openapi_version": "1.4.0",
+      "openapi_contact_url": "https://www.openg2p.org/",
+      "openapi_contact_email": "info@openg2p.org",
+      "openapi_license_name": "Mozilla Public License 2.0",
+      "openapi_license_url": "https://www.mozilla.org/en-US/MPL/2.0/",
+      "openapi_root_path": "/",
+      "openapi_common_api_prefix": "",
+      "db_datasource": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_agent",
+      "db_driver": "postgresql+asyncpg",
+      "db_username": "kdbt",
+      "db_password": "${secret:s011}",
+      "db_hostname": "postgres",
+      "db_port": 5432,
+      "db_dbname": "kdbt_agent",
+      "db_logging": false,
+      "db_pool_pre_ping": true,
+      "db_pool_recycle": 1800,
+      "error_response_debug": false,
+      "keymanager_api_base_url": "",
+      "keymanager_api_timeout": 10,
+      "keymanager_api_domain": "AUTH",
+      "keymanager_ssl_verify": false,
+      "keymanager_auth_enabled": true,
+      "keymanager_auth_url": "",
+      "keymanager_auth_client_id": "openg2p",
+      "keymanager_auth_client_secret": "",
+      "keymanager_sign_app_id": "OPENG2P",
+      "keymanager_sign_ref_id": "",
+      "crypto_backend": "pyjwt",
+      "crypto_signing_key_path": "",
+      "crypto_signing_key_password": "",
+      "crypto_signing_key_kid": "",
+      "crypto_signing_algorithm": "RS256",
+      "crypto_allowed_algorithms": "RS256",
+      "crypto_partner_certs": [],
+      "partner_mgmt_api_url": "",
+      "partner_key_cache_ttl_seconds": 300,
+      "partner_key_hard_ttl_seconds": 21600,
+      "partner_key_negative_ttl_seconds": 30,
+      "partner_key_refresh_cooldown_seconds": 10,
+      "partner_key_fetch_timeout_seconds": 3.0,
+      "notification_impl": "openg2p_fastapi_common.notification.implementations.NovuNotifier",
+      "novu_url": "https://api.novu.co",
+      "novu_api_key": "",
+      "cors_allow_origins": [
+        "https://localhost:8443",
+        "https://localhost:8451",
+        "https://localhost:8445"
+      ],
+      "cors_allow_credentials": true,
+      "security_headers_enabled": true,
+      "auth_enabled": true,
+      "csrf_enabled": true,
+      "auth_verify_ssl": true,
+      "auth_cookie_max_age": 2100,
+      "auth_cookie_set_expires": true,
+      "auth_cookie_domain": "localhost",
+      "auth_cookie_prefix": "",
+      "auth_cookie_path": "/",
+      "auth_cookie_httponly": true,
+      "auth_cookie_secure": true,
+      "auth_transaction_store_backend": "redis",
+      "auth_redis_url": "redis://:${redis_password}@redis:6379/0",
+      "auth_refresh_token_ttl_seconds": 2100,
+      "auth_default_id_token_verify_at_hash": true,
+      "auth_provider_api_url": "http://commons-services-iam-staff-portal-api",
+      "keycloak_client_id": "iam-staff-ui",
+      "auth_api_get_staff_portal_applications": {
+        "enabled": true,
+        "claim_name": null,
+        "claim_values": null,
+        "id_token_verify_at_hash": null,
+        "validation_mode": "jwt",
+        "introspection_endpoint": null
+      },
+      "auth_api_register_staff_portal_application": {
+        "enabled": true,
+        "claim_name": null,
+        "claim_values": null,
+        "id_token_verify_at_hash": null,
+        "validation_mode": "jwt",
+        "introspection_endpoint": null
+      },
+      "data_application_urls": {
+        "awe_application_url": "https://localhost:8452",
+        "master_data_application_url": "https://localhost:8447",
+        "keycloak_application_url": "https://localhost:8444",
+        "registry_application_url": "https://localhost:8446",
+        "iam_staff_ui_application_url": "https://localhost:8445",
+        "superset_application_url": "https://localhost:8443",
+        "minio_application_url": "https://localhost:8443"
+      },
+      "data_client_secrets": {
+        "staff_portal_secret": "${secret:s012}"
+      },
+      "cache_expire_seconds": 1800,
+      "data_dir": "/runtime/config/references/f008-iam-staff-portal-data",
+      "keycloak_admin_url": "http://keycloak:8080",
+      "keycloak_realm": "staff",
+      "default_page_size": 20
+    },
+    "redirect_origins": [
+      "https://localhost:8443",
+      "https://localhost:8443",
+      "https://localhost:8449",
+      "https://localhost:8445",
+      "https://localhost:8447",
+      "https://localhost:8448",
+      "https://localhost:8446",
+      "https://localhost:8451",
+      "https://localhost:8446"
+    ],
+    "registration_client_ids": [],
+    "consent_public": {
+      "signing_key_path": "/runtime/keys/consent.pem",
+      "signing_kid": "karnatakadbt-consent-480bb20d61777cbc1629",
+      "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+      "subject_providers": {
+        "https://localhost:8444/realms/staff": {
+          "jwks_uri": "https://localhost:8444/realms/staff/protocol/openid-connect/certs",
+          "audiences": [
+            "staff-portal"
+          ]
+        },
+        "https://localhost:8444/realms/agent": {
+          "jwks_uri": "https://localhost:8444/realms/agent/protocol/openid-connect/certs",
+          "audiences": [
+            "agent-portal"
+          ]
+        }
+      },
+      "subject_default_id_type": "national_id",
+      "caller_identity": {
+        "issuer": "https://localhost:8444/realms/staff",
+        "audience": "account",
+        "jwks_uri": "https://localhost:8444/realms/staff/protocol/openid-connect/certs"
+      },
+      "consent_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_consent",
+      "partner_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_partner",
+      "freshness_seconds": 300,
+      "writer_handoff_required": true,
+      "bind_service": false
+    },
+    "identity_recovery_settings_path": "/runtime/config/references/f011-iam-settings.json",
+    "writer_ownership_scope": "iam",
+    "native_recovery_settings_path": "/runtime/config/references/f011-iam-settings.json",
+    "production_acceptance_verified": false
+  },
+  "native-identity-authority": {
+    "environment": "synthetic-only",
+    "aadhaar_enabled": false,
+    "database": "/runtime/databases/identity.sqlite",
+    "data_key": "${secret:s013}",
+    "transaction_ttl": 60,
+    "max_attempts": 5,
+    "allowed_clients": [],
+    "administration_token": "${secret:s014}",
+    "service_token": "${secret:s003}",
+    "synthetic_otp": "111111",
+    "signing_vault_directory": "/runtime/signing",
+    "signing_alias": "f7727626-7ee2-40a6-9b1d-82cfcaf74c96",
+    "client_registry_connection": {
+      "host": "postgres",
+      "port": 5432,
+      "dbname": "kdbt_authorization",
+      "user": "kdbt",
+      "password": "${postgres_password}"
+    },
+    "enforce_ownership": true,
+    "synthetic_tokens": {},
+    "authority_backend": true,
+    "production_signing_verified": true,
+    "authority_owner": "NATIVE",
+    "wallet_registry_connection": {
+      "host": "postgres",
+      "port": 5432,
+      "dbname": "kdbt_authorization",
+      "user": "kdbt",
+      "password": "${postgres_password}"
+    },
+    "wallet_audience": "esignet-binding",
+    "production_acceptance_verified": false
+  },
+  "native-keymanager": {
+    "owner": "CANDIDATE",
+    "database": "/runtime/databases/authority.sqlite",
+    "master_key": "${secret:s015}",
+    "policies": {
+      "OPENG2P_SR": {
+        "active": true,
+        "validity_days": 1095,
+        "key_size": 2048
+      },
+      "OPENG2P_SR_NID": {
+        "active": true,
+        "validity_days": 1095,
+        "key_size": 2048
+      },
+      "OPENG2P_SPAR": {
+        "active": true,
+        "validity_days": 1095,
+        "key_size": 2048
+      },
+      "OPENG2P_SPAR_NID": {
+        "active": true,
+        "validity_days": 1095,
+        "key_size": 2048
+      },
+      "OPENG2P_PBMS": {
+        "active": true,
+        "validity_days": 1095,
+        "key_size": 2048
+      },
+      "OPENG2P_PBMS_NID": {
+        "active": true,
+        "validity_days": 1095,
+        "key_size": 2048
+      },
+      "OPENG2P_BRIDGE": {
+        "active": true,
+        "validity_days": 1095,
+        "key_size": 2048
+      },
+      "OPENG2P_BRIDGE_NID": {
+        "active": true,
+        "validity_days": 1095,
+        "key_size": 2048
+      },
+      "ROOT": {
+        "active": true,
+        "validity_days": 2920,
+        "key_size": 2048
+      },
+      "BASE": {
+        "active": true,
+        "validity_days": 730,
+        "key_size": 2048
+      },
+      "KERNEL": {
+        "active": true,
+        "validity_days": 1095,
+        "key_size": 2048,
+        "issuer_application": "ROOT"
+      },
+      "IDA": {
+        "active": true,
+        "validity_days": 1095,
+        "key_size": 2048,
+        "issuer_application": "ROOT"
+      },
+      "PARTNER": {
+        "active": true,
+        "validity_days": 1095,
+        "key_size": 2048,
+        "issuer_application": "ROOT"
+      },
+      "KEY_MIGRATE": {
+        "active": true,
+        "validity_days": 1,
+        "key_size": 2048,
+        "issuer_application": "ROOT"
+      },
+      "RESIDENT": {
+        "active": true,
+        "validity_days": 1095,
+        "key_size": 2048,
+        "issuer_application": "ROOT"
+      },
+      "PMS": {
+        "active": true,
+        "validity_days": 1095,
+        "key_size": 2048,
+        "issuer_application": "ROOT"
+      }
+    },
+    "default_application": "KERNEL",
+    "default_reference": "SIGN",
+    "principals": [],
+    "data_key_splitter": "#KEY_SPLITTER#",
+    "pin_iterations": 100000,
+    "token_id": {
+      "uin_salt": "",
+      "partner_salt": "",
+      "length": 36
+    },
+    "argon2": {
+      "iterations": 10,
+      "memory": 65536,
+      "parallelism": 2
+    },
+    "partner_signing_application": "PMS",
+    "migration_application": "KEY_MIGRATE",
+    "zk_application": "KERNEL",
+    "zk_recipients": [
+      {
+        "application": "IDA",
+        "reference": "PUBLIC_KEY"
+      }
+    ],
+    "source_snapshot_sha256": "fresh-local-install",
+    "identity": {
+      "issuer": "https://localhost:8444/realms/staff",
+      "jwks_url": "http://keycloak:8080/realms/staff/protocol/openid-connect/certs",
+      "audiences": [
+        "account",
+        "openg2p-registry",
+        "openg2p-registry-nigeria",
+        "openg2p-pbms",
+        "openg2p-pbms-nigeria",
+        "openg2p-spar",
+        "openg2p-spar-nigeria",
+        "openg2p-g2p-bridge",
+        "openg2p-g2p-bridge-nigeria"
+      ],
+      "domains": [
+        "AUTH",
+        "DEVICE",
+        "FTM",
+        "MISP"
+      ],
+      "operation_roles": {
+        "signData": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "verifySignature": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "tpmEncrypt": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "tpmDecrypt": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "getSigningPublicKey": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "getEncPublicKey": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "generateMasterKey": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "getCertificate": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "KEY_MAKER",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "generateCSR": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "uploadCertificate": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "uploadOtherDomainCertificate": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "generateSymmetricKey": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "revokeKey": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "getAllCertificates": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "KEY_MAKER",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "generateTokenID": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "KEYMANAGER_ADMIN",
+          "RESIDENT",
+          "ZONAL_ADMIN"
+        ],
+        "encrypt": [
+          "CREDENTIAL_REQUEST",
+          "GLOBAL_ADMIN",
+          "HOTLIST_ADMIN",
+          "ID_AUTHENTICATION",
+          "ID_REPOSITORY",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "decrypt": [
+          "CREDENTIAL_REQUEST",
+          "GLOBAL_ADMIN",
+          "HOTLIST_ADMIN",
+          "ID_AUTHENTICATION",
+          "ID_REPOSITORY",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "encryptWithPin": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "decryptWithPin": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "generateArgon2Hash": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "migrateBaseKey": [
+          "KEYMANAGER_ADMIN",
+          "KEY_MIGRATION_ADMIN"
+        ],
+        "getZKTempCertificate": [
+          "KEYMANAGER_ADMIN",
+          "KEY_MIGRATION_ADMIN"
+        ],
+        "migrateZKKeys": [
+          "KEYMANAGER_ADMIN",
+          "KEY_MIGRATION_ADMIN"
+        ],
+        "generateLicenseKey": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "uploadCACertificate": [
+          "GLOBAL_ADMIN",
+          "KEYMANAGER_ADMIN",
+          "PMS_ADMIN",
+          "ZONAL_ADMIN"
+        ],
+        "uploadPartnerCertificate": [
+          "GLOBAL_ADMIN",
+          "KEYMANAGER_ADMIN",
+          "PMS_ADMIN",
+          "PMS_USER",
+          "ZONAL_ADMIN"
+        ],
+        "getPartnerCertificate": [
+          "GLOBAL_ADMIN",
+          "KEYMANAGER_ADMIN",
+          "PMS_ADMIN",
+          "PMS_USER",
+          "ZONAL_ADMIN"
+        ],
+        "verifyCertificateTrust": [
+          "GLOBAL_ADMIN",
+          "KEYMANAGER_ADMIN",
+          "PMS_ADMIN",
+          "PMS_USER",
+          "ZONAL_ADMIN"
+        ],
+        "sign": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "validate": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "signPDF": [
+          "CREDENTIAL_REQUEST",
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "PRINT_PARTNER",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "jwtSign": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "jwtVerify": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "jwsSign": [
+          "CREDENTIAL_ISSUANCE",
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "zkEncrypt": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "zkDecrypt": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "zkReEncryptRandomKey": [
+          "GLOBAL_ADMIN",
+          "ID_AUTHENTICATION",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "jwtEncrypt": [
+          "CREDENTIAL_REQUEST",
+          "GLOBAL_ADMIN",
+          "HOTLIST_ADMIN",
+          "ID_AUTHENTICATION",
+          "ID_REPOSITORY",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "jwtDecrypt": [
+          "CREDENTIAL_REQUEST",
+          "GLOBAL_ADMIN",
+          "HOTLIST_ADMIN",
+          "ID_AUTHENTICATION",
+          "ID_REPOSITORY",
+          "INDIVIDUAL",
+          "KEYMANAGER_ADMIN",
+          "PRE_REGISTRATION_ADMIN",
+          "REGISTRATION_ADMIN",
+          "REGISTRATION_OFFICER",
+          "REGISTRATION_PROCESSOR",
+          "REGISTRATION_SUPERVISOR",
+          "RESIDENT",
+          "TEST",
+          "ZONAL_ADMIN"
+        ],
+        "getPartnerSignedCertificate": [
+          "GLOBAL_ADMIN",
+          "KEYMANAGER_ADMIN",
+          "PMS_ADMIN",
+          "PMS_USER",
+          "ZONAL_ADMIN"
+        ],
+        "fetchLicenseKeyPermissions": [
+          "__AUTHENTICATED__"
+        ],
+        "mapLicenseKey": [
+          "__AUTHENTICATED__"
+        ]
+      }
+    },
+    "public_certificate_operations": [
+      "getCertificate",
+      "getAllCertificates"
+    ],
+    "enforce_legacy_signing_scopes": true,
+    "migration_reference": "ZK_TEMP_KEY",
+    "zk_master_scope": {
+      "application": "KERNEL",
+      "reference": "IDENTITY_CACHE"
+    },
+    "client_key_scope": {
+      "application": "RESIDENT",
+      "reference": ""
+    },
+    "license_permissions": [
+      "Biometric Authentication - FID Data Match",
+      "Biometric Authentication - FMR Data Match",
+      "Biometric Authentication - IIR Data Match",
+      "Demo Authentication - Address Data Match",
+      "Demo Authentication - Full Address Data Match",
+      "Demo Authentication - Identity Data Match",
+      "Demo Authentication - Secondary Language Match",
+      "OTP Authentication",
+      "OTP Trigger",
+      "Static Pin Authentication",
+      "eKYC - Full",
+      "eKYC - No",
+      "eKYC - limited"
+    ],
+    "production_acceptance_verified": false
+  },
+  "native-login-candidate": {
+    "authorization_origin": "http://127.0.0.1:18144",
+    "public_prefix": "/_native/login-candidate",
+    "assets": "/app/platform/native-login-ui",
+    "production_acceptance_verified": false
+  },
+  "native-partner": {
+    "profile": "partner",
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_partner",
+    "business_writes_enabled": true,
+    "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+    "native_iam_url": "http://127.0.0.1:18110",
+    "keycloak_admin_origin": "http://keycloak:8080",
+    "approval_url": "http://10.43.172.195:80",
+    "auth": {
+      "app_host": "0.0.0.0",
+      "app_port": 8000,
+      "no_of_workers": 1,
+      "worker_id": -1,
+      "worker_pid": -1,
+      "worker_type": "local",
+      "docker_pod_id": "",
+      "docker_pod_name": "",
+      "logging_default_logger_name": "app",
+      "logging_level": "INFO",
+      "logging_file_name": null,
+      "openapi_title": "OpenG2P IAM Service",
+      "openapi_description": "\n    This is common library for FastAPI service. Override Settings properties to change this.\n\n    ***********************************\n    Further details goes here\n    ***********************************\n    ",
+      "openapi_version": "1.4.0",
+      "openapi_contact_url": "https://www.openg2p.org/",
+      "openapi_contact_email": "info@openg2p.org",
+      "openapi_license_name": "Mozilla Public License 2.0",
+      "openapi_license_url": "https://www.mozilla.org/en-US/MPL/2.0/",
+      "openapi_root_path": "/",
+      "openapi_common_api_prefix": "",
+      "db_datasource": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_agent",
+      "db_driver": "postgresql+asyncpg",
+      "db_username": "kdbt",
+      "db_password": "${secret:s011}",
+      "db_hostname": "postgres",
+      "db_port": 5432,
+      "db_dbname": "kdbt_agent",
+      "db_logging": false,
+      "db_pool_pre_ping": true,
+      "db_pool_recycle": 1800,
+      "error_response_debug": false,
+      "keymanager_api_base_url": "",
+      "keymanager_api_timeout": 10,
+      "keymanager_api_domain": "AUTH",
+      "keymanager_ssl_verify": false,
+      "keymanager_auth_enabled": true,
+      "keymanager_auth_url": "",
+      "keymanager_auth_client_id": "openg2p",
+      "keymanager_auth_client_secret": "",
+      "keymanager_sign_app_id": "OPENG2P",
+      "keymanager_sign_ref_id": "",
+      "crypto_backend": "pyjwt",
+      "crypto_signing_key_path": "",
+      "crypto_signing_key_password": "",
+      "crypto_signing_key_kid": "",
+      "crypto_signing_algorithm": "RS256",
+      "crypto_allowed_algorithms": "RS256",
+      "crypto_partner_certs": [],
+      "partner_mgmt_api_url": "",
+      "partner_key_cache_ttl_seconds": 300,
+      "partner_key_hard_ttl_seconds": 21600,
+      "partner_key_negative_ttl_seconds": 30,
+      "partner_key_refresh_cooldown_seconds": 10,
+      "partner_key_fetch_timeout_seconds": 3.0,
+      "notification_impl": "openg2p_fastapi_common.notification.implementations.NovuNotifier",
+      "novu_url": "https://api.novu.co",
+      "novu_api_key": "",
+      "cors_allow_origins": [
+        "https://localhost:8443",
+        "https://localhost:8451",
+        "https://localhost:8445"
+      ],
+      "cors_allow_credentials": true,
+      "security_headers_enabled": true,
+      "auth_enabled": true,
+      "csrf_enabled": true,
+      "auth_verify_ssl": true,
+      "auth_cookie_max_age": 2100,
+      "auth_cookie_set_expires": true,
+      "auth_cookie_domain": "localhost",
+      "auth_cookie_prefix": "",
+      "auth_cookie_path": "/",
+      "auth_cookie_httponly": true,
+      "auth_cookie_secure": true,
+      "auth_transaction_store_backend": "redis",
+      "auth_redis_url": "redis://:${redis_password}@redis:6379/0",
+      "auth_refresh_token_ttl_seconds": 2100,
+      "auth_default_id_token_verify_at_hash": true,
+      "auth_provider_api_url": "http://commons-services-iam-staff-portal-api",
+      "keycloak_client_id": "iam-staff-ui",
+      "auth_api_get_staff_portal_applications": {
+        "enabled": true,
+        "claim_name": null,
+        "claim_values": null,
+        "id_token_verify_at_hash": null,
+        "validation_mode": "jwt",
+        "introspection_endpoint": null
+      },
+      "auth_api_register_staff_portal_application": {
+        "enabled": true,
+        "claim_name": null,
+        "claim_values": null,
+        "id_token_verify_at_hash": null,
+        "validation_mode": "jwt",
+        "introspection_endpoint": null
+      },
+      "data_application_urls": {
+        "awe_application_url": "https://localhost:8452",
+        "master_data_application_url": "https://localhost:8447",
+        "keycloak_application_url": "https://localhost:8444",
+        "registry_application_url": "https://localhost:8446",
+        "iam_staff_ui_application_url": "https://localhost:8445",
+        "superset_application_url": "https://localhost:8443",
+        "minio_application_url": "https://localhost:8443"
+      },
+      "data_client_secrets": {
+        "staff_portal_secret": "${secret:s012}"
+      },
+      "cache_expire_seconds": 1800,
+      "data_dir": "/runtime/config/references/f008-iam-staff-portal-data",
+      "keycloak_admin_url": "http://keycloak:8080",
+      "keycloak_realm": "staff",
+      "default_page_size": 20
+    },
+    "redirect_origins": [
+      "https://localhost:8445",
+      "https://localhost:8451",
+      "https://localhost:8443",
+      "https://localhost:8443"
+    ],
+    "registration_client_ids": [],
+    "consent_public": {
+      "signing_key_path": "/runtime/keys/consent.pem",
+      "signing_kid": "karnatakadbt-consent-480bb20d61777cbc1629",
+      "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+      "subject_providers": {
+        "https://localhost:8444/realms/staff": {
+          "jwks_uri": "https://localhost:8444/realms/staff/protocol/openid-connect/certs",
+          "audiences": [
+            "staff-portal"
+          ]
+        },
+        "https://localhost:8444/realms/agent": {
+          "jwks_uri": "https://localhost:8444/realms/agent/protocol/openid-connect/certs",
+          "audiences": [
+            "agent-portal"
+          ]
+        }
+      },
+      "subject_default_id_type": "national_id",
+      "caller_identity": {
+        "issuer": "https://localhost:8444/realms/staff",
+        "audience": "account",
+        "jwks_uri": "https://localhost:8444/realms/staff/protocol/openid-connect/certs"
+      },
+      "consent_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_consent",
+      "partner_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_partner",
+      "freshness_seconds": 300,
+      "writer_handoff_required": true,
+      "bind_service": false
+    },
+    "audit_config": {
+      "url": "http://10.43.184.56:80",
+      "enabled": true,
+      "source": "/openg2p/partner-management-staff-portal-api",
+      "module": "partner-management-staff-portal-api",
+      "client_id": "commons-services-staff-portal"
+    },
+    "expose_internal_public_keys": true,
+    "writer_ownership_scope": "partner",
+    "native_recovery_settings_path": "/runtime/config/references/f012-partner-settings.json",
+    "production_acceptance_verified": false
+  },
+  "native-registry": {
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_registry_candidate_local",
+    "audit_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_registry_candidate_local",
+    "candidate_settings_directory": "/runtime/config/registry",
+    "native_iam_url": "http://127.0.0.1:18110",
+    "business_writes_enabled": true,
+    "approval_url": "http://10.43.172.195:80",
+    "webhook_settings": {
+      "hmac_secret": "${secret:s016}",
+      "tolerance_seconds": 300
+    },
+    "native_capture_key_path": "/runtime/config/references/f013-raw-capture.key",
+    "partner_runtime_settings_path": "/runtime/config/references/f014-settings.json",
+    "writer_ownership_scope": "registry",
+    "production_acceptance_verified": false
+  },
+  "native-spar-beneficiary": {
+    "profile": "beneficiary",
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_registry_candidate_mapping_local",
+    "native_partner_key_origin": "http://127.0.0.1:18113",
+    "native_identity_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_iam",
+    "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+    "issuer_policy": {
+      "https://localhost:8444/realms/staff": {
+        "audiences": [
+          "account"
+        ],
+        "user_types": [
+          "staff"
+        ],
+        "allow_staff_mapping_resolution": true
+      },
+      "https://localhost:8444/realms/beneficiary": {
+        "audiences": [
+          "account"
+        ],
+        "user_types": [
+          "beneficiary"
+        ],
+        "allow_staff_mapping_resolution": false
+      }
+    },
+    "allowed_origins": [
+      "https://localhost:8443",
+      "https://localhost:8443",
+      "https://localhost:8451"
+    ],
+    "capture_key": "${secret:s017}",
+    "production_acceptance_verified": false
+  },
+  "native-spar-partner": {
+    "profile": "partner",
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_registry_candidate_mapping_local",
+    "native_partner_key_origin": "http://127.0.0.1:18113",
+    "native_identity_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_iam",
+    "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+    "issuer_policy": {
+      "https://localhost:8444/realms/staff": {
+        "audiences": [
+          "account"
+        ],
+        "user_types": [
+          "staff"
+        ],
+        "allow_staff_mapping_resolution": true
+      },
+      "https://localhost:8444/realms/beneficiary": {
+        "audiences": [
+          "account"
+        ],
+        "user_types": [
+          "beneficiary"
+        ],
+        "allow_staff_mapping_resolution": false
+      }
+    },
+    "allowed_origins": [
+      "https://localhost:8443",
+      "https://localhost:8443",
+      "https://localhost:8451"
+    ],
+    "capture_key": "${secret:s017}",
+    "production_acceptance_verified": false
+  },
+  "native-staff": {
+    "profile": "iam",
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_iam",
+    "business_writes_enabled": false,
+    "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+    "native_iam_url": "http://127.0.0.1:18110",
+    "keycloak_admin_origin": "http://keycloak:8080",
+    "approval_url": "http://10.43.172.195:80",
+    "auth": {
+      "app_host": "0.0.0.0",
+      "app_port": 8000,
+      "no_of_workers": 1,
+      "worker_id": -1,
+      "worker_pid": -1,
+      "worker_type": "local",
+      "docker_pod_id": "",
+      "docker_pod_name": "",
+      "logging_default_logger_name": "app",
+      "logging_level": "INFO",
+      "logging_file_name": null,
+      "openapi_title": "OpenG2P IAM Service",
+      "openapi_description": "\n    This is common library for FastAPI service. Override Settings properties to change this.\n\n    ***********************************\n    Further details goes here\n    ***********************************\n    ",
+      "openapi_version": "1.4.0",
+      "openapi_contact_url": "https://www.openg2p.org/",
+      "openapi_contact_email": "info@openg2p.org",
+      "openapi_license_name": "Mozilla Public License 2.0",
+      "openapi_license_url": "https://www.mozilla.org/en-US/MPL/2.0/",
+      "openapi_root_path": "/",
+      "openapi_common_api_prefix": "",
+      "db_datasource": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_agent",
+      "db_driver": "postgresql+asyncpg",
+      "db_username": "kdbt",
+      "db_password": "${secret:s011}",
+      "db_hostname": "postgres",
+      "db_port": 5432,
+      "db_dbname": "kdbt_agent",
+      "db_logging": false,
+      "db_pool_pre_ping": true,
+      "db_pool_recycle": 1800,
+      "error_response_debug": false,
+      "keymanager_api_base_url": "",
+      "keymanager_api_timeout": 10,
+      "keymanager_api_domain": "AUTH",
+      "keymanager_ssl_verify": false,
+      "keymanager_auth_enabled": true,
+      "keymanager_auth_url": "",
+      "keymanager_auth_client_id": "openg2p",
+      "keymanager_auth_client_secret": "",
+      "keymanager_sign_app_id": "OPENG2P",
+      "keymanager_sign_ref_id": "",
+      "crypto_backend": "pyjwt",
+      "crypto_signing_key_path": "",
+      "crypto_signing_key_password": "",
+      "crypto_signing_key_kid": "",
+      "crypto_signing_algorithm": "RS256",
+      "crypto_allowed_algorithms": "RS256",
+      "crypto_partner_certs": [],
+      "partner_mgmt_api_url": "",
+      "partner_key_cache_ttl_seconds": 300,
+      "partner_key_hard_ttl_seconds": 21600,
+      "partner_key_negative_ttl_seconds": 30,
+      "partner_key_refresh_cooldown_seconds": 10,
+      "partner_key_fetch_timeout_seconds": 3.0,
+      "notification_impl": "openg2p_fastapi_common.notification.implementations.NovuNotifier",
+      "novu_url": "https://api.novu.co",
+      "novu_api_key": "",
+      "cors_allow_origins": [
+        "https://localhost:8443",
+        "https://localhost:8451",
+        "https://localhost:8445"
+      ],
+      "cors_allow_credentials": true,
+      "security_headers_enabled": true,
+      "auth_enabled": true,
+      "csrf_enabled": true,
+      "auth_verify_ssl": true,
+      "auth_cookie_max_age": 2100,
+      "auth_cookie_set_expires": true,
+      "auth_cookie_domain": "localhost",
+      "auth_cookie_prefix": "",
+      "auth_cookie_path": "/",
+      "auth_cookie_httponly": true,
+      "auth_cookie_secure": true,
+      "auth_transaction_store_backend": "redis",
+      "auth_redis_url": "redis://:${redis_password}@redis:6379/0",
+      "auth_refresh_token_ttl_seconds": 2100,
+      "auth_default_id_token_verify_at_hash": true,
+      "auth_provider_api_url": "http://commons-services-iam-staff-portal-api",
+      "keycloak_client_id": "iam-staff-ui",
+      "auth_api_get_staff_portal_applications": {
+        "enabled": true,
+        "claim_name": null,
+        "claim_values": null,
+        "id_token_verify_at_hash": null,
+        "validation_mode": "jwt",
+        "introspection_endpoint": null
+      },
+      "auth_api_register_staff_portal_application": {
+        "enabled": true,
+        "claim_name": null,
+        "claim_values": null,
+        "id_token_verify_at_hash": null,
+        "validation_mode": "jwt",
+        "introspection_endpoint": null
+      },
+      "data_application_urls": {
+        "awe_application_url": "https://localhost:8452",
+        "master_data_application_url": "https://localhost:8447",
+        "keycloak_application_url": "https://localhost:8444",
+        "registry_application_url": "https://localhost:8446",
+        "iam_staff_ui_application_url": "https://localhost:8445",
+        "superset_application_url": "https://localhost:8443",
+        "minio_application_url": "https://localhost:8443"
+      },
+      "data_client_secrets": {
+        "staff_portal_secret": "${secret:s012}"
+      },
+      "cache_expire_seconds": 1800,
+      "data_dir": "/runtime/config/references/f008-iam-staff-portal-data",
+      "keycloak_admin_url": "http://keycloak:8080",
+      "keycloak_realm": "staff",
+      "default_page_size": 20
+    },
+    "redirect_origins": [
+      "https://localhost:8443",
+      "https://localhost:8443",
+      "https://localhost:8449",
+      "https://localhost:8445",
+      "https://localhost:8447",
+      "https://localhost:8448",
+      "https://localhost:8446",
+      "https://localhost:8451",
+      "https://localhost:8446"
+    ],
+    "registration_client_ids": [],
+    "consent_public": {
+      "signing_key_path": "/runtime/keys/consent.pem",
+      "signing_kid": "karnatakadbt-consent-480bb20d61777cbc1629",
+      "trusted_ca_path": "/runtime/caddy/pki/authorities/local/root.crt",
+      "subject_providers": {
+        "https://localhost:8444/realms/staff": {
+          "jwks_uri": "https://localhost:8444/realms/staff/protocol/openid-connect/certs",
+          "audiences": [
+            "staff-portal"
+          ]
+        },
+        "https://localhost:8444/realms/agent": {
+          "jwks_uri": "https://localhost:8444/realms/agent/protocol/openid-connect/certs",
+          "audiences": [
+            "agent-portal"
+          ]
+        }
+      },
+      "subject_default_id_type": "national_id",
+      "caller_identity": {
+        "issuer": "https://localhost:8444/realms/staff",
+        "audience": "account",
+        "jwks_uri": "https://localhost:8444/realms/staff/protocol/openid-connect/certs"
+      },
+      "consent_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_consent",
+      "partner_database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_partner",
+      "freshness_seconds": 300,
+      "writer_handoff_required": true,
+      "bind_service": false
+    },
+    "identity_recovery_settings_path": "/runtime/config/references/f011-iam-settings.json",
+    "native_recovery_settings_path": "/runtime/config/references/f011-iam-settings.json",
+    "production_acceptance_verified": false
+  },
+  "native-wallet-identity-candidate": {
+    "environment": "synthetic-only",
+    "aadhaar_enabled": false,
+    "database": "/runtime/databases/identity.sqlite",
+    "data_key": "${secret:s013}",
+    "transaction_ttl": 60,
+    "max_attempts": 5,
+    "allowed_clients": [],
+    "administration_token": "${secret:s014}",
+    "service_token": "${secret:s003}",
+    "synthetic_otp": "111111",
+    "signing_vault_directory": "/runtime/signing",
+    "signing_alias": "f7727626-7ee2-40a6-9b1d-82cfcaf74c96",
+    "client_registry_connection": {
+      "host": "postgres",
+      "port": 5432,
+      "dbname": "kdbt_authorization",
+      "user": "kdbt",
+      "password": "${postgres_password}"
+    },
+    "enforce_ownership": true,
+    "synthetic_tokens": {},
+    "authority_backend": true,
+    "production_signing_verified": true,
+    "wallet_registry_connection": {
+      "host": "postgres",
+      "port": 5432,
+      "dbname": "kdbt_authorization",
+      "user": "kdbt",
+      "password": "${postgres_password}"
+    },
+    "wallet_audience": "esignet-binding",
+    "authority_owner": "NATIVE",
+    "production_acceptance_verified": false
+  },
+  "websub": {
+    "url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_websub",
+    "encryption_key": "${secret:s018}",
+    "publisher_token": "${secret:s019}",
+    "hub_url": "http://karnatakadbt-websub",
+    "subscription_permits": [],
+    "max_attempts": 5,
+    "backoff_seconds": 5,
+    "production_acceptance_verified": false
+  },
+  "native-master-data": {
+    "database_url": "postgresql+psycopg2://kdbt:${postgres_password}@postgres:5432/kdbt_master",
+    "native_iam_url": "http://127.0.0.1:18110",
+    "business_writes_enabled": true,
+    "writer_ownership_scope": "master-data",
+    "master_ownership_settings_path": "/runtime/config/references/f015-settings.json",
+    "production_acceptance_verified": false
+  }
+}

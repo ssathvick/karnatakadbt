@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LOCAL SIMULATION grievance",
+  "type": "object",
+  "properties": {
+    "case_reference": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "synthetic": {
+      "type": "boolean",
+      "enum": [
+        true
+      ]
+    }
+  },
+  "required": [
+    "case_reference",
+    "status",
+    "synthetic"
+  ]
+}

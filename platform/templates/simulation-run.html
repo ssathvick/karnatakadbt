@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% block content %}
+<p class="eyebrow">SYNTHETIC JOURNEY</p><h1>{{scenarios[run.scenario]}}</h1><p><a href="{{prefix}}/simulation">All scenarios and simulation analytics</a> · <a href="{{prefix}}/knowledge">Knowledge library</a></p>
+<section class="card"><h2>{{run.state.replace('_',' ')|title}}</h2><p>Run {{run.id}} · INR {{'{:,.2f}'.format(run.amount_minor/100)}}</p>{% if run.due_at %}<p>Background callback due after {{run.due_at}} UTC. Refresh after the worker processes it.</p>{% endif %}<a href="{{prefix}}/simulation/run/{{run.id}}">Refresh journey</a></section>
+<h2>Partner exchange timeline</h2><p>Local simulation events; no external agency, bank or SMS provider is contacted. This journey is stored separately from beneficiary and payment records in KarnatakaDBT.</p>
+{% for event in events %}<section class="card"><h3>{{loop.index}}. {{event.service.replace('-',' ')|title}} — {{event.status.replace('_',' ')}}</h3><small>{{event.at}} UTC</small><details><summary>Exchange payload</summary><pre style="white-space:pre-wrap;overflow-wrap:anywhere">{{event.payload}}</pre></details></section>{% endfor %}
+{% endblock %}

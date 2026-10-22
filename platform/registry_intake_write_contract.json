@@ -1,0 +1,402 @@
+{
+  "application_reference_format": "{DATE:%Y%b%d|upper}-{SECONDS:5}{RAND:1}",
+  "submission_defaults": {
+    "draft_status": {
+      "default": "DRAFT"
+    },
+    "approval_status": {
+      "default": "PENDING"
+    },
+    "register_ingest_process_status": {
+      "default": "NOT_APPLICABLE"
+    },
+    "register_ingest_process_attempts": {
+      "default": 0
+    },
+    "number_of_verifications_required": {
+      "default": 0
+    },
+    "number_of_verifications_done": {
+      "default": 0
+    },
+    "deduplication_status_vs_intake_forms": {
+      "default": "PENDING"
+    },
+    "deduplication_intake_forms_attempts": {
+      "default": 0
+    },
+    "deduplication_status_vs_register": {
+      "default": "PENDING"
+    },
+    "deduplication_register_forms_attempts": {
+      "default": 0
+    }
+  },
+  "domain_defaults": {
+    "Household": {
+      "record_status": {
+        "default": "ACTIVE"
+      },
+      "husband_dead": {
+        "server_default": false
+      }
+    },
+    "HouseholdAsset": {
+      "record_status": {
+        "default": "ACTIVE"
+      }
+    },
+    "HouseholdHousingAndServices": {
+      "record_status": {
+        "default": "ACTIVE"
+      }
+    },
+    "HouseholdProgram": {
+      "record_status": {
+        "default": "ACTIVE"
+      }
+    },
+    "Individual": {
+      "record_status": {
+        "default": "ACTIVE"
+      }
+    },
+    "IndividualDisability": {
+      "record_status": {
+        "default": "ACTIVE"
+      }
+    },
+    "IndividualLand": {
+      "record_status": {
+        "default": "ACTIVE"
+      }
+    },
+    "IndividualLivelihood": {
+      "record_status": {
+        "default": "ACTIVE"
+      }
+    },
+    "IndividualLivestock": {
+      "record_status": {
+        "default": "ACTIVE"
+      }
+    },
+    "IndividualProgram": {
+      "record_status": {
+        "default": "ACTIVE"
+      }
+    },
+    "IndividualShock": {
+      "record_status": {
+        "default": "ACTIVE"
+      }
+    },
+    "IndividualVulnerability": {
+      "record_status": {
+        "default": "ACTIVE"
+      }
+    }
+  },
+  "interfaces": {
+    "Household": {
+      "hooks": {
+        "get_search_text_fields": [
+          {
+            "domain": "construct_search_text"
+          },
+          {
+            "fields": [
+              "functional_record_id",
+              "record_name"
+            ]
+          }
+        ],
+        "get_record_name_fields": [
+          {
+            "domain": "construct_intake_record_name"
+          }
+        ]
+      },
+      "unique": [
+        [
+          "functional_record_id"
+        ]
+      ]
+    },
+    "HouseholdAsset": {
+      "hooks": {
+        "get_search_text_fields": [
+          {
+            "domain": "construct_search_text"
+          },
+          {
+            "fields": [
+              "functional_record_id",
+              "record_name"
+            ]
+          }
+        ],
+        "get_record_name_fields": [
+          {
+            "domain": "construct_intake_record_name"
+          }
+        ]
+      },
+      "unique": [
+        [
+          "functional_record_id"
+        ]
+      ]
+    },
+    "HouseholdHousingAndServices": {
+      "hooks": {
+        "get_search_text_fields": [
+          {
+            "domain": "construct_search_text"
+          },
+          {
+            "fields": [
+              "functional_record_id",
+              "record_name"
+            ]
+          }
+        ],
+        "get_record_name_fields": [
+          {
+            "domain": "construct_intake_record_name"
+          }
+        ]
+      },
+      "unique": [
+        [
+          "functional_record_id"
+        ]
+      ]
+    },
+    "HouseholdProgram": {
+      "hooks": {
+        "get_search_text_fields": [
+          {
+            "domain": "construct_search_text"
+          },
+          {
+            "fields": [
+              "functional_record_id",
+              "record_name"
+            ]
+          }
+        ],
+        "get_record_name_fields": [
+          {
+            "domain": "construct_intake_record_name"
+          }
+        ]
+      },
+      "unique": [
+        [
+          "functional_record_id"
+        ]
+      ]
+    },
+    "Individual": {
+      "hooks": {
+        "get_search_text_fields": [
+          {
+            "domain": "construct_search_text"
+          },
+          {
+            "fields": [
+              "functional_record_id",
+              "record_name"
+            ]
+          }
+        ],
+        "get_record_name_fields": [
+          {
+            "domain": "construct_intake_record_name"
+          }
+        ]
+      },
+      "unique": [
+        [
+          "functional_record_id"
+        ]
+      ]
+    },
+    "IndividualDisability": {
+      "hooks": {
+        "get_search_text_fields": [
+          {
+            "domain": "construct_search_text"
+          },
+          {
+            "fields": [
+              "functional_record_id",
+              "record_name"
+            ]
+          }
+        ],
+        "get_record_name_fields": [
+          {
+            "domain": "construct_intake_record_name"
+          }
+        ]
+      },
+      "unique": [
+        [
+          "functional_record_id"
+        ]
+      ]
+    },
+    "IndividualLand": {
+      "hooks": {
+        "get_search_text_fields": [
+          {
+            "domain": "construct_search_text"
+          },
+          {
+            "fields": [
+              "functional_record_id",
+              "record_name"
+            ]
+          }
+        ],
+        "get_record_name_fields": [
+          {
+            "domain": "construct_intake_record_name"
+          }
+        ]
+      },
+      "unique": [
+        [
+          "functional_record_id"
+        ]
+      ]
+    },
+    "IndividualLivelihood": {
+      "hooks": {
+        "get_search_text_fields": [
+          {
+            "domain": "construct_search_text"
+          },
+          {
+            "fields": [
+              "functional_record_id",
+              "record_name"
+            ]
+          }
+        ],
+        "get_record_name_fields": [
+          {
+            "domain": "construct_intake_record_name"
+          }
+        ]
+      },
+      "unique": [
+        [
+          "functional_record_id"
+        ]
+      ]
+    },
+    "IndividualLivestock": {
+      "hooks": {
+        "get_search_text_fields": [
+          {
+            "domain": "construct_search_text"
+          },
+          {
+            "fields": [
+              "functional_record_id",
+              "record_name"
+            ]
+          }
+        ],
+        "get_record_name_fields": [
+          {
+            "domain": "construct_intake_record_name"
+          }
+        ]
+      },
+      "unique": [
+        [
+          "functional_record_id"
+        ]
+      ]
+    },
+    "IndividualProgram": {
+      "hooks": {
+        "get_search_text_fields": [
+          {
+            "domain": "construct_search_text"
+          },
+          {
+            "fields": [
+              "functional_record_id",
+              "record_name"
+            ]
+          }
+        ],
+        "get_record_name_fields": [
+          {
+            "domain": "construct_intake_record_name"
+          }
+        ]
+      },
+      "unique": [
+        [
+          "functional_record_id"
+        ]
+      ]
+    },
+    "IndividualShock": {
+      "hooks": {
+        "get_search_text_fields": [
+          {
+            "domain": "construct_search_text"
+          },
+          {
+            "fields": [
+              "functional_record_id",
+              "record_name"
+            ]
+          }
+        ],
+        "get_record_name_fields": [
+          {
+            "domain": "construct_intake_record_name"
+          }
+        ]
+      },
+      "unique": [
+        [
+          "functional_record_id"
+        ]
+      ]
+    },
+    "IndividualVulnerability": {
+      "hooks": {
+        "get_search_text_fields": [
+          {
+            "domain": "construct_search_text"
+          },
+          {
+            "fields": [
+              "functional_record_id",
+              "record_name"
+            ]
+          }
+        ],
+        "get_record_name_fields": [
+          {
+            "domain": "construct_intake_record_name"
+          }
+        ]
+      },
+      "unique": [
+        [
+          "functional_record_id"
+        ]
+      ]
+    }
+  }
+}

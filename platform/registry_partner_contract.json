@@ -1,0 +1,1335 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OpenG2P Registry Partner API",
+    "description": "\n        FastAPI Service for OpenG2P Registry Partner API\n        ***********************************\n        Further details goes here\n        ***********************************\n        ",
+    "contact": {
+      "url": "https://www.openg2p.org/",
+      "email": "info@openg2p.org"
+    },
+    "license": {
+      "name": "Mozilla Public License 2.0",
+      "url": "https://www.mozilla.org/en-US/MPL/2.0/"
+    },
+    "version": "1.2.1"
+  },
+  "paths": {
+    "/partner/ingest_data": {
+      "post": {
+        "tags": [
+          "/partner"
+        ],
+        "summary": "Ingest Data",
+        "operationId": "ingest_data_partner_ingest_data_post",
+        "parameters": [
+          {
+            "name": "data_model",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Data Model"
+            }
+          },
+          {
+            "name": "register_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Register Id"
+            }
+          },
+          {
+            "name": "intake_form_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Intake Form Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IngestDataResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dci/registry/sync/search": {
+      "post": {
+        "tags": [
+          "/dci/registry"
+        ],
+        "summary": "Search",
+        "operationId": "search_dci_registry_sync_search_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DciSearchRequestEnvelope"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DciSearchResponseEnvelope"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ping": {
+      "get": {
+        "tags": [
+          "ping"
+        ],
+        "summary": "Get Ping",
+        "description": "Returns \"pong\" always, if the service is healthy.\nThis can also used for service health checks.",
+        "operationId": "get_ping_ping_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DciAuthorize": {
+        "properties": {
+          "@context": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "@Context"
+          },
+          "@type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "@Type"
+          },
+          "ts": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ts"
+          },
+          "purpose": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DciPurpose"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "title": "DciAuthorize"
+      },
+      "DciConsent": {
+        "properties": {
+          "@context": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "@Context"
+          },
+          "@type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "@Type"
+          },
+          "ts": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ts"
+          },
+          "purpose": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DciPurpose"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "title": "DciConsent"
+      },
+      "DciEncryptedMessage": {
+        "properties": {
+          "header": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Header"
+          },
+          "ciphertext": {
+            "type": "string",
+            "title": "Ciphertext"
+          },
+          "encrypted_key": {
+            "type": "string",
+            "title": "Encrypted Key"
+          },
+          "tag": {
+            "type": "string",
+            "title": "Tag"
+          },
+          "iv": {
+            "type": "string",
+            "title": "Iv"
+          }
+        },
+        "type": "object",
+        "required": [
+          "header",
+          "ciphertext",
+          "encrypted_key",
+          "tag",
+          "iv"
+        ],
+        "title": "DciEncryptedMessage"
+      },
+      "DciPagination": {
+        "properties": {
+          "page_size": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Page Size"
+          },
+          "page_number": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Page Number"
+          }
+        },
+        "type": "object",
+        "required": [
+          "page_size",
+          "page_number"
+        ],
+        "title": "DciPagination"
+      },
+      "DciPurpose": {
+        "properties": {
+          "text": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text"
+          },
+          "code": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Code"
+          },
+          "ref_uri": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ref Uri"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "title": "DciPurpose"
+      },
+      "DciQuery": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "value": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Value"
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "value"
+        ],
+        "title": "DciQuery"
+      },
+      "DciRequestHeader": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "message_id": {
+            "type": "string",
+            "title": "Message Id"
+          },
+          "message_ts": {
+            "type": "string",
+            "title": "Message Ts"
+          },
+          "action": {
+            "type": "string",
+            "title": "Action"
+          },
+          "sender_id": {
+            "type": "string",
+            "title": "Sender Id"
+          },
+          "sender_uri": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sender Uri"
+          },
+          "receiver_id": {
+            "type": "string",
+            "title": "Receiver Id"
+          },
+          "total_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Count"
+          },
+          "is_msg_encrypted": {
+            "type": "boolean",
+            "title": "Is Msg Encrypted",
+            "default": false
+          },
+          "meta": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Meta"
+          }
+        },
+        "type": "object",
+        "required": [
+          "version",
+          "message_id",
+          "message_ts",
+          "action",
+          "sender_id",
+          "receiver_id"
+        ],
+        "title": "DciRequestHeader"
+      },
+      "DciResponseHeader": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "title": "Version",
+            "default": "1.0.0"
+          },
+          "message_id": {
+            "type": "string",
+            "title": "Message Id"
+          },
+          "message_ts": {
+            "type": "string",
+            "title": "Message Ts"
+          },
+          "action": {
+            "type": "string",
+            "title": "Action"
+          },
+          "status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status"
+          },
+          "status_reason_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Reason Code"
+          },
+          "status_reason_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Reason Message"
+          },
+          "total_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Count"
+          },
+          "completed_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Completed Count"
+          },
+          "sender_id": {
+            "type": "string",
+            "title": "Sender Id"
+          },
+          "receiver_id": {
+            "type": "string",
+            "title": "Receiver Id"
+          },
+          "sender_uri": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sender Uri"
+          },
+          "is_msg_encrypted": {
+            "type": "boolean",
+            "title": "Is Msg Encrypted",
+            "default": false
+          },
+          "meta": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Meta"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "message_id",
+          "message_ts",
+          "action",
+          "sender_id",
+          "receiver_id"
+        ],
+        "title": "DciResponseHeader",
+        "description": "Message header for on-search responses"
+      },
+      "DciSearchCriteria": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "title": "Version",
+            "default": "1.0.0"
+          },
+          "reg_type": {
+            "type": "string",
+            "title": "Reg Type",
+            "description": "Root register mnemonic to search (`g2p_register_definitions.register_mnemonic`). Example values: Farmer, Household, Individual."
+          },
+          "reg_record_type": {
+            "type": "string",
+            "title": "Reg Record Type",
+            "description": "DCI record type for the outbound payload shape (often an ``spdci-extensions-dci:`` type key). Does not substitute for ``reg_type``."
+          },
+          "query_type": {
+            "type": "string",
+            "title": "Query Type"
+          },
+          "query": {
+            "$ref": "#/components/schemas/DciQuery"
+          },
+          "sort": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/DciSortItem"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort"
+          },
+          "pagination": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DciPagination"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "consent": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DciConsent"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "authorize": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DciAuthorize"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "reg_type",
+          "reg_record_type",
+          "query_type",
+          "query"
+        ],
+        "title": "DciSearchCriteria",
+        "description": "When performing deep search against this platform, ``reg_type`` is the deployer's\nregister mnemonic (same value as ``g2p_register_definitions.register_mnemonic``),\ne.g. Farmer, Household, Individual \u2014 not an ``ns:org:RegistryType:`` URI unless the\nDB is configured that way intentionally."
+      },
+      "DciSearchRequest": {
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "maxLength": 99,
+            "title": "Transaction Id"
+          },
+          "search_request": {
+            "items": {
+              "$ref": "#/components/schemas/DciSearchRequestItem"
+            },
+            "type": "array",
+            "title": "Search Request"
+          }
+        },
+        "type": "object",
+        "required": [
+          "transaction_id",
+          "search_request"
+        ],
+        "title": "DciSearchRequest"
+      },
+      "DciSearchRequestEnvelope": {
+        "properties": {
+          "signature": {
+            "type": "string",
+            "title": "Signature"
+          },
+          "header": {
+            "$ref": "#/components/schemas/DciRequestHeader"
+          },
+          "message": {
+            "$ref": "#/components/schemas/DciSearchRequest"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "signature",
+          "header",
+          "message"
+        ],
+        "title": "DciSearchRequestEnvelope"
+      },
+      "DciSearchRequestItem": {
+        "properties": {
+          "reference_id": {
+            "type": "string",
+            "maxLength": 99,
+            "title": "Reference Id"
+          },
+          "timestamp": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Timestamp"
+          },
+          "search_criteria": {
+            "$ref": "#/components/schemas/DciSearchCriteria"
+          },
+          "locale": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locale",
+            "default": "eng"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reference_id",
+          "search_criteria"
+        ],
+        "title": "DciSearchRequestItem"
+      },
+      "DciSearchResponse": {
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "maxLength": 99,
+            "title": "Transaction Id",
+            "description": "Transaction identifier"
+          },
+          "correlation_id": {
+            "type": "string",
+            "maxLength": 99,
+            "title": "Correlation Id",
+            "description": "Correlation identifier assigned by responder"
+          },
+          "search_response": {
+            "items": {
+              "$ref": "#/components/schemas/DciSearchResponseItem"
+            },
+            "type": "array",
+            "minItems": 0,
+            "title": "Search Response",
+            "description": "Array of search response entries"
+          }
+        },
+        "type": "object",
+        "required": [
+          "transaction_id",
+          "correlation_id",
+          "search_response"
+        ],
+        "title": "DciSearchResponse",
+        "description": "message payload for /registry/on-search"
+      },
+      "DciSearchResponseEnvelope": {
+        "properties": {
+          "signature": {
+            "type": "string",
+            "title": "Signature",
+            "description": "Signature of {header}+{message}"
+          },
+          "header": {
+            "$ref": "#/components/schemas/DciResponseHeader"
+          },
+          "message": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DciSearchResponse"
+              },
+              {
+                "$ref": "#/components/schemas/DciEncryptedMessage"
+              }
+            ],
+            "title": "Message"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "signature",
+          "header",
+          "message"
+        ],
+        "title": "DciSearchResponseEnvelope",
+        "description": "Envelope for POST /registry/on-search\n\n{\n  \"signature\": \"...\",\n  \"header\": { ... },\n  \"message\": { ...SearchResponse... } | { ...EncryptedMessage... }\n}"
+      },
+      "DciSearchResponseItem": {
+        "properties": {
+          "reference_id": {
+            "type": "string",
+            "maxLength": 99,
+            "title": "Reference Id",
+            "description": "Reference id from corresponding SearchRequest"
+          },
+          "timestamp": {
+            "type": "string",
+            "title": "Timestamp",
+            "description": "ISO-8601 timestamp"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status",
+            "description": "Enum: \"rcvd\", \"pdng\", \"succ\", \"rjct\""
+          },
+          "status_reason_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Reason Code",
+            "description": "Reason code explaining the status"
+          },
+          "status_reason_message": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 999
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Reason Message",
+            "description": "Human-readable status reason message"
+          },
+          "data": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DciSearchResultData"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Search result data payload"
+          },
+          "pagination": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DciSearchResultPagination"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Pagination information for this result"
+          },
+          "locale": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 10
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locale",
+            "description": "Locale, e.g. 'en' or 'eng'"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "reference_id",
+          "timestamp",
+          "status"
+        ],
+        "title": "DciSearchResponseItem",
+        "description": "One entry in message.search_response[]"
+      },
+      "DciSearchResultData": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "title": "Version",
+            "description": "Schema version",
+            "default": "1.0.0"
+          },
+          "reg_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reg Type",
+            "description": "Register mnemonic echoed from the search request (`g2p_register_definitions.register_mnemonic`), e.g. Farmer, Household, Individual."
+          },
+          "reg_record_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reg Record Type",
+            "description": "Registry record type, e.g. spdci-extensions-dci:Farmer"
+          },
+          "reg_records": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Reg Records",
+            "description": "List of registry records (opaque JSON-LD objects)"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "reg_records"
+        ],
+        "title": "DciSearchResultData",
+        "description": "SearchResponse.search_response[i].data\n\nRegistry response payload.\nDeep registry objects are intentionally treated as opaque JSON."
+      },
+      "DciSearchResultPagination": {
+        "properties": {
+          "page_size": {
+            "type": "integer",
+            "title": "Page Size",
+            "description": "Number of records per page"
+          },
+          "page_number": {
+            "type": "integer",
+            "title": "Page Number",
+            "description": "Current page number (1-based)"
+          },
+          "total_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Count",
+            "description": "Total number of records matching query"
+          }
+        },
+        "type": "object",
+        "required": [
+          "page_size",
+          "page_number"
+        ],
+        "title": "DciSearchResultPagination",
+        "description": "SearchResponse.search_response[i].pagination"
+      },
+      "DciSortItem": {
+        "properties": {
+          "attribute_name": {
+            "type": "string",
+            "title": "Attribute Name"
+          },
+          "sort_order": {
+            "type": "string",
+            "enum": [
+              "asc",
+              "desc"
+            ],
+            "title": "Sort Order"
+          }
+        },
+        "type": "object",
+        "required": [
+          "attribute_name",
+          "sort_order"
+        ],
+        "title": "DciSortItem"
+      },
+      "ErrorListResponse": {
+        "properties": {
+          "errors": {
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "type": "array",
+            "title": "Errors"
+          }
+        },
+        "type": "object",
+        "required": [
+          "errors"
+        ],
+        "title": "ErrorListResponse"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code",
+            "default": ""
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "title": "ErrorResponse"
+      },
+      "G2PPaginationResponse": {
+        "properties": {
+          "number_of_items": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Number Of Items"
+          },
+          "number_of_pages": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Number Of Pages"
+          }
+        },
+        "type": "object",
+        "required": [
+          "number_of_items",
+          "number_of_pages"
+        ],
+        "title": "G2PPaginationResponse"
+      },
+      "G2PResponseHeader": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "response_status": {
+            "$ref": "#/components/schemas/G2PResponseStatus"
+          },
+          "response_error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Error Code"
+          },
+          "response_error_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Error Message"
+          },
+          "response_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Response Timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_id",
+          "response_status",
+          "response_timestamp"
+        ],
+        "title": "G2PResponseHeader"
+      },
+      "G2PResponseStatus": {
+        "type": "string",
+        "enum": [
+          "ERROR",
+          "SUCCESS"
+        ],
+        "title": "G2PResponseStatus"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "IngestDataPayload": {
+        "properties": {
+          "correlation_id": {
+            "type": "string",
+            "title": "Correlation Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "correlation_id"
+        ],
+        "title": "IngestDataPayload"
+      },
+      "IngestDataResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/IngestDataResponseBody"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header"
+        ],
+        "title": "IngestDataResponse"
+      },
+      "IngestDataResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/IngestDataPayload"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "IngestDataResponseBody"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

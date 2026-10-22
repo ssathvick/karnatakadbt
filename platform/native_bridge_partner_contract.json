@@ -1,0 +1,3285 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OpenG2P G2P Bridge Partner API",
+    "description": "\n        This module enables cash transfers from PBMS\n        ***********************************\n        Further details goes here\n        ***********************************\n        ",
+    "contact": {
+      "url": "https://www.openg2p.org/",
+      "email": "info@openg2p.org"
+    },
+    "license": {
+      "name": "Mozilla Public License 2.0",
+      "url": "https://www.mozilla.org/en-US/MPL/2.0/"
+    },
+    "version": "2.1.0"
+  },
+  "paths": {
+    "/create_disbursement_envelopes": {
+      "post": {
+        "tags": [
+          "G2P Bridge Disbursement Envelope"
+        ],
+        "summary": "Create Disbursement Envelopes",
+        "operationId": "create_disbursement_envelopes_create_disbursement_envelopes_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisbursementEnvelopeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DisbursementEnvelopeResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWTSignatureValidator": []
+          }
+        ]
+      }
+    },
+    "/cancel_disbursement_envelope": {
+      "post": {
+        "tags": [
+          "G2P Bridge Disbursement Envelope"
+        ],
+        "summary": "Cancel Disbursement Envelope",
+        "operationId": "cancel_disbursement_envelope_cancel_disbursement_envelope_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisbursementEnvelopeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DisbursementEnvelopeResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWTSignatureValidator": []
+          }
+        ]
+      }
+    },
+    "/amend_disbursement_envelope": {
+      "post": {
+        "tags": [
+          "G2P Bridge Disbursement Envelope"
+        ],
+        "summary": "Amend Disbursement Envelope",
+        "operationId": "amend_disbursement_envelope_amend_disbursement_envelope_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisbursementEnvelopeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DisbursementEnvelopeResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWTSignatureValidator": []
+          }
+        ]
+      }
+    },
+    "/create_disbursements": {
+      "post": {
+        "tags": [
+          "G2P Bridge Disbursement Envelope"
+        ],
+        "summary": "Create Disbursements",
+        "operationId": "create_disbursements_create_disbursements_post",
+        "parameters": [
+          {
+            "name": "is_signature_valid",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "title": "Is Signature Valid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisbursementRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DisbursementResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Forbidden"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cancel_disbursements": {
+      "post": {
+        "tags": [
+          "G2P Bridge Disbursement Envelope"
+        ],
+        "summary": "Cancel Disbursements",
+        "operationId": "cancel_disbursements_cancel_disbursements_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisbursementRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DisbursementResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWTSignatureValidator": []
+          }
+        ]
+      }
+    },
+    "/upload_mt940": {
+      "post": {
+        "tags": [
+          "G2P Bridge Account Statement"
+        ],
+        "summary": "Upload Mt940",
+        "operationId": "upload_mt940_upload_mt940_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_mt940_upload_mt940_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountStatementResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/get_disbursement_status": {
+      "post": {
+        "tags": [
+          "G2P Bridge Disbursement Status"
+        ],
+        "summary": "Get Disbursement Status",
+        "operationId": "get_disbursement_status_get_disbursement_status_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisbursementStatusRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DisbursementStatusResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWTSignatureValidator": []
+          }
+        ]
+      }
+    },
+    "/get_disbursement_batch_control": {
+      "post": {
+        "tags": [
+          "G2P Bridge Disbursement Status"
+        ],
+        "summary": "Get Disbursement Batch Control",
+        "operationId": "get_disbursement_batch_control_get_disbursement_batch_control_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisbursementBatchControlRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DisbursementBatchControlResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWTSignatureValidator": []
+          }
+        ]
+      }
+    },
+    "/get_disbursement_envelope_status": {
+      "post": {
+        "tags": [
+          "G2P Bridge Disbursement Envelope Status"
+        ],
+        "summary": "Get Disbursement Envelope Status",
+        "operationId": "get_disbursement_envelope_status_get_disbursement_envelope_status_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisbursementEnvelopeStatusRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DisbursementEnvelopeStatusResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JWTSignatureValidator": []
+          }
+        ]
+      }
+    },
+    "/ping": {
+      "get": {
+        "tags": [
+          "ping"
+        ],
+        "summary": "Get Ping",
+        "description": "Returns \"pong\" always, if the service is healthy.\nThis can also used for service health checks.",
+        "operationId": "get_ping_ping_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AccountStatementPayload": {
+        "properties": {
+          "statement_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Statement Id"
+          }
+        },
+        "type": "object",
+        "title": "AccountStatementPayload"
+      },
+      "AccountStatementResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "$ref": "#/components/schemas/AccountStatementResponseBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header",
+          "response_body"
+        ],
+        "title": "AccountStatementResponse"
+      },
+      "AccountStatementResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "$ref": "#/components/schemas/AccountStatementPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_payload"
+        ],
+        "title": "AccountStatementResponseBody"
+      },
+      "BenefitType": {
+        "type": "string",
+        "enum": [
+          "COMMODITY",
+          "SERVICE",
+          "CASH_DIGITAL",
+          "CASH_PHYSICAL",
+          "COMBINATION"
+        ],
+        "title": "BenefitType"
+      },
+      "Body_upload_mt940_upload_mt940_post": {
+        "properties": {
+          "statement_file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "Statement File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "statement_file"
+        ],
+        "title": "Body_upload_mt940_upload_mt940_post"
+      },
+      "CancellationStatus": {
+        "type": "string",
+        "enum": [
+          "Not_Cancelled",
+          "Cancelled"
+        ],
+        "title": "CancellationStatus"
+      },
+      "DisbursementBatchControlGeoPayload": {
+        "properties": {
+          "disbursement_batch_control_geo_id": {
+            "type": "string",
+            "title": "Disbursement Batch Control Geo Id"
+          },
+          "disbursement_cycle_id": {
+            "type": "string",
+            "title": "Disbursement Cycle Id"
+          },
+          "disbursement_envelope_id": {
+            "type": "string",
+            "title": "Disbursement Envelope Id"
+          },
+          "disbursement_batch_control_id": {
+            "type": "string",
+            "title": "Disbursement Batch Control Id"
+          },
+          "administrative_zone_id_large": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Administrative Zone Id Large"
+          },
+          "administrative_zone_mnemonic_large": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Administrative Zone Mnemonic Large"
+          },
+          "administrative_zone_id_small": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Administrative Zone Id Small"
+          },
+          "administrative_zone_mnemonic_small": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Administrative Zone Mnemonic Small"
+          },
+          "no_of_beneficiaries": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "No Of Beneficiaries"
+          },
+          "total_quantity": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Quantity"
+          },
+          "warehouse_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Warehouse Id"
+          },
+          "warehouse_mnemonic": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Warehouse Mnemonic"
+          },
+          "warehouse_additional_attributes": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Warehouse Additional Attributes"
+          },
+          "agency_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Agency Id"
+          },
+          "agency_mnemonic": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Agency Mnemonic"
+          },
+          "agency_additional_attributes": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Agency Additional Attributes"
+          },
+          "warehouse_notification_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Warehouse Notification Status"
+          },
+          "agency_notification_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Agency Notification Status"
+          }
+        },
+        "type": "object",
+        "required": [
+          "disbursement_batch_control_geo_id",
+          "disbursement_cycle_id",
+          "disbursement_envelope_id",
+          "disbursement_batch_control_id"
+        ],
+        "title": "DisbursementBatchControlGeoPayload"
+      },
+      "DisbursementBatchControlPayload": {
+        "properties": {
+          "disbursement_batch_control_id": {
+            "type": "string",
+            "title": "Disbursement Batch Control Id"
+          },
+          "disbursement_cycle_id": {
+            "type": "integer",
+            "title": "Disbursement Cycle Id"
+          },
+          "disbursement_cycle_code_mnemonic": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Cycle Code Mnemonic"
+          },
+          "disbursement_envelope_id": {
+            "type": "string",
+            "title": "Disbursement Envelope Id"
+          },
+          "benefit_code_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Benefit Code Id"
+          },
+          "benefit_code_mnemonic": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Benefit Code Mnemonic"
+          },
+          "benefit_type": {
+            "type": "string",
+            "title": "Benefit Type"
+          },
+          "measurement_unit": {
+            "type": "string",
+            "title": "Measurement Unit"
+          },
+          "fa_resolution_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fa Resolution Status"
+          },
+          "fa_resolution_timestamp": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fa Resolution Timestamp"
+          },
+          "fa_resolution_latest_error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fa Resolution Latest Error Code"
+          },
+          "fa_resolution_attempts": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fa Resolution Attempts"
+          },
+          "sponsor_bank_dispatch_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sponsor Bank Dispatch Status"
+          },
+          "sponsor_bank_dispatch_timestamp": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sponsor Bank Dispatch Timestamp"
+          },
+          "sponsor_bank_dispatch_latest_error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sponsor Bank Dispatch Latest Error Code"
+          },
+          "sponsor_bank_dispatch_attempts": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sponsor Bank Dispatch Attempts"
+          },
+          "geo_resolution_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Geo Resolution Status"
+          },
+          "geo_resolution_timestamp": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Geo Resolution Timestamp"
+          },
+          "geo_resolution_latest_error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Geo Resolution Latest Error Code"
+          },
+          "geo_resolution_attempts": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Geo Resolution Attempts"
+          },
+          "warehouse_allocation_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Warehouse Allocation Status"
+          },
+          "warehouse_allocation_timestamp": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Warehouse Allocation Timestamp"
+          },
+          "warehouse_allocation_latest_error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Warehouse Allocation Latest Error Code"
+          },
+          "warehouse_allocation_attempts": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Warehouse Allocation Attempts"
+          },
+          "agency_allocation_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Agency Allocation Status"
+          },
+          "agency_allocation_timestamp": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Agency Allocation Timestamp"
+          },
+          "agency_allocation_latest_error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Agency Allocation Latest Error Code"
+          },
+          "agency_allocation_attempts": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Agency Allocation Attempts"
+          },
+          "disbursement_batch_control_geos": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/DisbursementBatchControlGeoPayload"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Batch Control Geos"
+          }
+        },
+        "type": "object",
+        "required": [
+          "disbursement_batch_control_id",
+          "disbursement_envelope_id",
+          "benefit_type",
+          "measurement_unit"
+        ],
+        "title": "DisbursementBatchControlPayload"
+      },
+      "DisbursementBatchControlRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/DisbursementBatchControlRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "DisbursementBatchControlRequest"
+      },
+      "DisbursementBatchControlRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "type": "string",
+            "title": "Request Payload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "DisbursementBatchControlRequestBody"
+      },
+      "DisbursementBatchControlResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "$ref": "#/components/schemas/DisbursementBatchControlResponseBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header",
+          "response_body"
+        ],
+        "title": "DisbursementBatchControlResponse"
+      },
+      "DisbursementBatchControlResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DisbursementBatchControlPayload"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "DisbursementBatchControlResponseBody"
+      },
+      "DisbursementCancellationStatus": {
+        "type": "string",
+        "enum": [
+          "NOT_CANCELLED",
+          "CANCELLED"
+        ],
+        "title": "DisbursementCancellationStatus"
+      },
+      "DisbursementEnvelopePayload": {
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id"
+          },
+          "benefit_program_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Benefit Program Id"
+          },
+          "benefit_program_mnemonic": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Benefit Program Mnemonic"
+          },
+          "benefit_program_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Benefit Program Description"
+          },
+          "target_registry": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Target Registry"
+          },
+          "benefit_code_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Benefit Code Id"
+          },
+          "benefit_code_mnemonic": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Benefit Code Mnemonic"
+          },
+          "benefit_code_description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Benefit Code Description"
+          },
+          "benefit_type": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BenefitType"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "disbursement_cycle_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Cycle Id"
+          },
+          "disbursement_frequency": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DisbursementFrequency"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cycle_code_mnemonic": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cycle Code Mnemonic"
+          },
+          "number_of_beneficiaries": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Number Of Beneficiaries"
+          },
+          "number_of_disbursements": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Number Of Disbursements"
+          },
+          "total_disbursement_quantity": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Disbursement Quantity"
+          },
+          "measurement_unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Measurement Unit"
+          },
+          "disbursement_schedule_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Schedule Date"
+          },
+          "receipt_time_stamp": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Receipt Time Stamp"
+          },
+          "cancellation_status": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CancellationStatus"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cancellation_timestamp": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cancellation Timestamp"
+          }
+        },
+        "type": "object",
+        "title": "DisbursementEnvelopePayload"
+      },
+      "DisbursementEnvelopeRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/DisbursementEnvelopeRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "DisbursementEnvelopeRequest"
+      },
+      "DisbursementEnvelopeRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "items": {
+              "$ref": "#/components/schemas/DisbursementEnvelopePayload"
+            },
+            "type": "array",
+            "title": "Request Payload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "DisbursementEnvelopeRequestBody"
+      },
+      "DisbursementEnvelopeResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "$ref": "#/components/schemas/DisbursementEnvelopeResponseBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header",
+          "response_body"
+        ],
+        "title": "DisbursementEnvelopeResponse"
+      },
+      "DisbursementEnvelopeResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/DisbursementEnvelopePayload"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Payload"
+          }
+        },
+        "type": "object",
+        "title": "DisbursementEnvelopeResponseBody"
+      },
+      "DisbursementEnvelopeStatusPayload": {
+        "properties": {
+          "disbursement_envelope_id": {
+            "type": "string",
+            "title": "Disbursement Envelope Id"
+          },
+          "benefit_code_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Benefit Code Id"
+          },
+          "benefit_code_mnemonic": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Benefit Code Mnemonic"
+          },
+          "benefit_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Benefit Type"
+          },
+          "measurement_unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Measurement Unit"
+          },
+          "number_of_beneficiaries_received": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Number Of Beneficiaries Received"
+          },
+          "number_of_beneficiaries_declared": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Number Of Beneficiaries Declared"
+          },
+          "number_of_disbursements_declared": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Number Of Disbursements Declared"
+          },
+          "number_of_disbursements_received": {
+            "type": "integer",
+            "title": "Number Of Disbursements Received"
+          },
+          "total_disbursement_quantity_declared": {
+            "type": "number",
+            "title": "Total Disbursement Quantity Declared"
+          },
+          "total_disbursement_quantity_received": {
+            "type": "integer",
+            "title": "Total Disbursement Quantity Received"
+          },
+          "funds_available_with_bank": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/FundsAvailableWithBankEnum"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "funds_available_latest_timestamp": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Funds Available Latest Timestamp"
+          },
+          "funds_available_latest_error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Funds Available Latest Error Code"
+          },
+          "funds_available_attempts": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Funds Available Attempts"
+          },
+          "funds_blocked_with_bank": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/FundsBlockedWithBankEnum"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "funds_blocked_latest_timestamp": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Funds Blocked Latest Timestamp"
+          },
+          "funds_blocked_latest_error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Funds Blocked Latest Error Code"
+          },
+          "funds_blocked_attempts": {
+            "type": "integer",
+            "title": "Funds Blocked Attempts"
+          },
+          "funds_blocked_reference_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Funds Blocked Reference Number"
+          },
+          "number_of_disbursements_shipped": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Number Of Disbursements Shipped"
+          },
+          "number_of_disbursements_reconciled": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Number Of Disbursements Reconciled"
+          },
+          "number_of_disbursements_reversed": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Number Of Disbursements Reversed"
+          },
+          "no_of_warehouses_allocated": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "No Of Warehouses Allocated"
+          },
+          "no_of_warehouses_notified": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "No Of Warehouses Notified"
+          },
+          "no_of_agencies_allocated": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "No Of Agencies Allocated"
+          },
+          "no_of_agencies_notified": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "No Of Agencies Notified"
+          },
+          "no_of_beneficiaries_notified": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "No Of Beneficiaries Notified"
+          },
+          "no_of_pods_received": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "No Of Pods Received"
+          },
+          "disbursement_batch_control_geos": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/DisbursementBatchControlGeoPayload"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Batch Control Geos"
+          }
+        },
+        "type": "object",
+        "required": [
+          "disbursement_envelope_id",
+          "number_of_disbursements_received",
+          "total_disbursement_quantity_received",
+          "funds_blocked_attempts"
+        ],
+        "title": "DisbursementEnvelopeStatusPayload"
+      },
+      "DisbursementEnvelopeStatusRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/DisbursementEnvelopeStatusRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "DisbursementEnvelopeStatusRequest"
+      },
+      "DisbursementEnvelopeStatusRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "type": "string",
+            "title": "Request Payload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "DisbursementEnvelopeStatusRequestBody"
+      },
+      "DisbursementEnvelopeStatusResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "$ref": "#/components/schemas/DisbursementEnvelopeStatusResponseBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header",
+          "response_body"
+        ],
+        "title": "DisbursementEnvelopeStatusResponse"
+      },
+      "DisbursementEnvelopeStatusResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DisbursementEnvelopeStatusPayload"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "DisbursementEnvelopeStatusResponseBody"
+      },
+      "DisbursementErrorReconPayload": {
+        "properties": {
+          "statement_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Statement Id"
+          },
+          "statement_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Statement Number"
+          },
+          "statement_sequence": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Statement Sequence"
+          },
+          "entry_sequence": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Entry Sequence"
+          },
+          "entry_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Entry Date"
+          },
+          "value_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value Date"
+          },
+          "error_reason": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PBridgeErrorCodes"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "disbursement_id": {
+            "type": "string",
+            "title": "Disbursement Id"
+          },
+          "bank_reference_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bank Reference Number"
+          }
+        },
+        "type": "object",
+        "required": [
+          "disbursement_id"
+        ],
+        "title": "DisbursementErrorReconPayload"
+      },
+      "DisbursementFrequency": {
+        "type": "string",
+        "enum": [
+          "Daily",
+          "Weekly",
+          "Fortnightly",
+          "Monthly",
+          "BiMonthly",
+          "Quarterly",
+          "SemiAnnually",
+          "Annually",
+          "OnDemand"
+        ],
+        "title": "DisbursementFrequency"
+      },
+      "DisbursementPayload": {
+        "properties": {
+          "disbursement_id": {
+            "type": "string",
+            "title": "Disbursement Id"
+          },
+          "disbursement_envelope_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Envelope Id"
+          },
+          "beneficiary_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Beneficiary Id"
+          },
+          "beneficiary_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Beneficiary Name"
+          },
+          "disbursement_quantity": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Quantity"
+          },
+          "compute_elements": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Compute Elements"
+          },
+          "narrative": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Narrative"
+          },
+          "receipt_time_stamp": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Receipt Time Stamp"
+          },
+          "cancellation_status": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DisbursementCancellationStatus"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cancellation_time_stamp": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cancellation Time Stamp"
+          },
+          "disbursement_cycle_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Cycle Id"
+          },
+          "disbursement_batch_control_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Batch Control Id"
+          },
+          "response_error_codes": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Error Codes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "disbursement_id"
+        ],
+        "title": "DisbursementPayload"
+      },
+      "DisbursementReconPayload": {
+        "properties": {
+          "bank_disbursement_batch_id": {
+            "type": "string",
+            "title": "Bank Disbursement Batch Id"
+          },
+          "disbursement_id": {
+            "type": "string",
+            "title": "Disbursement Id"
+          },
+          "disbursement_envelope_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Envelope Id"
+          },
+          "beneficiary_name_from_bank": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Beneficiary Name From Bank"
+          },
+          "remittance_reference_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Remittance Reference Number"
+          },
+          "remittance_statement_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Remittance Statement Id"
+          },
+          "remittance_statement_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Remittance Statement Number"
+          },
+          "remittance_statement_sequence": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Remittance Statement Sequence"
+          },
+          "remittance_entry_sequence": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Remittance Entry Sequence"
+          },
+          "remittance_entry_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Remittance Entry Date"
+          },
+          "remittance_value_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Remittance Value Date"
+          },
+          "reversal_found": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reversal Found"
+          },
+          "reversal_statement_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reversal Statement Id"
+          },
+          "reversal_statement_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reversal Statement Number"
+          },
+          "reversal_statement_sequence": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reversal Statement Sequence"
+          },
+          "reversal_entry_sequence": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reversal Entry Sequence"
+          },
+          "reversal_entry_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reversal Entry Date"
+          },
+          "reversal_value_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reversal Value Date"
+          },
+          "reversal_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reversal Reason"
+          }
+        },
+        "type": "object",
+        "required": [
+          "bank_disbursement_batch_id",
+          "disbursement_id"
+        ],
+        "title": "DisbursementReconPayload"
+      },
+      "DisbursementReconRecords": {
+        "properties": {
+          "disbursement_recon_payloads": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/DisbursementReconPayload"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Recon Payloads"
+          },
+          "disbursement_error_recon_payloads": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/DisbursementErrorReconPayload"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Error Recon Payloads"
+          }
+        },
+        "type": "object",
+        "title": "DisbursementReconRecords"
+      },
+      "DisbursementRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/DisbursementRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "DisbursementRequest"
+      },
+      "DisbursementRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "items": {
+              "$ref": "#/components/schemas/DisbursementPayload"
+            },
+            "type": "array",
+            "title": "Request Payload"
+          },
+          "disbursement_batch_control_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Batch Control Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "DisbursementRequestBody"
+      },
+      "DisbursementResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "$ref": "#/components/schemas/DisbursementResponseBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header",
+          "response_body"
+        ],
+        "title": "DisbursementResponse"
+      },
+      "DisbursementResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/DisbursementPayload"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Payload"
+          },
+          "disbursement_batch_control_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Disbursement Batch Control Id"
+          }
+        },
+        "type": "object",
+        "title": "DisbursementResponseBody"
+      },
+      "DisbursementStatusPayload": {
+        "properties": {
+          "disbursement_id": {
+            "type": "string",
+            "title": "Disbursement Id"
+          },
+          "disbursement_recon_records": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DisbursementReconRecords"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "disbursement_id"
+        ],
+        "title": "DisbursementStatusPayload"
+      },
+      "DisbursementStatusRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/DisbursementStatusRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "DisbursementStatusRequest"
+      },
+      "DisbursementStatusRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Request Payload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "DisbursementStatusRequestBody"
+      },
+      "DisbursementStatusResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "$ref": "#/components/schemas/DisbursementStatusResponseBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header",
+          "response_body"
+        ],
+        "title": "DisbursementStatusResponse"
+      },
+      "DisbursementStatusResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/DisbursementStatusPayload"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Payload"
+          }
+        },
+        "type": "object",
+        "title": "DisbursementStatusResponseBody"
+      },
+      "ErrorListResponse": {
+        "properties": {
+          "errors": {
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "type": "array",
+            "title": "Errors"
+          }
+        },
+        "type": "object",
+        "required": [
+          "errors"
+        ],
+        "title": "ErrorListResponse"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code",
+            "default": ""
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "title": "ErrorResponse"
+      },
+      "FundsAvailableWithBankEnum": {
+        "type": "string",
+        "enum": [
+          "NOT_APPLICABLE",
+          "PENDING_CHECK",
+          "CHECK_IN_PROGRESS",
+          "FUNDS_AVAILABLE",
+          "FUNDS_NOT_AVAILABLE",
+          "ERROR"
+        ],
+        "title": "FundsAvailableWithBankEnum"
+      },
+      "FundsBlockedWithBankEnum": {
+        "type": "string",
+        "enum": [
+          "NOT_APPLICABLE",
+          "PENDING_CHECK",
+          "CHECK_IN_PROGRESS",
+          "FUNDS_BLOCK_SUCCESS",
+          "FUNDS_BLOCK_FAILURE",
+          "ERROR"
+        ],
+        "title": "FundsBlockedWithBankEnum"
+      },
+      "G2PBridgeErrorCodes": {
+        "type": "string",
+        "enum": [
+          "REQUEST_VALIDATION_ERROR",
+          "INVALID_PROGRAM_ID",
+          "INVALID_PROGRAM_MNEMONIC",
+          "INVALID_DISBURSEMENT_FREQUENCY",
+          "INVALID_CYCLE_CODE_MNEMONIC",
+          "INVALID_NO_OF_BENEFICIARIES",
+          "INVALID_NO_OF_DISBURSEMENTS",
+          "INVALID_TOTAL_DISBURSEMENT_QUANTITY",
+          "INVALID_DISBURSEMENT_CURRENCY_CODE",
+          "INVALID_DISBURSEMENT_SCHEDULE_DATE",
+          "DISBURSEMENT_ENVELOPE_NOT_FOUND",
+          "DISBURSEMENT_ENVELOPE_ALREADY_CANCELED",
+          "INVALID_DISBURSEMENT_ENVELOPE_ID",
+          "INVALID_DISBURSEMENT_QUANTITY",
+          "INVALID_BENEFICIARY_ID",
+          "INVALID_BENEFICIARY_NAME",
+          "INVALID_NARRATIVE",
+          "INVALID_RECEIPT_TIME_STAMP",
+          "INVALID_TARGET_REGISTRY",
+          "INVALID_BENEFIT_CODE_ID",
+          "INVALID_BENEFIT_CODE_MNEMONIC",
+          "DISBURSEMENT_ENVELOPE_DATE_PASSED",
+          "INVALID_DISBURSEMENT_ID",
+          "INVALID_RECONCILIATION_ID",
+          "INVALID_DISBURSEMENT_PAYLOAD",
+          "ENVELOPE_ALREADY_CANCELLED",
+          "NO_OF_DISBUESEMENTS_EXCEEDS_DECLARED",
+          "NO_OF_DISBURSEMENTS_LESS_THAN_ZERO",
+          "TOTAL_DISBURSEMENT_QUANTITY_EXCEEDS_DECLARED",
+          "TOTAL_DISBURSEMENT_QUANTITY_LESS_THAN_ZERO",
+          "MULTIPLE_ENVELOPES_FOUND",
+          "DISBURSEMENT_ENVELOPE_SCHEDULE_DATE_REACHED",
+          "DISBURSEMENT_ALREADY_CANCELED",
+          "STATEMENT_UPLOAD_ERROR",
+          "DUPLICATE_DISBURSEMENT",
+          "INVALID_REVERSAL",
+          "INVALID_ACCOUNT_NUMBER",
+          "DATABASE_CONNECTION_ERROR",
+          "DATABASE_QUERY_ERROR",
+          "DATABASE_TRANSACTION_ERROR"
+        ],
+        "title": "G2PBridgeErrorCodes"
+      },
+      "G2PPaginationRequest": {
+        "properties": {
+          "current_page": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Current Page"
+          },
+          "page_size": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Page Size"
+          },
+          "sort_by": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort By"
+          },
+          "filter_by": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Filter By"
+          },
+          "search_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Search Text"
+          }
+        },
+        "type": "object",
+        "required": [
+          "current_page",
+          "page_size"
+        ],
+        "title": "G2PPaginationRequest"
+      },
+      "G2PPaginationResponse": {
+        "properties": {
+          "number_of_items": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Number Of Items"
+          },
+          "number_of_pages": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Number Of Pages"
+          }
+        },
+        "type": "object",
+        "required": [
+          "number_of_items",
+          "number_of_pages"
+        ],
+        "title": "G2PPaginationResponse"
+      },
+      "G2PRequestHeader": {
+        "properties": {
+          "sender_app_mnemonic": {
+            "type": "string",
+            "title": "Sender App Mnemonic"
+          },
+          "sender_app_url": {
+            "type": "string",
+            "title": "Sender App Url"
+          },
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "request_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Request Timestamp"
+          },
+          "instance_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Instance Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "sender_app_mnemonic",
+          "sender_app_url",
+          "request_id",
+          "request_timestamp"
+        ],
+        "title": "G2PRequestHeader"
+      },
+      "G2PResponseHeader": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "response_status": {
+            "$ref": "#/components/schemas/G2PResponseStatus"
+          },
+          "response_error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Error Code"
+          },
+          "response_error_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Error Message"
+          },
+          "response_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Response Timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_id",
+          "response_status",
+          "response_timestamp"
+        ],
+        "title": "G2PResponseHeader"
+      },
+      "G2PResponseStatus": {
+        "type": "string",
+        "enum": [
+          "ERROR",
+          "SUCCESS"
+        ],
+        "title": "G2PResponseStatus"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    },
+    "securitySchemes": {
+      "JWTSignatureValidator": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "/api/g2p-bridge"
+    }
+  ]
+}

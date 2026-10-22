@@ -1,0 +1,2848 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OpenG2P SPAR Bene Portal API",
+    "description": "\n        FastAPI Service for OpenG2P SPAR Bene Portal API\n        ***********************************\n        Further details goes here\n        ***********************************\n        ",
+    "contact": {
+      "url": "https://www.openg2p.org/",
+      "email": "info@openg2p.org"
+    },
+    "license": {
+      "name": "Mozilla Public License 2.0",
+      "url": "https://www.mozilla.org/en-US/MPL/2.0/"
+    },
+    "version": "2.1.0"
+  },
+  "paths": {
+    "/mapper/link": {
+      "post": {
+        "tags": [
+          "SPAR Bene Portal"
+        ],
+        "summary": "Link",
+        "description": "Link ID to Financial Address",
+        "operationId": "link_mapper_link_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LinkRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LinkResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JwtBearerAuth": []
+          }
+        ]
+      }
+    },
+    "/mapper/resolve": {
+      "post": {
+        "tags": [
+          "SPAR Bene Portal"
+        ],
+        "summary": "Resolve",
+        "description": "Resolve ID to Financial Address",
+        "operationId": "resolve_mapper_resolve_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResolveRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResolveResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JwtBearerAuth": []
+          }
+        ]
+      }
+    },
+    "/mapper/unlink": {
+      "post": {
+        "tags": [
+          "SPAR Bene Portal"
+        ],
+        "summary": "Unlink",
+        "description": "Unlink ID from Financial Address",
+        "operationId": "unlink_mapper_unlink_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UnlinkRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnlinkResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JwtBearerAuth": []
+          }
+        ]
+      }
+    },
+    "/mapper/update": {
+      "post": {
+        "tags": [
+          "SPAR Bene Portal"
+        ],
+        "summary": "Update",
+        "description": "Update ID to Financial Address mapping",
+        "operationId": "update_mapper_update_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "JwtBearerAuth": []
+          }
+        ]
+      }
+    },
+    "/dfsp/fetch-banks": {
+      "post": {
+        "tags": [
+          "Bank, Branch & Wallet"
+        ],
+        "summary": "Fetch all banks",
+        "description": "Returns all available banks",
+        "operationId": "fetch_banks_dfsp_fetch_banks_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BanksRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BanksResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dfsp/fetch-branches": {
+      "post": {
+        "tags": [
+          "Bank, Branch & Wallet"
+        ],
+        "summary": "Fetch all branches",
+        "description": "Returns all available branches, optionally filtered by bank_id",
+        "operationId": "fetch_branches_dfsp_fetch_branches_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BranchesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BranchesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dfsp/fetch-wallet-service-providers": {
+      "post": {
+        "tags": [
+          "Bank, Branch & Wallet"
+        ],
+        "summary": "Fetch all wallet service providers",
+        "description": "Returns all available wallet service providers",
+        "operationId": "fetch_wallet_service_providers_dfsp_fetch_wallet_service_providers_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WalletServiceProvidersRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WalletServiceProvidersResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ping": {
+      "get": {
+        "tags": [
+          "ping"
+        ],
+        "summary": "Get Ping",
+        "description": "Returns \"pong\" always, if the service is healthy.\nThis can also used for service health checks.",
+        "operationId": "get_ping_ping_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AccountProviderInfo": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "subcode": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Subcode"
+          },
+          "additional_info": {
+            "anyOf": [
+              {
+                "items": {},
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Additional Info"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "code",
+          "subcode"
+        ],
+        "title": "AccountProviderInfo"
+      },
+      "BankAccountFa": {
+        "properties": {
+          "strategy_id": {
+            "type": "integer",
+            "title": "Strategy Id"
+          },
+          "fa_type": {
+            "$ref": "#/components/schemas/ProviderTypeEnum"
+          },
+          "bank_name": {
+            "type": "string",
+            "title": "Bank Name"
+          },
+          "bank_code": {
+            "type": "string",
+            "title": "Bank Code"
+          },
+          "branch_name": {
+            "type": "string",
+            "title": "Branch Name"
+          },
+          "branch_code": {
+            "type": "string",
+            "title": "Branch Code"
+          },
+          "account_number": {
+            "type": "string",
+            "title": "Account Number"
+          }
+        },
+        "type": "object",
+        "required": [
+          "strategy_id",
+          "fa_type",
+          "bank_name",
+          "bank_code",
+          "branch_name",
+          "branch_code",
+          "account_number"
+        ],
+        "title": "BankAccountFa",
+        "description": "Schema for Bank Account FA.\n\nUsed for bank account financial addresses."
+      },
+      "BankSchema": {
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id"
+          },
+          "bank_mnemonic": {
+            "type": "string",
+            "title": "Bank Mnemonic"
+          },
+          "bank_name": {
+            "type": "string",
+            "title": "Bank Name"
+          },
+          "bank_code": {
+            "type": "string",
+            "title": "Bank Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "bank_mnemonic",
+          "bank_name",
+          "bank_code"
+        ],
+        "title": "BankSchema",
+        "description": "Pydantic schema for Bank model"
+      },
+      "BanksRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/BanksRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "BanksRequest",
+        "description": "Request for banks"
+      },
+      "BanksRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/BanksRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "BanksRequestBody",
+        "description": "Request body for banks"
+      },
+      "BanksRequestPayload": {
+        "properties": {},
+        "type": "object",
+        "title": "BanksRequestPayload",
+        "description": "Payload for banks request"
+      },
+      "BanksResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "$ref": "#/components/schemas/BanksResponseBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header",
+          "response_body"
+        ],
+        "title": "BanksResponse",
+        "description": "Response for banks"
+      },
+      "BanksResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "$ref": "#/components/schemas/BanksResponsePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_payload"
+        ],
+        "title": "BanksResponseBody",
+        "description": "Response body for banks"
+      },
+      "BanksResponsePayload": {
+        "properties": {
+          "banks": {
+            "items": {
+              "$ref": "#/components/schemas/BankSchema"
+            },
+            "type": "array",
+            "title": "Banks"
+          }
+        },
+        "type": "object",
+        "required": [
+          "banks"
+        ],
+        "title": "BanksResponsePayload",
+        "description": "Response payload for banks"
+      },
+      "BranchSchema": {
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id"
+          },
+          "branch_mnemonic": {
+            "type": "string",
+            "title": "Branch Mnemonic"
+          },
+          "branch_name": {
+            "type": "string",
+            "title": "Branch Name"
+          },
+          "branch_code": {
+            "type": "string",
+            "title": "Branch Code"
+          },
+          "bank_id": {
+            "type": "integer",
+            "title": "Bank Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "branch_mnemonic",
+          "branch_name",
+          "branch_code",
+          "bank_id"
+        ],
+        "title": "BranchSchema",
+        "description": "Pydantic schema for Branch model"
+      },
+      "BranchesRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/BranchesRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "BranchesRequest",
+        "description": "Request for branches"
+      },
+      "BranchesRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/BranchesRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "BranchesRequestBody",
+        "description": "Request body for branches"
+      },
+      "BranchesRequestPayload": {
+        "properties": {
+          "bank_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bank Id"
+          }
+        },
+        "type": "object",
+        "title": "BranchesRequestPayload",
+        "description": "Payload for branches request"
+      },
+      "BranchesResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "$ref": "#/components/schemas/BranchesResponseBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header",
+          "response_body"
+        ],
+        "title": "BranchesResponse",
+        "description": "Response for branches"
+      },
+      "BranchesResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "$ref": "#/components/schemas/BranchesResponsePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_payload"
+        ],
+        "title": "BranchesResponseBody",
+        "description": "Response body for branches"
+      },
+      "BranchesResponsePayload": {
+        "properties": {
+          "branches": {
+            "items": {
+              "$ref": "#/components/schemas/BranchSchema"
+            },
+            "type": "array",
+            "title": "Branches"
+          }
+        },
+        "type": "object",
+        "required": [
+          "branches"
+        ],
+        "title": "BranchesResponsePayload",
+        "description": "Response payload for branches"
+      },
+      "EmailWalletFa": {
+        "properties": {
+          "strategy_id": {
+            "type": "integer",
+            "title": "Strategy Id"
+          },
+          "fa_type": {
+            "$ref": "#/components/schemas/ProviderTypeEnum"
+          },
+          "wallet_provider_name": {
+            "type": "string",
+            "title": "Wallet Provider Name"
+          },
+          "wallet_provider_code": {
+            "type": "string",
+            "title": "Wallet Provider Code"
+          },
+          "email_address": {
+            "type": "string",
+            "title": "Email Address"
+          }
+        },
+        "type": "object",
+        "required": [
+          "strategy_id",
+          "fa_type",
+          "wallet_provider_name",
+          "wallet_provider_code",
+          "email_address"
+        ],
+        "title": "EmailWalletFa",
+        "description": "Schema for Email Wallet FA.\n\nUsed for email wallet financial addresses."
+      },
+      "ErrorListResponse": {
+        "properties": {
+          "errors": {
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "type": "array",
+            "title": "Errors"
+          }
+        },
+        "type": "object",
+        "required": [
+          "errors"
+        ],
+        "title": "ErrorListResponse"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code",
+            "default": ""
+          },
+          "message": {
+            "type": "string",
+            "title": "Message",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "title": "ErrorResponse"
+      },
+      "G2PPaginationRequest": {
+        "properties": {
+          "current_page": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Current Page"
+          },
+          "page_size": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Page Size"
+          },
+          "sort_by": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort By"
+          },
+          "filter_by": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Filter By"
+          },
+          "search_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Search Text"
+          }
+        },
+        "type": "object",
+        "required": [
+          "current_page",
+          "page_size"
+        ],
+        "title": "G2PPaginationRequest"
+      },
+      "G2PPaginationResponse": {
+        "properties": {
+          "number_of_items": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Number Of Items"
+          },
+          "number_of_pages": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Number Of Pages"
+          }
+        },
+        "type": "object",
+        "required": [
+          "number_of_items",
+          "number_of_pages"
+        ],
+        "title": "G2PPaginationResponse"
+      },
+      "G2PRequestHeader": {
+        "properties": {
+          "sender_app_mnemonic": {
+            "type": "string",
+            "title": "Sender App Mnemonic"
+          },
+          "sender_app_url": {
+            "type": "string",
+            "title": "Sender App Url"
+          },
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "request_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Request Timestamp"
+          },
+          "instance_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Instance Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "sender_app_mnemonic",
+          "sender_app_url",
+          "request_id",
+          "request_timestamp"
+        ],
+        "title": "G2PRequestHeader"
+      },
+      "G2PResponseHeader": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "response_status": {
+            "$ref": "#/components/schemas/G2PResponseStatus"
+          },
+          "response_error_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Error Code"
+          },
+          "response_error_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Error Message"
+          },
+          "response_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Response Timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_id",
+          "response_status",
+          "response_timestamp"
+        ],
+        "title": "G2PResponseHeader"
+      },
+      "G2PResponseStatus": {
+        "type": "string",
+        "enum": [
+          "ERROR",
+          "SUCCESS"
+        ],
+        "title": "G2PResponseStatus"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "LinkRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/LinkRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "LinkRequest"
+      },
+      "LinkRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/LinkRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "LinkRequestBody"
+      },
+      "LinkRequestPayload": {
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "title": "Transaction Id"
+          },
+          "link_request": {
+            "items": {
+              "$ref": "#/components/schemas/SingleLinkRequest"
+            },
+            "type": "array",
+            "title": "Link Request"
+          }
+        },
+        "type": "object",
+        "required": [
+          "transaction_id",
+          "link_request"
+        ],
+        "title": "LinkRequestPayload"
+      },
+      "LinkResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "$ref": "#/components/schemas/LinkResponseBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header",
+          "response_body"
+        ],
+        "title": "LinkResponse"
+      },
+      "LinkResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "$ref": "#/components/schemas/LinkResponsePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_payload"
+        ],
+        "title": "LinkResponseBody"
+      },
+      "LinkResponsePayload": {
+        "properties": {
+          "transaction_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Transaction Id"
+          },
+          "correlation_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Correlation Id"
+          },
+          "link_response": {
+            "items": {
+              "$ref": "#/components/schemas/SingleLinkResponse"
+            },
+            "type": "array",
+            "title": "Link Response"
+          }
+        },
+        "type": "object",
+        "required": [
+          "link_response"
+        ],
+        "title": "LinkResponsePayload"
+      },
+      "LinkStatusReasonCode": {
+        "type": "string",
+        "enum": [
+          "rjct.reference_id.invalid",
+          "rjct.reference_id.duplicate",
+          "rjct.timestamp.invalid",
+          "rjct.id.invalid",
+          "rjct.fa.invalid",
+          "rjct.name.invalid",
+          "rjct.mobile_number.invalid",
+          "rjct.unknown.retry",
+          "rjct.other.error"
+        ],
+        "title": "LinkStatusReasonCode"
+      },
+      "MobileWalletFa": {
+        "properties": {
+          "strategy_id": {
+            "type": "integer",
+            "title": "Strategy Id"
+          },
+          "fa_type": {
+            "$ref": "#/components/schemas/ProviderTypeEnum"
+          },
+          "wallet_provider_name": {
+            "type": "string",
+            "title": "Wallet Provider Name"
+          },
+          "wallet_provider_code": {
+            "type": "string",
+            "title": "Wallet Provider Code"
+          },
+          "mobile_number": {
+            "type": "string",
+            "title": "Mobile Number"
+          }
+        },
+        "type": "object",
+        "required": [
+          "strategy_id",
+          "fa_type",
+          "wallet_provider_name",
+          "wallet_provider_code",
+          "mobile_number"
+        ],
+        "title": "MobileWalletFa",
+        "description": "Schema for Mobile Wallet FA.\n\nUsed for mobile wallet financial addresses."
+      },
+      "ProviderTypeEnum": {
+        "type": "string",
+        "enum": [
+          "BANK",
+          "EMAIL_WALLET",
+          "MOBILE_WALLET"
+        ],
+        "title": "ProviderTypeEnum",
+        "description": "Enum for FA provider types"
+      },
+      "ResolveRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/ResolveRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "ResolveRequest"
+      },
+      "ResolveRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/ResolveRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "ResolveRequestBody"
+      },
+      "ResolveRequestPayload": {
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "title": "Transaction Id"
+          },
+          "resolve_request": {
+            "items": {
+              "$ref": "#/components/schemas/SingleResolveRequest"
+            },
+            "type": "array",
+            "title": "Resolve Request"
+          }
+        },
+        "type": "object",
+        "required": [
+          "transaction_id",
+          "resolve_request"
+        ],
+        "title": "ResolveRequestPayload"
+      },
+      "ResolveResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "$ref": "#/components/schemas/ResolveResponseBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header",
+          "response_body"
+        ],
+        "title": "ResolveResponse"
+      },
+      "ResolveResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "$ref": "#/components/schemas/ResolveResponsePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_payload"
+        ],
+        "title": "ResolveResponseBody"
+      },
+      "ResolveResponsePayload": {
+        "properties": {
+          "transaction_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Transaction Id"
+          },
+          "correlation_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Correlation Id",
+            "default": ""
+          },
+          "resolve_response": {
+            "items": {
+              "$ref": "#/components/schemas/SingleResolveResponse"
+            },
+            "type": "array",
+            "title": "Resolve Response"
+          }
+        },
+        "type": "object",
+        "required": [
+          "resolve_response"
+        ],
+        "title": "ResolveResponsePayload"
+      },
+      "ResolveScope": {
+        "type": "string",
+        "enum": [
+          "yes_no",
+          "details"
+        ],
+        "title": "ResolveScope"
+      },
+      "ResolveStatusReasonCode": {
+        "type": "string",
+        "enum": [
+          "rjct.reference_id.invalid",
+          "rjct.reference_id.duplicate",
+          "rjct.timestamp.invalid",
+          "rjct.id.invalid",
+          "rjct.fa.invalid",
+          "rjct.resolve_type.not_supported",
+          "succ.fa.active",
+          "succ.fa.inactive",
+          "succ.fa.not_found",
+          "succ.fa.not_linked_to_id",
+          "succ.id.active",
+          "succ.id.inactive",
+          "succ.id.not_found"
+        ],
+        "title": "ResolveStatusReasonCode"
+      },
+      "SingleLinkRequest": {
+        "properties": {
+          "reference_id": {
+            "type": "string",
+            "title": "Reference Id"
+          },
+          "timestamp": {
+            "type": "string",
+            "title": "Timestamp"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id"
+          },
+          "fa": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BankAccountFa"
+              },
+              {
+                "$ref": "#/components/schemas/MobileWalletFa"
+              },
+              {
+                "$ref": "#/components/schemas/EmailWalletFa"
+              }
+            ],
+            "title": "Fa"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "phone_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phone Number"
+          },
+          "additional_info": {
+            "anyOf": [
+              {
+                "items": {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Additional Info"
+          },
+          "locale": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locale",
+            "default": "en"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reference_id",
+          "timestamp",
+          "fa"
+        ],
+        "title": "SingleLinkRequest"
+      },
+      "SingleLinkResponse": {
+        "properties": {
+          "reference_id": {
+            "type": "string",
+            "title": "Reference Id"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Timestamp"
+          },
+          "fa": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fa"
+          },
+          "status": {
+            "$ref": "#/components/schemas/StatusEnum"
+          },
+          "status_reason_code": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LinkStatusReasonCode"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status_reason_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Reason Message"
+          },
+          "additional_info": {
+            "anyOf": [
+              {
+                "items": {},
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Additional Info"
+          },
+          "locale": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locale",
+            "default": "en"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reference_id",
+          "timestamp",
+          "status"
+        ],
+        "title": "SingleLinkResponse"
+      },
+      "SingleResolveRequest": {
+        "properties": {
+          "reference_id": {
+            "type": "string",
+            "title": "Reference Id"
+          },
+          "timestamp": {
+            "type": "string",
+            "title": "Timestamp"
+          },
+          "fa": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fa",
+            "default": ""
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id",
+            "default": ""
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "scope": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ResolveScope"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": "yes_no"
+          },
+          "additional_info": {
+            "anyOf": [
+              {
+                "items": {},
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Additional Info"
+          },
+          "locale": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locale",
+            "default": "en"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reference_id",
+          "timestamp"
+        ],
+        "title": "SingleResolveRequest"
+      },
+      "SingleResolveResponse": {
+        "properties": {
+          "reference_id": {
+            "type": "string",
+            "title": "Reference Id"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Timestamp"
+          },
+          "fa": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fa"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id"
+          },
+          "account_provider_info": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AccountProviderInfo"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status": {
+            "$ref": "#/components/schemas/StatusEnum"
+          },
+          "status_reason_code": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ResolveStatusReasonCode"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status_reason_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Reason Message",
+            "default": ""
+          },
+          "additional_info": {
+            "anyOf": [
+              {
+                "items": {},
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Additional Info"
+          },
+          "locale": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locale",
+            "default": "en"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reference_id",
+          "timestamp",
+          "status"
+        ],
+        "title": "SingleResolveResponse"
+      },
+      "SingleUnlinkRequest": {
+        "properties": {
+          "reference_id": {
+            "type": "string",
+            "title": "Reference Id"
+          },
+          "timestamp": {
+            "type": "string",
+            "title": "Timestamp"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id"
+          },
+          "fa": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fa"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "phone_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phone Number"
+          },
+          "additional_info": {
+            "anyOf": [
+              {
+                "items": {},
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Additional Info"
+          },
+          "locale": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locale",
+            "default": "en"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reference_id",
+          "timestamp"
+        ],
+        "title": "SingleUnlinkRequest"
+      },
+      "SingleUnlinkResponse": {
+        "properties": {
+          "reference_id": {
+            "type": "string",
+            "title": "Reference Id"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Timestamp"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id",
+            "default": ""
+          },
+          "status": {
+            "$ref": "#/components/schemas/StatusEnum"
+          },
+          "status_reason_code": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/UnlinkStatusReasonCode"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status_reason_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Reason Message",
+            "default": ""
+          },
+          "additional_info": {
+            "anyOf": [
+              {
+                "items": {},
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Additional Info"
+          },
+          "locale": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locale",
+            "default": "en"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reference_id",
+          "timestamp",
+          "status"
+        ],
+        "title": "SingleUnlinkResponse"
+      },
+      "SingleUpdateRequest": {
+        "properties": {
+          "reference_id": {
+            "type": "string",
+            "title": "Reference Id"
+          },
+          "timestamp": {
+            "type": "string",
+            "title": "Timestamp"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id"
+          },
+          "fa": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BankAccountFa"
+              },
+              {
+                "$ref": "#/components/schemas/MobileWalletFa"
+              },
+              {
+                "$ref": "#/components/schemas/EmailWalletFa"
+              }
+            ],
+            "title": "Fa"
+          },
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name"
+          },
+          "phone_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phone Number"
+          },
+          "additional_info": {
+            "anyOf": [
+              {
+                "items": {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Additional Info"
+          },
+          "locale": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locale",
+            "default": "en"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reference_id",
+          "timestamp",
+          "fa"
+        ],
+        "title": "SingleUpdateRequest"
+      },
+      "SingleUpdateResponse": {
+        "properties": {
+          "reference_id": {
+            "type": "string",
+            "title": "Reference Id"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Timestamp"
+          },
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id",
+            "default": ""
+          },
+          "status": {
+            "$ref": "#/components/schemas/StatusEnum"
+          },
+          "status_reason_code": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/UpdateStatusReasonCode"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status_reason_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Reason Message",
+            "default": ""
+          },
+          "additional_info": {
+            "anyOf": [
+              {
+                "items": {},
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Additional Info"
+          },
+          "locale": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locale",
+            "default": "en"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reference_id",
+          "timestamp",
+          "status"
+        ],
+        "title": "SingleUpdateResponse"
+      },
+      "StatusEnum": {
+        "type": "string",
+        "enum": [
+          "succ",
+          "rjct"
+        ],
+        "title": "StatusEnum"
+      },
+      "UnlinkRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/UnlinkRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "UnlinkRequest"
+      },
+      "UnlinkRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/UnlinkRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "UnlinkRequestBody"
+      },
+      "UnlinkRequestPayload": {
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "title": "Transaction Id"
+          },
+          "unlink_request": {
+            "items": {
+              "$ref": "#/components/schemas/SingleUnlinkRequest"
+            },
+            "type": "array",
+            "title": "Unlink Request"
+          }
+        },
+        "type": "object",
+        "required": [
+          "transaction_id",
+          "unlink_request"
+        ],
+        "title": "UnlinkRequestPayload"
+      },
+      "UnlinkResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "$ref": "#/components/schemas/UnlinkResponseBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header",
+          "response_body"
+        ],
+        "title": "UnlinkResponse"
+      },
+      "UnlinkResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "$ref": "#/components/schemas/UnlinkResponsePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_payload"
+        ],
+        "title": "UnlinkResponseBody"
+      },
+      "UnlinkResponsePayload": {
+        "properties": {
+          "transaction_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Transaction Id"
+          },
+          "correlation_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Correlation Id",
+            "default": ""
+          },
+          "unlink_response": {
+            "items": {
+              "$ref": "#/components/schemas/SingleUnlinkResponse"
+            },
+            "type": "array",
+            "title": "Unlink Response"
+          }
+        },
+        "type": "object",
+        "required": [
+          "unlink_response"
+        ],
+        "title": "UnlinkResponsePayload"
+      },
+      "UnlinkStatusReasonCode": {
+        "type": "string",
+        "enum": [
+          "rjct.reference_id.invalid",
+          "rjct.id.invalid",
+          "rjct.fa.invalid",
+          "rjct.reference_id.duplicate",
+          "rjct.timestamp.invalid",
+          "rjct.beneficiary_name.invalid"
+        ],
+        "title": "UnlinkStatusReasonCode"
+      },
+      "UpdateRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/UpdateRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "UpdateRequest"
+      },
+      "UpdateRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/UpdateRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "UpdateRequestBody"
+      },
+      "UpdateRequestPayload": {
+        "properties": {
+          "transaction_id": {
+            "type": "string",
+            "title": "Transaction Id"
+          },
+          "update_request": {
+            "items": {
+              "$ref": "#/components/schemas/SingleUpdateRequest"
+            },
+            "type": "array",
+            "title": "Update Request"
+          }
+        },
+        "type": "object",
+        "required": [
+          "transaction_id",
+          "update_request"
+        ],
+        "title": "UpdateRequestPayload"
+      },
+      "UpdateResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "$ref": "#/components/schemas/UpdateResponseBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header",
+          "response_body"
+        ],
+        "title": "UpdateResponse"
+      },
+      "UpdateResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "$ref": "#/components/schemas/UpdateResponsePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_payload"
+        ],
+        "title": "UpdateResponseBody"
+      },
+      "UpdateResponsePayload": {
+        "properties": {
+          "transaction_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Transaction Id"
+          },
+          "correlation_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Correlation Id",
+            "default": ""
+          },
+          "update_response": {
+            "items": {
+              "$ref": "#/components/schemas/SingleUpdateResponse"
+            },
+            "type": "array",
+            "title": "Update Response"
+          }
+        },
+        "type": "object",
+        "required": [
+          "update_response"
+        ],
+        "title": "UpdateResponsePayload"
+      },
+      "UpdateStatusReasonCode": {
+        "type": "string",
+        "enum": [
+          "rjct.reference_id.invalid",
+          "rjct.reference_id.duplicate",
+          "rjct.timestamp.invalid",
+          "rjct.beneficiary_name.invalid",
+          "rjct.id.invalid",
+          "rjct.fa.invalid"
+        ],
+        "title": "UpdateStatusReasonCode"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "WalletServiceProviderSchema": {
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Id"
+          },
+          "sp_mnemonic": {
+            "type": "string",
+            "title": "Sp Mnemonic"
+          },
+          "sp_name": {
+            "type": "string",
+            "title": "Sp Name"
+          },
+          "sp_code": {
+            "type": "string",
+            "title": "Sp Code"
+          },
+          "wallet_type": {
+            "type": "string",
+            "title": "Wallet Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "sp_mnemonic",
+          "sp_name",
+          "sp_code",
+          "wallet_type"
+        ],
+        "title": "WalletServiceProviderSchema",
+        "description": "Pydantic schema for WalletServiceProvider model"
+      },
+      "WalletServiceProvidersRequest": {
+        "properties": {
+          "request_header": {
+            "$ref": "#/components/schemas/G2PRequestHeader"
+          },
+          "request_body": {
+            "$ref": "#/components/schemas/WalletServiceProvidersRequestBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_header",
+          "request_body"
+        ],
+        "title": "WalletServiceProvidersRequest",
+        "description": "Request for wallet service providers"
+      },
+      "WalletServiceProvidersRequestBody": {
+        "properties": {
+          "pagination_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "request_payload": {
+            "$ref": "#/components/schemas/WalletServiceProvidersRequestPayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_payload"
+        ],
+        "title": "WalletServiceProvidersRequestBody",
+        "description": "Request body for wallet service providers"
+      },
+      "WalletServiceProvidersRequestPayload": {
+        "properties": {},
+        "type": "object",
+        "title": "WalletServiceProvidersRequestPayload",
+        "description": "Payload for wallet service providers request"
+      },
+      "WalletServiceProvidersResponse": {
+        "properties": {
+          "response_header": {
+            "$ref": "#/components/schemas/G2PResponseHeader"
+          },
+          "response_body": {
+            "$ref": "#/components/schemas/WalletServiceProvidersResponseBody"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_header",
+          "response_body"
+        ],
+        "title": "WalletServiceProvidersResponse",
+        "description": "Response for wallet service providers"
+      },
+      "WalletServiceProvidersResponseBody": {
+        "properties": {
+          "pagination_response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/G2PPaginationResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "response_payload": {
+            "$ref": "#/components/schemas/WalletServiceProvidersResponsePayload"
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_payload"
+        ],
+        "title": "WalletServiceProvidersResponseBody",
+        "description": "Response body for wallet service providers"
+      },
+      "WalletServiceProvidersResponsePayload": {
+        "properties": {
+          "wallet_service_providers": {
+            "items": {
+              "$ref": "#/components/schemas/WalletServiceProviderSchema"
+            },
+            "type": "array",
+            "title": "Wallet Service Providers"
+          }
+        },
+        "type": "object",
+        "required": [
+          "wallet_service_providers"
+        ],
+        "title": "WalletServiceProvidersResponsePayload",
+        "description": "Response payload for wallet service providers"
+      }
+    },
+    "securitySchemes": {
+      "JwtBearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

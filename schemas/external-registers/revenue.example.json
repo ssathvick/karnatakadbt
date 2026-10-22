@@ -1,0 +1,26 @@
+{
+  "certificates": [
+    {
+      "certificate_id": "SIM-CERT-income-SIM-FAM-a41c89e27965",
+      "household_ref": "KA-DEMO-HH-001",
+      "person_id": "SIM-PER-b93ee8775afc2a",
+      "certificate_type": "income",
+      "annual_income_inr": 102000,
+      "issued_on": "2026-09-16",
+      "valid_until": "2027-10-16",
+      "status": "active",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    },
+    {
+      "certificate_id": "SIM-CERT-residence-SIM-FAM-a41c89e27965",
+      "household_ref": "KA-DEMO-HH-001",
+      "person_id": "SIM-PER-b93ee8775afc2a",
+      "certificate_type": "residence",
+      "annual_income_inr": null,
+      "issued_on": "2026-09-16",
+      "valid_until": "2027-10-16",
+      "status": "active",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    }
+  ]
+}

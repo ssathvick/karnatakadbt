@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:treasury:1.0.0",
+  "title": "Treasury funding simulator local database response",
+  "description": "Local funding model, not a treasury contract. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "budgets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "scheme_id": {
+            "type": "string"
+          },
+          "available_minor": {
+            "type": "integer"
+          },
+          "currency": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "scheme_id",
+          "available_minor",
+          "currency"
+        ]
+      }
+    },
+    "reservations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "reservation_id": {
+            "type": "string"
+          },
+          "run_id": {
+            "type": "string"
+          },
+          "scheme_id": {
+            "type": "string"
+          },
+          "amount_minor": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "reservation_id",
+          "run_id",
+          "scheme_id",
+          "amount_minor",
+          "status"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

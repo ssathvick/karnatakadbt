@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:bhoomi:1.0.0",
+  "title": "Bhoomi land register local database response",
+  "description": "Public service description; simulated tables and API. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "parcels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "parcel_id": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "district_id": {
+            "type": "string"
+          },
+          "village_code": {
+            "type": "string"
+          },
+          "survey_number": {
+            "type": "string"
+          },
+          "extent_hectares": {
+            "type": "number"
+          },
+          "owner_person_id": {
+            "type": "string"
+          },
+          "mutation_status": {
+            "type": "string"
+          },
+          "source_updated_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "parcel_id",
+          "household_ref",
+          "district_id",
+          "village_code",
+          "survey_number",
+          "extent_hectares",
+          "owner_person_id",
+          "mutation_status",
+          "source_updated_at"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

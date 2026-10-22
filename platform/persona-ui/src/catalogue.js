@@ -1,0 +1,29 @@
+export const personas = [
+ {id:'officer',name:'Registration officer',lead:'Register households and resolve returned cases.',action:'Open registration workspace'},
+ {id:'verifier',name:'Verification officer',lead:'Review registrations and follow approval tasks.',action:'Open verification workspace'},
+ {id:'supervisor',name:'Programme supervisor',lead:'Oversee programme delivery and operational exceptions.',action:'Open programme workspace'},
+ {id:'citizen',name:'Citizen / assisted applicant',lead:'Register your household and follow your applications.',action:'Open my support workspace'},
+ {id:'all',name:'All services',lead:'Find specialist tools and administration services.',action:'Open persona workspace'}
+];
+export const modules = [
+ {id:'knowledge',title:'Knowledge library',group:'Shared services',host:'localhost:8443',path:'/registration/knowledge',description:'Find stage guidance, common issues and instructions for your role.',roles:['officer','verifier','supervisor','citizen'],task:'Open workflow help'},
+ {id:'intake',title:'Household registration',group:'People and households',host:'localhost:8443',path:'/registration/',description:'Register a household, correct returned details and follow enrollment.',roles:['officer','citizen'],task:'Create or correct a household'},
+ {id:'review',title:'Registration review',group:'People and households',host:'localhost:8443',path:'/registration/workspace',description:'Review household details and record an independent registration decision.',roles:['verifier','officer','supervisor'],task:'Review the registration queue'},
+ {id:'register',title:'Modern social registry',group:'People and households',host:'localhost:8446',path:'/',description:'Work with individual records, household intake and registry approvals.',roles:['officer','verifier'],task:'Open registry cases'},
+ {id:'registry',title:'Social registry administration',group:'People and households',host:'registry.localhost:8443',path:'/web',description:'Manage household membership and existing registry records.',roles:['officer','verifier','supervisor'],task:'Open household records'},
+ {id:'beneficiary',title:'Beneficiary portal',group:'People and households',host:'beneficiary.localhost:8443',path:'/selfservice',description:'Use existing self-service forms and follow programme applications.',roles:['citizen'],task:'Open self-service'},
+ {id:'pbms',title:'Programme management',group:'Programmes and approvals',host:'pbms.localhost:8443',path:'/web',description:'Manage synthetic programmes, enrollment, benefits and payment simulations.',roles:['supervisor'],task:'Open programme operations'},
+ {id:'awe',title:'Approval workflows',group:'Programmes and approvals',host:'localhost:8452',path:'/',description:'Review assigned approval tasks and existing workflow policies.',roles:['verifier','supervisor'],task:'Open approval tasks'},
+ {id:'portal-admin',title:'Beneficiary programme administration',group:'Programmes and approvals',host:'portal-admin.localhost:8443',path:'/web',description:'Administer the programmes connected to the beneficiary portal.',roles:['supervisor'],task:'Open portal administration'},
+ {id:'odk',title:'Field data collection',group:'Field work and insights',host:'odk.localhost:8443',path:'/',description:'Create and manage field surveys in the dedicated collection service.',roles:['officer','supervisor'],task:'Open collection projects'},
+ {id:'geography',title:'Geographic record data',group:'Field work and insights',host:'localhost:8443',path:'/registration/geography',description:'Explore synthetic records across all 31 districts and four Karnataka revenue divisions.',roles:['supervisor'],task:'Open geographic record counts'},
+ {id:'superset',title:'Analytics',group:'Field work and insights',host:'localhost:8443',path:'/registration/analytics',description:'Inspect synthetic operational counts, knowledge publishing and guidance usage.',roles:['officer','verifier','supervisor'],task:'View operations and knowledge metrics'},
+ {id:'master-data-ui',title:'Master data',group:'Shared services',host:'localhost:8447',path:'/',description:'Maintain shared locations and attributes used by the applications.',roles:[],task:'Open shared reference data'},
+ {id:'partner-management',title:'Partner management',group:'Shared services',host:'localhost:8448',path:'/',description:'Review partner onboarding and existing integration access workflows.',roles:[],task:'Open partner services'},
+ {id:'consent-manager',title:'Consent manager',group:'Shared services',host:'localhost:8449',path:'/',description:'Manage existing consent records and access policies.',roles:[],task:'Open consent services'},
+ {id:'staff-portal',title:'Staff portal',group:'Shared services',host:'localhost:8451',path:'/',description:'Use the existing staff application launcher and sign-on journey.',roles:['officer','verifier','supervisor'],task:'Open staff services'},
+ {id:'iam-staff-ui',title:'Staff access administration',group:'Shared services',host:'localhost:8445',path:'/',description:'Use existing account administration tools with an authorized staff account.',roles:[],task:'Open access administration'},
+ {id:'schemas',title:'Schema explorer',group:'Shared services',host:'local',path:'/',description:'Explore replicated data schemas, partner contracts and example payloads.',roles:['officer','verifier','supervisor'],task:'Open schemas'},
+ {id:'automation',title:'AI and automation',group:'Shared services',host:'local',path:'/',description:'Use published-guidance assistance and run monitored synthetic automation cycles.',roles:['officer','verifier','supervisor'],task:'Open AI and automation'}
+];
+export const url=m=>m.host==='localhost:8443'?m.path:window.KARNATAKA_NATIVE_BACKEND&&m.host.endsWith('.localhost:8443')?'https://'+m.host+m.path:'/services/'+m.id;

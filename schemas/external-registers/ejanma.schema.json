@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:ejanma:1.0.0",
+  "title": "eJanMa life events local database response",
+  "description": "Public service description; simulated tables and API. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "life_events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "event_id": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "person_id": {
+            "type": "string"
+          },
+          "birth_date": {
+            "type": "string"
+          },
+          "death_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "registration_status": {
+            "type": "string"
+          },
+          "source_updated_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "event_id",
+          "household_ref",
+          "person_id",
+          "birth_date",
+          "death_date",
+          "registration_status",
+          "source_updated_at"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

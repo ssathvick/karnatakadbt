@@ -1,0 +1,40 @@
+/* Karnataka yellow and red. Shared across the inherited service interfaces. */
+:root{--green:#a51d2d;--primary:#a51d2d;--ink:#321d23;--gold:#f6c928;--line:#ead8c4;accent-color:#a51d2d}
+body{background:#fffcf4;color:#321d23;border-top:7px solid #f6c928;font-family:Inter,"Segoe UI",sans-serif}
+body:before{content:"";position:absolute;top:0;left:50%;right:0;height:7px;background:#ba1f32;z-index:10000;pointer-events:none}
+header,.hub-header{border-bottom:1px solid #ead8c4;background:#fffdf8}
+.brand img{object-fit:contain;width:48px;height:58px;margin-right:10px}
+.brand,.hub-brand{color:#98172a!important}
+.hub-brand{display:flex;align-items:center;gap:12px;font-weight:800}
+.hub-brand img{width:42px;height:52px;object-fit:contain}
+.hub-sandbox,.notice{background:#fff1bc!important;color:#6b3d00!important;border-color:#e7c04b!important}
+.hub-main{max-width:1240px;margin:auto}
+.hub-hero{position:relative;padding:56px 0 36px!important;max-width:none!important}
+.hub-hero h1{color:#8f1830!important;font-size:clamp(38px,5vw,66px)!important;line-height:1.05!important;letter-spacing:-2px;max-width:760px}
+.hub-hero>p{max-width:780px;color:#71565c}
+.state-emblem{position:absolute;right:6px;top:35px;width:130px;height:130px;object-fit:contain;opacity:.95}
+.hub-eyebrow,.eyebrow{color:#a51d2d!important;letter-spacing:1.7px;font-weight:750}
+.hub-focus{background:linear-gradient(115deg,#fff0ac,#fff8dc)!important;border-color:#e6bc32!important;color:#542c20!important}
+.hub-role button[aria-pressed=true],button,.button,.hub-primary{background:#a51d2d!important;color:#fff!important;border-color:#a51d2d!important}
+.hub-role button:not([aria-pressed=true]){background:#fff!important;color:#8f1830!important;border-color:#e4c4bb!important}
+.hub-card{border:1px solid #ecdcc9!important;border-top:3px solid #e8bc20!important;background:#fff!important;border-radius:12px!important;box-shadow:0 4px 18px #6c322008}
+.hub-card:hover{border-top-color:#ba1f32!important;box-shadow:0 8px 22px #6c322012}
+.hub-card a,a{color:#a51d2d}
+.hub-help{background:#fff1c3!important;border:1px solid #efd27b!important}
+.hub-footer,footer{border-top:3px solid #efc529!important;background:#fff8e6!important;color:#73555b!important;padding:24px!important}
+.secondary,.button.secondary,button.secondary{background:#fff6d9!important;color:#8f1830!important;border-color:#e2bd4a!important}
+.card{background:#fff;border-color:#ead8c4!important;border-radius:12px!important}
+input,select,textarea{border-color:#d7bfb7!important;border-radius:6px!important}
+input:focus,select:focus,textarea:focus{outline:3px solid #f6d96d66!important;border-color:#a51d2d!important}
+th{background:#fff1bf!important;color:#642b22}
+.amount{color:#a51d2d!important}
+.sidebar,.rail{background:#80182c!important}
+.badge.approved,.badge.enrolled,.badge.complete{background:#fff0ad!important;color:#6b4100!important}
+.badge.rejected{background:#ffe1e3!important;color:#961a2b!important}
+.persona-list button:not(.active),.tabs button:not(.active){background:transparent!important;color:#75515a!important;border-color:transparent!important}
+.tabs button.active{background:#fff2bd!important;color:#8f1830!important;border-bottom:3px solid #a51d2d!important}
+.wordmark img{vertical-align:middle;object-fit:contain;margin-bottom:8px}
+.map-reference circle{fill:#b91e32;stroke:white;stroke-width:2;cursor:pointer}
+.map-reference text{fill:#5a2930;font-size:10px;pointer-events:none}
+.map-reference circle:focus,.map-reference circle.selected{stroke:#e8b714;stroke-width:5}
+@media(max-width:800px){.state-emblem{position:static;width:72px;height:72px;float:right}.hub-hero h1{letter-spacing:-1px}.hub-header{flex-wrap:wrap}.hub-header nav{flex-wrap:wrap}header nav{display:flex;gap:10px;flex-wrap:wrap}.hub-main{padding:0 20px}.hub-hero{padding-top:28px!important}}

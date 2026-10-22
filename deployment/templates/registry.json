@@ -1,0 +1,68 @@
+{
+  "storage-settings.json": {
+    "endpoint": "10.43.161.203:9000",
+    "access_key": "${secret:s022}",
+    "secret_key": "${secret:s023}",
+    "bucket": "kdbt-registry-canary-20261017223106-d3e3",
+    "public_endpoint": "minio-api.aidrivendbt.com"
+  },
+  "workflow-settings.json": {
+    "callback_url": "http://register-staff-portal-api/awe/webhooks/decision",
+    "callback_secret_id": "register"
+  },
+  "master-data-settings.json": {
+    "api_url": "http://127.0.0.1:18121",
+    "token_url": "http://keycloak:8080/realms/staff/protocol/openid-connect/token",
+    "client_id": "commons-services-staff-portal",
+    "client_secret": "${secret:s024}",
+    "timeout_seconds": 10.0,
+    "cache_seconds": 300
+  },
+  "partner-management-candidate-settings.json": {
+    "admin_api_url": "http://127.0.0.1:18113",
+    "token_url": "http://keycloak:8080/realms/staff/protocol/openid-connect/token",
+    "client_id": "commons-services-staff-portal",
+    "client_secret": "${secret:s024}",
+    "keys_api_url": "http://127.0.0.1:18113",
+    "timeout_seconds": 5.0,
+    "cache_seconds": 300
+  },
+  "registrant-auth-candidate-settings.json": {
+    "encryption_key": "${secret:s025}",
+    "session_ttl_seconds": 300
+  },
+  "worker-authority-settings.json": {
+    "client_id": "karnatakadbt-native-registry-worker",
+    "client_secret": "${secret:s026}",
+    "subject": "c75d10b6-b8d4-4cba-b8f9-fbbdaa80234c",
+    "token_url": "http://keycloak:8080/realms/staff/protocol/openid-connect/token",
+    "iam_url": "http://127.0.0.1:18110",
+    "allowed_origins": [
+      "http://keycloak:8080",
+      "http://10.43.73.106:80",
+      "http://127.0.0.1:18110"
+    ]
+  },
+  "websub-client-settings.json": {
+    "endpoint": "http://10.43.11.60:80",
+    "allowed_origins": [
+      "http://10.43.11.60:80"
+    ],
+    "publisher_token": "${secret:s019}"
+  },
+  "worker-integration-settings.json": {
+    "functional_id_generation_url": "http://10.43.191.34:80/v1",
+    "websub_base_url": "http://websub.play.svc.cluster.local",
+    "import_file_sender_id": "Staff Portal",
+    "import_file_signature": "${secret:s027}",
+    "keycloak_admin_url": "http://keycloak:8080",
+    "keycloak_admin_client_id": "openg2p-staff-portal",
+    "keycloak_admin_client_secret": "${secret:s028}",
+    "keycloak_admin_realm": "master",
+    "keycloak_realm": "staff",
+    "auth_provider_api_url": null,
+    "batch_size": 2000,
+    "worker_max_attempts": 5,
+    "export_batch_size": 2000
+  }
+}

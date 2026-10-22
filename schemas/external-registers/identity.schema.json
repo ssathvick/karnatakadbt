@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:identity:1.0.0",
+  "title": "Identity verification simulator local database response",
+  "description": "Local tokens only; no Aadhaar numbers, biometrics or authentication. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "verifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "identity_token": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "person_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "birth_date": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "source_updated_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "identity_token",
+          "household_ref",
+          "person_id",
+          "name",
+          "birth_date",
+          "status",
+          "source_updated_at"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

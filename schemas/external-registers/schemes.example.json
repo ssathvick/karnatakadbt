@@ -1,0 +1,35 @@
+{
+  "schemes": [
+    {
+      "scheme_id": "SIM-HOUSEHOLD",
+      "name": "Household support demonstration",
+      "rule_version": "demo-2026.1",
+      "audience": "household",
+      "monthly_income_ceiling_inr": 25000,
+      "benefit_minor": 200000,
+      "currency": "INR",
+      "required_sources": "[\"kutumba\", \"ahara\", \"revenue\", \"ejanma\", \"identity\", \"documents\", \"geography\", \"sevasindhu\"]"
+    },
+    {
+      "scheme_id": "SIM-FARMER",
+      "name": "Farmer support demonstration",
+      "rule_version": "demo-2026.1",
+      "audience": "farmer",
+      "monthly_income_ceiling_inr": 30000,
+      "benefit_minor": 200000,
+      "currency": "INR",
+      "required_sources": "[\"kutumba\", \"revenue\", \"fruits\", \"bhoomi\", \"ejanma\", \"identity\", \"documents\", \"geography\", \"sevasindhu\"]"
+    },
+    {
+      "scheme_id": "SIM-STUDENT",
+      "name": "Student scholarship demonstration",
+      "rule_version": "demo-2026.1",
+      "audience": "student",
+      "monthly_income_ceiling_inr": 22000,
+      "benefit_minor": 150000,
+      "currency": "INR",
+      "required_sources": "[\"kutumba\", \"revenue\", \"education\", \"ejanma\", \"identity\", \"documents\", \"geography\", \"sevasindhu\"]"
+    }
+  ],
+  "sanctions": []
+}

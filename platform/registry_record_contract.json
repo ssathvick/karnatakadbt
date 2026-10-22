@@ -1,0 +1,2963 @@
+{
+  "REGISTER:Household": {
+    "register_id": "a0000000-0000-4000-8000-000000000002",
+    "extension_current_available": true,
+    "current": {
+      "source_table": "g2p_register_households",
+      "primary_key": [
+        "internal_record_id"
+      ],
+      "columns": {
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "search_text": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "latitude": {
+          "type": "double precision",
+          "nullable": true
+        },
+        "longitude": {
+          "type": "double precision",
+          "nullable": true
+        },
+        "altitude": {
+          "type": "double precision",
+          "nullable": true
+        },
+        "plus_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "address_line_1": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "address_line_2": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "postal_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "country_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "geo_lowest_level_value_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "geo_code_hierarchy_json": {
+          "type": "jsonb",
+          "nullable": true
+        },
+        "household_head_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "household_head_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "headship_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "husband_dead": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "husband_dead_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "size_total": {
+          "type": "integer",
+          "nullable": true
+        },
+        "size_adults": {
+          "type": "integer",
+          "nullable": true
+        },
+        "size_children_u5": {
+          "type": "integer",
+          "nullable": true
+        },
+        "size_school_age": {
+          "type": "integer",
+          "nullable": true
+        },
+        "size_elderly": {
+          "type": "integer",
+          "nullable": true
+        },
+        "number_of_female_members": {
+          "type": "integer",
+          "nullable": true
+        },
+        "number_of_male_members": {
+          "type": "integer",
+          "nullable": true
+        },
+        "elderly_member_present": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "dwelling_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "roof_material": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "wall_material": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "floor_material": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "tenure_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "rooms_count": {
+          "type": "integer",
+          "nullable": true
+        },
+        "overcrowding_indicator": {
+          "type": "numeric",
+          "nullable": true
+        },
+        "water_source_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "water_distance_minutes": {
+          "type": "integer",
+          "nullable": true
+        },
+        "sanitation_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "lighting_source": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "cooking_fuel_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "mobile_phone_type": {
+          "type": "character varying",
+          "nullable": true
+        }
+      }
+    },
+    "history": {
+      "source_table": "g2p_register_history_households",
+      "primary_key": [
+        "history_record_id"
+      ],
+      "columns": {
+        "history_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "tab_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "section_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "change_request_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "submission_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "change_request_source": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "is_primary_section": {
+          "type": "boolean",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "subject_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "latitude": {
+          "type": "double precision",
+          "nullable": true
+        },
+        "longitude": {
+          "type": "double precision",
+          "nullable": true
+        },
+        "altitude": {
+          "type": "double precision",
+          "nullable": true
+        },
+        "plus_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "address_line_1": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "address_line_2": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "postal_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "country_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "geo_lowest_level_value_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "geo_code_hierarchy_json": {
+          "type": "jsonb",
+          "nullable": true
+        },
+        "household_head_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "household_head_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "headship_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "husband_dead": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "husband_dead_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "size_total": {
+          "type": "integer",
+          "nullable": true
+        },
+        "size_adults": {
+          "type": "integer",
+          "nullable": true
+        },
+        "size_children_u5": {
+          "type": "integer",
+          "nullable": true
+        },
+        "size_school_age": {
+          "type": "integer",
+          "nullable": true
+        },
+        "size_elderly": {
+          "type": "integer",
+          "nullable": true
+        },
+        "number_of_female_members": {
+          "type": "integer",
+          "nullable": true
+        },
+        "number_of_male_members": {
+          "type": "integer",
+          "nullable": true
+        },
+        "elderly_member_present": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "dwelling_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "roof_material": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "wall_material": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "floor_material": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "tenure_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "rooms_count": {
+          "type": "integer",
+          "nullable": true
+        },
+        "overcrowding_indicator": {
+          "type": "numeric",
+          "nullable": true
+        },
+        "water_source_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "water_distance_minutes": {
+          "type": "integer",
+          "nullable": true
+        },
+        "sanitation_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "lighting_source": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "cooking_fuel_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "mobile_phone_type": {
+          "type": "character varying",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "REGISTER:Individual": {
+    "register_id": "a0000000-0000-4000-8000-000000000001",
+    "extension_current_available": true,
+    "current": {
+      "source_table": "g2p_register_individuals",
+      "primary_key": [
+        "internal_record_id"
+      ],
+      "columns": {
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "search_text": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "first_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "middle_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "last_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "given_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "prefix": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "suffix": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "gender": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "birth_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "phone_numbers": {
+          "type": "jsonb",
+          "nullable": true
+        },
+        "emails": {
+          "type": "jsonb",
+          "nullable": true
+        },
+        "marital_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "occupation": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "income_level": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "language_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "education_level": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "registration_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "latitude": {
+          "type": "double precision",
+          "nullable": true
+        },
+        "longitude": {
+          "type": "double precision",
+          "nullable": true
+        },
+        "altitude": {
+          "type": "double precision",
+          "nullable": true
+        },
+        "plus_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "address_line_1": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "address_line_2": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "postal_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "country_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "geo_lowest_level_value_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "geo_code_hierarchy_json": {
+          "type": "jsonb",
+          "nullable": true
+        },
+        "foundational_id_masked": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "foundational_id_verification_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "identity_evidence_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "legacy_program_ids": {
+          "type": "json",
+          "nullable": true
+        },
+        "full_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "alias_names": {
+          "type": "json",
+          "nullable": true
+        },
+        "estimated_age": {
+          "type": "integer",
+          "nullable": true
+        },
+        "age_method": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "citizenship_category": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "relationship_to_head": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "residency_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "dependency_indicator": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "preferred_contact_method": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "contact_person_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "disability_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "plw_status": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "plw_status_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "orphanhood_flag": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "chronic_illness_flag": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "displacement_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "pastoralist_classification": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "high_mobility_indicator": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "primary_livelihood": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "secondary_livelihood": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "employment_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "coping_strategies_index": {
+          "type": "integer",
+          "nullable": true
+        }
+      }
+    },
+    "history": {
+      "source_table": "g2p_register_history_individuals",
+      "primary_key": [
+        "history_record_id"
+      ],
+      "columns": {
+        "history_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "tab_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "section_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "change_request_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "submission_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "change_request_source": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "is_primary_section": {
+          "type": "boolean",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "subject_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "first_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "middle_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "last_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "given_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "prefix": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "suffix": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "gender": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "birth_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "phone_numbers": {
+          "type": "jsonb",
+          "nullable": true
+        },
+        "emails": {
+          "type": "jsonb",
+          "nullable": true
+        },
+        "marital_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "occupation": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "income_level": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "language_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "education_level": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "registration_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "latitude": {
+          "type": "double precision",
+          "nullable": true
+        },
+        "longitude": {
+          "type": "double precision",
+          "nullable": true
+        },
+        "altitude": {
+          "type": "double precision",
+          "nullable": true
+        },
+        "plus_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "address_line_1": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "address_line_2": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "postal_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "country_code": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "geo_lowest_level_value_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "geo_code_hierarchy_json": {
+          "type": "jsonb",
+          "nullable": true
+        },
+        "foundational_id_masked": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "foundational_id_verification_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "identity_evidence_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "legacy_program_ids": {
+          "type": "json",
+          "nullable": true
+        },
+        "full_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "alias_names": {
+          "type": "json",
+          "nullable": true
+        },
+        "estimated_age": {
+          "type": "integer",
+          "nullable": true
+        },
+        "age_method": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "citizenship_category": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "relationship_to_head": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "residency_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "dependency_indicator": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "preferred_contact_method": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "contact_person_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "disability_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "plw_status": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "plw_status_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "orphanhood_flag": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "chronic_illness_flag": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "displacement_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "pastoralist_classification": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "high_mobility_indicator": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "primary_livelihood": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "secondary_livelihood": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "employment_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "coping_strategies_index": {
+          "type": "integer",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "TABLE:IndividualProgram": {
+    "register_id": "b0000000-0000-4000-8000-000000000010",
+    "extension_current_available": true,
+    "current": {
+      "source_table": "g2p_register_individual_programs",
+      "primary_key": [
+        "internal_record_id"
+      ],
+      "columns": {
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "search_text": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "program_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "program_start_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "program_exit_date": {
+          "type": "date",
+          "nullable": true
+        }
+      }
+    },
+    "history": {
+      "source_table": "g2p_register_history_individual_programs",
+      "primary_key": [
+        "history_record_id"
+      ],
+      "columns": {
+        "history_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "tab_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "section_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "change_request_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "submission_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "change_request_source": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "is_primary_section": {
+          "type": "boolean",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "subject_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "program_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "program_start_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "program_exit_date": {
+          "type": "date",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "TABLE:IndividualLand": {
+    "register_id": "b0000000-0000-4000-8000-000000000012",
+    "extension_current_available": true,
+    "current": {
+      "source_table": "g2p_register_individual_land",
+      "primary_key": [
+        "internal_record_id"
+      ],
+      "columns": {
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "search_text": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "land_access": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "land_size": {
+          "type": "numeric",
+          "nullable": true
+        },
+        "productive_assets": {
+          "type": "json",
+          "nullable": true
+        }
+      }
+    },
+    "history": {
+      "source_table": "g2p_register_history_individual_land",
+      "primary_key": [
+        "history_record_id"
+      ],
+      "columns": {
+        "history_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "tab_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "section_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "change_request_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "submission_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "change_request_source": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "is_primary_section": {
+          "type": "boolean",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "subject_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "land_access": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "land_size": {
+          "type": "numeric",
+          "nullable": true
+        },
+        "productive_assets": {
+          "type": "json",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "TABLE:IndividualLivelihood": {
+    "register_id": "b0000000-0000-4000-8000-000000000013",
+    "extension_current_available": true,
+    "current": {
+      "source_table": "g2p_register_individual_livelihoods",
+      "primary_key": [
+        "internal_record_id"
+      ],
+      "columns": {
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "search_text": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "primary_livelihood": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "secondary_livelihood": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "employment_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "coping_strategies_index": {
+          "type": "integer",
+          "nullable": true
+        },
+        "mobile_phone_type": {
+          "type": "character varying",
+          "nullable": true
+        }
+      }
+    },
+    "history": {
+      "source_table": "g2p_register_history_individual_livelihoods",
+      "primary_key": [
+        "history_record_id"
+      ],
+      "columns": {
+        "history_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "tab_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "section_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "change_request_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "submission_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "change_request_source": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "is_primary_section": {
+          "type": "boolean",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "subject_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "primary_livelihood": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "secondary_livelihood": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "employment_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "coping_strategies_index": {
+          "type": "integer",
+          "nullable": true
+        },
+        "mobile_phone_type": {
+          "type": "character varying",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "TABLE:IndividualLivestock": {
+    "register_id": "b0000000-0000-4000-8000-000000000014",
+    "extension_current_available": true,
+    "current": {
+      "source_table": "g2p_register_individual_livestock",
+      "primary_key": [
+        "internal_record_id"
+      ],
+      "columns": {
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "search_text": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "livestock_species": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "livestock_counts": {
+          "type": "character varying",
+          "nullable": true
+        }
+      }
+    },
+    "history": {
+      "source_table": "g2p_register_history_individual_livestock",
+      "primary_key": [
+        "history_record_id"
+      ],
+      "columns": {
+        "history_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "tab_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "section_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "change_request_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "submission_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "change_request_source": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "is_primary_section": {
+          "type": "boolean",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "subject_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "livestock_species": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "livestock_counts": {
+          "type": "character varying",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "TABLE:IndividualVulnerability": {
+    "register_id": "b0000000-0000-4000-8000-000000000015",
+    "extension_current_available": true,
+    "current": {
+      "source_table": "g2p_register_individual_vulnerability",
+      "primary_key": [
+        "internal_record_id"
+      ],
+      "columns": {
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "search_text": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "disability_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "orphanhood_flag": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "chronic_illness_flag": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "displacement_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "pastoralist_classification": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "high_mobility_indicator": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "plw_status": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "plw_status_date": {
+          "type": "date",
+          "nullable": true
+        }
+      }
+    },
+    "history": {
+      "source_table": "g2p_register_history_individual_vulnerability",
+      "primary_key": [
+        "history_record_id"
+      ],
+      "columns": {
+        "history_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "tab_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "section_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "change_request_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "submission_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "change_request_source": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "is_primary_section": {
+          "type": "boolean",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "subject_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "disability_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "orphanhood_flag": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "chronic_illness_flag": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "displacement_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "pastoralist_classification": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "high_mobility_indicator": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "plw_status": {
+          "type": "boolean",
+          "nullable": true
+        },
+        "plw_status_date": {
+          "type": "date",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "TABLE:IndividualShock": {
+    "register_id": "b0000000-0000-4000-8000-000000000040",
+    "extension_current_available": true,
+    "current": {
+      "source_table": "g2p_register_individual_shocks",
+      "primary_key": [
+        "internal_record_id"
+      ],
+      "columns": {
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "search_text": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "shock_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "shock_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "shock_period": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "coping_strategy": {
+          "type": "character varying",
+          "nullable": true
+        }
+      }
+    },
+    "history": {
+      "source_table": "g2p_register_history_individual_shocks",
+      "primary_key": [
+        "history_record_id"
+      ],
+      "columns": {
+        "history_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "tab_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "section_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "change_request_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "submission_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "change_request_source": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "is_primary_section": {
+          "type": "boolean",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "subject_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "shock_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "shock_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "shock_period": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "coping_strategy": {
+          "type": "character varying",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "TABLE:IndividualDisability": {
+    "register_id": "b0000000-0000-4000-8000-000000000080",
+    "extension_current_available": true,
+    "current": {
+      "source_table": "g2p_register_individual_disabilities",
+      "primary_key": [
+        "internal_record_id"
+      ],
+      "columns": {
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "search_text": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "disability_domain": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "disability_severity": {
+          "type": "character varying",
+          "nullable": true
+        }
+      }
+    },
+    "history": {
+      "source_table": "g2p_register_history_individual_disabilities",
+      "primary_key": [
+        "history_record_id"
+      ],
+      "columns": {
+        "history_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "tab_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "section_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "change_request_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "submission_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "change_request_source": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "is_primary_section": {
+          "type": "boolean",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "subject_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "disability_domain": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "disability_severity": {
+          "type": "character varying",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "TABLE:HouseholdProgram": {
+    "register_id": "b0000000-0000-4000-8000-000000000090",
+    "extension_current_available": true,
+    "current": {
+      "source_table": "g2p_register_household_programs",
+      "primary_key": [
+        "internal_record_id"
+      ],
+      "columns": {
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "search_text": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "program_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "program_start_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "program_exit_date": {
+          "type": "date",
+          "nullable": true
+        }
+      }
+    },
+    "history": {
+      "source_table": "g2p_register_history_household_programs",
+      "primary_key": [
+        "history_record_id"
+      ],
+      "columns": {
+        "history_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "tab_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "section_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "change_request_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "submission_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "change_request_source": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "is_primary_section": {
+          "type": "boolean",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "subject_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "program_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "program_start_date": {
+          "type": "date",
+          "nullable": true
+        },
+        "program_exit_date": {
+          "type": "date",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "TABLE:HouseholdHousingAndServices": {
+    "register_id": "b0000000-0000-4000-8000-000000000011",
+    "extension_current_available": true,
+    "current": {
+      "source_table": "g2p_register_household_housing_and_services",
+      "primary_key": [
+        "internal_record_id"
+      ],
+      "columns": {
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "search_text": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "dwelling_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "roof_material": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "wall_material": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "floor_material": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "tenure_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "water_source_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "water_distance_minutes": {
+          "type": "integer",
+          "nullable": true
+        },
+        "sanitation_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "lighting_source": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "cooking_fuel_type": {
+          "type": "character varying",
+          "nullable": true
+        }
+      }
+    },
+    "history": {
+      "source_table": "g2p_register_history_household_housing_and_services",
+      "primary_key": [
+        "history_record_id"
+      ],
+      "columns": {
+        "history_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "tab_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "section_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "change_request_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "submission_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "change_request_source": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "is_primary_section": {
+          "type": "boolean",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "subject_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "dwelling_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "roof_material": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "wall_material": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "floor_material": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "tenure_status": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "water_source_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "water_distance_minutes": {
+          "type": "integer",
+          "nullable": true
+        },
+        "sanitation_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "lighting_source": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "cooking_fuel_type": {
+          "type": "character varying",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "TABLE:HouseholdAsset": {
+    "register_id": "b0000000-0000-4000-8000-000000000030",
+    "extension_current_available": true,
+    "current": {
+      "source_table": "g2p_register_household_assets",
+      "primary_key": [
+        "internal_record_id"
+      ],
+      "columns": {
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "last_approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "search_text": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "asset_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "asset_category": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "quantity": {
+          "type": "integer",
+          "nullable": true
+        },
+        "size_value": {
+          "type": "numeric",
+          "nullable": true
+        },
+        "size_unit": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "size_band": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "details": {
+          "type": "json",
+          "nullable": true
+        }
+      }
+    },
+    "history": {
+      "source_table": "g2p_register_history_household_assets",
+      "primary_key": [
+        "history_record_id"
+      ],
+      "columns": {
+        "history_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "tab_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "section_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "change_request_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "submission_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "change_request_source": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "is_primary_section": {
+          "type": "boolean",
+          "nullable": false
+        },
+        "functional_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "subject_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "link_foundational_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_name": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "record_image_document_id": {
+          "type": "text",
+          "nullable": true
+        },
+        "record_status": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "record_status_reason": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "created_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "created_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "approved_by": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "approved_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        },
+        "asset_type": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "asset_category": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "quantity": {
+          "type": "integer",
+          "nullable": true
+        },
+        "size_value": {
+          "type": "numeric",
+          "nullable": true
+        },
+        "size_unit": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "size_band": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "details": {
+          "type": "json",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "CORE_TABLE:Score": {
+    "register_id": "c0000000-0000-4000-8000-000000000001",
+    "extension_current_available": false,
+    "current": {
+      "source_table": "g2p_register_scores",
+      "primary_key": [
+        "internal_record_id"
+      ],
+      "columns": {
+        "internal_record_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "register_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "score_type": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "score_definition_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "link_internal_record_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "triggered_by_cr_id": {
+          "type": "character varying",
+          "nullable": false
+        },
+        "triggered_by_submission_id": {
+          "type": "character varying",
+          "nullable": true
+        },
+        "computed_score": {
+          "type": "double precision",
+          "nullable": false
+        },
+        "computed_at": {
+          "type": "timestamp without time zone",
+          "nullable": false
+        }
+      }
+    },
+    "history": null
+  }
+}

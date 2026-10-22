@@ -1,0 +1,146 @@
+{
+  "/auth/get_login_providers": {
+    "scheme": "console",
+    "required_permissions": [
+      "loginProvider:view"
+    ]
+  },
+  "/applications/get_applications": {
+    "scheme": "console",
+    "required_permissions": [
+      "application:view"
+    ]
+  },
+  "/applications/get_application": {
+    "scheme": "console",
+    "required_permissions": [
+      "application:view"
+    ]
+  },
+  "/applications/create_application": {
+    "scheme": "console",
+    "required_permissions": [
+      "application:create"
+    ]
+  },
+  "/applications/update_application": {
+    "scheme": "console",
+    "required_permissions": [
+      "application:edit"
+    ]
+  },
+  "/applications/delete_application": {
+    "scheme": "console",
+    "required_permissions": [
+      "application:delete"
+    ]
+  },
+  "/applications/get_roles": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:view"
+    ]
+  },
+  "/applications/create_role": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:create"
+    ]
+  },
+  "/applications/delete_role": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:delete"
+    ]
+  },
+  "/applications/get_permissions": {
+    "scheme": "console",
+    "required_permissions": [
+      "permission:view"
+    ]
+  },
+  "/applications/create_permission": {
+    "scheme": "console",
+    "required_permissions": [
+      "permission:create"
+    ]
+  },
+  "/applications/delete_permission": {
+    "scheme": "console",
+    "required_permissions": [
+      "permission:delete"
+    ]
+  },
+  "/applications/get_role_permissions": {
+    "scheme": "console",
+    "required_permissions": [
+      "rolePermission:view"
+    ]
+  },
+  "/applications/create_role_permission": {
+    "scheme": "console",
+    "required_permissions": [
+      "rolePermission:create"
+    ]
+  },
+  "/applications/delete_role_permission": {
+    "scheme": "console",
+    "required_permissions": [
+      "rolePermission:delete"
+    ]
+  },
+  "/login-providers/get_login_providers": {
+    "scheme": "console",
+    "required_permissions": [
+      "loginProvider:view"
+    ]
+  },
+  "/login-providers/get_login_provider": {
+    "scheme": "console",
+    "required_permissions": [
+      "loginProvider:view"
+    ]
+  },
+  "/login-providers/create_login_provider": {
+    "scheme": "console",
+    "required_permissions": [
+      "loginProvider:create"
+    ]
+  },
+  "/login-providers/update_login_provider": {
+    "scheme": "console",
+    "required_permissions": [
+      "loginProvider:edit"
+    ]
+  },
+  "/login-providers/delete_login_provider": {
+    "scheme": "console",
+    "required_permissions": [
+      "loginProvider:delete"
+    ]
+  },
+  "/data-policies/get_policy": {
+    "scheme": "console",
+    "required_permissions": [
+      "dataPolicy:view"
+    ]
+  },
+  "/data-policies/get_all_policies": {
+    "scheme": "console",
+    "required_permissions": [
+      "dataPolicy:view"
+    ]
+  },
+  "/data-policies/add_policy": {
+    "scheme": "console",
+    "required_permissions": [
+      "dataPolicy:create"
+    ]
+  },
+  "/data-policies/remove_policy": {
+    "scheme": "console",
+    "required_permissions": [
+      "dataPolicy:delete"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:ahara:1.0.0",
+  "title": "AHARA ration register local database response",
+  "description": "Public service description; simulated tables and API. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "card_members": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "card_id": {
+            "type": "string"
+          },
+          "person_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "card_id",
+          "person_id"
+        ]
+      }
+    },
+    "ration_cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "card_id": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "family_id": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "district_id": {
+            "type": "string"
+          },
+          "source_updated_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "card_id",
+          "household_ref",
+          "family_id",
+          "category",
+          "status",
+          "district_id",
+          "source_updated_at"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

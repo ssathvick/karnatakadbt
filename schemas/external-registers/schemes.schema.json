@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:schemes:1.0.0",
+  "title": "Scheme and sanction register local database response",
+  "description": "Demonstration rules and sanctions, not official scheme criteria. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "sanctions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "sanction_id": {
+            "type": "string"
+          },
+          "run_id": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "scheme_id": {
+            "type": "string"
+          },
+          "cycle": {
+            "type": "string"
+          },
+          "amount_minor": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sanction_id",
+          "run_id",
+          "household_ref",
+          "scheme_id",
+          "cycle",
+          "amount_minor",
+          "status"
+        ]
+      }
+    },
+    "schemes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "scheme_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "rule_version": {
+            "type": "string"
+          },
+          "audience": {
+            "type": "string"
+          },
+          "monthly_income_ceiling_inr": {
+            "type": "integer"
+          },
+          "benefit_minor": {
+            "type": "integer"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "required_sources": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "scheme_id",
+          "name",
+          "rule_version",
+          "audience",
+          "monthly_income_ceiling_inr",
+          "benefit_minor",
+          "currency",
+          "required_sources"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

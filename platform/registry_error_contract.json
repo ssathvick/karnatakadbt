@@ -1,0 +1,338 @@
+{
+  "UNEXPECTED_ERROR": {
+    "message": "UNEXPECTED_ERROR",
+    "code": "SYS-ERR-001"
+  },
+  "INVALID_REQUEST": {
+    "message": "INVALID_REQUEST",
+    "code": "REQ-VAL-000"
+  },
+  "REQUEST_VALIDATION_ERROR": {
+    "message": "REQUEST_VALIDATION_ERROR",
+    "code": "REQ-VAL-001"
+  },
+  "DATABASE_CONNECTION_ERROR": {
+    "message": "DATABASE_CONNECTION_ERROR",
+    "code": "DB-ERR-001"
+  },
+  "DATABASE_QUERY_ERROR": {
+    "message": "DATABASE_QUERY_ERROR",
+    "code": "DB-ERR-002"
+  },
+  "DATABASE_TRANSACTION_ERROR": {
+    "message": "DATABASE_TRANSACTION_ERROR",
+    "code": "DB-ERR-003"
+  },
+  "REGISTER_NOT_FOUND": {
+    "message": "REGISTER_NOT_FOUND",
+    "code": "REG-ERR-001"
+  },
+  "REGISTER_DATA_NOT_FOUND": {
+    "message": "REGISTER_DATA_NOT_FOUND",
+    "code": "REG-ERR-002"
+  },
+  "CHANGE_REQUEST_NOT_FOUND": {
+    "message": "CHANGE_REQUEST_NOT_FOUND",
+    "code": "REG-ERR-003"
+  },
+  "CHANGE_REQUEST_NOT_IN_PENDING_STATE": {
+    "message": "CHANGE_REQUEST_NOT_IN_PENDING_STATE",
+    "code": "REG-ERR-004"
+  },
+  "VERIFICATIONS_PENDING": {
+    "message": "VERIFICATIONS_PENDING",
+    "code": "REG-ERR-005"
+  },
+  "SECTION_NOT_FOUND": {
+    "message": "SECTION_NOT_FOUND",
+    "code": "REG-ERR-006"
+  },
+  "UNKNOWN_CHANGE_REQUEST_ACTION": {
+    "message": "UNKNOWN_CHANGE_REQUEST_ACTION",
+    "code": "REG-ERR-007"
+  },
+  "INTAKE_FORM_NOT_FOUND": {
+    "message": "INTAKE_FORM_NOT_FOUND",
+    "code": "REG-ERR-008"
+  },
+  "INTAKE_FORM_INVALID_STATE": {
+    "message": "INTAKE_FORM_INVALID_STATE",
+    "code": "REG-ERR-009"
+  },
+  "INTAKE_FORM_VERIFICATIONS_PENDING": {
+    "message": "INTAKE_FORM_VERIFICATIONS_PENDING",
+    "code": "REG-ERR-010"
+  },
+  "NON_CORE_SECTION_OPERATION_NOT_ALLOWED": {
+    "message": "NON_CORE_SECTION_OPERATION_NOT_ALLOWED",
+    "code": "REG-ERR-011"
+  },
+  "RECORD_ACCESS_DENIED": {
+    "message": "RECORD_ACCESS_DENIED",
+    "code": "REG-ERR-012"
+  },
+  "PARTNER_NOT_REGISTERED": {
+    "message": "PARTNER_NOT_REGISTERED",
+    "code": "REGP-ERR-001"
+  },
+  "DATA_MODEL_NOT_FOUND": {
+    "message": "DATA_MODEL_NOT_FOUND",
+    "code": "REGP-ERR-002"
+  },
+  "PARTNER_ALREADY_EXISTS": {
+    "message": "PARTNER_ALREADY_EXISTS",
+    "code": "ING-ERR-001"
+  },
+  "PARTNER_NOT_FOUND": {
+    "message": "PARTNER_NOT_FOUND",
+    "code": "ING-ERR-002"
+  },
+  "PATTERN_NOT_FOUND": {
+    "message": "PATTERN_NOT_FOUND",
+    "code": "ING-ERR-003"
+  },
+  "SEMANTIC_PATTERN_NOT_FOUND": {
+    "message": "SEMANTIC_PATTERN_NOT_FOUND",
+    "code": "ING-ERR-004"
+  },
+  "PAYLOAD_ENRICHER_NOT_FOUND": {
+    "message": "PAYLOAD_ENRICHER_NOT_FOUND",
+    "code": "ING-ERR-006"
+  },
+  "DATA_MODEL_ALREADY_EXISTS": {
+    "message": "DATA_MODEL_ALREADY_EXISTS",
+    "code": "ING-ERR-007"
+  },
+  "PATTERN_ALREADY_EXISTS_FOR_DATA_MODEL": {
+    "message": "PATTERN_ALREADY_EXISTS_FOR_DATA_MODEL",
+    "code": "ING-ERR-008"
+  },
+  "PATTERN_ALREADY_EXISTS": {
+    "message": "PATTERN_ALREADY_EXISTS",
+    "code": "ING-ERR-008"
+  },
+  "TOPIC_NOT_FOUND": {
+    "message": "TOPIC_NOT_FOUND",
+    "code": "OUT-ERR-001"
+  },
+  "TOPIC_ALREADY_EXISTS": {
+    "message": "TOPIC_ALREADY_EXISTS",
+    "code": "OUT-ERR-002"
+  },
+  "TOPIC_NOT_INACTIVE": {
+    "message": "TOPIC_NOT_INACTIVE",
+    "code": "OUT-ERR-003"
+  },
+  "TEMPLATE_NOT_FOUND": {
+    "message": "TEMPLATE_NOT_FOUND",
+    "code": "TPL-ERR-001"
+  },
+  "TEMPLATE_ALREADY_EXISTS": {
+    "message": "TEMPLATE_ALREADY_EXISTS",
+    "code": "TPL-ERR-002"
+  },
+  "DOCUMENT_NOT_FOUND": {
+    "message": "DOCUMENT_NOT_FOUND",
+    "code": "DOC-ERR-001"
+  },
+  "INVALID_FILE_NAME": {
+    "message": "INVALID_FILE_NAME",
+    "code": "DOC-VAL-001"
+  },
+  "INVALID_FILE_TYPE": {
+    "message": "INVALID_FILE_TYPE",
+    "code": "DOC-VAL-002"
+  },
+  "FILE_TOO_LARGE": {
+    "message": "FILE_TOO_LARGE",
+    "code": "DOC-VAL-003"
+  },
+  "INVALID_IMAGE_DIMENSIONS": {
+    "message": "INVALID_IMAGE_DIMENSIONS",
+    "code": "DOC-VAL-004"
+  },
+  "INVALID_FILE_CONTENT": {
+    "message": "INVALID_FILE_CONTENT",
+    "code": "DOC-VAL-005"
+  },
+  "SUBSCRIPTION_CALL_FAILED": {
+    "message": "SUBSCRIPTION_CALL_FAILED",
+    "code": "SUB-ERR-001"
+  },
+  "REGISTRY_CONFIGURATION_NOT_FOUND": {
+    "message": "REGISTRY_CONFIGURATION_NOT_FOUND",
+    "code": "RCF-ERR-001"
+  },
+  "REGISTRY_CONFIGURATION_EXISTS": {
+    "message": "REGISTRY_CONFIGURATION_EXISTS",
+    "code": "RCF-ERR-002"
+  },
+  "REGISTRY_THEME_NOT_FOUND": {
+    "message": "REGISTRY_THEME_NOT_FOUND",
+    "code": "RTH-ERR-001"
+  },
+  "REGISTRY_THEME_EXISTS": {
+    "message": "REGISTRY_THEME_EXISTS",
+    "code": "RTH-ERR-002"
+  },
+  "FACTORY_THEME_DELETE_NOT_ALLOWED": {
+    "message": "FACTORY_THEME_DELETE_NOT_ALLOWED",
+    "code": "RTH-ERR-003"
+  },
+  "FACTORY_THEME_UPDATE_NOT_ALLOWED": {
+    "message": "FACTORY_THEME_UPDATE_NOT_ALLOWED",
+    "code": "RTH-ERR-004"
+  },
+  "REGISTRY_LANGUAGE_NOT_FOUND": {
+    "message": "REGISTRY_LANGUAGE_NOT_FOUND",
+    "code": "RLG-ERR-001"
+  },
+  "REGISTRY_LANGUAGE_EXISTS": {
+    "message": "REGISTRY_LANGUAGE_EXISTS",
+    "code": "RLG-ERR-002"
+  },
+  "VC_CONFIGURATION_NOT_FOUND": {
+    "message": "VC_CONFIGURATION_NOT_FOUND",
+    "code": "VCF-ERR-001"
+  },
+  "IMPORT_FILE_CONFIGURATION_NOT_FOUND": {
+    "message": "IMPORT_FILE_CONFIGURATION_NOT_FOUND",
+    "code": "IF-ERR-001"
+  },
+  "AWE_POLICY_CONFIGURATION_NOT_FOUND": {
+    "message": "AWE_POLICY_CONFIGURATION_NOT_FOUND",
+    "code": "AWE-ERR-001"
+  },
+  "AWE_WEBHOOK_SIGNATURE_INVALID": {
+    "message": "AWE_WEBHOOK_SIGNATURE_INVALID",
+    "code": "AWE-ERR-002"
+  },
+  "AWE_WEBHOOK_EVENT_ID_MISMATCH": {
+    "message": "AWE_WEBHOOK_EVENT_ID_MISMATCH",
+    "code": "AWE-ERR-003"
+  },
+  "AWE_WEBHOOK_REQUEST_MISMATCH": {
+    "message": "AWE_WEBHOOK_REQUEST_MISMATCH",
+    "code": "AWE-ERR-004"
+  },
+  "AWE_WEBHOOK_UNSUPPORTED_ARTIFACT": {
+    "message": "AWE_WEBHOOK_UNSUPPORTED_ARTIFACT",
+    "code": "AWE-ERR-005"
+  },
+  "AWE_REQUEST_FAILED": {
+    "message": "AWE_REQUEST_FAILED",
+    "code": "AWE-ERR-006"
+  },
+  "AWE_TASK_NOT_FOUND": {
+    "message": "AWE_TASK_NOT_FOUND",
+    "code": "AWE-ERR-007"
+  },
+  "AWE_BEARER_TOKEN_REQUIRED": {
+    "message": "AWE_BEARER_TOKEN_REQUIRED",
+    "code": "AWE-ERR-008"
+  },
+  "AWE_INVALID_STATE_TRANSITION": {
+    "message": "AWE_INVALID_STATE_TRANSITION",
+    "code": "AWE-007"
+  },
+  "SCORE_DEFINITION_NOT_ALLOWED_FOR_REGISTER_PURPOSE": {
+    "message": "SCORE_DEFINITION_NOT_ALLOWED_FOR_REGISTER_PURPOSE",
+    "code": "SC-ERR-001"
+  },
+  "SCORE_DEFINITION_CONTRIBUTING_ATTRIBUTES_INVALID": {
+    "message": "SCORE_DEFINITION_CONTRIBUTING_ATTRIBUTES_INVALID",
+    "code": "SC-ERR-002"
+  },
+  "SCORE_DEFINITION_NOT_FOUND": {
+    "message": "SCORE_DEFINITION_NOT_FOUND",
+    "code": "SC-ERR-003"
+  },
+  "SCORE_NOT_FOUND": {
+    "message": "SCORE_NOT_FOUND",
+    "code": "SC-ERR-004"
+  },
+  "SCORE_COMPUTE_QUEUE_NOT_FOUND": {
+    "message": "SCORE_COMPUTE_QUEUE_NOT_FOUND",
+    "code": "SC-ERR-005"
+  },
+  "SCORE_COMPUTE_SERVICE_ERROR": {
+    "message": "SCORE_COMPUTE_SERVICE_ERROR",
+    "code": "SC-ERR-006"
+  },
+  "SCORE_VALIDATION_ERROR": {
+    "message": "SCORE_VALIDATION_ERROR",
+    "code": "SC-ERR-007"
+  },
+  "SCORE_CONTRIBUTING_ATTRIBUTE_NOT_FOUND": {
+    "message": "SCORE_CONTRIBUTING_ATTRIBUTE_NOT_FOUND",
+    "code": "SC-ERR-008"
+  },
+  "COMPLETION_SCORE_NOT_FOUND": {
+    "message": "COMPLETION_SCORE_NOT_FOUND",
+    "code": "CMP-ERR-001"
+  },
+  "COMPLETION_SCORE_COMPUTE_FAILED": {
+    "message": "COMPLETION_SCORE_COMPUTE_FAILED",
+    "code": "CMP-ERR-002"
+  },
+  "COMPLETION_SCORE_QUEUE_ITEM_NOT_FOUND": {
+    "message": "COMPLETION_SCORE_QUEUE_ITEM_NOT_FOUND",
+    "code": "CMP-ERR-003"
+  },
+  "REGISTRANT_AUTH_PROVIDER_NOT_FOUND": {
+    "message": "REGISTRANT_AUTH_PROVIDER_NOT_FOUND",
+    "code": "RAU-ERR-002"
+  },
+  "REGISTRANT_AUTH_PROVIDER_INACTIVE": {
+    "message": "REGISTRANT_AUTH_PROVIDER_INACTIVE",
+    "code": "RAU-ERR-003"
+  },
+  "REGISTRANT_AUTH_PROVIDER_MISCONFIGURED": {
+    "message": "REGISTRANT_AUTH_PROVIDER_MISCONFIGURED",
+    "code": "RAU-ERR-004"
+  },
+  "REGISTRANT_AUTH_SESSION_INVALID_OR_EXPIRED": {
+    "message": "REGISTRANT_AUTH_SESSION_INVALID_OR_EXPIRED",
+    "code": "RAU-ERR-005"
+  },
+  "REGISTRANT_AUTH_RECORD_NOT_FOUND": {
+    "message": "REGISTRANT_AUTH_RECORD_NOT_FOUND",
+    "code": "RAU-ERR-006"
+  },
+  "REGISTRANT_AUTH_NOT_REQUIRED_FOR_REGISTER": {
+    "message": "REGISTRANT_AUTH_NOT_REQUIRED_FOR_REGISTER",
+    "code": "RAU-ERR-007"
+  },
+  "ATTRIBUTE_NOT_FOUND": {
+    "message": "ATTRIBUTE_NOT_FOUND",
+    "code": "REF-ERR-001"
+  },
+  "ATTRIBUTE_ALREADY_EXISTS": {
+    "message": "ATTRIBUTE_ALREADY_EXISTS",
+    "code": "REF-ERR-002"
+  },
+  "ATTRIBUTE_HAS_VALUES": {
+    "message": "ATTRIBUTE_HAS_VALUES",
+    "code": "REF-ERR-003"
+  },
+  "ATTRIBUTE_HAS_HIERARCHICAL_VALUES": {
+    "message": "ATTRIBUTE_HAS_HIERARCHICAL_VALUES",
+    "code": "REF-ERR-004"
+  },
+  "ATTRIBUTE_VALUE_NOT_FOUND": {
+    "message": "ATTRIBUTE_VALUE_NOT_FOUND",
+    "code": "REF-ERR-005"
+  },
+  "ATTRIBUTE_VALUE_ALREADY_EXISTS": {
+    "message": "ATTRIBUTE_VALUE_ALREADY_EXISTS",
+    "code": "REF-ERR-006"
+  },
+  "ATTRIBUTE_VALUE_HAS_CHILDREN": {
+    "message": "ATTRIBUTE_VALUE_HAS_CHILDREN",
+    "code": "REF-ERR-007"
+  },
+  "KEYCLOAK_SYNC_ERROR": {
+    "message": "KEYCLOAK_SYNC_ERROR",
+    "code": "KCK-ERR-001"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "/consent/v1/partners": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:CONSENT_MANAGER_ADMIN"
+    ]
+  },
+  "/consent/v1/partners/{partner_id}": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:CONSENT_MANAGER_ADMIN"
+    ]
+  },
+  "/consent/v1/partners/{partner_id}/policy": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:CONSENT_MANAGER_ADMIN"
+    ]
+  },
+  "/consent/v1/partners/{partner_id}/policies": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:CONSENT_MANAGER_ADMIN"
+    ]
+  },
+  "/consent/v1/awe/tasks": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:CONSENT_MANAGER_APPROVER"
+    ]
+  },
+  "/consent/v1/awe/tasks/{task_id}/decision": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:CONSENT_MANAGER_APPROVER"
+    ]
+  },
+  "/consent/v1/awe/tasks/{task_id}/claim": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:CONSENT_MANAGER_APPROVER"
+    ]
+  },
+  "/consent/v1/awe/requests/{request_id}": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:CONSENT_MANAGER_APPROVER"
+    ]
+  },
+  "/consent/v1/awe/requests/{request_id}/events": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:CONSENT_MANAGER_APPROVER"
+    ]
+  },
+  "/consent/v1/decisions": {
+    "scheme": "console",
+    "required_permissions": [
+      "role:CONSENT_MANAGER_ADMIN"
+    ]
+  }
+}

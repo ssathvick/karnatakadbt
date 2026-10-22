@@ -1,0 +1,29 @@
+flowchart LR
+  Intake[Existing synthetic intake records] --> Crosswalk[Orchestration crosswalk and case]
+  Kutumba[Kutumba families and members] --> Evidence[Frozen departmental evidence]
+  Ahara[AHARA cards and membership] --> Evidence
+  Revenue[Revenue certificates] --> Evidence
+  Fruits[FRUITS farmers and crops] --> Evidence
+  Bhoomi[Bhoomi parcels and ownership] --> Evidence
+  Events[eJanMa life events] --> Evidence
+  Education[Education and SSP students] --> Evidence
+  Seva[Seva Sindhu application] --> Evidence
+  Geography[Location master] --> Evidence
+  Identity[Synthetic identity verification] --> Evidence
+  Documents[Unsigned document metadata] --> Evidence
+  Crosswalk --> Evidence
+  Evidence --> Review[Explicit staff review]
+  Review --> Mirror[Simulation registry mirror]
+  Mirror --> Eligibility[Versioned demonstration eligibility rules]
+  Schemes[Scheme definitions] --> Eligibility
+  Eligibility --> Approval[Explicit staff sanction approval]
+  Approval --> Sanction[Scheme sanction register]
+  Sanction --> Account[Bank account validation]
+  Account --> Treasury[Treasury budget reservation]
+  Treasury --> Instruction[Bank instruction]
+  Instruction --> Callback[Callback inbox and bank settlement]
+  Callback --> Reconcile[Reconciliation]
+  Reconcile --> Notify[Simulated household notification]
+  Evidence --> Exceptions[Correction and grievance cases]
+  Eligibility --> Exceptions
+  Reconcile --> Exceptions

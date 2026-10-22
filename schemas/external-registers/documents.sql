@@ -1,0 +1,2 @@
+-- KarnatakaDBT simulation schema 1.0.0; not a government production DDL
+CREATE TABLE documents(document_id TEXT PRIMARY KEY, household_ref TEXT NOT NULL, person_id TEXT NOT NULL, certificate_id TEXT NOT NULL, document_type TEXT NOT NULL, issuer_name TEXT NOT NULL, holder_name TEXT NOT NULL, issued_on TEXT NOT NULL, expiry_date TEXT NOT NULL, status TEXT NOT NULL CHECK(status IN ('A','E','R','S')), signature_status TEXT NOT NULL CHECK(signature_status='unsigned_simulation'), source_updated_at TEXT NOT NULL);

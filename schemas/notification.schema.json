@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LOCAL SIMULATION notification",
+  "type": "object",
+  "properties": {
+    "delivery_status": {
+      "type": "string"
+    },
+    "channel": {
+      "type": "string"
+    },
+    "synthetic": {
+      "type": "boolean",
+      "enum": [
+        true
+      ]
+    }
+  },
+  "required": [
+    "delivery_status",
+    "channel",
+    "synthetic"
+  ]
+}

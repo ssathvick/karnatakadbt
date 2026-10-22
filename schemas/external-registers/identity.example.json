@@ -1,0 +1,31 @@
+{
+  "verifications": [
+    {
+      "identity_token": "synthetic-example-1",
+      "household_ref": "KA-DEMO-HH-001",
+      "person_id": "SIM-PER-b93ee8775afc2a",
+      "name": "Lakshmi Gowda",
+      "birth_date": "1988-04-12",
+      "status": "verified",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    },
+    {
+      "identity_token": "synthetic-example-2",
+      "household_ref": "KA-DEMO-HH-001",
+      "person_id": "SIM-PER-5b6a6333f65b3e",
+      "name": "Kiran Gowda",
+      "birth_date": "2012-08-05",
+      "status": "verified",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    },
+    {
+      "identity_token": "synthetic-example-3",
+      "household_ref": "KA-DEMO-HH-001",
+      "person_id": "SIM-PER-c7d531b54314e1",
+      "name": "Sahana Gowda",
+      "birth_date": "2016-02-20",
+      "status": "verified",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    }
+  ]
+}

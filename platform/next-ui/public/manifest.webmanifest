@@ -1,0 +1,17 @@
+{
+  "id": "/registration/next/",
+  "name": "KarnatakaDBT",
+  "short_name": "KarnatakaDBT",
+  "description": "Your KarnatakaDBT delivery workspace",
+  "start_url": "/registration/next/",
+  "scope": "/registration/next/",
+  "display": "standalone",
+  "background_color": "#fffdf7",
+  "theme_color": "#a51d32",
+  "lang": "en",
+  "icons": [
+    {"src":"/registration/next/app-icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"/registration/next/app-icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"/registration/next/app-icon-maskable.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}

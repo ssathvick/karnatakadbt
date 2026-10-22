@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:fruits:1.0.0",
+  "title": "FRUITS farmer register local database response",
+  "description": "Published field domains; simulated tables and API. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "crops": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "crop_id": {
+            "type": "string"
+          },
+          "farmer_id": {
+            "type": "string"
+          },
+          "parcel_id": {
+            "type": "string"
+          },
+          "season": {
+            "type": "string"
+          },
+          "crop_name": {
+            "type": "string"
+          },
+          "area_hectares": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "crop_id",
+          "farmer_id",
+          "parcel_id",
+          "season",
+          "crop_name",
+          "area_hectares"
+        ]
+      }
+    },
+    "farmers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "farmer_id": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "person_id": {
+            "type": "string"
+          },
+          "family_id": {
+            "type": "string"
+          },
+          "registration_status": {
+            "type": "string"
+          },
+          "source_updated_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "farmer_id",
+          "household_ref",
+          "person_id",
+          "family_id",
+          "registration_status",
+          "source_updated_at"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

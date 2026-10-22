@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:kutumba:1.0.0",
+  "title": "Kutumba family register local database response",
+  "description": "Public domain description; simulated tables and API. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "families": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "family_id": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "household_name": {
+            "type": "string"
+          },
+          "district_id": {
+            "type": "string"
+          },
+          "address_line": {
+            "type": "string"
+          },
+          "monthly_income_inr": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          },
+          "source_updated_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "family_id",
+          "household_ref",
+          "household_name",
+          "district_id",
+          "address_line",
+          "monthly_income_inr",
+          "status",
+          "source_updated_at"
+        ]
+      }
+    },
+    "members": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "person_id": {
+            "type": "string"
+          },
+          "family_id": {
+            "type": "string"
+          },
+          "platform_member_ref": {
+            "type": "string"
+          },
+          "given_name": {
+            "type": "string"
+          },
+          "family_name": {
+            "type": "string"
+          },
+          "birth_date": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "relationship": {
+            "type": "string"
+          },
+          "identity_token": {
+            "type": "string"
+          },
+          "source_updated_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "person_id",
+          "family_id",
+          "platform_member_ref",
+          "given_name",
+          "family_name",
+          "birth_date",
+          "gender",
+          "relationship",
+          "identity_token",
+          "source_updated_at"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

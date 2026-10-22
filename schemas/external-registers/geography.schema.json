@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:geography:1.0.0",
+  "title": "Location master local database response",
+  "description": "Published code domains; project codes are synthetic, official LGD mappings unset. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "districts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "district_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "division": {
+            "type": "string"
+          },
+          "official_lgd_code": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "code_status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "district_id",
+          "name",
+          "division",
+          "official_lgd_code",
+          "code_status"
+        ]
+      }
+    },
+    "locations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "location_id": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "district_id": {
+            "type": "string"
+          },
+          "village_code": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "longitude": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "coordinate_source": {
+            "type": "string"
+          },
+          "verified": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "location_id",
+          "household_ref",
+          "district_id",
+          "village_code",
+          "latitude",
+          "longitude",
+          "coordinate_source",
+          "verified"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

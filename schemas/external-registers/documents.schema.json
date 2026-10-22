@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:documents:1.0.0",
+  "title": "Document verification simulator local database response",
+  "description": "Published XML field mappings; local SQL and JSON API are simulated; no digital signatures. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "document_id": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "person_id": {
+            "type": "string"
+          },
+          "certificate_id": {
+            "type": "string"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "issuer_name": {
+            "type": "string"
+          },
+          "holder_name": {
+            "type": "string"
+          },
+          "issued_on": {
+            "type": "string"
+          },
+          "expiry_date": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "signature_status": {
+            "type": "string"
+          },
+          "source_updated_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "document_id",
+          "household_ref",
+          "person_id",
+          "certificate_id",
+          "document_type",
+          "issuer_name",
+          "holder_name",
+          "issued_on",
+          "expiry_date",
+          "status",
+          "signature_status",
+          "source_updated_at"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

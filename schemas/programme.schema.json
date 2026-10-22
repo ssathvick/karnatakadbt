@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LOCAL SIMULATION programme",
+  "type": "object",
+  "properties": {
+    "programme_reference": {
+      "type": "string"
+    },
+    "amount_minor": {
+      "type": "integer"
+    },
+    "currency": {
+      "type": "string",
+      "enum": [
+        "INR"
+      ]
+    },
+    "eligible": {
+      "type": "boolean"
+    },
+    "synthetic": {
+      "type": "boolean",
+      "enum": [
+        true
+      ]
+    }
+  },
+  "required": [
+    "programme_reference",
+    "amount_minor",
+    "currency",
+    "eligible",
+    "synthetic"
+  ]
+}

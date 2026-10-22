@@ -1,0 +1,338 @@
+[
+  {
+    "path": "products/registry/registry/features/unified-registry-model.md",
+    "file": "6bde8f928025.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/unified-registry-model.md",
+    "sha256": "37e8032476c51a8501d42c3db440ec9eadc639da766091ba9e4ec8fc77d66774",
+    "bytes": 2975
+  },
+  {
+    "path": "products/registry/registry/features/change-management-and-approval-workflow.md",
+    "file": "3fce5a9bb395.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/change-management-and-approval-workflow.md",
+    "sha256": "4179725b1b0ead4dc4a4a316f5053bdf6da323133b354958f6946c3ac3c6b1bd",
+    "bytes": 1583
+  },
+  {
+    "path": "products/registry/registry/features/audit-ability-and-trace-ability.md",
+    "file": "540975bfbe08.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/audit-ability-and-trace-ability.md",
+    "sha256": "6339e1f8bd5cbfe8ad192ab3e72bcbbe8c81f9adb14b05dd0b7b7eb4e9915074",
+    "bytes": 1370
+  },
+  {
+    "path": "products/registry/registry/features/documents.md",
+    "file": "0aef12692f91.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/documents.md",
+    "sha256": "3e29f34f379f2ddc75997a23e3de9f8f1c42cfffe94802222c6ea2c6b69ae0e4",
+    "bytes": 17868
+  },
+  {
+    "path": "products/registry/registry/features/ingestion-pipeline.md",
+    "file": "e3e7bc31a3ab.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/ingestion-pipeline.md",
+    "sha256": "3f5eca3dd599c67942824f9ae4d615742fd1b1020bbb23c622d8bf9fc390e188",
+    "bytes": 11633
+  },
+  {
+    "path": "products/registry/registry/features/version-history.md",
+    "file": "262a65def296.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/version-history.md",
+    "sha256": "721d7b3ef03aae1f0b08d91ebd65bebf44fdd1be8154754827f5ef576fb27ce2",
+    "bytes": 2897
+  },
+  {
+    "path": "products/registry/registry/features/registry-intake.md",
+    "file": "2f350c948fdf.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/registry-intake.md",
+    "sha256": "0d822d6fc5ec245c8782f1836123c212f6213fac8abbd69f511b72fa4e675478",
+    "bytes": 3559
+  },
+  {
+    "path": "products/registry/registry/features/consent-aware-data-sharing.md",
+    "file": "a9edd0d8aef3.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/consent-aware-data-sharing.md",
+    "sha256": "b0398a721f336bd3504206df3ced4681855b33bd065a8f7f58400b1b49909fa0",
+    "bytes": 4616
+  },
+  {
+    "path": "products/registry/registry/features/deduplication.md",
+    "file": "3fd6af0255e0.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/deduplication.md",
+    "sha256": "65cef46adb67dcf70788e7558cfc57cb8065cf3e8ea30738aa2fe0149b704c5c",
+    "bytes": 6046
+  },
+  {
+    "path": "products/registry/registry/features/rbac-roles-and-permissions.md",
+    "file": "dce8c802fe14.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/rbac-roles-and-permissions.md",
+    "sha256": "9417f656bb9e129c3adca7f2ed861d5efd774e5f64dd44aa75fee6601fc58f70",
+    "bytes": 14918
+  },
+  {
+    "path": "products/registry/registry/features/export-register-data.md",
+    "file": "165866d80f56.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/registry/registry/features/export-register-data.md",
+    "sha256": "72d95c23688046375df231cb5651f9e1c99b51fc6b5b133fe7e8a072f9a98891",
+    "bytes": 18624
+  },
+  {
+    "path": "pbms/features/rule-driven-processing.md",
+    "file": "079c5f8b4dbf.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/pbms/features/rule-driven-processing.md",
+    "sha256": "1ab1a06863e9aa5f6adf7ca5c6168ef10031a158369c1e4b83435e6c58eaf5d1",
+    "bytes": 642
+  },
+  {
+    "path": "pbms/features/dual-cycle-management.md",
+    "file": "370dcc94e3cb.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/pbms/features/dual-cycle-management.md",
+    "sha256": "3dd79c9dbce20e79ff71ca7abbfdf283aec47d02090e2e209a7d3425b4d783c7",
+    "bytes": 724
+  },
+  {
+    "path": "pbms/features/verification-workflows.md",
+    "file": "9427a64dc5da.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/pbms/features/verification-workflows.md",
+    "sha256": "f86cee1a58055093fdcaabf1864ed2169698bc676fc6612b42896520498ce95b",
+    "bytes": 513
+  },
+  {
+    "path": "pbms/features/controlled-list-management.md",
+    "file": "d5b759186619.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/pbms/features/controlled-list-management.md",
+    "sha256": "90cbd5f511cd69c9d9328d3826d066f413a06341dfd6962b9094b96c374159a7",
+    "bytes": 585
+  },
+  {
+    "path": "pbms/features/reconciliation-with-sponsor-bank.md",
+    "file": "706bd691b3bb.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/pbms/features/reconciliation-with-sponsor-bank.md",
+    "sha256": "cadc9128b980bc61f63185ac537d2315bfd8ebeddafd2c938166f14246814a65",
+    "bytes": 588
+  },
+  {
+    "path": "pbms/features/reporting-and-dashboards.md",
+    "file": "ebaa28f2a5df.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/pbms/features/reporting-and-dashboards.md",
+    "sha256": "8eebaeed922f95b9cb832f59382670ff03e8beb825e2b70e37e5ab3a62f82b23",
+    "bytes": 547
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/program-disbursement-cycles/user-guides/create-program-fund.md",
+    "file": "6683094044e2.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/program-disbursement-cycles/user-guides/create-program-fund.md",
+    "sha256": "31a33918cafd9711d3234043f19bf5fd004dce15e45212c63e26d3208fa93985",
+    "bytes": 4231
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/program-disbursement-cycles/user-guides/create-cycle-manager-for-a-program.md",
+    "file": "b46eaeef9540.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/program-disbursement-cycles/user-guides/create-cycle-manager-for-a-program.md",
+    "sha256": "87086119091b42defba8a7b618b2ffa3e7171840afc78c3b66156b0ad6617e9a",
+    "bytes": 7596
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/beneficiary-management/beneficiary-registry/user-guides/create-an-individual-registrant.md",
+    "file": "c61fa8bbaf64.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/beneficiary-management/beneficiary-registry/user-guides/create-an-individual-registrant.md",
+    "sha256": "f656706b88e99355e9c610d5ccc09eee1559f57ce0c7442e29f78356c0c8643f",
+    "bytes": 6138
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/beneficiary-management/beneficiary-registry/user-guides/create-a-group-and-add-individual-registrants-to-the-group.md",
+    "file": "ae47652807cd.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/beneficiary-management/beneficiary-registry/user-guides/create-a-group-and-add-individual-registrants-to-the-group.md",
+    "sha256": "7926747a05acabfabd12708ce357dae5cd3b16f65c240afb00066e98cae97037",
+    "bytes": 5117
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/beneficiary-management/beneficiary-registry-configurations/user-guides/configure-id-types.md",
+    "file": "ff8ff1992cc4.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/beneficiary-management/beneficiary-registry-configurations/user-guides/configure-id-types.md",
+    "sha256": "bb92d9564daca0c34c891a3f3df15fb595b69b1a4ffacb8eca22e3d8186a7ca3",
+    "bytes": 1315
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/beneficiary-management/beneficiary-registry-configurations/user-guides/configure-relationships.md",
+    "file": "15859f1099f2.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/beneficiary-management/beneficiary-registry-configurations/user-guides/configure-relationships.md",
+    "sha256": "6788b19a4376c4704ec268d5448da617214c1108ff80964b92caaaee6f6a7711",
+    "bytes": 2479
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/beneficiary-management/registration/user-guides/import-csv-file-to-registry-module.md",
+    "file": "735a018518b6.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/beneficiary-management/registration/user-guides/import-csv-file-to-registry-module.md",
+    "sha256": "f5da5c0806cd51c3a24f6506233f38a970eafaf2811dfc165f7eabeee318d455",
+    "bytes": 2336
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/eligibility/user-guides/configure-proxy-means-test.md",
+    "file": "b7d15bd703a7.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/eligibility/user-guides/configure-proxy-means-test.md",
+    "sha256": "c22f0a6e5c7540019b600b0a8178870cff2ab75d0f296fd71991634820eebd02",
+    "bytes": 4402
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/eligibility/user-guides/verify-eligibility-of-enrolled-registrants.md",
+    "file": "b2dd6e8e7e76.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/eligibility/user-guides/verify-eligibility-of-enrolled-registrants.md",
+    "sha256": "de0f0a02dfb0806ca3df0dee202099a5c837fce6312891677ab1a528d07bc8fc",
+    "bytes": 2644
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/deduplication/user-guides/deduplicate-registrants.md",
+    "file": "f6dfe5edc80a.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/deduplication/user-guides/deduplicate-registrants.md",
+    "sha256": "f3db621795931bc27e74ef0cbb8b215c43a15151f4dd9da16f34fa7e2a4e5b2f",
+    "bytes": 1624
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/enrolment/user-guides/enrol-registrants-into-program.md",
+    "file": "d41862450fc7.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/enrolment/user-guides/enrol-registrants-into-program.md",
+    "sha256": "f576d87fac48af3e5e4eda0eb230a726c141fd517c6e356c1f0fc089c9d2ad4d",
+    "bytes": 1725
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/entitlement/user-guides/multi-stage-approval.md",
+    "file": "0800a12e9e96.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/entitlement/user-guides/multi-stage-approval.md",
+    "sha256": "d86d3d0897a10b3b47c27242f93b2cf85869b7a6080c31eccc09ac45a5702ba9",
+    "bytes": 5143
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/notifications/user-guides/configure-notification-manager.md",
+    "file": "cc820fece2b0.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/notifications/user-guides/configure-notification-manager.md",
+    "sha256": "581b3a13a1965052522959c77b90f034be5f22a16cb874aab9fdbf85216a2eac",
+    "bytes": 1896
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/odk-importer/user-guides/customize-the-odk-importer-configuration-based-on-the-odk-form-fields.md",
+    "file": "f4129bf8aa02.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/odk-importer/user-guides/customize-the-odk-importer-configuration-based-on-the-odk-form-fields.md",
+    "sha256": "5365a6b077b00b0980625193818d001eda8b755139f69a793296022930878e32",
+    "bytes": 9178
+  },
+  {
+    "path": "products/pbms/_archive/previous-generation/functionality/odk-importer/user-guides/import-social-registry-data-into-pbms.md",
+    "file": "e1601128d8b0.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/products/pbms/_archive/previous-generation/functionality/odk-importer/user-guides/import-social-registry-data-into-pbms.md",
+    "sha256": "ee04fa7f33df02b6a7c9a1bb99d7120c999b4c04a399142ff0a34826b8275c2d",
+    "bytes": 8623
+  },
+  {
+    "path": "platform/platform-services/identity-and-access-management/staff-ui/requirements.md",
+    "file": "9e54bbd84915.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/identity-and-access-management/staff-ui/requirements.md",
+    "sha256": "ae8afcd2428549b8e2d66e288f1888f6c0e01ed06b8a4c3c36262b8861c65f82",
+    "bytes": 8414
+  },
+  {
+    "path": "platform/platform-services/master-data-service/catalogue/concepts.md",
+    "file": "ac68f428fa0f.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/master-data-service/catalogue/concepts.md",
+    "sha256": "60afc96b7208f9aaf4b317fa19d42cb371eb1e53a387197badbb795fe8af4355",
+    "bytes": 17310
+  },
+  {
+    "path": "platform/platform-services/master-data-service/catalogue/geography.md",
+    "file": "5113fbf9d081.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/master-data-service/catalogue/geography.md",
+    "sha256": "17a626307f3aed7f591e040ce3aaa946eea8b7f94da2c37679b3cab4aef4df1a",
+    "bytes": 18646
+  },
+  {
+    "path": "platform/platform-services/master-data-service/catalogue/change-control.md",
+    "file": "41ab4a9b2eb0.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/master-data-service/catalogue/change-control.md",
+    "sha256": "fa0e5ec1a5eb2ccbb522ee7605bb0f17371759565070f01cb6ab46a6e86fec56",
+    "bytes": 15109
+  },
+  {
+    "path": "platform/platform-services/master-data-service/catalogue/ui.md",
+    "file": "97d248305956.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/master-data-service/catalogue/ui.md",
+    "sha256": "34672148c2cf729dc7f414f29fe0c81e88e358399a53164405400a2a2b2f5e0c",
+    "bytes": 15935
+  },
+  {
+    "path": "platform/platform-services/approval-workflow-engine/scenarios.md",
+    "file": "1ecb4e62276c.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/approval-workflow-engine/scenarios.md",
+    "sha256": "0f4047b8f1554c484b822b70e06d3a22ac94721d364c328e779961136db730ec",
+    "bytes": 9077
+  },
+  {
+    "path": "platform/platform-services/approval-workflow-engine/functional-specifications.md",
+    "file": "c613c410a6f6.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/approval-workflow-engine/functional-specifications.md",
+    "sha256": "32ebac6046ccb227ba9755f363404124a69139afa00712cba55a8996ad533025",
+    "bytes": 42977
+  },
+  {
+    "path": "platform/platform-services/approval-workflow-engine/how-to/sla-escalation.md",
+    "file": "cb00da90c845.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/approval-workflow-engine/how-to/sla-escalation.md",
+    "sha256": "8fbc10c790fe89b253bd878c42b79a5725abd372e647f2c2019e92b222e1c254",
+    "bytes": 913
+  },
+  {
+    "path": "platform/platform-services/approval-workflow-engine/how-to/segregation-of-duties.md",
+    "file": "d7ef927d9e05.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/approval-workflow-engine/how-to/segregation-of-duties.md",
+    "sha256": "610fa13a253a30e36f6639cc12751e1d9bd4e5fb4186ccfe82b93a839d2a1e8d",
+    "bytes": 663
+  },
+  {
+    "path": "platform/platform-services/approval-workflow-engine/how-to/reassign-task.md",
+    "file": "3ea0f1988d7f.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/approval-workflow-engine/how-to/reassign-task.md",
+    "sha256": "3281b572e05fbf6fb6c8550f367ad41a997676e5856eb89116760f6c8b14c9ba",
+    "bytes": 659
+  },
+  {
+    "path": "platform/platform-services/partner-management/functional-specifications.md",
+    "file": "d3c324452049.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/partner-management/functional-specifications.md",
+    "sha256": "6ee6a774ef008c215019547980b7b792e50ea71cfd246ff1c9f5d32a69eb39d7",
+    "bytes": 6111
+  },
+  {
+    "path": "platform/platform-services/partner-management/integration.md",
+    "file": "e0b7338b137a.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/platform/platform-services/partner-management/integration.md",
+    "sha256": "7825678ea85142f986e22a98d7e09877b21a2ce6a26665ed0a4e7745a871ee68",
+    "bytes": 4098
+  },
+  {
+    "path": "consent-management/design/verification-and-enforcement.md",
+    "file": "c82b4e279bf9.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/consent-management/design/verification-and-enforcement.md",
+    "sha256": "b3789483901308cfe906569839c40343faf7a761531f186c087bee7787e3c0e3",
+    "bytes": 10425
+  },
+  {
+    "path": "consent-management/design/partner-onboarding-and-policy.md",
+    "file": "d356f8f7f92a.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/consent-management/design/partner-onboarding-and-policy.md",
+    "sha256": "983c8e086baba81479bcf388bdfcb81d59fbbddf430c22eb45874d143ac3ca56",
+    "bytes": 9496
+  },
+  {
+    "path": "consent-management/design/consent-lifecycle.md",
+    "file": "d4a797fecb1d.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/consent-management/design/consent-lifecycle.md",
+    "sha256": "c7ba7c6b830c899a48c8a347e3807da081aaf1a87841c1d9fd166df45ce52fbd",
+    "bytes": 5174
+  },
+  {
+    "path": "deployment/deployment-guide/importing-dashboards-on-the-superset-ui-for-opeka2p-applications.md",
+    "file": "5c78070ae1cf.md",
+    "url": "https://github.com/KarnatakaDBT/opeka2p-documentation/blob/latest/deployment/deployment-guide/importing-dashboards-on-the-superset-ui-for-opeka2p-applications.md",
+    "sha256": "efa39b850da9efc1218e9243be657fbf821da35fc0fc9531bbf47ef05369aeb1",
+    "bytes": 1679
+  }
+]

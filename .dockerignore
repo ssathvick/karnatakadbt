@@ -1,0 +1,10 @@
+.git
+.local
+.venv
+**/node_modules
+**/.next
+**/out
+**/__pycache__
+*.sqlite*
+*.vhdx
+*.zip

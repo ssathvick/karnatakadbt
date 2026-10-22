@@ -1,0 +1,202 @@
+[
+  {
+    "unit": "karnatakadbt-approval.service",
+    "module": "approval_service",
+    "factory": "app",
+    "port": 18087,
+    "env": "KDBT_APPROVAL_SETTINGS",
+    "name": "approval"
+  },
+  {
+    "unit": "karnatakadbt-native-agent-oauth.service",
+    "module": "native_agent_oauth_service",
+    "factory": "app",
+    "port": 18117,
+    "env": "KDBT_AGENT_OAUTH_SETTINGS",
+    "name": "native-agent-oauth"
+  },
+  {
+    "unit": "karnatakadbt-native-audit.service",
+    "module": "native_audit_service",
+    "factory": "app",
+    "port": 18122,
+    "env": "KDBT_NATIVE_AUDIT_SETTINGS",
+    "name": "native-audit"
+  },
+  {
+    "unit": "karnatakadbt-native-auth-candidate.service",
+    "module": "native_auth_service",
+    "factory": "app",
+    "port": 18144,
+    "env": "KDBT_NATIVE_AUTH_SETTINGS",
+    "name": "native-auth-candidate"
+  },
+  {
+    "unit": "karnatakadbt-native-bank-api.service",
+    "module": "native_example_bank_service",
+    "factory": "app",
+    "port": 18125,
+    "env": "KDBT_NATIVE_BANK_SETTINGS",
+    "name": "native-bank-api"
+  },
+  {
+    "unit": "karnatakadbt-native-bank-worker.service",
+    "module": "native_example_bank_service",
+    "factory": "app",
+    "port": 18126,
+    "env": "KDBT_NATIVE_BANK_SETTINGS",
+    "name": "native-bank-worker"
+  },
+  {
+    "unit": "karnatakadbt-native-bridge-beneficiary.service",
+    "module": "native_bridge_service",
+    "factory": "app",
+    "port": 18128,
+    "env": "KDBT_NATIVE_BRIDGE_SETTINGS",
+    "name": "native-bridge-beneficiary"
+  },
+  {
+    "unit": "karnatakadbt-native-bridge-partner.service",
+    "module": "native_bridge_service",
+    "factory": "app",
+    "port": 18127,
+    "env": "KDBT_NATIVE_BRIDGE_SETTINGS",
+    "name": "native-bridge-partner"
+  },
+  {
+    "unit": "karnatakadbt-native-bridge-worker.service",
+    "module": "native_bridge_worker_service",
+    "factory": "app",
+    "port": 18129,
+    "env": "KDBT_NATIVE_BRIDGE_WORKER_SETTINGS",
+    "name": "native-bridge-worker"
+  },
+  {
+    "unit": "karnatakadbt-native-certify-candidate.service",
+    "module": "native_certify_service",
+    "factory": "app",
+    "port": 18147,
+    "env": "KDBT_NATIVE_CERTIFY_SETTINGS",
+    "name": "native-certify-candidate"
+  },
+  {
+    "unit": "karnatakadbt-native-consent-public.service",
+    "module": "native_administration_service",
+    "factory": "app",
+    "port": 18112,
+    "env": "KDBT_NATIVE_ADMIN_SETTINGS",
+    "name": "native-consent-public"
+  },
+  {
+    "unit": "karnatakadbt-native-consent-staff.service",
+    "module": "native_consent_production_service",
+    "factory": "app",
+    "port": 18111,
+    "env": "KDBT_NATIVE_ADMIN_SETTINGS",
+    "name": "native-consent-staff"
+  },
+  {
+    "unit": "karnatakadbt-native-farmer.service",
+    "module": "native_farmer_api",
+    "factory": "app",
+    "port": 18130,
+    "env": "KDBT_NATIVE_FARMER_SETTINGS",
+    "name": "native-farmer"
+  },
+  {
+    "unit": "karnatakadbt-native-iam.service",
+    "module": "native_administration_service",
+    "factory": "app",
+    "port": 18110,
+    "env": "KDBT_NATIVE_ADMIN_SETTINGS",
+    "name": "native-iam"
+  },
+  {
+    "unit": "karnatakadbt-native-identity-authority.service",
+    "module": "native_identity_service",
+    "factory": "app",
+    "port": 18141,
+    "env": "KDBT_NATIVE_IDENTITY_AUTHORITY_SETTINGS",
+    "name": "native-identity-authority"
+  },
+  {
+    "unit": "karnatakadbt-native-keymanager.service",
+    "module": "native_keymanager_service",
+    "factory": "app",
+    "port": 18143,
+    "env": "KDBT_NATIVE_KEYMANAGER_SETTINGS",
+    "name": "native-keymanager"
+  },
+  {
+    "unit": "karnatakadbt-native-login-candidate.service",
+    "module": "native_login_service",
+    "factory": "app",
+    "port": 18146,
+    "env": "KDBT_NATIVE_LOGIN_SETTINGS",
+    "name": "native-login-candidate"
+  },
+  {
+    "unit": "karnatakadbt-native-partner.service",
+    "module": "native_administration_service",
+    "factory": "app",
+    "port": 18113,
+    "env": "KDBT_NATIVE_ADMIN_SETTINGS",
+    "name": "native-partner"
+  },
+  {
+    "unit": "karnatakadbt-native-registry.service",
+    "module": "native_registry_service",
+    "factory": "app",
+    "port": 18120,
+    "env": "KDBT_NATIVE_REGISTRY_SETTINGS",
+    "name": "native-registry"
+  },
+  {
+    "unit": "karnatakadbt-native-spar-beneficiary.service",
+    "module": "native_spar_service",
+    "factory": "app",
+    "port": 18124,
+    "env": "KDBT_NATIVE_SPAR_SETTINGS",
+    "name": "native-spar-beneficiary"
+  },
+  {
+    "unit": "karnatakadbt-native-spar-partner.service",
+    "module": "native_spar_service",
+    "factory": "app",
+    "port": 18123,
+    "env": "KDBT_NATIVE_SPAR_SETTINGS",
+    "name": "native-spar-partner"
+  },
+  {
+    "unit": "karnatakadbt-native-staff.service",
+    "module": "native_staff_service",
+    "factory": "app",
+    "port": 18131,
+    "env": "KDBT_NATIVE_STAFF_SETTINGS",
+    "name": "native-staff"
+  },
+  {
+    "unit": "karnatakadbt-native-wallet-identity-candidate.service",
+    "module": "native_identity_service",
+    "factory": "app",
+    "port": 18145,
+    "env": "KDBT_NATIVE_IDENTITY_AUTHORITY_SETTINGS",
+    "name": "native-wallet-identity-candidate"
+  },
+  {
+    "unit": "karnatakadbt-websub.service",
+    "module": "websub_service",
+    "factory": "app",
+    "port": 18089,
+    "env": "KDBT_WEBSUB_SETTINGS",
+    "name": "websub"
+  },
+  {
+    "unit": "karnatakadbt-native-master-data.service",
+    "module": "native_master_data_service",
+    "factory": "app",
+    "env": "KDBT_NATIVE_MASTER_SETTINGS",
+    "port": 18121,
+    "name": "native-master-data"
+  }
+]

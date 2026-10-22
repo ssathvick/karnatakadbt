@@ -1,0 +1,226 @@
+{
+  "export_visibility_days": 2,
+  "approval_summary": {
+    "skip_event_types": [
+      "request_created",
+      "stage_completed"
+    ],
+    "status_ranks": {
+      "pending": 0,
+      "in_review": 1,
+      "approved": 2,
+      "rejected": 2,
+      "cancelled": 2
+    }
+  },
+  "event": {
+    "source_table": "awe_req_events",
+    "columns": {
+      "event_id": {
+        "type": "character varying",
+        "nullable": false,
+        "has_default": false
+      },
+      "event_type": {
+        "type": "character varying",
+        "nullable": false,
+        "has_default": false
+      },
+      "request_id": {
+        "type": "character varying",
+        "nullable": false,
+        "has_default": false
+      },
+      "artifact_type": {
+        "type": "character varying",
+        "nullable": false,
+        "has_default": false
+      },
+      "artifact_id": {
+        "type": "character varying",
+        "nullable": false,
+        "has_default": false
+      },
+      "status": {
+        "type": "character varying",
+        "nullable": false,
+        "has_default": false
+      },
+      "stage_order": {
+        "type": "integer",
+        "nullable": true,
+        "has_default": false
+      },
+      "actor": {
+        "type": "character varying",
+        "nullable": true,
+        "has_default": false
+      },
+      "occurred_at": {
+        "type": "timestamp with time zone",
+        "nullable": false,
+        "has_default": false
+      },
+      "received_at": {
+        "type": "timestamp with time zone",
+        "nullable": false,
+        "has_default": false
+      },
+      "applied": {
+        "type": "boolean",
+        "nullable": false,
+        "has_default": false
+      },
+      "error": {
+        "type": "text",
+        "nullable": true,
+        "has_default": false
+      }
+    },
+    "primary_key": [
+      "event_id"
+    ],
+    "selected_fields": [
+      "event_id",
+      "artifact_type",
+      "artifact_id",
+      "event_type",
+      "status",
+      "stage_order",
+      "applied",
+      "occurred_at",
+      "received_at"
+    ]
+  },
+  "export": {
+    "source_table": "g2p_register_export_data_queue",
+    "columns": {
+      "export_id": {
+        "type": "character varying",
+        "nullable": false,
+        "has_default": false
+      },
+      "register_id": {
+        "type": "character varying",
+        "nullable": false,
+        "has_default": false
+      },
+      "requested_by": {
+        "type": "character varying",
+        "nullable": false,
+        "has_default": false
+      },
+      "queued_at": {
+        "type": "timestamp without time zone",
+        "nullable": false,
+        "has_default": false
+      },
+      "export_format": {
+        "type": "character varying",
+        "nullable": false,
+        "has_default": false
+      },
+      "selection_mode": {
+        "type": "character varying",
+        "nullable": false,
+        "has_default": false
+      },
+      "selected_internal_record_ids": {
+        "type": "jsonb",
+        "nullable": true,
+        "has_default": false
+      },
+      "search_text": {
+        "type": "text",
+        "nullable": true,
+        "has_default": false
+      },
+      "filter_by": {
+        "type": "jsonb",
+        "nullable": true,
+        "has_default": false
+      },
+      "sort_by": {
+        "type": "character varying",
+        "nullable": true,
+        "has_default": false
+      },
+      "policy_mnemonics": {
+        "type": "jsonb",
+        "nullable": true,
+        "has_default": false
+      },
+      "data_policies": {
+        "type": "jsonb",
+        "nullable": true,
+        "has_default": false
+      },
+      "batch_size": {
+        "type": "integer",
+        "nullable": false,
+        "has_default": false
+      },
+      "last_processed_offset": {
+        "type": "integer",
+        "nullable": false,
+        "has_default": false
+      },
+      "export_status": {
+        "type": "character varying",
+        "nullable": false,
+        "has_default": false
+      },
+      "export_no_of_attempts": {
+        "type": "integer",
+        "nullable": false,
+        "has_default": false
+      },
+      "export_latest_timestamp": {
+        "type": "timestamp without time zone",
+        "nullable": true,
+        "has_default": false
+      },
+      "export_latest_error_code": {
+        "type": "text",
+        "nullable": true,
+        "has_default": false
+      },
+      "file_object_name": {
+        "type": "text",
+        "nullable": true,
+        "has_default": false
+      },
+      "file_presigned_url": {
+        "type": "text",
+        "nullable": true,
+        "has_default": false
+      },
+      "file_url_expires_at": {
+        "type": "timestamp without time zone",
+        "nullable": true,
+        "has_default": false
+      },
+      "total_records_exported": {
+        "type": "integer",
+        "nullable": true,
+        "has_default": false
+      }
+    },
+    "primary_key": [
+      "export_id"
+    ],
+    "selected_fields": [
+      "export_id",
+      "requested_by",
+      "register_id",
+      "export_status",
+      "queued_at",
+      "export_latest_timestamp",
+      "total_records_exported",
+      "export_format",
+      "file_presigned_url",
+      "file_url_expires_at",
+      "export_latest_error_code"
+    ]
+  }
+}

@@ -1,0 +1,342 @@
+[
+  {
+    "source_component": "registration-ui\\analytics.html",
+    "sha256": "5e9b8b7d8babe5b557705b2d029ae3d654bb5c3fff58414c1d1771ef9706cb60",
+    "destination": "platform\\templates\\analytics.html"
+  },
+  {
+    "source_component": "registration-ui\\base.html",
+    "sha256": "35c60c3a037487ce072a9c5e2d4c5afb75fd4b6dcb5bad95dbf9626786b2527f",
+    "destination": "platform\\templates\\base.html"
+  },
+  {
+    "source_component": "registration-ui\\geo-form.js",
+    "sha256": "27cc1db0d4f806d3b1e48b1ee07428d5471cbade5ed25564d21d727a37816b24",
+    "destination": "platform\\templates\\geo-form.js"
+  },
+  {
+    "source_component": "registration-ui\\geography-map.css",
+    "sha256": "f0b3d196836656926fd34ffbdeb9070ab01e23249905b66ad8f76b34773affbb",
+    "destination": "platform\\templates\\geography-map.css"
+  },
+  {
+    "source_component": "registration-ui\\geography-map.js",
+    "sha256": "87df5b5711d6fa3591be55376e58be04614f32cfde5e98848853179a7d4fa4eb",
+    "destination": "platform\\templates\\geography-map.js"
+  },
+  {
+    "source_component": "registration-ui\\geography.html",
+    "sha256": "7cf4f96dfa7aca755accef11c147da851266f373e574431650459ad937829a8c",
+    "destination": "platform\\templates\\geography.html"
+  },
+  {
+    "source_component": "registration-ui\\home.html",
+    "sha256": "a27ce2044a02c0a2a2f7e446f41e791a5600fdeeb7e31c05ac552b2d87003f91",
+    "destination": "platform\\templates\\home.html"
+  },
+  {
+    "source_component": "registration-ui\\knowledge-admin.html",
+    "sha256": "9bbd265f72e16a8db7115c355152bd00203f5c61e03ca076600452b3890495b2",
+    "destination": "platform\\templates\\knowledge-admin.html"
+  },
+  {
+    "source_component": "registration-ui\\knowledge-article.html",
+    "sha256": "07223432915a9387f517dfd5a28e5b8733d642936a95e5fbe96b6d9f3c52a915",
+    "destination": "platform\\templates\\knowledge-article.html"
+  },
+  {
+    "source_component": "registration-ui\\knowledge-editor.html",
+    "sha256": "5def7f93fa06f337cc45549175adc881da4282df9f9e3890118c17408b198cfd",
+    "destination": "platform\\templates\\knowledge-editor.html"
+  },
+  {
+    "source_component": "registration-ui\\knowledge-library.html",
+    "sha256": "6bd5629e7c96d83fa9fb023cd4b7dcf4d906fb08ccdccc0a9ba3fbb7341e0cbe",
+    "destination": "platform\\templates\\knowledge-library.html"
+  },
+  {
+    "source_component": "registration-ui\\knowledge-revision.html",
+    "sha256": "5b4c16d671f652ea79986278424a1eff658e8f7739dbe0eb7516e035e6c299d1",
+    "destination": "platform\\templates\\knowledge-revision.html"
+  },
+  {
+    "source_component": "registration-ui\\local-ai.html",
+    "sha256": "a705c2a9b221c8dc1bccc0aee23580a75269507e60a848d215a75cdf509aa879",
+    "destination": "platform\\templates\\local-ai.html"
+  },
+  {
+    "source_component": "registration-ui\\message.html",
+    "sha256": "34dd3f36df526b1d6a41c65a51634a97fdbeb486867a18e5e8ce9a4a43a6598b",
+    "destination": "platform\\templates\\message.html"
+  },
+  {
+    "source_component": "registration-ui\\phase1-cms.html",
+    "sha256": "99433cf01652d758c0198bf52e491514730b56093d94a5e06aadb3002d946d25",
+    "destination": "platform\\templates\\phase1-cms.html"
+  },
+  {
+    "source_component": "registration-ui\\phase1-conditionality.html",
+    "sha256": "6a4d8d722de0fe213eede8d541615add9e5d4a8ac2b5b90fc378844eae2dd5f7",
+    "destination": "platform\\templates\\phase1-conditionality.html"
+  },
+  {
+    "source_component": "registration-ui\\phase1-field.html",
+    "sha256": "404af0c0cea2f9562449a3b65816161d5cc1b0cc270536f25459e427689602d7",
+    "destination": "platform\\templates\\phase1-field.html"
+  },
+  {
+    "source_component": "registration-ui\\phase1-grievances.html",
+    "sha256": "2c60b97d1dbd613c714c354dffc903c78199b474dbdfe59b2a3ecf331b97b908",
+    "destination": "platform\\templates\\phase1-grievances.html"
+  },
+  {
+    "source_component": "registration-ui\\phase1-portal.html",
+    "sha256": "6fdd1c7eec5ad34b27d35a67ebc98936237cac8a1e0113795e731b13c5aa1d22",
+    "destination": "platform\\templates\\phase1-portal.html"
+  },
+  {
+    "source_component": "registration-ui\\phase1-public.html",
+    "sha256": "d932bca8048456fb6df40308c8c62336f0bf4f72a62d9f49340fcb3da52e7f38",
+    "destination": "platform\\templates\\phase1-public.html"
+  },
+  {
+    "source_component": "registration-ui\\phase1-readiness.html",
+    "sha256": "a37668efe7387a118a5c47ae0d621527bcda70fa6cbb087dadaa3d7dacb0a339",
+    "destination": "platform\\templates\\phase1-readiness.html"
+  },
+  {
+    "source_component": "registration-ui\\phase1.html",
+    "sha256": "ea6403d87b9c9aa8fdd37adf4a79ac0b4d43ccf211bd1d60a6299c394c538829",
+    "destination": "platform\\templates\\phase1.html"
+  },
+  {
+    "source_component": "registration-ui\\profile.html",
+    "sha256": "01bfc1db605809dde36e505d5181a123df82ce2ac1c9dc603ae187e4b68477a9",
+    "destination": "platform\\templates\\profile.html"
+  },
+  {
+    "source_component": "registration-ui\\review.html",
+    "sha256": "cb5629b83496bc582488c169a021d7e154d1a9b1fee01920ef18270a8b45b6b7",
+    "destination": "platform\\templates\\review.html"
+  },
+  {
+    "source_component": "registration-ui\\simulation-run.html",
+    "sha256": "064cc7fb0c12b93840869598809110965062a8bf2c66e5d76b47d26e8e045836",
+    "destination": "platform\\templates\\simulation-run.html"
+  },
+  {
+    "source_component": "registration-ui\\simulation.html",
+    "sha256": "4b8d2dd80036ce23d75ffc8684bb4232f9a9cf8d6667b1ce5f849ee153f1c8b2",
+    "destination": "platform\\templates\\simulation.html"
+  },
+  {
+    "source_component": "registration-ui\\staff.html",
+    "sha256": "78c6c8d6f5d23f38b9bfeaab7607aeb521b3aeb14effccb2a2a586e7db041bed",
+    "destination": "platform\\templates\\staff.html"
+  },
+  {
+    "source_component": "registration-ui\\style.css",
+    "sha256": "4dadf94f659d5c4ccc73923c3db776e1fdaea748aea825394cf00ef7918079a9",
+    "destination": "platform\\templates\\style.css"
+  },
+  {
+    "source_component": "registration-ui\\workspace.css",
+    "sha256": "c3a031cbb158379947a54e0b48601abfe75bec0dc7d59a6386c3ecc1ab5af93e",
+    "destination": "platform\\templates\\workspace.css"
+  },
+  {
+    "source_component": "registration-ui\\workspace.html",
+    "sha256": "e2006c67a570e5750770a8cad37b5d96857462b4b67a5973fc5d47b9524ae21b",
+    "destination": "platform\\templates\\workspace.html"
+  },
+  {
+    "source_component": "knowledge\\analytics.js",
+    "sha256": "d675f1bda7da69457526ac8055dc20ec894eb46b524dcd0cbfcf977443ed977b",
+    "destination": "platform\\knowledge-assets\\analytics.js"
+  },
+  {
+    "source_component": "knowledge\\context.js",
+    "sha256": "2e19ea052dc2ab269d3ccd4a1f92a957ffb494b6466944759dcc9bd0fc6a17d5",
+    "destination": "platform\\knowledge-assets\\context.js"
+  },
+  {
+    "source_component": "knowledge\\documentation-pack.json",
+    "sha256": "7c303c53e70ed8413c91db202919710dc7a2e7184845c30756472837e6fc8f49",
+    "destination": "platform\\knowledge-assets\\documentation-pack.json"
+  },
+  {
+    "source_component": "knowledge\\experience.css",
+    "sha256": "a725d8cf56df3a58758a2b8cb2dbce352bd5911e50ae3962d7e7f9027abc8a4c",
+    "destination": "platform\\knowledge-assets\\experience.css"
+  },
+  {
+    "source_component": "knowledge\\help.css",
+    "sha256": "b5f64cdeca463bf37de0711f4e138755844f74f422382d3b88a10b13e90d50e9",
+    "destination": "platform\\knowledge-assets\\help.css"
+  },
+  {
+    "source_component": "knowledge\\help.js",
+    "sha256": "7d44250014dada21d2e06033219b7b465afd5c0b766f45396d61ac82c1b83e14",
+    "destination": "platform\\knowledge-assets\\help.js"
+  },
+  {
+    "source_component": "knowledge\\phase1-field.js",
+    "sha256": "cd76b458f3dc54966adf5b92058c7303644508a6699988e1b8ad92f3efc6fed0",
+    "destination": "platform\\knowledge-assets\\phase1-field.js"
+  },
+  {
+    "source_component": "knowledge\\phase1-portal.css",
+    "sha256": "ca448b723abd8dfc6f6a27f06d9c1a6d51138c350d29e8f32babd46bebf76b4d",
+    "destination": "platform\\knowledge-assets\\phase1-portal.css"
+  },
+  {
+    "source_component": "knowledge\\phase1-sw.js",
+    "sha256": "f28ccd91c9c14284a3bac2f18a6d918b6b78ded1f81c1d1d2ca4ee9b0a14b5a9",
+    "destination": "platform\\knowledge-assets\\phase1-sw.js"
+  },
+  {
+    "source_component": "knowledge\\screen-guide-mappings.json",
+    "sha256": "1b493e54a9501daed56f16ce921d12720460c9c3bc38aa107edf931c485189d2",
+    "destination": "platform\\knowledge-assets\\screen-guide-mappings.json"
+  },
+  {
+    "source_component": "knowledge\\seed.json",
+    "sha256": "77da712d5318d8a0bf07b465ae3849b0368c2cb4af1a15e3292cf960f582abc6",
+    "destination": "platform\\knowledge-assets\\seed.json"
+  },
+  {
+    "source_component": "knowledge\\upstream-docs\\manifest.json",
+    "sha256": "699fba54a28f1e00485c11e4ca2f7ddb3c97f5df7908377c25ae866af679e3a1",
+    "destination": "platform\\knowledge-assets\\upstream-docs\\manifest.json"
+  },
+  {
+    "source_component": "persona-ui\\src\\catalogue.js",
+    "sha256": "0d2a1d67928194c19e3cfb67be1141cd5e5a3427cf5e156233d759cb37ccc01b",
+    "destination": "platform\\persona-ui\\src\\catalogue.js"
+  },
+  {
+    "source_component": "persona-ui\\src\\main.jsx",
+    "sha256": "62175018af1e9209cda04fc2f3b862294fbd5015240ebde8e34c9c42d9977e33",
+    "destination": "platform\\persona-ui\\src\\main.jsx"
+  },
+  {
+    "source_component": "persona-ui\\src\\shell.js",
+    "sha256": "f499e097bb286c756246d238aa59697854c4319fc57f111c9dc13fe4e548b7b1",
+    "destination": "platform\\persona-ui\\src\\shell.js"
+  },
+  {
+    "source_component": "persona-ui\\src\\site.jsx",
+    "sha256": "6d4042c6dd70a5e7e1f8ad42a7f5a00099a50fc5ab63255ee2e137956877dcf8",
+    "destination": "platform\\persona-ui\\src\\site.jsx"
+  },
+  {
+    "source_component": "sitewide-ui\\index.html",
+    "sha256": "95ffc0fa2b364d36e94775a6126d4ec9113a66c405ded5e0e3221aca24d7eed2",
+    "destination": "platform\\hub-assets\\index.html"
+  },
+  {
+    "source_component": "sitewide-ui\\modules.json",
+    "sha256": "64ee5a45c3af8c5bab95c8f9bda8590e792ff58518f1176fedf2975b9c6b17b0",
+    "destination": "platform\\hub-assets\\modules.json"
+  },
+  {
+    "source_component": "sitewide-ui\\site-shell.css",
+    "sha256": "288d873238880e38f6d59db633966d2a12640b6bb989d51bdfd2828432c46b21",
+    "destination": "platform\\hub-assets\\site-shell.css"
+  },
+  {
+    "source_component": "sitewide-ui\\site.css",
+    "sha256": "191a027d8be5cb1db044ee9b8f3bc185c1d37f700555f0f7cd1c7d374d9a24b1",
+    "destination": "platform\\hub-assets\\site.css"
+  },
+  {
+    "source_component": "sitewide-ui\\verification.json",
+    "sha256": "20193a472229ce14261dcfb489fa36ca5775d1063c44d08143de7ffa0671185b",
+    "destination": "platform\\hub-assets\\verification.json"
+  },
+  {
+    "source_component": "knowledge_management.py",
+    "sha256": "39422a0567b6cf3e28cb9ba59518e8c1a772137ab88554e7738b7af8abbdde1a",
+    "destination": "platform\\knowledge_management.py"
+  },
+  {
+    "source_component": "platform_analytics.py",
+    "sha256": "481855d653337e96b09b7c00b94e3ea46c5564e46a2547e714020dba8fadd0f4",
+    "destination": "platform\\platform_analytics.py"
+  },
+  {
+    "source_component": "partner_simulation.py",
+    "sha256": "6d0792212429145fc103e124ad960b82fd4df2ea6c6a706462cc1899c6b9c64c",
+    "destination": "platform\\partner_simulation.py"
+  },
+  {
+    "source_component": "phase1_sandbox.py",
+    "sha256": "4a26007a8d0d98c605686900866fc98c242f703448ec405eee517b2229d6570a",
+    "destination": "platform\\phase1_sandbox.py"
+  },
+  {
+    "source_component": "phase1_cms.py",
+    "sha256": "e453546f8fb4dfb88d929dfb3c269ae61c218d9c6a8864ffacbdf6687bef0866",
+    "destination": "platform\\phase1_cms.py"
+  },
+  {
+    "source_component": "phase1_conditionality.py",
+    "sha256": "7533028c9a0d9c46a6dd91154249129be8e21d3aa57acf2f3a2b5e01ccaf5739",
+    "destination": "platform\\phase1_conditionality.py"
+  },
+  {
+    "source_component": "phase1_observability.py",
+    "sha256": "42f1154e2e9ab838cc07ab9c38c4c16190f60f96e54744ed13e6d61e951abd5b",
+    "destination": "platform\\phase1_observability.py"
+  },
+  {
+    "source_component": "local_ai.py",
+    "sha256": "faf4545bb3133664d816e7283ce39b402f42de2bc361d7c0f19facca46330bfa",
+    "destination": "platform\\local_ai.py"
+  },
+  {
+    "source_component": "registration_workspaces.py",
+    "sha256": "a7419736ab5b0a56462103480362b8663109c5c97999be0402b586b4d33736ad",
+    "destination": "platform\\registration_workspaces.py"
+  },
+  {
+    "source_component": "knowledge-seed.json",
+    "sha256": "0d7edf85229f5a2718dfebac959e5f6132c630478e7fd4844b970913fb976b00",
+    "destination": "platform\\knowledge-seed.json"
+  },
+  {
+    "source_component": "persona-ui\\build.cjs",
+    "sha256": "2a7327df756cb58cd0e6d3a66ab2bf2d7651d6a067193c6b37bcd2863f4a82d9",
+    "destination": "platform\\persona-ui\\build.cjs"
+  },
+  {
+    "source_component": "persona-ui\\package.json",
+    "sha256": "2c696147c2f3e24e6fd1898fd62b5329618d0280f91ef2b95b01db5033c8f5c1",
+    "destination": "platform\\persona-ui\\package.json"
+  },
+  {
+    "source_component": "persona-ui\\package-lock.json",
+    "sha256": "a06ab77aef48da7f25d0caa9cacf4d5a75042013b6c7df55c3a892332ffc2f0d",
+    "destination": "platform\\persona-ui\\package-lock.json"
+  },
+  {
+    "source_component": "registration_app.py",
+    "sha256": "5038a8de937fc00ea9e972ef8208fc7cecae3e21812b6a41b340ecb81c0b0e5b",
+    "destination": "integration-reference\\registration_app.py"
+  },
+  {
+    "source_component": "analytics_sources.py",
+    "sha256": "fec121be4179dd2b42b217dbf0fb322c4c3a08f46ef030cab81c1655b249ee6d",
+    "destination": "integration-reference\\analytics_sources.py"
+  },
+  {
+    "source_component": "nigeria_geography.py",
+    "sha256": "16eb93a7f46fd0b589a89d24a8faf3751b6b04bf2255b52df52822fec0d72a46",
+    "destination": "integration-reference\\karnataka_geography.py"
+  },
+  {
+    "source_component": "build-simulation-schema.py",
+    "sha256": "152071dba1158cd99ddb71824d30dd25aabdb7f983f850eac55b069d7ff2740e",
+    "destination": "integration-reference\\build-simulation-schema.py"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:sevasindhu:1.0.0",
+  "title": "Seva Sindhu applications local database response",
+  "description": "Public service description; simulated tables and API. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "service_applications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "application_id": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "service_code": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "source_updated_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "application_id",
+          "household_ref",
+          "service_code",
+          "status",
+          "source_updated_at"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

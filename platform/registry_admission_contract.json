@@ -1,0 +1,73 @@
+{
+  "import": {
+    "source_table": "import_file_process_queue",
+    "primary_key": "import_file_id",
+    "columns": {
+      "import_file_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "document_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "data_model_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "register_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "intake_form_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "queued_at": {
+        "type": "timestamp without time zone",
+        "nullable": false,
+        "max_length": null
+      },
+      "queued_by": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "intake_form_ingestion_status": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "intake_form_ingestion_timestamp": {
+        "type": "timestamp without time zone",
+        "nullable": true,
+        "max_length": null
+      },
+      "intake_form_ingestion_attempts": {
+        "type": "integer",
+        "nullable": false,
+        "max_length": null
+      },
+      "intake_form_ingestion_error": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "number_of_records_present": {
+        "type": "integer",
+        "nullable": true,
+        "max_length": null
+      },
+      "number_of_records_ingested": {
+        "type": "integer",
+        "nullable": true,
+        "max_length": null
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Secure sign in · AI in e-Governance</title>
+  <link rel="stylesheet" href="/assets/login.css">
+  <script src="/assets/login.js" defer></script>
+</head>
+<body>
+  <header class="brand"><a href="/" aria-label="AI in e-Governance home"><span class="mark" aria-hidden="true">A</span><span>AI in e-Governance<small data-i18n="secure">Secure programme access</small></span></a><label class="language"><span data-i18n="language">Language</span><select id="language" aria-label="Language"><option value="en">English</option><option value="kn">ಕನ್ನಡ</option></select></label></header>
+  <main>
+    <aside class="intro"><span class="eyebrow" data-i18n="welcome">YOUR IDENTITY. YOUR CHOICE.</span><h1 data-i18n="headline">One secure sign in.<br>Access that belongs to you.</h1><p data-i18n="intro">Sign in to the programme you chose. Review the information you share before continuing.</p><div class="assurance"><span aria-hidden="true">✓</span><p data-i18n="assurance">Your sign-in details stay private. This page does not save your identity information on this device.</p></div><div class="steps"><span>01 <b data-i18n="step1">Verify your identity</b></span><span>02 <b data-i18n="step2">Review access</b></span><span>03 <b data-i18n="step3">Continue securely</b></span></div></aside>
+    <section class="card" aria-labelledby="card-title">
+      <div class="progress" aria-hidden="true"><i id="progress-fill"></i></div>
+      <p id="client-name" class="client"></p><h2 id="card-title" data-i18n="signin">Sign in</h2>
+      <p id="message" role="status" aria-live="polite"></p>
+      <section id="loading"><div class="spinner" aria-hidden="true"></div><p data-i18n="loading">Preparing your secure sign in…</p></section>
+      <form id="identity-form" hidden>
+        <p class="hint" data-i18n="identityHint">Use the identity enrolled by your institution.</p>
+        <label for="individual" data-i18n="identity">Identity number</label><input id="individual" name="individual" autocomplete="username" required maxlength="128" spellcheck="false">
+        <label for="factor" data-i18n="method">Verification method</label><select id="factor"></select>
+        <div id="challenges"></div>
+        <button id="verify" type="submit" data-i18n="verify">Verify and continue</button>
+        <button id="wallet-button" type="button" class="secondary" data-i18n="wallet">Use a linked wallet</button>
+      </form>
+      <section id="wallet-panel" hidden><h3 data-i18n="walletHeading">Continue in your wallet</h3><p data-i18n="walletHint">Scan this code with your enrolled wallet. Keep this page open while you approve access.</p><img id="wallet-qr" width="240" height="240" alt="Wallet sign-in QR code"><p id="wallet-state" role="status"></p><button id="wallet-back" class="secondary" data-i18n="back">Back to sign in</button></section>
+      <form id="consent-form" hidden><p data-i18n="consentHint">Review what this application can receive. Required information is marked.</p><fieldset><legend data-i18n="claims">Identity information</legend><div id="claim-options"></div></fieldset><fieldset id="scope-fieldset"><legend data-i18n="permissions">Programme permissions and credentials</legend><div id="scope-options"></div></fieldset><p class="hint" data-i18n="consentNote">Continue only if you recognize this application and agree to this access.</p><button type="submit" data-i18n="continue">Allow and continue</button><button id="cancel" class="secondary" type="button" data-i18n="cancel">Cancel</button></form>
+      <section id="unavailable" hidden><h3 data-i18n="unavailable">This sign-in request cannot continue</h3><p data-i18n="returnHint">Return to the programme and start sign in again. Your application will create a fresh secure request.</p></section>
+      <footer><span aria-hidden="true">◈</span><span data-i18n="footer">Encrypted connection · You control your access</span></footer>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,2 @@
+-- KarnatakaDBT simulation schema 1.0.0; not a government production DDL
+CREATE TABLE parcels(parcel_id TEXT PRIMARY KEY, household_ref TEXT NOT NULL, district_id TEXT NOT NULL, village_code TEXT NOT NULL, survey_number TEXT NOT NULL, extent_hectares REAL NOT NULL CHECK(extent_hectares>0), owner_person_id TEXT NOT NULL, mutation_status TEXT NOT NULL CHECK(mutation_status IN ('clear','pending')), source_updated_at TEXT NOT NULL);

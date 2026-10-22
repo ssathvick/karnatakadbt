@@ -1,0 +1,20 @@
+{
+  "budgets": [
+    {
+      "scheme_id": "SIM-HOUSEHOLD",
+      "available_minor": 1000000000,
+      "currency": "INR"
+    },
+    {
+      "scheme_id": "SIM-FARMER",
+      "available_minor": 1000000000,
+      "currency": "INR"
+    },
+    {
+      "scheme_id": "SIM-STUDENT",
+      "available_minor": 1000000000,
+      "currency": "INR"
+    }
+  ],
+  "reservations": []
+}

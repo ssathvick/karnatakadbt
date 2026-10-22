@@ -1,0 +1,2 @@
+/* UI preference only. No fields or record values are modified. */
+document.addEventListener('DOMContentLoaded',()=>{const selector=document.querySelector('[data-language-selector]');if(!selector)return;selector.addEventListener('change',()=>{const lang=selector.value;if(!['en','kn'].includes(lang))return;document.cookie=`KDBT-Language=${lang}; Path=/; Max-Age=31536000; SameSite=Lax; Secure${location.hostname.endsWith('localhost:8443')?'; Domain=localhost:8443':''}`;const url=new URL(location.href);url.searchParams.set('lang',lang);location.assign(url.href);});});

@@ -1,0 +1,90 @@
+{
+  "/attributes/get_all_attributes": {
+    "scheme": "console",
+    "required_permissions": []
+  },
+  "/attributes/get_attribute_values": {
+    "scheme": "console",
+    "required_permissions": []
+  },
+  "/attributes/add_attribute": {
+    "scheme": "console",
+    "required_permissions": [
+      "referenceData:create"
+    ]
+  },
+  "/attributes/update_attribute": {
+    "scheme": "console",
+    "required_permissions": [
+      "referenceData:edit"
+    ]
+  },
+  "/attributes/delete_attribute": {
+    "scheme": "console",
+    "required_permissions": [
+      "referenceData:delete"
+    ]
+  },
+  "/attributes/add_attribute_value": {
+    "scheme": "console",
+    "required_permissions": [
+      "referenceData:create"
+    ]
+  },
+  "/attributes/update_attribute_value": {
+    "scheme": "console",
+    "required_permissions": [
+      "referenceData:edit"
+    ]
+  },
+  "/attributes/delete_attribute_value": {
+    "scheme": "console",
+    "required_permissions": [
+      "referenceData:delete"
+    ]
+  },
+  "/geo/get_all_geo_levels": {
+    "scheme": "console",
+    "required_permissions": []
+  },
+  "/geo/get_geo_level_values": {
+    "scheme": "console",
+    "required_permissions": []
+  },
+  "/geo/add_geo_level": {
+    "scheme": "console",
+    "required_permissions": [
+      "geo:create"
+    ]
+  },
+  "/geo/update_geo_level": {
+    "scheme": "console",
+    "required_permissions": [
+      "geo:edit"
+    ]
+  },
+  "/geo/delete_geo_level": {
+    "scheme": "console",
+    "required_permissions": [
+      "geo:delete"
+    ]
+  },
+  "/geo/add_geo_level_value": {
+    "scheme": "console",
+    "required_permissions": [
+      "geo:create"
+    ]
+  },
+  "/geo/update_geo_level_value": {
+    "scheme": "console",
+    "required_permissions": [
+      "geo:edit"
+    ]
+  },
+  "/geo/delete_geo_level_value": {
+    "scheme": "console",
+    "required_permissions": [
+      "geo:delete"
+    ]
+  }
+}

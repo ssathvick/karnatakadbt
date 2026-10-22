@@ -1,0 +1,3 @@
+-- KarnatakaDBT simulation schema 1.0.0; not a government production DDL
+CREATE TABLE districts(district_id TEXT PRIMARY KEY, name TEXT UNIQUE NOT NULL, division TEXT NOT NULL, official_lgd_code TEXT, code_status TEXT NOT NULL CHECK(code_status='synthetic_project_code'));
+ CREATE TABLE locations(location_id TEXT PRIMARY KEY, household_ref TEXT UNIQUE NOT NULL, district_id TEXT NOT NULL REFERENCES districts(district_id), village_code TEXT NOT NULL, latitude REAL CHECK(latitude BETWEEN -90 AND 90), longitude REAL CHECK(longitude BETWEEN -180 AND 180), coordinate_source TEXT NOT NULL, verified INTEGER NOT NULL CHECK(verified IN (0,1)), CHECK((latitude IS NULL)=(longitude IS NULL)));

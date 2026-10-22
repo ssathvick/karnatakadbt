@@ -1,0 +1,299 @@
+{
+  "models": {
+    "incoming": {
+      "table": "incoming_raw_data",
+      "fields": {
+        "classification_status": {
+          "default": "PENDING"
+        },
+        "classification_number_of_attempts": {
+          "default": 0
+        }
+      },
+      "columns": {
+        "ingest_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "partner_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "data_model_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "ingest_message_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "ingest_correlation_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "receipt_date_time": {
+          "nullable": false,
+          "type": "DATETIME"
+        },
+        "classification_status": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "classification_date_time": {
+          "nullable": true,
+          "type": "DATETIME"
+        },
+        "classification_number_of_attempts": {
+          "nullable": false,
+          "type": "INTEGER"
+        },
+        "classification_latest_error_code": {
+          "nullable": true,
+          "type": "VARCHAR"
+        }
+      }
+    },
+    "incoming-payload": {
+      "table": "incoming_raw_data_payloads",
+      "fields": {},
+      "columns": {
+        "ingest_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "raw_data_json": {
+          "nullable": true,
+          "type": "JSON"
+        },
+        "raw_data_xml": {
+          "nullable": true,
+          "type": "TEXT"
+        },
+        "raw_data_text": {
+          "nullable": true,
+          "type": "TEXT"
+        }
+      }
+    },
+    "classified": {
+      "table": "incoming_classified_data",
+      "fields": {
+        "pipeline_action": {
+          "default": "ADD"
+        },
+        "transformation_status": {
+          "default": "PENDING"
+        },
+        "transformation_number_of_attempts": {
+          "default": 0
+        },
+        "ingestion_status": {
+          "default": "NOT_APPLICABLE"
+        },
+        "ingestion_number_of_attempts": {
+          "default": 0
+        }
+      },
+      "columns": {
+        "ingest_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "data_model_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "partner_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "register_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "pipeline_action": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "section_id": {
+          "nullable": true,
+          "type": "VARCHAR"
+        },
+        "internal_record_id": {
+          "nullable": true,
+          "type": "VARCHAR"
+        },
+        "change_request_id": {
+          "nullable": true,
+          "type": "VARCHAR"
+        },
+        "intake_form_id": {
+          "nullable": true,
+          "type": "VARCHAR"
+        },
+        "semantic_pattern_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "classified_date_time": {
+          "nullable": false,
+          "type": "DATETIME"
+        },
+        "transformation_status": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "transformation_date_time": {
+          "nullable": true,
+          "type": "DATETIME"
+        },
+        "transformation_number_of_attempts": {
+          "nullable": false,
+          "type": "INTEGER"
+        },
+        "transformation_latest_error_code": {
+          "nullable": true,
+          "type": "VARCHAR"
+        },
+        "ingestion_status": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "ingestion_date_time": {
+          "nullable": true,
+          "type": "DATETIME"
+        },
+        "ingestion_number_of_attempts": {
+          "nullable": false,
+          "type": "INTEGER"
+        },
+        "ingestion_latest_error_code": {
+          "nullable": true,
+          "type": "VARCHAR"
+        },
+        "intake_form_submission_id": {
+          "nullable": true,
+          "type": "VARCHAR"
+        }
+      }
+    },
+    "model": {
+      "table": "data_models",
+      "fields": {
+        "is_active": {
+          "default": true
+        }
+      },
+      "columns": {
+        "data_model_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "data_model_mnemonic": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "pattern_for_data_model": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "response_template_document_id": {
+          "nullable": true,
+          "type": "VARCHAR"
+        },
+        "is_active": {
+          "nullable": false,
+          "type": "BOOLEAN"
+        }
+      }
+    },
+    "key": {
+      "table": "incoming_model_key_paths",
+      "fields": {
+        "is_list": {
+          "default": false
+        }
+      },
+      "columns": {
+        "key_path_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "data_model_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "key_path_for_message_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "key_path_for_sender": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "key_path_for_signature": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "key_path_for_signature_payload": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "is_list": {
+          "nullable": false,
+          "type": "BOOLEAN"
+        },
+        "key_path_for_list_elements": {
+          "nullable": false,
+          "type": "VARCHAR"
+        }
+      }
+    },
+    "semantic": {
+      "table": "incoming_model_semantic_patterns",
+      "fields": {},
+      "columns": {
+        "semantic_pattern_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "data_model_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "register_id": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "intake_form_id": {
+          "nullable": true,
+          "type": "VARCHAR"
+        },
+        "section_id": {
+          "nullable": true,
+          "type": "VARCHAR"
+        },
+        "pattern_for_register": {
+          "nullable": true,
+          "type": "VARCHAR"
+        },
+        "pattern_for_intake_form": {
+          "nullable": true,
+          "type": "VARCHAR"
+        },
+        "pattern_for_section": {
+          "nullable": true,
+          "type": "VARCHAR"
+        },
+        "key_path_for_business_payload": {
+          "nullable": false,
+          "type": "VARCHAR"
+        },
+        "raw_payload_enricher_class": {
+          "nullable": false,
+          "type": "VARCHAR"
+        }
+      }
+    }
+  }
+}

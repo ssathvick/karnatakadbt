@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:notifications:1.0.0",
+  "title": "Notification and grievance simulator local database response",
+  "description": "Local delivery and case model; no external messages. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "deliveries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "message_id": {
+            "type": "string"
+          },
+          "run_id": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "template": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "message_id",
+          "run_id",
+          "household_ref",
+          "template",
+          "status",
+          "at"
+        ]
+      }
+    },
+    "grievances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "case_id": {
+            "type": "string"
+          },
+          "run_id": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "case_id",
+          "run_id",
+          "household_ref",
+          "reason",
+          "status",
+          "at"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

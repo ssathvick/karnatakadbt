@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:bank:1.0.0",
+  "title": "State DBT and bank simulator local database response",
+  "description": "Local accounts, instructions and settlement model, not a financial API. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "accounts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "account_token": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "holder_person_id": {
+            "type": "string"
+          },
+          "validation_status": {
+            "type": "string"
+          },
+          "routing_code": {
+            "type": "string"
+          },
+          "source_updated_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "account_token",
+          "household_ref",
+          "holder_person_id",
+          "validation_status",
+          "routing_code",
+          "source_updated_at"
+        ]
+      }
+    },
+    "instructions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "instruction_id": {
+            "type": "string"
+          },
+          "run_id": {
+            "type": "string"
+          },
+          "account_token": {
+            "type": "string"
+          },
+          "sanction_id": {
+            "type": "string"
+          },
+          "amount_minor": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "instruction_id",
+          "run_id",
+          "account_token",
+          "sanction_id",
+          "amount_minor",
+          "status"
+        ]
+      }
+    },
+    "settlements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "settlement_id": {
+            "type": "string"
+          },
+          "instruction_id": {
+            "type": "string"
+          },
+          "amount_minor": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          },
+          "received_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "settlement_id",
+          "instruction_id",
+          "amount_minor",
+          "status",
+          "received_at"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

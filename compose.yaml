@@ -1,0 +1,124 @@
+name: karnatakadbt-local
+services:
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: kdbt
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run python manage.py up first}
+      POSTGRES_DB: postgres
+    volumes:
+      - postgres:/var/lib/postgresql
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U kdbt -d postgres]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+  redis:
+    image: redis:7-alpine
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD:?Run python manage.py up first}
+    command: [/bin/sh, -c, 'exec redis-server --appendonly yes --requirepass "$$REDIS_PASSWORD"']
+    volumes:
+      - redis:/data
+    restart: unless-stopped
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.8.1
+    command: [start-dev, --import-realm]
+    environment:
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres:5432/kdbt_keycloak
+      KC_DB_USERNAME: kdbt
+      KC_DB_PASSWORD: ${POSTGRES_PASSWORD}
+      KC_BOOTSTRAP_ADMIN_USERNAME: local-root
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD:?Run python manage.py up first}
+      KC_HOSTNAME: https://localhost:8444
+      KC_HTTP_ENABLED: 'true'
+      KC_PROXY_HEADERS: xforwarded
+      KC_HEALTH_ENABLED: 'true'
+    volumes:
+      - ./.local/keycloak:/opt/keycloak/data/import:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+      database-init:
+        condition: service_completed_successfully
+    restart: unless-stopped
+  database-init:
+    image: postgres:18
+    environment:
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+    entrypoint: [/bin/sh, -ec]
+    command:
+      - |
+        if ! psql -h postgres -U kdbt -d postgres -tAc "SELECT 1 FROM pg_database WHERE datname='kdbt_keycloak'" | grep -q 1; then
+          createdb -h postgres -U kdbt kdbt_keycloak
+        fi
+    depends_on:
+      postgres:
+        condition: service_healthy
+  minio:
+    build:
+      context: .
+      dockerfile: deployment/Minio.Dockerfile
+    environment:
+      MINIO_ROOT_USER: local-storage
+      MINIO_ROOT_PASSWORD: ${MINIO_PASSWORD:?Run python manage.py up first}
+      MINIO_BROWSER_REDIRECT_URL: https://localhost:8469
+    command: server /data --console-address :9001
+    volumes:
+      - objects:/data
+    restart: unless-stopped
+  kafka:
+    image: apache/kafka:4.1.1
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+      KAFKA_HEAP_OPTS: -Xmx512m -Xms256m
+    volumes:
+      - kafka:/var/lib/kafka/data
+    restart: unless-stopped
+  app:
+    build: .
+    init: true
+    env_file: .local/runtime.env
+    volumes:
+      - runtime:/runtime
+      - ./.local:/host-input:ro
+    ports:
+      - '127.0.0.1:8443-8469:8443-8469'
+    depends_on:
+      database-init:
+        condition: service_completed_successfully
+      redis:
+        condition: service_started
+      minio:
+        condition: service_started
+      kafka:
+        condition: service_started
+      keycloak:
+        condition: service_started
+    healthcheck:
+      test: [CMD, python, deployment/healthcheck.py]
+      interval: 20s
+      timeout: 15s
+      start_period: 180s
+      retries: 30
+    restart: unless-stopped
+volumes:
+  runtime:
+  postgres:
+  redis:
+  objects:
+  kafka:

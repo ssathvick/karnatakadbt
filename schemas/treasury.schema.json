@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LOCAL SIMULATION treasury",
+  "type": "object",
+  "properties": {
+    "funding_reference": {
+      "type": "string"
+    },
+    "approved": {
+      "type": "boolean"
+    },
+    "amount_minor": {
+      "type": "integer"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "synthetic": {
+      "type": "boolean",
+      "enum": [
+        true
+      ]
+    }
+  },
+  "required": [
+    "funding_reference",
+    "approved",
+    "amount_minor",
+    "currency",
+    "synthetic"
+  ]
+}

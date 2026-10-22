@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:karnatakadbt:simulation:revenue:1.0.0",
+  "title": "Nadakacheri certificate register local database response",
+  "description": "Public service description; simulated tables and API. SQL contains additional business and referential constraints.",
+  "type": "object",
+  "properties": {
+    "certificates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "certificate_id": {
+            "type": "string"
+          },
+          "household_ref": {
+            "type": "string"
+          },
+          "person_id": {
+            "type": "string"
+          },
+          "certificate_type": {
+            "type": "string"
+          },
+          "annual_income_inr": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "issued_on": {
+            "type": "string"
+          },
+          "valid_until": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "source_updated_at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "certificate_id",
+          "household_ref",
+          "person_id",
+          "certificate_type",
+          "annual_income_inr",
+          "issued_on",
+          "valid_until",
+          "status",
+          "source_updated_at"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

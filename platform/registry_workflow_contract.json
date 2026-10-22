@@ -1,0 +1,129 @@
+{
+  "awe_enabled": true,
+  "export_batch_size": 2000,
+  "policy_types": {
+    "change": [
+      "registry.change_request",
+      "change_request"
+    ],
+    "intake": [
+      "registry.intake_form",
+      "intake_form"
+    ]
+  },
+  "export": {
+    "source_table": "g2p_register_export_data_queue",
+    "columns": {
+      "export_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "register_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "requested_by": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "queued_at": {
+        "type": "timestamp without time zone",
+        "nullable": false,
+        "max_length": null
+      },
+      "export_format": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "selection_mode": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "selected_internal_record_ids": {
+        "type": "jsonb",
+        "nullable": true,
+        "max_length": null
+      },
+      "search_text": {
+        "type": "text",
+        "nullable": true,
+        "max_length": null
+      },
+      "filter_by": {
+        "type": "jsonb",
+        "nullable": true,
+        "max_length": null
+      },
+      "sort_by": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "policy_mnemonics": {
+        "type": "jsonb",
+        "nullable": true,
+        "max_length": null
+      },
+      "data_policies": {
+        "type": "jsonb",
+        "nullable": true,
+        "max_length": null
+      },
+      "batch_size": {
+        "type": "integer",
+        "nullable": false,
+        "max_length": null
+      },
+      "last_processed_offset": {
+        "type": "integer",
+        "nullable": false,
+        "max_length": null
+      },
+      "export_status": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "export_no_of_attempts": {
+        "type": "integer",
+        "nullable": false,
+        "max_length": null
+      },
+      "export_latest_timestamp": {
+        "type": "timestamp without time zone",
+        "nullable": true,
+        "max_length": null
+      },
+      "export_latest_error_code": {
+        "type": "text",
+        "nullable": true,
+        "max_length": null
+      },
+      "file_object_name": {
+        "type": "text",
+        "nullable": true,
+        "max_length": null
+      },
+      "file_presigned_url": {
+        "type": "text",
+        "nullable": true,
+        "max_length": null
+      },
+      "file_url_expires_at": {
+        "type": "timestamp without time zone",
+        "nullable": true,
+        "max_length": null
+      },
+      "total_records_exported": {
+        "type": "integer",
+        "nullable": true,
+        "max_length": null
+      }
+    }
+  }
+}

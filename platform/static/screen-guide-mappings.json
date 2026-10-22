@@ -1,0 +1,726 @@
+[
+  {
+    "slug": "docs-register-unified-registry-model",
+    "module": "register",
+    "stage": "Registry and register concepts",
+    "contexts": [
+      "Find a record",
+      "Service overview"
+    ],
+    "topic": "registry and register|register concepts",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-register-change-management-and-approval-workflow",
+    "module": "register",
+    "stage": "Proposed and approved changes",
+    "contexts": [
+      "Submit for approval",
+      "Individual details",
+      "Household details"
+    ],
+    "topic": "proposed.*approved|change request|edit details",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-register-audit-ability-and-trace-ability",
+    "module": "register",
+    "stage": "Workflow audit",
+    "contexts": [
+      "Submit for approval",
+      "Individual details",
+      "Household details"
+    ],
+    "topic": "workflow audit|audit trail",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-register-documents",
+    "module": "register",
+    "stage": "Record documents",
+    "contexts": [
+      "Individual details",
+      "Household details",
+      "Submit for approval"
+    ],
+    "topic": "supporting documents|attached documents|record documents|document upload",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-register-ingestion-pipeline",
+    "module": "register",
+    "stage": "Ingestion monitoring",
+    "contexts": [
+      "Service overview",
+      "Submit for approval"
+    ],
+    "topic": "incoming messages|ingestion|imported submissions",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-register-version-history",
+    "module": "register",
+    "stage": "Committed record history",
+    "contexts": [
+      "Individual details",
+      "Household details"
+    ],
+    "topic": "version history|committed record history",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-register-registry-intake",
+    "module": "register",
+    "stage": "Registry intake lifecycle",
+    "contexts": [
+      "Submit for approval",
+      "Service overview"
+    ],
+    "topic": "intake form|intake submission|registry intake",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-consent-manager-consent-aware-data-sharing",
+    "module": "consent-manager",
+    "stage": "Consent-aware sharing",
+    "contexts": [
+      "Review consent",
+      "Service overview"
+    ],
+    "topic": "consent.aware sharing",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-register-deduplication",
+    "module": "register",
+    "stage": "Duplicate candidate review",
+    "contexts": [
+      "Find a record",
+      "Individual details",
+      "Household details",
+      "Service overview"
+    ],
+    "topic": "duplicate candidates|deduplication|duplicate review",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-iam-staff-ui-rbac-roles-and-permissions",
+    "module": "iam-staff-ui",
+    "stage": "Operations and configuration roles",
+    "contexts": [
+      "Role assignment",
+      "Account management",
+      "Service overview"
+    ],
+    "topic": "operations.*configuration roles",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-register-export-register-data",
+    "module": "register",
+    "stage": "Registry export jobs",
+    "contexts": [
+      "Find a record",
+      "Individual details",
+      "Household details"
+    ],
+    "topic": "export records|export history",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-pbms-rule-driven-processing",
+    "module": "pbms",
+    "stage": "Eligibility and entitlement rules",
+    "contexts": [
+      "Eligibility",
+      "Benefit calculation",
+      "Programme setup"
+    ],
+    "topic": "eligibility.*entitlement rules|rule definitions",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-pbms-dual-cycle-management",
+    "module": "pbms",
+    "stage": "Enrolment and disbursement cycles",
+    "contexts": [
+      "Enrollment",
+      "Disbursement",
+      "Programme setup"
+    ],
+    "topic": "enrolment.*disbursement cycles|dual cycle",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-pbms-verification-workflows",
+    "module": "pbms",
+    "stage": "List verification",
+    "contexts": [
+      "Enrollment",
+      "Disbursement",
+      "Eligibility"
+    ],
+    "topic": "list verification|verify list|verification list",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-pbms-controlled-list-management",
+    "module": "pbms",
+    "stage": "Registry-based list corrections",
+    "contexts": [
+      "Enrollment",
+      "Programme setup"
+    ],
+    "topic": "beneficiary list|controlled list|source.*list correction",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-pbms-reconciliation-with-sponsor-bank",
+    "module": "pbms",
+    "stage": "Bank reconciliation concepts",
+    "contexts": [
+      "Reconciliation",
+      "Disbursement"
+    ],
+    "topic": "bank reconciliation|sponsor bank",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-superset-reporting-and-dashboards",
+    "module": "superset",
+    "stage": "Programme reporting",
+    "contexts": [
+      "Choose dashboard",
+      "Apply filters",
+      "Service overview"
+    ],
+    "topic": "programme reports|program reports",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-pbms-create-program-fund",
+    "module": "pbms",
+    "stage": "Programme fund records",
+    "contexts": [
+      "Programme setup",
+      "Disbursement"
+    ],
+    "topic": "program funds|programme funds|fund allocation",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-pbms-create-cycle-manager-for-a-program",
+    "module": "pbms",
+    "stage": "Cycle manager configuration",
+    "contexts": [
+      "Programme setup",
+      "Enrollment"
+    ],
+    "topic": "cycle manager",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-registry-create-an-individual-registrant",
+    "module": "registry",
+    "stage": "Individual registrant entry",
+    "contexts": [
+      "Record maintenance",
+      "Service overview"
+    ],
+    "topic": "create individual|new individual|individual registrant",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-registry-create-a-group-and-add-individual-registrants-to-the-group",
+    "module": "registry",
+    "stage": "Household membership entry",
+    "contexts": [
+      "Household membership",
+      "Record maintenance"
+    ],
+    "topic": "members|group membership",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-registry-configure-id-types",
+    "module": "registry",
+    "stage": "Identifier type configuration",
+    "contexts": [
+      "Record maintenance",
+      "Service overview"
+    ],
+    "topic": "id types|identifier types",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-registry-configure-relationships",
+    "module": "registry",
+    "stage": "Relationship type configuration",
+    "contexts": [
+      "Household membership",
+      "Service overview"
+    ],
+    "topic": "relationship types|relationships configuration",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-registry-import-csv-file-to-registry-module",
+    "module": "registry",
+    "stage": "CSV import validation",
+    "contexts": [
+      "Record maintenance",
+      "Service overview"
+    ],
+    "topic": "csv|import records|import a file",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-pbms-configure-proxy-means-test",
+    "module": "pbms",
+    "stage": "Proxy means test configuration",
+    "contexts": [
+      "Eligibility",
+      "Programme setup"
+    ],
+    "topic": "proxy means|pmt",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-pbms-verify-eligibility-of-enrolled-registrants",
+    "module": "pbms",
+    "stage": "Eligibility reassessment",
+    "contexts": [
+      "Eligibility",
+      "Enrollment"
+    ],
+    "topic": "verify eligibility|reassess eligibility|eligibility reassessment",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-pbms-deduplicate-registrants",
+    "module": "pbms",
+    "stage": "Programme duplicate checks",
+    "contexts": [
+      "Eligibility",
+      "Enrollment",
+      "Programme setup"
+    ],
+    "topic": "deduplicate|duplicated|duplicate check",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-pbms-enrol-registrants-into-program",
+    "module": "pbms",
+    "stage": "Enrolment outcomes",
+    "contexts": [
+      "Enrollment",
+      "Eligibility"
+    ],
+    "topic": "enrolment results|enrollment results|enrolled.*not eligible",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-pbms-multi-stage-approval",
+    "module": "pbms",
+    "stage": "Entitlement assessment stages",
+    "contexts": [
+      "Benefit calculation",
+      "Programme setup"
+    ],
+    "topic": "prepare assessment|entitlement assessment|multi.stage approval",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-portal-admin-configure-notification-manager",
+    "module": "portal-admin",
+    "stage": "Programme notifications",
+    "contexts": [
+      "Programme configuration",
+      "Application administration"
+    ],
+    "topic": "notification manager|programme notifications|program notifications",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-odk-customize-the-odk-importer-configuration-based-on-the-odk-form-fields",
+    "module": "odk",
+    "stage": "ODK import field mapping",
+    "contexts": [
+      "Prepare collection form",
+      "Submit and quality check",
+      "Collect field data",
+      "Service overview"
+    ],
+    "topic": "odk import|json formatter|field mapping",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-portal-admin-import-social-registry-data-into-pbms",
+    "module": "portal-admin",
+    "stage": "Social registry data source",
+    "contexts": [
+      "Programme configuration",
+      "Application administration"
+    ],
+    "topic": "data source|registry import",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-iam-staff-ui-requirements",
+    "module": "iam-staff-ui",
+    "stage": "Application and login provider configuration",
+    "contexts": [
+      "Service overview",
+      "Account management",
+      "Role assignment"
+    ],
+    "topic": "applications|login providers",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-master-data-ui-concepts",
+    "module": "master-data-ui",
+    "stage": "Reference code lists",
+    "contexts": [
+      "Maintain shared attributes",
+      "Service overview"
+    ],
+    "topic": "reference code|code lists|datasets|attributes|values",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-master-data-ui-geography",
+    "module": "master-data-ui",
+    "stage": "Geography changes",
+    "contexts": [
+      "Location reference data",
+      "Service overview"
+    ],
+    "topic": "boundary change|geography changes|crosswalk",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-master-data-ui-change-control",
+    "module": "master-data-ui",
+    "stage": "Reference data change review",
+    "contexts": [
+      "Maintain shared attributes",
+      "Location reference data"
+    ],
+    "topic": "reference data.*review|change control|reference.*approval",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-master-data-ui-ui",
+    "module": "master-data-ui",
+    "stage": "Reference data navigation",
+    "contexts": [
+      "Service overview",
+      "Maintain shared attributes",
+      "Location reference data"
+    ],
+    "topic": "catalogue overview|reference.data navigation",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-awe-scenarios",
+    "module": "awe",
+    "stage": "Approval patterns",
+    "contexts": [
+      "Assigned tasks",
+      "Review evidence",
+      "Record decision",
+      "Service overview"
+    ],
+    "topic": "quorum|approval patterns|stage modes",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-awe-functional-specifications",
+    "module": "awe",
+    "stage": "Policy versions",
+    "contexts": [
+      "Service overview",
+      "Assigned tasks",
+      "Review evidence"
+    ],
+    "topic": "policy version|approval policy|policies",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-awe-sla-escalation",
+    "module": "awe",
+    "stage": "Overdue approval tasks",
+    "contexts": [
+      "Assigned tasks",
+      "Review evidence"
+    ],
+    "topic": "overdue|sla|escalation",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-awe-segregation-of-duties",
+    "module": "awe",
+    "stage": "Independent approvers",
+    "contexts": [
+      "Record decision",
+      "Review evidence"
+    ],
+    "topic": "self.approval|separation of duties|independent approver",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-awe-reassign-task",
+    "module": "awe",
+    "stage": "Task reassignment",
+    "contexts": [
+      "Assigned tasks",
+      "Review evidence"
+    ],
+    "topic": "reassign|reassignment|blocked task",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-partner-management-functional-specifications",
+    "module": "partner-management",
+    "stage": "Partner lifecycle and keys",
+    "contexts": [
+      "Partner onboarding",
+      "Service overview"
+    ],
+    "topic": "onboarding|partner lifecycle|public keys|rotate keys|key update",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-partner-management-integration",
+    "module": "partner-management",
+    "stage": "Partner key integration",
+    "contexts": [
+      "Integration access",
+      "Partner onboarding"
+    ],
+    "topic": "signature verification|key integration|signing keys",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-consent-manager-verification-and-enforcement",
+    "module": "consent-manager",
+    "stage": "Consent decision enforcement",
+    "contexts": [
+      "Review consent",
+      "Service overview"
+    ],
+    "topic": "effective scope|consent decision|validation result",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-consent-manager-partner-onboarding-and-policy",
+    "module": "consent-manager",
+    "stage": "Partner policy scope",
+    "contexts": [
+      "Review consent",
+      "Service overview"
+    ],
+    "topic": "partner policy|policy binding|data.share policy",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-consent-manager-consent-lifecycle",
+    "module": "consent-manager",
+    "stage": "Consent withdrawal and expiry",
+    "contexts": [
+      "Consent withdrawal",
+      "Review consent"
+    ],
+    "topic": "revocation|withdrawal|expiry|consent lifecycle",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "docs-superset-importing-dashboards-on-the-superset-ui-for-opeka2p-applications",
+    "module": "superset",
+    "stage": "Dashboard import preparation",
+    "contexts": [
+      "Choose dashboard",
+      "Service overview"
+    ],
+    "topic": "import dashboard|dashboard import",
+    "scope": "upstream_reference"
+  },
+  {
+    "slug": "karnataka-guide-platform-1",
+    "module": "platform",
+    "stage": "End-to-end service journey",
+    "contexts": [
+      "Find your service",
+      "Service overview"
+    ],
+    "topic": "service journey|registration.*review.*application",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-platform-2",
+    "module": "platform",
+    "stage": "Persona and permission",
+    "contexts": [
+      "Find your service",
+      "Service overview"
+    ],
+    "topic": "persona.*permission|persona selector",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-intake-3",
+    "module": "intake",
+    "stage": "Registration readiness",
+    "contexts": [
+      "Household details",
+      "Household members",
+      "Submit registration"
+    ],
+    "topic": "registration readiness|prepare.*registration",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-intake-4",
+    "module": "intake",
+    "stage": "Returned registration corrections",
+    "contexts": [
+      "Correct returned details"
+    ],
+    "topic": "returned registration|reviewer feedback",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-review-5",
+    "module": "review",
+    "stage": "Verification readiness",
+    "contexts": [
+      "Verification checks",
+      "Approve or return",
+      "Review queue"
+    ],
+    "topic": "verification readiness|independent registration review",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-review-6",
+    "module": "review",
+    "stage": "Registration audit reference",
+    "contexts": [
+      "Recorded activity",
+      "Review queue",
+      "Verification checks"
+    ],
+    "topic": "registration audit|status question",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-beneficiary-7",
+    "module": "beneficiary",
+    "stage": "Application preparation",
+    "contexts": [
+      "Programme application",
+      "Register household"
+    ],
+    "topic": "application preparation|prepare.*application",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-beneficiary-8",
+    "module": "beneficiary",
+    "stage": "Status meaning",
+    "contexts": [
+      "Application status",
+      "Programme application"
+    ],
+    "topic": "status meaning|application status",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-geography-9",
+    "module": "geography",
+    "stage": "Map intensity and counting",
+    "contexts": [
+      "District record map",
+      "Location coverage"
+    ],
+    "topic": "map intensity|state colours|state colors|records by state",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-geography-10",
+    "module": "geography",
+    "stage": "Coordinate quality",
+    "contexts": [
+      "Household location points",
+      "Location coverage"
+    ],
+    "topic": "coordinate quality|coordinate provenance|synthetic coordinates",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-staff-portal-11",
+    "module": "staff-portal",
+    "stage": "Staff service navigation",
+    "contexts": [
+      "Choose service",
+      "Service overview"
+    ],
+    "topic": "staff service|staff navigation",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-staff-portal-12",
+    "module": "staff-portal",
+    "stage": "Access troubleshooting",
+    "contexts": [
+      "Sign-in troubleshooting",
+      "Choose service"
+    ],
+    "topic": "access problem|access troubleshooting|session expired",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-knowledge-13",
+    "module": "knowledge",
+    "stage": "Source-aware guidance",
+    "contexts": [
+      "Browse guidance"
+    ],
+    "topic": "source.linked|source.aware|references",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-knowledge-14",
+    "module": "knowledge",
+    "stage": "Knowledge content maintenance",
+    "contexts": [
+      "Edit guidance",
+      "Review and publication",
+      "Version history"
+    ],
+    "topic": "content maintenance|maintain.*guidance",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-knowledge-15",
+    "module": "knowledge",
+    "stage": "AI source verification",
+    "contexts": [
+      "Ask local AI"
+    ],
+    "topic": "ai source|check.*ai answer",
+    "scope": "local_workflow"
+  },
+  {
+    "slug": "karnataka-guide-knowledge-16",
+    "module": "knowledge",
+    "stage": "AI drafting review",
+    "contexts": [
+      "Draft with local AI",
+      "Edit guidance"
+    ],
+    "topic": "ai.suggested|drafting review",
+    "scope": "local_workflow"
+  }
+]

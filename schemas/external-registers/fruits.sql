@@ -1,0 +1,3 @@
+-- KarnatakaDBT simulation schema 1.0.0; not a government production DDL
+CREATE TABLE farmers(farmer_id TEXT PRIMARY KEY, household_ref TEXT UNIQUE NOT NULL, person_id TEXT NOT NULL, family_id TEXT NOT NULL, registration_status TEXT NOT NULL CHECK(registration_status IN ('active','inactive')), source_updated_at TEXT NOT NULL);
+ CREATE TABLE crops(crop_id TEXT PRIMARY KEY, farmer_id TEXT NOT NULL REFERENCES farmers(farmer_id), parcel_id TEXT NOT NULL, season TEXT NOT NULL, crop_name TEXT NOT NULL, area_hectares REAL NOT NULL CHECK(area_hectares>0));

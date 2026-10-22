@@ -1,0 +1,513 @@
+{
+  "completion": {
+    "source_table": "g2p_register_section_completion_score",
+    "primary_key": [
+      "id"
+    ],
+    "columns": {
+      "id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "register_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "internal_record_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "section_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "computed_section_completion_score": {
+        "type": "double precision",
+        "nullable": false,
+        "max_length": null
+      },
+      "computed_timestamp": {
+        "type": "timestamp without time zone",
+        "nullable": false,
+        "max_length": null
+      }
+    }
+  },
+  "score": {
+    "source_table": "g2p_register_scores",
+    "primary_key": [
+      "internal_record_id"
+    ],
+    "columns": {
+      "internal_record_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "register_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "score_type": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "score_definition_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "link_internal_record_id": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "triggered_by_cr_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "triggered_by_submission_id": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "computed_score": {
+        "type": "double precision",
+        "nullable": false,
+        "max_length": null
+      },
+      "computed_at": {
+        "type": "timestamp without time zone",
+        "nullable": false,
+        "max_length": null
+      }
+    }
+  },
+  "score-history": {
+    "source_table": "g2p_register_score_history",
+    "primary_key": [
+      "internal_record_id"
+    ],
+    "columns": {
+      "internal_record_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "register_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "score_type": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "score_definition_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "link_internal_record_id": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "triggered_by_cr_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "triggered_by_submission_id": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "computed_score": {
+        "type": "double precision",
+        "nullable": false,
+        "max_length": null
+      },
+      "computed_at": {
+        "type": "timestamp without time zone",
+        "nullable": false,
+        "max_length": null
+      }
+    }
+  },
+  "change": {
+    "source_table": "g2p_register_change_requests",
+    "primary_key": [
+      "change_request_id"
+    ],
+    "columns": {
+      "change_request_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "record_name": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "register_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "tab_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "section_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "section_register_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "internal_record_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "no_of_verifications_required": {
+        "type": "integer",
+        "nullable": false,
+        "max_length": null
+      },
+      "no_of_verifications_done": {
+        "type": "integer",
+        "nullable": false,
+        "max_length": null
+      },
+      "deduplication_register_status": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "deduplication_register_failure_reason": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "deduplication_change_request_status": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "deduplication_change_request_failure_reason": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "remarks": {
+        "type": "text",
+        "nullable": true,
+        "max_length": null
+      },
+      "approval_status": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "created_at": {
+        "type": "timestamp without time zone",
+        "nullable": false,
+        "max_length": null
+      },
+      "approved_at": {
+        "type": "timestamp without time zone",
+        "nullable": true,
+        "max_length": null
+      },
+      "created_by": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "approved_by": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "change_request_source": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "source_partner_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "awe_request_id": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "awe_request_status_summary": {
+        "type": "text",
+        "nullable": true,
+        "max_length": null
+      }
+    }
+  },
+  "change-payload": {
+    "source_table": "g2p_register_change_request_payloads",
+    "primary_key": [
+      "change_request_id"
+    ],
+    "columns": {
+      "change_request_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "change_payload": {
+        "type": "json",
+        "nullable": false,
+        "max_length": null
+      },
+      "search_text": {
+        "type": "text",
+        "nullable": true,
+        "max_length": null
+      }
+    }
+  },
+  "intake": {
+    "source_table": "g2p_intake_form_submissions",
+    "primary_key": [
+      "submission_id"
+    ],
+    "columns": {
+      "submission_id": {
+        "type": "uuid",
+        "nullable": false,
+        "max_length": null
+      },
+      "application_reference": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "form_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "register_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "draft_status": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "approval_status": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "approved_by": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "approved_at": {
+        "type": "timestamp without time zone",
+        "nullable": true,
+        "max_length": null
+      },
+      "remarks": {
+        "type": "text",
+        "nullable": true,
+        "max_length": null
+      },
+      "finalized_at": {
+        "type": "timestamp without time zone",
+        "nullable": true,
+        "max_length": null
+      },
+      "first_created_at": {
+        "type": "timestamp without time zone",
+        "nullable": false,
+        "max_length": null
+      },
+      "last_updated_at": {
+        "type": "timestamp without time zone",
+        "nullable": true,
+        "max_length": null
+      },
+      "created_by": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "submission_source": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "partner_id": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "register_ingest_process_status": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "register_ingest_processed_timestamp": {
+        "type": "timestamp without time zone",
+        "nullable": true,
+        "max_length": null
+      },
+      "register_ingest_process_attempts": {
+        "type": "integer",
+        "nullable": false,
+        "max_length": null
+      },
+      "register_ingest_process_last_error_code": {
+        "type": "text",
+        "nullable": true,
+        "max_length": null
+      },
+      "number_of_verifications_required": {
+        "type": "integer",
+        "nullable": false,
+        "max_length": null
+      },
+      "number_of_verifications_done": {
+        "type": "integer",
+        "nullable": false,
+        "max_length": null
+      },
+      "deduplication_status_vs_intake_forms": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "deduplication_intake_forms_process_timestamp": {
+        "type": "timestamp without time zone",
+        "nullable": true,
+        "max_length": null
+      },
+      "deduplication_intake_forms_attempts": {
+        "type": "integer",
+        "nullable": false,
+        "max_length": null
+      },
+      "deduplication_intake_forms_error": {
+        "type": "text",
+        "nullable": true,
+        "max_length": null
+      },
+      "deduplication_status_vs_register": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "deduplication_register_process_timestamp": {
+        "type": "timestamp without time zone",
+        "nullable": true,
+        "max_length": null
+      },
+      "deduplication_register_forms_attempts": {
+        "type": "integer",
+        "nullable": false,
+        "max_length": null
+      },
+      "deduplication_register_error": {
+        "type": "text",
+        "nullable": true,
+        "max_length": null
+      },
+      "awe_request_id": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "awe_request_status_summary": {
+        "type": "text",
+        "nullable": true,
+        "max_length": null
+      }
+    }
+  },
+  "verification": {
+    "source_table": "g2p_register_verifications",
+    "primary_key": [
+      "verification_id"
+    ],
+    "columns": {
+      "verification_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "register_id": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "internal_record_id": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "section_id": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "change_request_id": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "submission_id": {
+        "type": "character varying",
+        "nullable": true,
+        "max_length": null
+      },
+      "verified_by": {
+        "type": "character varying",
+        "nullable": false,
+        "max_length": null
+      },
+      "verified_at": {
+        "type": "timestamp without time zone",
+        "nullable": false,
+        "max_length": null
+      },
+      "verification_observations": {
+        "type": "text",
+        "nullable": true,
+        "max_length": null
+      },
+      "is_approved": {
+        "type": "boolean",
+        "nullable": false,
+        "max_length": null
+      }
+    }
+  }
+}

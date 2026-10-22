@@ -1,0 +1,11 @@
+{
+  "service_applications": [
+    {
+      "application_id": "SIM-SERVICE-SIM-FAM-a41c89e27965",
+      "household_ref": "KA-DEMO-HH-001",
+      "service_code": "SIM-DBT-INTAKE",
+      "status": "approved",
+      "source_updated_at": "2026-10-16T17:09:59.558654+00:00"
+    }
+  ]
+}

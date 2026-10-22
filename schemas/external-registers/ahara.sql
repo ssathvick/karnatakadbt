@@ -1,0 +1,3 @@
+-- KarnatakaDBT simulation schema 1.0.0; not a government production DDL
+CREATE TABLE ration_cards(card_id TEXT PRIMARY KEY, household_ref TEXT UNIQUE NOT NULL, family_id TEXT NOT NULL, category TEXT NOT NULL CHECK(category IN ('PHH','AAY','NPHH')), status TEXT NOT NULL CHECK(status IN ('active','inactive')), district_id TEXT NOT NULL, source_updated_at TEXT NOT NULL);
+ CREATE TABLE card_members(card_id TEXT NOT NULL REFERENCES ration_cards(card_id), person_id TEXT NOT NULL, PRIMARY KEY(card_id,person_id));

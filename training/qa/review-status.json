@@ -1,0 +1,13 @@
+{
+  "pages": 19,
+  "changed_pages_requiring_final_review": [
+    11,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "all_other_pages_pixel_identical_to_reviewed_version": true
+}

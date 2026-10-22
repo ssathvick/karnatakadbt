@@ -1,0 +1,159 @@
+{
+  "validate_attribute_values": false,
+  "domains": {
+    "Individual": {
+      "construct_search_text": [
+        "functional_record_id",
+        "first_name",
+        "last_name",
+        "middle_name",
+        "given_name",
+        "full_name",
+        "alias_names",
+        "foundational_id",
+        "foundational_id_masked",
+        "birth_date",
+        "plus_code",
+        "address_line_1",
+        "address_line_2",
+        "postal_code"
+      ],
+      "construct_intake_record_name": [
+        "first_name",
+        "last_name",
+        "application_reference"
+      ],
+      "construct_record_name": [
+        "first_name",
+        "last_name"
+      ]
+    },
+    "IndividualShock": {
+      "construct_search_text": [
+        "functional_record_id",
+        "shock_type",
+        "shock_period",
+        "coping_strategy"
+      ],
+      "construct_record_name": [
+        "shock_type",
+        "shock_period"
+      ]
+    },
+    "HouseholdAsset": {
+      "construct_search_text": [
+        "functional_record_id",
+        "asset_type",
+        "asset_category"
+      ],
+      "construct_record_name": [
+        "asset_type",
+        "asset_category"
+      ]
+    },
+    "IndividualProgram": {
+      "construct_search_text": [
+        "functional_record_id",
+        "program_name"
+      ],
+      "construct_record_name": [
+        "functional_record_id"
+      ]
+    },
+    "IndividualVulnerability": {
+      "construct_search_text": [
+        "functional_record_id",
+        "displacement_status",
+        "pastoralist_classification"
+      ],
+      "construct_record_name": [
+        "functional_record_id"
+      ]
+    },
+    "IndividualLivestock": {
+      "construct_search_text": [
+        "functional_record_id",
+        "livestock_species"
+      ],
+      "construct_record_name": [
+        "functional_record_id"
+      ]
+    },
+    "HouseholdProgram": {
+      "construct_search_text": [
+        "functional_record_id",
+        "program_name"
+      ],
+      "construct_record_name": [
+        "functional_record_id"
+      ]
+    },
+    "IndividualLand": {
+      "construct_search_text": [
+        "functional_record_id",
+        "productive_assets"
+      ],
+      "construct_record_name": [
+        "functional_record_id"
+      ]
+    },
+    "HouseholdHousingAndServices": {
+      "construct_search_text": [
+        "functional_record_id",
+        "dwelling_type",
+        "roof_material",
+        "wall_material",
+        "floor_material",
+        "tenure_status",
+        "water_source_type",
+        "sanitation_type",
+        "lighting_source",
+        "cooking_fuel_type"
+      ],
+      "construct_record_name": [
+        "functional_record_id"
+      ]
+    },
+    "Household": {
+      "construct_search_text": [
+        "functional_record_id",
+        "record_name",
+        "household_head_name",
+        "plus_code",
+        "address_line_1",
+        "address_line_2",
+        "postal_code"
+      ],
+      "construct_intake_record_name": [
+        "household_head_name",
+        "application_reference"
+      ],
+      "construct_record_name": [
+        "household_head_name",
+        "functional_record_id"
+      ]
+    },
+    "IndividualDisability": {
+      "construct_search_text": [
+        "functional_record_id",
+        "disability_domain",
+        "disability_severity"
+      ],
+      "construct_record_name": [
+        "disability_domain",
+        "disability_severity"
+      ]
+    },
+    "IndividualLivelihood": {
+      "construct_search_text": [
+        "functional_record_id",
+        "primary_livelihood",
+        "secondary_livelihood",
+        "employment_status"
+      ],
+      "construct_record_name": [
+        "functional_record_id"
+      ]
+    }
+  }
+}

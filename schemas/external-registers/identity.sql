@@ -1,0 +1,2 @@
+-- KarnatakaDBT simulation schema 1.0.0; not a government production DDL
+CREATE TABLE verifications(identity_token TEXT PRIMARY KEY, household_ref TEXT NOT NULL, person_id TEXT UNIQUE NOT NULL, name TEXT NOT NULL, birth_date TEXT NOT NULL, status TEXT NOT NULL CHECK(status IN ('verified','mismatch','unavailable')), source_updated_at TEXT NOT NULL);
